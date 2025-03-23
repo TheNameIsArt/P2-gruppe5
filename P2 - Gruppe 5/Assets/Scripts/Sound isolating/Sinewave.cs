@@ -14,15 +14,10 @@ public class Sinewave : MonoBehaviour
     public float movementSpeed = 1;
     [Range(0, 2 * Mathf.PI)]
     public float radians;
-    void Start()
+    void Awake()
     {
         myLineRenderer = GetComponent<LineRenderer>();
-        float randomValue1 = Random.Range(0.3f, 1.5f);
-        float randomValue2 = Random.Range(0.3f, 1f);
-        Debug.Log("Random Floats: " + randomValue1 + " and " + randomValue2);
-
-        frequency = randomValue1;
-        amplitude = randomValue2;
+        Reroll();
     }
 
     void Draw()
