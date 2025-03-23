@@ -49,9 +49,6 @@ public class Sinewave : MonoBehaviour
     void Update()
     {
         Draw();
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Reroll();
-        }
+
     }
 }

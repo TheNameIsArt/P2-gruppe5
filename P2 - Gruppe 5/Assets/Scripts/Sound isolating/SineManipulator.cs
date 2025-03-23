@@ -5,9 +5,8 @@ public class SineManipulator : MonoBehaviour
 
 {
     public Sinewave controledSinewave;
-    [SerializeField]
-    private float currentAmplitude;
-    private float currentFrequenzy;
+    [SerializeField] private float currentAmplitude;
+    [SerializeField] private float currentFrequenzy;
     private float amplitudeChanger = 0.01f;
     private float frequenzyChanger = 0.01f;
     public Sinewave targetSinewave;
