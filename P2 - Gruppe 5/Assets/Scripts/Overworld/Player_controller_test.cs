@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_controller : MonoBehaviour
 {
@@ -8,11 +9,14 @@ public class Player_controller : MonoBehaviour
     public bool isFacingRight;
     public Rigidbody2D rb;
     public Animator animator;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         isFacingRight = true;
+        Scene currentScene = SceneManager.GetActiveScene();
+        Debug.Log("Current scene:" + currentScene.name);
     }
 
     // Update is called once per frame
