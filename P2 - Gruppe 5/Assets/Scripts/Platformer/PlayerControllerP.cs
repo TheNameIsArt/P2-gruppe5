@@ -13,6 +13,7 @@ public class PlayerControllerP : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     private bool isTouchingGround;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,14 @@ public class PlayerControllerP : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isTouchingGround)
         {
             player.linearVelocity = new Vector2(player.linearVelocity.x, jumpSpeed);
+        }
+        if (isTouchingGround && direction != 0f)
+        {
+            animator.Play("New_Guy_Run");
+        }
+        else if (isTouchingGround && direction == 0f) 
+        {
+            animator.Play("New_Guy_Idle");
         }
     }
 }
