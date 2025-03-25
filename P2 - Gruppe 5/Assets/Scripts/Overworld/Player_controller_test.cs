@@ -15,8 +15,6 @@ public class Player_controller : MonoBehaviour
     void Start()
     {
         isFacingRight = true;
-        Scene currentScene = SceneManager.GetActiveScene();
-        Debug.Log("Current scene:" + currentScene.name);
     }
 
     // Update is called once per frame
