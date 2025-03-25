@@ -45,10 +45,6 @@ public class SineManipulator : MonoBehaviour
         bool keyIncreaseFrequency = Input.GetKey(KeyCode.RightArrow);
         bool keyDecreaseFrequency = Input.GetKey(KeyCode.LeftArrow);
 
-        // **Controller Inputs (Old Input System)**
-        //float leftStickX = Input.GetAxis("Horizontal");   // Left Joystick for Frequency
-        //float rightStickY = Input.GetAxis("Vertical");    // Right Joystick for Amplitude
-
         // **New Input System (Uncomment if using new Input System)**
         float leftStickX = Gamepad.current?.leftStick.x.ReadValue() ?? 0f;
         float rightStickY = Gamepad.current?.rightStick.y.ReadValue() ?? 0f;
