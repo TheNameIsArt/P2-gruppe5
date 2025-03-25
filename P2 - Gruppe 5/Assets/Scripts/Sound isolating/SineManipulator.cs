@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem; // For the new Input System (optional)
 
 public class SineManipulator : MonoBehaviour
-
 {
     public Sinewave controledSinewave;
     [SerializeField] private float currentAmplitude;
@@ -21,68 +21,68 @@ public class SineManipulator : MonoBehaviour
         controledSinewave = GetComponent<Sinewave>();
         scannerUI = GameObject.Find("Scanner UI");
         targetSinewave = GameObject.Find("Sinewave").GetComponent<Sinewave>();
+
         float randomValue1 = Random.Range(0.0f, 1.0f);
         float randomValue2 = Random.Range(0.0f, 1.0f);
         Debug.Log("Random Floats: " + randomValue1 + " and " + randomValue2);
 
         controledSinewave.frequency = randomValue1;
         controledSinewave.amplitude = randomValue2;
+        
     }
 
     private void Update()
     {
 
-        //Mouse controls
-        float mouseX = Input.GetAxis("Mouse X");
-
-        if (mouseX < 0)
-        {
-            //Debug.Log("Mouse moved left!");
-            currentFrequenzy = controledSinewave.frequency + frequenzyChanger;
-
-            if (currentFrequenzy > 1.5f)
-            {
-                currentFrequenzy = 1.5f;
-            }
-            controledSinewave.frequency = currentFrequenzy;
-        }
-        else if (mouseX > 0)
-        {
-            //Debug.Log("Mouse moved right!");
-            currentFrequenzy = controledSinewave.frequency - frequenzyChanger;
-
-            if (currentFrequenzy < 0f)
-            {
-                currentFrequenzy = 0f;
-            }
-            controledSinewave.frequency = currentFrequenzy;
-        }
     }
+
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
+        // **PC Controls**
+        float mouseX = Input.GetAxis("Mouse X");    // Mouse movement (X) controls frequency
+        bool keyIncreaseAmplitude = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        bool keyDecreaseAmplitude = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+        bool keyIncreaseFrequency = Input.GetKey(KeyCode.RightArrow);
+        bool keyDecreaseFrequency = Input.GetKey(KeyCode.LeftArrow);
+
+        // **Controller Inputs (Old Input System)**
+        //float leftStickX = Input.GetAxis("Horizontal");   // Left Joystick for Frequency
+        //float rightStickY = Input.GetAxis("Vertical");    // Right Joystick for Amplitude
+
+        // **New Input System (Uncomment if using new Input System)**
+        float leftStickX = Gamepad.current?.leftStick.x.ReadValue() ?? 0f;
+        float rightStickY = Gamepad.current?.rightStick.y.ReadValue() ?? 0f;
+
+        // **Adjust Frequency (Mouse, Arrows, Controller Left Stick)**
+        if (mouseX < 0 || keyDecreaseFrequency || leftStickX < -0.1f)
         {
-            //Debug.Log("W key is held down!");
+            currentFrequenzy = controledSinewave.frequency + frequenzyChanger;
+            currentFrequenzy = Mathf.Clamp(currentFrequenzy, 0f, 1.5f);
+            controledSinewave.frequency = currentFrequenzy;
+        }
+        else if (mouseX > 0 || keyIncreaseFrequency || leftStickX > 0.1f)
+        {
+            currentFrequenzy = controledSinewave.frequency - frequenzyChanger;
+            currentFrequenzy = Mathf.Clamp(currentFrequenzy, 0f, 1.5f);
+            controledSinewave.frequency = currentFrequenzy;
+        }
+
+        // **Adjust Amplitude (W/S Keys, Right Stick)**
+        if (keyIncreaseAmplitude || rightStickY > 0.1f)
+        {
             currentAmplitude = controledSinewave.amplitude + amplitudeChanger;
-            if (currentAmplitude > 1f)
-            {
-                currentAmplitude = 1f;
-            }
+            currentAmplitude = Mathf.Clamp(currentAmplitude, 0f, 1f);
             controledSinewave.amplitude = currentAmplitude;
         }
-
-        if (Input.GetKey(KeyCode.S))
+        else if (keyDecreaseAmplitude || rightStickY < -0.1f)
         {
-            //Debug.Log("S key is held down!");
             currentAmplitude = controledSinewave.amplitude - amplitudeChanger;
-            if (currentAmplitude < 0f)
-            {
-                currentAmplitude = 0f;
-            }
+            currentAmplitude = Mathf.Clamp(currentAmplitude, 0f, 1f);
             controledSinewave.amplitude = currentAmplitude;
         }
-
-        if (Mathf.Abs(targetSinewave.amplitude - currentAmplitude) <= 0.05f && Mathf.Abs(targetSinewave.frequency - currentFrequenzy) <= 0.01f)
+        // Check if the Sinewaves Match
+        if (Mathf.Abs(targetSinewave.amplitude - currentAmplitude) <= 0.05f &&
+            Mathf.Abs(targetSinewave.frequency - currentFrequenzy) <= 0.01f)
         {
             ProgressBarFilling();
         }
@@ -103,7 +103,6 @@ public class SineManipulator : MonoBehaviour
 
         if (progressBar.value >= 1f)
         {
-            
             Debug.Log("You win!");
             Won = true;
             progressBar.value = 0f;
@@ -114,11 +113,11 @@ public class SineManipulator : MonoBehaviour
 
     private void ProgressBarUnfilling()
     {
-        progressBar.value -= 0.01f; // Decrease the value
+        progressBar.value -= 0.01f;
 
-        if (progressBar.value <= 0f) // Disable only when value reaches 0
+        if (progressBar.value <= 0f)
         {
-            progressBar.value = 0f; // Ensure it doesn’t go below 0
+            progressBar.value = 0f;
             progressBar.enabled = false;
         }
     }

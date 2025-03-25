@@ -33,6 +33,7 @@ public class ButtonScriptSound : MonoBehaviour
             {
                 SineManipulator.Won = false;
                 buttonPressed = true;
+                Cursor.lockState = CursorLockMode.Locked;
 
                 // Disable all buttons while the action is in progress
                 DisableAllButtons();
@@ -50,6 +51,7 @@ public class ButtonScriptSound : MonoBehaviour
         {
             this.gameObject.SetActive(false);
             EnableAllButtons();  // Re-enable all buttons when the game is won
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
