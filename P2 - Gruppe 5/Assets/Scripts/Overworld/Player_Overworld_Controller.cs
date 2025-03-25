@@ -6,6 +6,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     public Animator animator;
+    public GameObject interactionButton;
 
     private Vector2 moveInput;
 
@@ -13,7 +14,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveSpeed = 5f;
+        interactionButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class Player_Overworld_Controller : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+
         if (moveInput.x != 0 || moveInput.y != 0)
         {
             animator.Play("New_Guy_Run");
@@ -41,5 +43,20 @@ public class Player_Overworld_Controller : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "InteractionZone")
+        {
+            interactionButton.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "InteractionZone")
+        {
+            interactionButton.SetActive(false);
+        }
     }
 }
