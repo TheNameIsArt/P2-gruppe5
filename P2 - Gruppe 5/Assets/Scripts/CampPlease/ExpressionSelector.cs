@@ -21,7 +21,7 @@ public class ExpressionSelector : MonoBehaviour
     public TMP_Text pageNumberText, codeText;
 
     // Stores the correct camp letter to be sent to CampAreaManager script
-    private string correctCampLetter;
+    public string correctCampLetter;
 
     // Predefined set of codes, letters, and page numbers
     private readonly (string code, string letter, int page)[] codeMappings = new (string, string, int)[]
@@ -94,8 +94,9 @@ public class ExpressionSelector : MonoBehaviour
         pageNumberText.text = "Page: " + selectedCode.page;
         codeText.text = selectedCode.code;
         correctCampLetter = selectedCode.letter;
+        Debug.Log ("the correct camp is: " +  correctCampLetter);
 
         // Send the correct letter to the CampAreaManager script
-        Object.FindFirstObjectByType<CampAreaManager>().SetCorrectCampLetter(correctCampLetter);
+    
     }
 }
