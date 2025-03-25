@@ -2,16 +2,18 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class Interation_Button : MonoBehaviour
+public class Interaction_Button : MonoBehaviour
 {
-    public Sprite keyboardSprite;
-    public Sprite controllerSprite;
-    public SpriteRenderer spriteRenderer;
+    //public Sprite keyboardSprite;
+    //public Sprite controllerSprite;
+    //public SpriteRenderer spriteRenderer;
     public Animator animator;
-    public bool active;
     public GameObject interactionController;
+    public Transform player;
+    public float spacing = 5f;
 
-    private string targetSceneName;
+    string targetSceneName;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +25,7 @@ public class Interation_Button : MonoBehaviour
     void Update()
     {
         UpdateControlScheme();
+        MoveWithPlayer();
         if (gameObject.activeSelf)
         {
             targetSceneName = GameObject.FindGameObjectWithTag("InteractionZone").GetComponent<Interaction_Controller>().targetSceneName;
@@ -34,12 +37,19 @@ public class Interation_Button : MonoBehaviour
 
         if (currentControlScheme == "Keyboard" || currentControlScheme == "Mouse")
         {
-            spriteRenderer.sprite = keyboardSprite;
+            animator.Play("Interaction_Button_Keyboard");
+            //spriteRenderer.sprite = keyboardSprite;
         }
         else if (currentControlScheme == "Gamepad")
         {
-            spriteRenderer.sprite = controllerSprite;
+            animator.Play("Interaction_Button_Controller");
+            //spriteRenderer.sprite = controllerSprite;
         }
+    }
+
+    void MoveWithPlayer() 
+    {
+        transform.position = new Vector3(player.position.x, player.position.y + spacing,player.position.z);
     }
 
     public void Interact(InputAction.CallbackContext context)

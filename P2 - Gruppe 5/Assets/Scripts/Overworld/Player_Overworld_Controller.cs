@@ -21,6 +21,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = moveInput * moveSpeed;
+
         if (moveInput.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
