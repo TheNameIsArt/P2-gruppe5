@@ -2,22 +2,28 @@ using UnityEngine;
 
 public class CampAreaManager : MonoBehaviour
 {
-    // Stores the correct camp letter that the player needs to choose
     private string correctCampLetter;
 
-    // Sets the correct camp letter (received from ExpressionSelector script)
     public void SetCorrectCampLetter(string letter)
     {
         correctCampLetter = letter;
         Debug.Log("Correct camp letter is: " + correctCampLetter);
     }
 
-    // Method called when the player selects a camp option
-    public void PlayerSelectsCamp(string selectedLetter)
-    {
-        Debug.Log("Button clicked: " + selectedLetter); // Logs the player's choice
+    // Individual methods for each button
+    public void PlayerSelectsCampA() { PlayerSelectsCamp("A"); }
+    public void PlayerSelectsCampB() { PlayerSelectsCamp("B"); }
+    public void PlayerSelectsCampC() { PlayerSelectsCamp("C"); }
+    public void PlayerSelectsCampD() { PlayerSelectsCamp("D"); }
+    public void PlayerSelectsCampE() { PlayerSelectsCamp("E"); }
+    public void PlayerSelectsCampF() { PlayerSelectsCamp("F"); }
+    public void PlayerSelectsCampG() { PlayerSelectsCamp("G"); }
+    public void PlayerSelectsCampH() { PlayerSelectsCamp("H"); }
 
-        // Checks if the selected camp matches the correct one
+    private void PlayerSelectsCamp(string selectedLetter)
+    {
+        Debug.Log("Button clicked: " + selectedLetter);
+
         if (selectedLetter == correctCampLetter)
         {
             Debug.Log("Correct Camp Selected: " + selectedLetter);

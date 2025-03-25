@@ -92,7 +92,7 @@ public class ExpressionSelector : MonoBehaviour
 
         // Update UI elements with the generated values
         pageNumberText.text = "Page: " + selectedCode.page;
-        codeText.text = "Code: " + selectedCode.code;
+        codeText.text = selectedCode.code;
         correctCampLetter = selectedCode.letter;
 
         // Send the correct letter to the CampAreaManager script
