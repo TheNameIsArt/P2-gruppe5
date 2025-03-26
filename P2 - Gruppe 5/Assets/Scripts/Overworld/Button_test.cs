@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Button_test : MonoBehaviour
 {
-    public Transform player;
-    private float spacing = 1.3f;
+    private Transform player;
+    private float spacing = 1.4f;
     private Animator animator;
     private Animation correctAnimation;
     private InputDevice inputDevice;
@@ -13,8 +13,9 @@ public class Button_test : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.Play("Interaction_Button_Keyboard");
+        SelectAnimaton();
         InputSystem.onActionChange += OnActionChange;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame

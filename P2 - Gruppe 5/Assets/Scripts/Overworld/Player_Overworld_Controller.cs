@@ -8,6 +8,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public InputDevice inputDevice;
+    public GameObject interactionZone;
 
     private string targetSceneName;
     private Vector2 moveInput;
@@ -18,7 +19,11 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
         InputSystem.onActionChange += OnActionChange;
-        interactionButton.SetActive(false);
+        if (interactionButton != null)
+        {
+            interactionButton.SetActive(false);
+        }
+        
     }
 
     // Update is called once per frame
@@ -26,8 +31,12 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
         Animate();
-        targetSceneName = GameObject.FindGameObjectWithTag("InteractionZone").GetComponent<Interaction_Controller>().targetSceneName;
-        //Debug.Log(inputDevice);
+        if (interactionButton != null) 
+        {
+            targetSceneName = interactionZone.GetComponent<Interaction_Controller>().targetSceneName;
+            //targetSceneName = GameObject.FindGameObjectWithTag("InteractionZone").GetComponent<Interaction_Controller>().targetSceneName;
+        }
+
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -65,21 +74,34 @@ public class Player_Overworld_Controller : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "InteractionZone")
+        if (interactionButton != null) 
         {
-            interactionButton.SetActive(false);
+            if (collision.gameObject.tag == "InteractionZone")
+            {
+                interactionButton.SetActive(false);
+            }
         }
+        
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (interactionButton.activeSelf)
+        if (interactionButton != null)
         {
             if (context.performed)
             {
+                // if possible change this code to use a metod from the interaction zone, instead of directly loading the scene.
+                // this way we can do other things than just loading a scene (eg. in-world dialouge ect.).
                 SceneManager.LoadScene(targetSceneName);
                 Debug.Log("INTERACT!");
             }
+        }
+    }
+    public void Sprint(InputAction.CallbackContext context) 
+    {
+        if (context.performed)
+        {
+            Debug.Log("Sprint!");
         }
     }
 
