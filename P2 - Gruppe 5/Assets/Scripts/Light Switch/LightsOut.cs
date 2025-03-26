@@ -5,7 +5,7 @@ public class LightsOut : MonoBehaviour
 {
     public SpriteRenderer[] lightButtons; // Assign these in the Inspector
     private bool[] lightStates;   // Store the On/Off state of lights
-
+    public SpriteRenderer winLight;
     void Start()
     {
         lightStates = new bool[lightButtons.Length];
@@ -60,5 +60,15 @@ public class LightsOut : MonoBehaviour
         }
 
         Debug.Log("You win! All lights are ON!");
+        OnWin();
+    }
+    void OnWin()
+    {
+
+        // Change the color from black to yellow
+        if (winLight != null)
+        {
+            winLight.color = Color.yellow;
+        }
     }
 }

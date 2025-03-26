@@ -30,6 +30,6 @@ public class TileInteraction : MonoBehaviour
     void RotateMirror()
     {
         // Rotate the tile (mirror) by 90 degrees
-        transform.Rotate(0f, 0f, 15f);
+        transform.Rotate(0f, 0f, 45f);
     }
 }

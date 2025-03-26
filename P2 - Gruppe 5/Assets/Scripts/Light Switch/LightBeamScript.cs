@@ -6,9 +6,13 @@ public class LightBeam : MonoBehaviour
     public LineRenderer lineRenderer;
     public Transform beamStart;
     public LayerMask mirrorLayer;
-    public LayerMask groundLayer;  // Added ground layer
+    public LayerMask groundLayer;
+    public LayerMask winLayer;  // Added win trigger layer
     public int maxReflections = 10;
-    public float offsetDistance = 0.01f; // Adjust to avoid self-collision
+    public float offsetDistance = 0.01f; // Prevents self-collision
+
+    public delegate void OnWinCondition(); // Event for winning
+    public static event OnWinCondition WinEvent;
 
     void Update()
     {
@@ -25,28 +29,33 @@ public class LightBeam : MonoBehaviour
 
         for (int i = 0; i < maxReflections; i++)
         {
-            // Check if the beam hits either a mirror or the ground
-            RaycastHit2D hit = Physics2D.Raycast(startPosition, direction, Mathf.Infinity, mirrorLayer | groundLayer);
+            RaycastHit2D hit = Physics2D.Raycast(startPosition, direction, Mathf.Infinity, mirrorLayer | groundLayer | winLayer);
 
             if (hit.collider != null)
             {
                 beamPoints.Add(hit.point);
 
-                // If the beam hits the ground, stop further reflections
-                if (((1 << hit.collider.gameObject.layer) & groundLayer) != 0)
+                // Check if the beam hit the win trigger
+                if (((1 << hit.collider.gameObject.layer) & winLayer) != 0)
                 {
-                    break;  // Stop the loop if it hits the ground
+                    Debug.Log("Win condition met!");
+                    WinEvent?.Invoke(); // Trigger the win event
+                    break;
                 }
 
-                // If it hits a mirror, reflect the beam
-                direction = Vector2.Reflect(direction, hit.normal);
+                // Stop if it hits the ground
+                if (((1 << hit.collider.gameObject.layer) & groundLayer) != 0)
+                {
+                    break;
+                }
 
-                // Offset the start position slightly to prevent re-hitting the mirror
+                // Reflect if it hits a mirror
+                direction = Vector2.Reflect(direction, hit.normal);
                 startPosition = hit.point + (hit.normal * offsetDistance);
             }
             else
             {
-                // If no more mirrors or ground, extend the beam into the distance
+                // Extend the beam if no mirrors or win trigger are hit
                 beamPoints.Add(startPosition + direction * 10f);
                 break;
             }
