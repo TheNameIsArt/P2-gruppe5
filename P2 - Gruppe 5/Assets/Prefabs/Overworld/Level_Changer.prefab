@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -171,6 +171,8 @@ MonoBehaviour:
   connection: {fileID: 0}
   targetSceneName: 
   spawnPoint: {fileID: 4032507557104960123}
+  animator: {fileID: 4638327439317322798}
+  transitionTime: 0.1
 --- !u!61 &710269514348045252
 BoxCollider2D:
   m_ObjectHideFlags: 0
