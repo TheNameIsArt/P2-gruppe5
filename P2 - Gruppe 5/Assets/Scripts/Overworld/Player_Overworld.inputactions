@@ -31,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "e294a699-0f44-4972-808b-eb77d62c6c39",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Value",
+                    "id": "44078917-e80a-4f97-b1b5-eeb69920cb69",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -253,6 +271,50 @@
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "139a78e5-5f24-41e0-8f6a-b064b1de88d9",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "019aa5f7-3156-4e64-8a5b-0d14aaf296e7",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebee12e0-d4b0-4335-91f3-e7f63388a7a2",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c5cf2fa-def8-408d-9dd9-55b31aae4b22",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -282,7 +344,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "ac7afba0-38b5-40ab-ab9f-178c96f4ef3e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -619,7 +681,7 @@
                 {
                     "name": "",
                     "id": "9e92bb26-7e3b-4ec4-b06b-3c8f8e498ddc",
-                    "path": "*/{Submit}",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
@@ -630,7 +692,7 @@
                 {
                     "name": "",
                     "id": "82627dcc-3b13-4ba9-841d-e4b746d6553e",
-                    "path": "*/{Cancel}",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
