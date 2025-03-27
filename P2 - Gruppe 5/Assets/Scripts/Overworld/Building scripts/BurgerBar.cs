@@ -17,17 +17,24 @@ public class BurgerBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
         Animate();
     }
     void Animate() 
     {
-        if (interactionButton.activeSelf)
+        //animator.Play("BurgerBar_Idle");
+        if (interactionButton != null) 
         {
-            animator.Play("BurgerBar_Interact");
+            if (interactionButton.activeSelf)
+            {
+                animator.Play("BurgerBar_Interact");
+            }
+
         }
-        else if (!interactionButton.activeSelf) 
+        else
         {
             animator.Play("BurgerBar_Idle");
         }
+
     }
 }
