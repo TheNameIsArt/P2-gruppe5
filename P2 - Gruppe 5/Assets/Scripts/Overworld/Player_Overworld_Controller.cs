@@ -31,12 +31,6 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
         Animate();
-        if (interactionButton != null) 
-        {
-            targetSceneName = interactionZone.GetComponent<Interaction_Controller>().targetSceneName;
-            //targetSceneName = GameObject.FindGameObjectWithTag("InteractionZone").GetComponent<Interaction_Controller>().targetSceneName;
-        }
-
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -69,6 +63,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "InteractionZone")
         {
+            targetSceneName = interactionZone.GetComponent<Interaction_Controller>().targetSceneName;
             interactionButton.SetActive(true);
         }
     }
