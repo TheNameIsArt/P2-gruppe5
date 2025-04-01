@@ -6,11 +6,21 @@ public class YellowSpriteChecker : MonoBehaviour
     public SpriteRenderer[] targetSprites; // Assign 3 sprites in the Inspector
     public Color targetColor = Color.yellow; // The color to check for
     public Button winButton;
+    private AudioSource audioSource;
+    public AudioClip[] audioClips;   // Array of AudioClips (2 clips)
+    private bool winConditionMet = false;
+    private void Start()
+    {
+        winButton.interactable = false;
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
-        if (CheckAllYellow())
+        if (CheckAllYellow() && !winConditionMet)
         {
+            winConditionMet = true;
+            PlayClip(0); // Play the first clip
             TriggerAction();
         }
     }
@@ -36,5 +46,14 @@ public class YellowSpriteChecker : MonoBehaviour
     public void OnWinButtonClick()
     {
         Debug.Log("YOU WIN THE ENTIRE GAME AND HAVE SET UP THE LIGHT SHOW!!!!");
+        PlayClip(1); // Play the second clip
+    }
+    void PlayClip(int index)
+    {
+        if (index >= 0 && index < audioClips.Length)
+        {
+            audioSource.clip = audioClips[index]; // Assign the new clip
+            audioSource.Play(); // Play the selected clip
+        }
     }
 }
