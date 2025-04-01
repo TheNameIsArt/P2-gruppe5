@@ -9,11 +9,19 @@ public class TempoScroller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        musicTempo = musicTempo / 62.5f; //Det halve af BPM(?)
+        musicTempo = musicTempo / 60f;
     }
 
+    // Update is called once per frame
    void Update()
     {
+        if (!hasStarted)
+        {
+            /*if (Input.anyKeyDown)
+            {
+                hasStarted = true;
+            }*/
+        }
 
         if (hasStarted)
         {
