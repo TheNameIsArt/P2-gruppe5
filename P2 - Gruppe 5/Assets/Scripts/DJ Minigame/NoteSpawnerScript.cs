@@ -1,58 +1,85 @@
 using UnityEngine;
+using Melanchall.DryWetMidi.Core;
+using Melanchall.DryWetMidi.Interaction;
+using System.Collections.Generic;
+using System.Linq;
 
 public class NoteSpawnerScript : MonoBehaviour
 {
     public GameObject[] keys; // Different note prefabs, one for each lane
     public Transform[] spawnPoints; // Assign spawn positions in the Inspector
-    public float bpm = 130f; // Set BPM of the song
-    public AudioSource musicSource; // Reference to the song audio
+    public TextAsset midiFile;
 
-    private float secondsPerBeat;
+    private List<NoteData> notes = new List<NoteData>();
+    private int noteIndex = 0;
     private float songStartTime;
-    private int beatIndex = 0; // Keeps track of beats
 
     void Start()
     {
-        if (bpm <= 0)
+        if (midiFile == null)
         {
-            Debug.LogError("BPM must be greater than zero! Setting default BPM to 130.");
-            bpm = 130f; // Default BPM to prevent crashes
+            Debug.LogError("MIDI file is missing!");
+            return;
         }
 
-        secondsPerBeat = 60f / bpm; // Time between beats
-        Debug.Log("Seconds per beat: " + secondsPerBeat); // Log the seconds per beat to check
+        ReadMidiFile(); // Extract note timing from MIDI
         songStartTime = Time.time; // Mark the start of the song
     }
 
     void Update()
     {
-        float songPosition = Time.time - songStartTime; // Time elapsed in song
-        if (secondsPerBeat > 0 && songPosition >= beatIndex * secondsPerBeat)
+        float songTime = Time.time - songStartTime; // Time elapsed since song started
+        while (noteIndex < notes.Count && songTime >= notes[noteIndex].time)
         {
-            SpawnKey(); // Spawn key in a random lane
-            beatIndex++; // Move to the next beat
-        }
-        else if (secondsPerBeat <= 0)
-        {
-            Debug.LogError("secondsPerBeat is zero or negative, which is invalid.");
+            SpawnKey(notes[noteIndex].noteNumber);
+            noteIndex++;
         }
     }
 
-    void SpawnKey()
+    void ReadMidiFile()
+{
+    using (var stream = new System.IO.MemoryStream(midiFile.bytes))
     {
-        // Randomly select a prefab (note) to spawn
-        int randomNoteIndex = Random.Range(0, keys.Length);
+        var midi = MidiFile.Read(stream);
+        var tempoMap = midi.GetTempoMap();
+        var notesCollection = midi.GetNotes();
 
-        // Ensure that each note stays in its own lane (spawn at the corresponding spawn point)
-        if (randomNoteIndex < spawnPoints.Length) // Ensure the lane exists
+        foreach (var note in notesCollection)
         {
-            // Instantiate the note at the selected spawn point
-            Instantiate(keys[randomNoteIndex], spawnPoints[randomNoteIndex].position, Quaternion.identity);
-            Debug.Log("Spawning note in lane: " + randomNoteIndex);
+            double noteTimeInSeconds = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, tempoMap).TotalSeconds;
+            notes.Add(new NoteData(note.NoteNumber, (float)noteTimeInSeconds));
         }
-        else
+
+        notes = notes.OrderBy(n => n.time).ToList(); // Ensure they are in order
+        Debug.Log("Loaded " + notes.Count + " notes from MIDI file.");
+    }
+}
+
+
+    void SpawnKey(int noteNumber)
+    {
+        int laneIndex = GetLaneFromNoteNumber(noteNumber);
+        if (laneIndex >= 0 && laneIndex < spawnPoints.Length)
         {
-            Debug.LogError("Invalid random note index: " + randomNoteIndex);
+            Instantiate(keys[laneIndex], spawnPoints[laneIndex].position, Quaternion.identity);
+            Debug.Log("Spawning note " + noteNumber + " in lane: " + laneIndex);
         }
+    }
+
+    int GetLaneFromNoteNumber(int noteNumber)
+    {
+        return noteNumber % keys.Length; // Maps MIDI note numbers to available lanes
+    }
+}
+
+public class NoteData
+{
+    public int noteNumber;
+    public float time;
+
+    public NoteData(int noteNumber, float time)
+    {
+        this.noteNumber = noteNumber;
+        this.time = time;
     }
 }
