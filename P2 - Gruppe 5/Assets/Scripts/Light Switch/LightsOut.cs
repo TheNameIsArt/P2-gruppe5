@@ -6,8 +6,10 @@ public class LightsOut : MonoBehaviour
     public SpriteRenderer[] lightButtons; // Assign these in the Inspector
     private bool[] lightStates;   // Store the On/Off state of lights
     public SpriteRenderer winLight;
+    private AudioSource buttonSound;
     void Start()
     {
+        buttonSound = GetComponent<AudioSource>();
         lightStates = new bool[lightButtons.Length];
         InitializeLights();
     }
@@ -37,6 +39,7 @@ public class LightsOut : MonoBehaviour
         if (index == 0) ToggleLight(lightStates.Length - 1);
         if (index == lightStates.Length - 1) ToggleLight(0);
 
+        buttonSound.Play();
         CheckWinCondition();
     }
 

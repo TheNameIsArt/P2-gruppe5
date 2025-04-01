@@ -29,36 +29,38 @@ public class GamepadCursor : MonoBehaviour
     }
     void Update()
     {
-        // Get the joystick position
-        leftStick = Gamepad.current.leftStick.ReadValue();
-
-        // Prevent annoying jitter when not using joystick
-        if (leftStick.magnitude >= 0.1f)
+        if (Gamepad.current != null)
         {
-            // Get the current mouse position to add to the joystick movement
-            mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            // Get the joystick position
+            leftStick = Gamepad.current.leftStick.ReadValue();
 
-            // Precise value for desired cursor position, which unfortunately cannot be used directly
-            warpPosition = mousePosition + bias + overflow + sensitivity * Time.deltaTime * leftStick;
+            // Prevent annoying jitter when not using joystick
+            if (leftStick.magnitude >= 0.1f)
+            {
+                // Get the current mouse position to add to the joystick movement
+                mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
-            // Keep the cursor in the game screen (behavior gets weird out of bounds)
-            warpPosition = new Vector2(Mathf.Clamp(warpPosition.x, 0, Screen.width), Mathf.Clamp(warpPosition.y, 0, Screen.height));
+                // Precise value for desired cursor position, which unfortunately cannot be used directly
+                warpPosition = mousePosition + bias + overflow + sensitivity * Time.deltaTime * leftStick;
 
-            // Store floating point values so they are not lost in WarpCursorPosition (which applies FloorToInt)
-            overflow = new Vector2(warpPosition.x % 1, warpPosition.y % 1);
+                // Keep the cursor in the game screen (behavior gets weird out of bounds)
+                warpPosition = new Vector2(Mathf.Clamp(warpPosition.x, 0, Screen.width), Mathf.Clamp(warpPosition.y, 0, Screen.height));
 
-            // Move the cursor
-            Mouse.current.WarpCursorPosition(warpPosition);
+                // Store floating point values so they are not lost in WarpCursorPosition (which applies FloorToInt)
+                overflow = new Vector2(warpPosition.x % 1, warpPosition.y % 1);
+
+                // Move the cursor
+                Mouse.current.WarpCursorPosition(warpPosition);
+            }
+
+            // Check if the "B" button (buttonSouth) on the gamepad is pressed
+            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+            {
+                Debug.Log("B Button Pressed");
+                // You can add more logic here for when the B button is pressed
+                PushButton();
+            }
         }
-
-        // Check if the "B" button (buttonSouth) on the gamepad is pressed
-        if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
-        {
-            Debug.Log("B Button Pressed");
-            // You can add more logic here for when the B button is pressed
-            PushButton();
-        }
-
     }
     public void PushButton()
     {
