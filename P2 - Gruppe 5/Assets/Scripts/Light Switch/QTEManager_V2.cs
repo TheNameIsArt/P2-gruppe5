@@ -9,7 +9,7 @@ public class QTEManager_V2 : MonoBehaviour
 {
     public TMP_Text qteText; // Assign a TextMeshPro UI text in the inspector
     public float timeLimit = 5f; // Time to complete each sequence
-    public int sequenceLength = 3; // Number of inputs per sequence
+    public int sequenceLength = 5; // Number of inputs per sequence
     public int totalSequences = 5; // Total sequences before success
     public InputActionAsset inputActions; // Assign Input Actions Asset in Inspector
     public Button startButton; // Assign a UI Button in the inspector
@@ -22,6 +22,9 @@ public class QTEManager_V2 : MonoBehaviour
     private int sequencesCompleted = 0; // Track completed sequences
     private InputActionMap actionMap;
     private Dictionary<string, InputAction> inputActionsMap = new Dictionary<string, InputAction>();
+
+    public AudioSource audioSource;  // Reference to the AudioSource
+    public AudioClip[] audioClips;   // Array of AudioClips (3 clips)
 
     private string[] possibleInputs = { "Left", "Down", "Right", "Up" }; // Mapped to input actions
 
@@ -37,6 +40,7 @@ public class QTEManager_V2 : MonoBehaviour
                 inputActionsMap[input] = action;
             }
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -57,6 +61,7 @@ public class QTEManager_V2 : MonoBehaviour
     void StartQTE()
     {
         sequencesCompleted = 0; // Reset completed sequences
+        startButton.interactable = false;
         StartNextSequence();
     }
 
@@ -103,6 +108,7 @@ public class QTEManager_V2 : MonoBehaviour
     void OnInputReceived(string input)
     {
         if (!qteActive) return;
+        PlayClip(0); // Play first button sound
 
         if (input == qteSequence[currentIndex])
         {
@@ -124,6 +130,7 @@ public class QTEManager_V2 : MonoBehaviour
     {
         qteText.text = "<color=green>Success! All sequences completed!</color>";
         qteActive = false;
+        PlayClip(1); // Play success sound
 
         // Change the color from black to yellow
         if (winLight != null)
@@ -136,5 +143,16 @@ public class QTEManager_V2 : MonoBehaviour
     {
         qteText.text = "<color=red>Failed! Try again.</color>";
         qteActive = false;
+        startButton.interactable = true;
+        PlayClip(2); // Play fail sound
+
+    }
+     void PlayClip(int index)
+    {
+        if (index >= 0 && index < audioClips.Length)
+        {
+            audioSource.clip = audioClips[index]; // Assign the new clip
+            audioSource.Play(); // Play the selected clip
+        }
     }
 }
