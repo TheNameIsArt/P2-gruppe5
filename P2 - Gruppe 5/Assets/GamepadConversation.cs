@@ -9,6 +9,7 @@ public class ExampleInputManager : MonoBehaviour
     private InputActionMap uiActionMap;
     private float deadZone = 0.5f; // Dead zone threshold for joystick input
     private bool canNavigate = true; // Flag to ensure joystick is released before triggering again
+    private bool textIsTyping = false; // Flag to make skipping possible while text is typing
 
     private void Awake()
     {
@@ -74,7 +75,18 @@ public class ExampleInputManager : MonoBehaviour
     {
         if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
         {
-            ConversationManager.Instance.PressSelectedOption();
+            if(!textIsTyping)
+            {
+                textIsTyping = true;
+                ConversationManager.Instance.PressSelectedOption();
+
+            }
+            else
+            {
+                ConversationManager.Instance.ScrollingText_Skip();
+                textIsTyping = false;
+            }
+
         }
     }
 

@@ -255,7 +255,14 @@ namespace DialogueEditor
 
             return value;
         }
-
+        //marcus added this. No boom plz!
+        public void ScrollingText_Skip()
+        {
+            m_elapsedScrollTime = 0f;
+            m_scrollIndex = m_targetScrollTextCount;
+            DialogueText.maxVisibleCharacters = m_scrollIndex;
+            SetState(eState.TransitioningOptionsOn);
+        }
 
         //--------------------------------------
         // Set state
@@ -359,7 +366,11 @@ namespace DialogueEditor
                     SetState(eState.TransitioningOptionsOn);
                 }
             }
+
         }
+
+  
+
 
         private void TransitionOptionsOn_Update()
         {
