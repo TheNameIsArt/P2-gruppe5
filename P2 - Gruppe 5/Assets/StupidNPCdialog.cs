@@ -8,7 +8,7 @@ public class StupidNPCdialog : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !ConversationManager.Instance.IsConversationActive)
         {
             ConversationManager.Instance.StartConversation(myConversation);
         }
