@@ -15,7 +15,6 @@ public class Level_Changer : MonoBehaviour
 
     private void Start()
     {
-        
         if (connection == Level_Connection.activeConnection) 
         {
             player.transform.position = spawnPoint.position;
