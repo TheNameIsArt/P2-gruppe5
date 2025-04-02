@@ -8,16 +8,19 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public InputDevice inputDevice;
-    public GameObject interactionZone;
+    private GameObject interactionZone;
 
     private string targetSceneName;
     private Vector2 moveInput;
     private GameObject interactionButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
         interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
+    }
+    void Start()
+    {
         InputSystem.onActionChange += OnActionChange;
         if (interactionButton != null)
         {
@@ -59,14 +62,17 @@ public class Player_Overworld_Controller : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        interactionZone = collision.gameObject;
+
         if (collision.gameObject.tag == "InteractionZone")
         {
             targetSceneName = interactionZone.GetComponent<Interaction_Controller>().targetSceneName;
             interactionButton.SetActive(true);
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (interactionButton != null) 
