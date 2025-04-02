@@ -10,6 +10,7 @@ public class LightBeam : MonoBehaviour
     public LayerMask winLayer;  // Added win trigger layer
     public int maxReflections = 10;
     public float offsetDistance = 0.01f; // Prevents self-collision
+    private bool isWin = false;
 
     public delegate void OnWinCondition(); // Event for winning
     public static event OnWinCondition WinEvent;
@@ -38,7 +39,9 @@ public class LightBeam : MonoBehaviour
                 // Check if the beam hit the win trigger
                 if (((1 << hit.collider.gameObject.layer) & winLayer) != 0)
                 {
+                    if (isWin) return; // Prevent multiple win events
                     Debug.Log("Win condition met!");
+                    isWin = true;
                     WinEvent?.Invoke(); // Trigger the win event
                     break;
                 }

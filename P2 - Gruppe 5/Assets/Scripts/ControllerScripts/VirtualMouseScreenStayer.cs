@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.UI;
 
@@ -14,9 +15,12 @@ public class VirtualMouseScreenStayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector2 mousePosition = virtualMouseInput.virtualMouse.position.value;
-        mousePosition.x = Mathf.Clamp(mousePosition.x, 0, Screen.width);
-        mousePosition.y = Mathf.Clamp(mousePosition.y, 0, Screen.height);
-        InputState.Change(virtualMouseInput.virtualMouse.position, mousePosition);
+        if (virtualMouseInput != null && virtualMouseInput.enabled)
+        {
+            Vector2 mousePosition = virtualMouseInput.virtualMouse.position.value;
+            mousePosition.x = Mathf.Clamp(mousePosition.x, 0, Screen.width);
+            mousePosition.y = Mathf.Clamp(mousePosition.y, 0, Screen.height);
+            InputState.Change(virtualMouseInput.virtualMouse.position, mousePosition);
+        }
     }
 }

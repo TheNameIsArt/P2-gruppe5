@@ -7,26 +7,33 @@ using UnityEngine.UI;
 
 public class QTEManager_V2 : MonoBehaviour
 {
-    public TMP_Text qteText; // Assign a TextMeshPro UI text in the inspector
-    public float timeLimit = 5f; // Time to complete each sequence
-    public int sequenceLength = 5; // Number of inputs per sequence
-    public int totalSequences = 5; // Total sequences before success
-    public InputActionAsset inputActions; // Assign Input Actions Asset in Inspector
-    public Button startButton; // Assign a UI Button in the inspector
-    public SpriteRenderer winLight; // Assign the circle sprite in the Inspector
+    public TMP_Text qteText;
+    public float timeLimit = 5f;
+    public int sequenceLength = 5;
+    public int totalSequences = 5;
+    public InputActionAsset inputActions;
+    public Button startButton;
+    public SpriteRenderer winLight;
+    public AudioSource audioSource;
+    public AudioClip[] audioClips;
+    public SpriteRenderer[] sequenceLights;
+    public Slider timerSlider;
 
     private List<string> qteSequence = new List<string>();
     private int currentIndex = 0;
     private float timer;
     private bool qteActive = false;
-    private int sequencesCompleted = 0; // Track completed sequences
+    private int sequencesCompleted = 0;
     private InputActionMap actionMap;
     private Dictionary<string, InputAction> inputActionsMap = new Dictionary<string, InputAction>();
 
-    public AudioSource audioSource;  // Reference to the AudioSource
-    public AudioClip[] audioClips;   // Array of AudioClips (3 clips)
+    public SpriteRenderer[] inputSprites; // Assign 3 SpriteRenderers in Inspector
 
-    private string[] possibleInputs = { "Left", "Down", "Right", "Up" }; // Mapped to input actions
+    [Header("Input Sprites Mapping")]
+    public string[] inputNames; // Names: "Left", "Down", "Right", "Up"
+    public Sprite[] inputIcons; // Sprites corresponding to input names
+
+    private string[] possibleInputs = { "Left", "Down", "Right", "Up" };
 
     void Awake()
     {
@@ -60,7 +67,7 @@ public class QTEManager_V2 : MonoBehaviour
 
     void StartQTE()
     {
-        sequencesCompleted = 0; // Reset completed sequences
+        sequencesCompleted = 0;
         startButton.interactable = false;
         StartNextSequence();
     }
@@ -83,6 +90,8 @@ public class QTEManager_V2 : MonoBehaviour
         timer = timeLimit;
         currentIndex = 0;
         qteActive = true;
+        ResetInputSprites(); // Reset all sprite colors
+        UpdateInputSprites();
     }
 
     void DisplaySequence()
@@ -99,6 +108,7 @@ public class QTEManager_V2 : MonoBehaviour
         if (!qteActive) return;
 
         timer -= Time.deltaTime;
+        timerSlider.value = timer / timeLimit;
         if (timer <= 0)
         {
             LoseQTE();
@@ -108,31 +118,84 @@ public class QTEManager_V2 : MonoBehaviour
     void OnInputReceived(string input)
     {
         if (!qteActive) return;
-        PlayClip(0); // Play first button sound
+        PlayClip(0);
 
         if (input == qteSequence[currentIndex])
         {
+            // Correct input: turn green
+            if (currentIndex < inputSprites.Length)
+            {
+                inputSprites[currentIndex].color = Color.green;
+            }
+
             currentIndex++;
+
             if (currentIndex >= qteSequence.Count)
             {
                 sequencesCompleted++;
                 qteActive = false;
+                sequenceLights[sequencesCompleted - 1].color = Color.yellow;
                 StartNextSequence();
             }
         }
         else
         {
+            // Incorrect input: turn red
+            if (currentIndex < inputSprites.Length)
+            {
+                inputSprites[currentIndex].color = Color.red;
+            }
             LoseQTE();
         }
+    }
+    void ResetInputSprites()
+    {
+        foreach (var sprite in inputSprites)
+        {
+            sprite.color = Color.white; // Reset to original color
+        }
+    }
+
+    void UpdateInputSprites()
+    {
+        for (int i = 0; i < inputSprites.Length; i++)
+        {
+            int sequenceIndex = currentIndex + i; // Track input in sequence
+
+            if (sequenceIndex < qteSequence.Count)
+            {
+                string nextInput = qteSequence[sequenceIndex];
+                Sprite inputSprite = GetSpriteForInput(nextInput);
+
+                if (inputSprite != null)
+                {
+                    inputSprites[i].sprite = inputSprite;
+                    inputSprites[i].enabled = true;
+
+                    // Keep already tapped inputs green
+                    inputSprites[i].color = (sequenceIndex < currentIndex) ? Color.green : Color.white;
+                }
+            }
+        }
+    }
+
+    Sprite GetSpriteForInput(string input)
+    {
+        for (int i = 0; i < inputNames.Length; i++)
+        {
+            if (inputNames[i] == input)
+            {
+                return inputIcons[i];
+            }
+        }
+        return null;
     }
 
     void WinQTE()
     {
         qteText.text = "<color=green>Success! All sequences completed!</color>";
         qteActive = false;
-        PlayClip(1); // Play success sound
-
-        // Change the color from black to yellow
+        PlayClip(1);
         if (winLight != null)
         {
             winLight.color = Color.yellow;
@@ -144,15 +207,15 @@ public class QTEManager_V2 : MonoBehaviour
         qteText.text = "<color=red>Failed! Try again.</color>";
         qteActive = false;
         startButton.interactable = true;
-        PlayClip(2); // Play fail sound
-
+        PlayClip(2);
     }
-     void PlayClip(int index)
+
+    void PlayClip(int index)
     {
         if (index >= 0 && index < audioClips.Length)
         {
-            audioSource.clip = audioClips[index]; // Assign the new clip
-            audioSource.Play(); // Play the selected clip
+            audioSource.clip = audioClips[index];
+            audioSource.Play();
         }
     }
 }
