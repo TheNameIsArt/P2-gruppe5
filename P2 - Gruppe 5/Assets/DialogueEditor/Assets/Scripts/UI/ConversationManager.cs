@@ -59,8 +59,7 @@ namespace DialogueEditor
 
         // marcus added this. No boom plz!
         public bool skipAllowed = false;
-        public bool isEnded = false;
-        public bool hasAdvanced = false; // Used to prevent auto-advancing when the user has pressed a button
+        //public bool isEnded = false;
 
         // Getter properties
         public bool IsConversationActive
@@ -77,12 +76,12 @@ namespace DialogueEditor
         public int m_targetScrollTextCount;
         private eState m_state;
         private float m_stateTime;
-        
+
         private Conversation m_conversation;
         private SpeechNode m_currentSpeech;
         private OptionNode m_selectedOption;
 
-        
+
 
         // Selection options
         private List<UIConversationButton> m_uiOptions;
@@ -163,8 +162,7 @@ namespace DialogueEditor
 
         public void EndConversation()
         {
-            if (isEnded) return; // Prevent multiple calls to EndConversation
-            isEnded = true;
+
             SetState(eState.TransitioningDialogueOff);
 
             if (OnConversationEnded != null)
@@ -200,6 +198,7 @@ namespace DialogueEditor
 
             UIConversationButton button = m_uiOptions[m_currentSelectedIndex];
             button.OnButtonPressed();
+
         }
 
         public void AlertHover(UIConversationButton button)
@@ -227,7 +226,7 @@ namespace DialogueEditor
                 LogWarning("parameter \'" + paramName + "\' does not exist.");
             }
         }
-        
+
         public void SetBool(string paramName, bool value)
         {
             eParamStatus status;
@@ -268,6 +267,7 @@ namespace DialogueEditor
         public void ScrollingText_Skip()
         {
             if (!skipAllowed) return;
+            //if (hasAdvanced) return; // Prevent auto-advancing when the user has pressed a button
             skipAllowed = false;
             m_elapsedScrollTime = 0f;
             m_scrollIndex = m_targetScrollTextCount;
@@ -275,7 +275,7 @@ namespace DialogueEditor
             if (m_scrollIndex >= m_targetScrollTextCount)
             {
                 SetState(eState.TransitioningOptionsOn);
-                hasAdvanced = true; // Allow auto-advancing after skipping
+                //hasAdvanced = true; // Allow auto-advancing after skipping
             }
         }
 
@@ -363,7 +363,6 @@ namespace DialogueEditor
         private void ScrollingText_Update()
         {
             skipAllowed = true;
-            isEnded = false;
             const float charactersPerSecond = 1500;
             float timePerChar = (60.0f / charactersPerSecond);
             timePerChar *= ScrollSpeed;
@@ -380,22 +379,19 @@ namespace DialogueEditor
                 // Finished?
                 if (m_scrollIndex >= m_targetScrollTextCount)
                 {
-                    if (hasAdvanced)
-                    {
-                        hasAdvanced = false;
-                        return;
-                    }
+                    skipAllowed = false;
                     SetState(eState.TransitioningOptionsOn);
                 }
             }
 
         }
 
-  
+
 
 
         private void TransitionOptionsOn_Update()
         {
+
             m_stateTime += Time.deltaTime;
             float t = m_stateTime / TRANSITION_TIME;
 
@@ -427,6 +423,7 @@ namespace DialogueEditor
 
         private void TransitionOptionsOff_Update()
         {
+            
             m_stateTime += Time.deltaTime;
             float t = m_stateTime / TRANSITION_TIME;
 
@@ -580,7 +577,7 @@ namespace DialogueEditor
             else
             {
                 SetState(eState.TransitioningOptionsOn);
-            }            
+            }
         }
 
 
@@ -716,16 +713,16 @@ namespace DialogueEditor
                         // If there was no valid speech node (due to no conditions being met) this becomes a None button type
                         if (next == null)
                         {
-                            
+
                             uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
-                            
+
                         }
                         // Else, valid speech node found
                         else
                         {
                             uiOption.SetupButton(UIConversationButton.eButtonType.Speech, next, continueFont: m_conversation.ContinueFont);
                         }
-                        
+
                     }
                     else if (m_currentSpeech.ConnectionType == Connection.eConnectionType.None)
                     {
