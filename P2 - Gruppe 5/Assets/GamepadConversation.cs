@@ -1,7 +1,7 @@
 using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using System.Collections;
 public class ExampleInputManager : MonoBehaviour
 {
     public InputActionAsset inputActionsAsset; // Reference to the Input Actions asset
@@ -9,7 +9,7 @@ public class ExampleInputManager : MonoBehaviour
     private InputActionMap uiActionMap;
     private float deadZone = 0.5f; // Dead zone threshold for joystick input
     private bool canNavigate = true; // Flag to ensure joystick is released before triggering again
-    private bool textIsTyping = false; // Flag to make skipping possible while text is typing
+    private bool canInteract = true; // Flag to ensure interaction delay
 
     private void Awake()
     {
@@ -22,6 +22,7 @@ public class ExampleInputManager : MonoBehaviour
                 uiActionMap.FindAction("Navigate").performed += ctx => OnNavigate(ctx);
                 uiActionMap.FindAction("Submit").performed += ctx => OnSubmit(ctx);
                 uiActionMap.FindAction("Cancel").performed += ctx => OnCancel(ctx);
+                uiActionMap.FindAction("Click").performed += ctx => OnClick(ctx); // Bind the OnClick method
             }
             else
             {
@@ -46,7 +47,7 @@ public class ExampleInputManager : MonoBehaviour
 
     private void OnNavigate(InputAction.CallbackContext context)
     {
-        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
+        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive && canInteract)
         {
             Vector2 navigation = context.ReadValue<Vector2>();
 
@@ -73,29 +74,44 @@ public class ExampleInputManager : MonoBehaviour
 
     private void OnSubmit(InputAction.CallbackContext context)
     {
-        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
+        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive && canInteract)
         {
-            if(!textIsTyping)
+            if (!ConversationManager.Instance.skipAllowed)
             {
-                textIsTyping = true;
                 ConversationManager.Instance.PressSelectedOption();
-
+                StartCoroutine(InteractionDelay());
             }
             else
             {
                 ConversationManager.Instance.ScrollingText_Skip();
-                textIsTyping = false;
             }
-
         }
     }
 
     private void OnCancel(InputAction.CallbackContext context)
     {
-        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
+        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive && canInteract)
         {
             ConversationManager.Instance.EndConversation();
         }
+    }
+
+    private void OnClick(InputAction.CallbackContext context)
+    {
+        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
+        {
+            if (ConversationManager.Instance.skipAllowed)
+            {
+                ConversationManager.Instance.ScrollingText_Skip();
+            }
+        }
+    }
+
+    private IEnumerator InteractionDelay()
+    {
+        canInteract = false;
+        yield return new WaitForSeconds(0.2f);
+        canInteract = true;
     }
 }
 
