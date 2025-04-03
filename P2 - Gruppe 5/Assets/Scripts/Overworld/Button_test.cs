@@ -16,6 +16,7 @@ public class Button_test : MonoBehaviour
         SelectAnimaton();
         InputSystem.onActionChange += OnActionChange;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
