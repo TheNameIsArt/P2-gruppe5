@@ -60,6 +60,7 @@ namespace DialogueEditor
         // marcus added this. No boom plz!
         public bool skipAllowed = false;
         public bool isEnded = false;
+        public bool hasAdvanced = false; // Used to prevent auto-advancing when the user has pressed a button
 
         // Getter properties
         public bool IsConversationActive
@@ -274,6 +275,7 @@ namespace DialogueEditor
             if (m_scrollIndex >= m_targetScrollTextCount)
             {
                 SetState(eState.TransitioningOptionsOn);
+                hasAdvanced = true; // Allow auto-advancing after skipping
             }
         }
 
@@ -378,6 +380,11 @@ namespace DialogueEditor
                 // Finished?
                 if (m_scrollIndex >= m_targetScrollTextCount)
                 {
+                    if (hasAdvanced)
+                    {
+                        hasAdvanced = false;
+                        return;
+                    }
                     SetState(eState.TransitioningOptionsOn);
                 }
             }
