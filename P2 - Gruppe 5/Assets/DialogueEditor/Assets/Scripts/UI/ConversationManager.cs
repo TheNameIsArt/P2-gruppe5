@@ -57,6 +57,10 @@ namespace DialogueEditor
         // Default values
         public Sprite BlankSprite;
 
+        // marcus added this. No boom plz!
+        public bool skipAllowed = false;
+        public bool isEnded = false;
+
         // Getter properties
         public bool IsConversationActive
         {
@@ -76,6 +80,8 @@ namespace DialogueEditor
         private Conversation m_conversation;
         private SpeechNode m_currentSpeech;
         private OptionNode m_selectedOption;
+
+        
 
         // Selection options
         private List<UIConversationButton> m_uiOptions;
@@ -156,6 +162,8 @@ namespace DialogueEditor
 
         public void EndConversation()
         {
+            if (isEnded) return; // Prevent multiple calls to EndConversation
+            isEnded = true;
             SetState(eState.TransitioningDialogueOff);
 
             if (OnConversationEnded != null)
@@ -258,10 +266,15 @@ namespace DialogueEditor
         //marcus added this. No boom plz!
         public void ScrollingText_Skip()
         {
+            if (!skipAllowed) return;
+            skipAllowed = false;
             m_elapsedScrollTime = 0f;
             m_scrollIndex = m_targetScrollTextCount;
             DialogueText.maxVisibleCharacters = m_scrollIndex;
-            SetState(eState.TransitioningOptionsOn);
+            if (m_scrollIndex >= m_targetScrollTextCount)
+            {
+                SetState(eState.TransitioningOptionsOn);
+            }
         }
 
         //--------------------------------------
@@ -347,6 +360,8 @@ namespace DialogueEditor
 
         private void ScrollingText_Update()
         {
+            skipAllowed = true;
+            isEnded = false;
             const float charactersPerSecond = 1500;
             float timePerChar = (60.0f / charactersPerSecond);
             timePerChar *= ScrollSpeed;
@@ -694,7 +709,9 @@ namespace DialogueEditor
                         // If there was no valid speech node (due to no conditions being met) this becomes a None button type
                         if (next == null)
                         {
+                            
                             uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
+                            
                         }
                         // Else, valid speech node found
                         else
