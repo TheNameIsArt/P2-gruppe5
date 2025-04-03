@@ -79,7 +79,7 @@ public class ExampleInputManager : MonoBehaviour
             if (!ConversationManager.Instance.skipAllowed)
             {
                 ConversationManager.Instance.PressSelectedOption();
-                //StartCoroutine(InteractionDelay());
+                StartCoroutine(InteractionDelay());
             }
             else
             {
