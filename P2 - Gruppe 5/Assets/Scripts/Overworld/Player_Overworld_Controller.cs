@@ -13,11 +13,12 @@ public class Player_Overworld_Controller : MonoBehaviour
     private PlayerInput playerInput;
 
     private string targetSceneName;
-    private NPCConversation targetConversation;
+    //private NPCConversation targetConversation;
     private Vector2 moveInput;
     private GameObject interactionButton;
     private bool isConversationZone;
     private bool isInteractionZone;
+    [SerializeField] private bool isConversationActive = false;
 
     private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
@@ -25,7 +26,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     private void Awake()
     {
         interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
-        conversationEditor = GetComponent<ConversationEditer>(); // Get the ConversationEditor component
+        
     }
 
     void Start()
@@ -35,6 +36,7 @@ public class Player_Overworld_Controller : MonoBehaviour
         {
             interactionButton.SetActive(false);
         }
+        playerInput = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,11 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
         Animate();
+        isConversationActive = ConversationManager.Instance.IsConversationActive;
+        if (!isConversationActive && !playerInput.enabled)
+        {
+            playerInput.enabled = true; // Enable the PlayerInput component
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -82,9 +89,11 @@ public class Player_Overworld_Controller : MonoBehaviour
         }
         else if (collision.gameObject.tag == "ConversationZone")
         {
-            targetConversation = interactionZone.GetComponent<NPCConversation>();
+            //targetConversation = interactionZone.GetComponent<NPCConversation>();
+            conversationEditor = interactionZone.GetComponent<ConversationEditer>();
             isConversationZone = true;
-            interactionButton.SetActive(true);
+            if(!isConversationActive)
+                interactionButton.SetActive(true);
         }
     }
 
@@ -114,10 +123,9 @@ public class Player_Overworld_Controller : MonoBehaviour
             {
                 if (conversationEditor != null)
                 {
-                    conversationEditor.SetTargetConversation(targetConversation); // Set the targetConversation in ConversationEditor
+                    conversationEditor.PlayConversation();
+                    Debug.Log("Conversation started!");
                 }
-                ConversationManager.Instance.StartConversation(targetConversation);
-                playerInput = GetComponent<PlayerInput>();
                 playerInput.enabled = false; // Disable the PlayerInput component
                 interactionButton.SetActive(false); // Hide the interaction button
             }
