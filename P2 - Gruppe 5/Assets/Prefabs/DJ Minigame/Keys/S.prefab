@@ -104,6 +104,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 115
+  goodHit: {fileID: 5359402209980570094, guid: 1dcd3328d20bfca48b4f58ff2bcfa988, type: 3}
+  greatHit: {fileID: 3250051553618639925, guid: bea92a39db0f264439b0e1bde77b3d28, type: 3}
+  perfectHit: {fileID: 8634546747771758998, guid: b5210070c63261d43b980f4b5e772439, type: 3}
+  missEffect: {fileID: 8481650320334880768, guid: 77e3a306387fb0c45a8a461b20174576, type: 3}
+  missedPositionY: -4
+  pressWindowTime: 0.5
 --- !u!58 &2229356533868395827
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -152,5 +158,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0feb259109b64a14ebbe2e6b3daf7ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicTempo: 130
+  musicTempo: 125
   hasStarted: 1

@@ -1,58 +1,80 @@
 using UnityEngine;
+using Melanchall.DryWetMidi.Core;
+using Melanchall.DryWetMidi.Interaction;
+using System.Collections.Generic;
+using System.IO;
 
 public class NoteSpawnerScript : MonoBehaviour
 {
-    public GameObject[] keys; // Different note prefabs, one for each lane
-    public Transform[] spawnPoints; // Assign spawn positions in the Inspector
-    public float bpm = 130f; // Set BPM of the song
-    public AudioSource musicSource; // Reference to the song audio
+    public GameObject[] keys; // Different note prefabs for each lane
+    public Transform[] spawnPoints; // Spawn positions per lane
+    public TextAsset midiFile; // MIDI file to read from (drag & drop in the Inspector)
 
-    private float secondsPerBeat;
     private float songStartTime;
-    private int beatIndex = 0; // Keeps track of beats
+    private List<MidiNoteData> noteEvents = new List<MidiNoteData>();
+    private int nextNoteIndex = 0;
 
     void Start()
     {
-        if (bpm <= 0)
-        {
-            Debug.LogError("BPM must be greater than zero! Setting default BPM to 130.");
-            bpm = 130f; // Default BPM to prevent crashes
-        }
-
-        secondsPerBeat = 60f / bpm; // Time between beats
-        Debug.Log("Seconds per beat: " + secondsPerBeat); // Log the seconds per beat to check
-        songStartTime = Time.time; // Mark the start of the song
+        songStartTime = Time.time;
+        LoadMidiNotes();
     }
 
     void Update()
     {
-        float songPosition = Time.time - songStartTime; // Time elapsed in song
-        if (secondsPerBeat > 0 && songPosition >= beatIndex * secondsPerBeat)
+        float songPosition = Time.time - songStartTime; // Time since song started
+
+        while (nextNoteIndex < noteEvents.Count && songPosition >= noteEvents[nextNoteIndex].time)
         {
-            SpawnKey(); // Spawn key in a random lane
-            beatIndex++; // Move to the next beat
-        }
-        else if (secondsPerBeat <= 0)
-        {
-            Debug.LogError("secondsPerBeat is zero or negative, which is invalid.");
+            SpawnKey(noteEvents[nextNoteIndex]);
+            nextNoteIndex++;
         }
     }
 
-    void SpawnKey()
+    void LoadMidiNotes()
     {
-        // Randomly select a prefab (note) to spawn
-        int randomNoteIndex = Random.Range(0, keys.Length);
+        if (midiFile == null)
+        {
+            Debug.LogError("MIDI file not assigned!");
+            return;
+        }
 
-        // Ensure that each note stays in its own lane (spawn at the corresponding spawn point)
-        if (randomNoteIndex < spawnPoints.Length) // Ensure the lane exists
+        byte[] midiBytes = midiFile.bytes;
+        MemoryStream stream = new MemoryStream(midiBytes);
+        MidiFile midi = MidiFile.Read(stream);
+
+        TempoMap tempoMap = midi.GetTempoMap();
+
+        foreach (var note in midi.GetNotes())
         {
-            // Instantiate the note at the selected spawn point
-            Instantiate(keys[randomNoteIndex], spawnPoints[randomNoteIndex].position, Quaternion.identity);
-            Debug.Log("Spawning note in lane: " + randomNoteIndex);
+            float timeInSeconds = (float)TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, tempoMap).TotalSeconds;
+            int lane = GetLaneFromMidiNote(note.NoteNumber);
+
+            if (lane >= 0 && lane < spawnPoints.Length)
+            {
+                noteEvents.Add(new MidiNoteData { time = timeInSeconds, lane = lane });
+            }
         }
-        else
-        {
-            Debug.LogError("Invalid random note index: " + randomNoteIndex);
-        }
+
+        noteEvents.Sort((a, b) => a.time.CompareTo(b.time)); // Ensure events are in order
+    }
+
+    void SpawnKey(MidiNoteData noteData)
+    {
+        Instantiate(keys[noteData.lane], spawnPoints[noteData.lane].position, Quaternion.identity);
+        Debug.Log($"Spawning note at {noteData.time} seconds in lane {noteData.lane}");
+    }
+
+    int GetLaneFromMidiNote(int midiNote)
+    {
+        // Example: Map MIDI notes to lanes (adjust based on your game)
+        if (midiNote >= 60 && midiNote <= 63) return midiNote - 60; // Maps C4-F4 to lanes 0-3
+        return -1; // Ignore notes outside the mapped range
+    }
+
+    private struct MidiNoteData
+    {
+        public float time;
+        public int lane;
     }
 }
