@@ -2,20 +2,26 @@ using UnityEngine;
 
 public class CampPanel : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Sprite[] panel;
+    private SpriteRenderer spriteRenderer;
+
+    bool hovering;
+
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = panel[0]; // Default sprite at start
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseEnter()
     {
-        
+        hovering = true;
+        spriteRenderer.sprite = panel[1]; // Change to hover sprite
     }
 
-    public void test()
+    void OnMouseExit()
     {
-        Debug.Log("interact");
+        hovering = false;
+        spriteRenderer.sprite = panel[0]; // Revert to default sprite
     }
 }
