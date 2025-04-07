@@ -24,4 +24,9 @@ public class CampPanel : MonoBehaviour
         hovering = false;
         spriteRenderer.sprite = panel[0]; // Revert to default sprite
     }
+
+    public void Select()
+    {
+        Debug.Log("Selected");
+    }
 }
