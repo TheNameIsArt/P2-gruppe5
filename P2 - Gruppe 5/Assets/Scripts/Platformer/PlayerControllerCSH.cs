@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 public class PlayerControllerCSH : MonoBehaviour
 {
-    public float maxSpeed = 30f;
+    public float maxSpeed = 10f;
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
     public float jumpImpulse = 10f;
@@ -95,10 +95,6 @@ public class PlayerControllerCSH : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
     }
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -111,6 +107,11 @@ public class PlayerControllerCSH : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
 
         animator.SetFloat(PlatformerAnimationStrings.yVelocity, rb.linearVelocity.y);
+
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
