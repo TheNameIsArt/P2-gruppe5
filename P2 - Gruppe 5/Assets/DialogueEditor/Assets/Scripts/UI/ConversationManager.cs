@@ -57,6 +57,10 @@ namespace DialogueEditor
         // Default values
         public Sprite BlankSprite;
 
+        // marcus added this. No boom plz!
+        public bool skipAllowed = false;
+        //public bool isEnded = false;
+
         // Getter properties
         public bool IsConversationActive
         {
@@ -72,10 +76,12 @@ namespace DialogueEditor
         public int m_targetScrollTextCount;
         private eState m_state;
         private float m_stateTime;
-        
+
         private Conversation m_conversation;
         private SpeechNode m_currentSpeech;
         private OptionNode m_selectedOption;
+
+
 
         // Selection options
         private List<UIConversationButton> m_uiOptions;
@@ -156,6 +162,7 @@ namespace DialogueEditor
 
         public void EndConversation()
         {
+
             SetState(eState.TransitioningDialogueOff);
 
             if (OnConversationEnded != null)
@@ -191,6 +198,7 @@ namespace DialogueEditor
 
             UIConversationButton button = m_uiOptions[m_currentSelectedIndex];
             button.OnButtonPressed();
+
         }
 
         public void AlertHover(UIConversationButton button)
@@ -218,7 +226,7 @@ namespace DialogueEditor
                 LogWarning("parameter \'" + paramName + "\' does not exist.");
             }
         }
-        
+
         public void SetBool(string paramName, bool value)
         {
             eParamStatus status;
@@ -258,10 +266,17 @@ namespace DialogueEditor
         //marcus added this. No boom plz!
         public void ScrollingText_Skip()
         {
+            if (!skipAllowed) return;
+            //if (hasAdvanced) return; // Prevent auto-advancing when the user has pressed a button
+            skipAllowed = false;
             m_elapsedScrollTime = 0f;
             m_scrollIndex = m_targetScrollTextCount;
             DialogueText.maxVisibleCharacters = m_scrollIndex;
-            SetState(eState.TransitioningOptionsOn);
+            if (m_scrollIndex >= m_targetScrollTextCount)
+            {
+                SetState(eState.TransitioningOptionsOn);
+                //hasAdvanced = true; // Allow auto-advancing after skipping
+            }
         }
 
         //--------------------------------------
@@ -347,6 +362,7 @@ namespace DialogueEditor
 
         private void ScrollingText_Update()
         {
+            skipAllowed = true;
             const float charactersPerSecond = 1500;
             float timePerChar = (60.0f / charactersPerSecond);
             timePerChar *= ScrollSpeed;
@@ -363,17 +379,19 @@ namespace DialogueEditor
                 // Finished?
                 if (m_scrollIndex >= m_targetScrollTextCount)
                 {
+                    skipAllowed = false;
                     SetState(eState.TransitioningOptionsOn);
                 }
             }
 
         }
 
-  
+
 
 
         private void TransitionOptionsOn_Update()
         {
+
             m_stateTime += Time.deltaTime;
             float t = m_stateTime / TRANSITION_TIME;
 
@@ -405,6 +423,7 @@ namespace DialogueEditor
 
         private void TransitionOptionsOff_Update()
         {
+            
             m_stateTime += Time.deltaTime;
             float t = m_stateTime / TRANSITION_TIME;
 
@@ -558,7 +577,7 @@ namespace DialogueEditor
             else
             {
                 SetState(eState.TransitioningOptionsOn);
-            }            
+            }
         }
 
 
@@ -694,14 +713,16 @@ namespace DialogueEditor
                         // If there was no valid speech node (due to no conditions being met) this becomes a None button type
                         if (next == null)
                         {
+
                             uiOption.SetupButton(UIConversationButton.eButtonType.End, null, endFont: m_conversation.EndConversationFont);
+
                         }
                         // Else, valid speech node found
                         else
                         {
                             uiOption.SetupButton(UIConversationButton.eButtonType.Speech, next, continueFont: m_conversation.ContinueFont);
                         }
-                        
+
                     }
                     else if (m_currentSpeech.ConnectionType == Connection.eConnectionType.None)
                     {
