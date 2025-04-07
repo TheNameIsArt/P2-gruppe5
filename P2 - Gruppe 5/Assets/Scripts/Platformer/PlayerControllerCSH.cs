@@ -6,9 +6,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 public class PlayerControllerCSH : MonoBehaviour
 {
+    public float maxSpeed = 10f;
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
     public float jumpImpulse = 10f;
+    public float jumpHoldTime = 0.2f; // Maximum time allowed for higher jumps
+    public float jumpCutMultiplier = 0.5f; // How much to reduce velocity when releasing early
+    private float jumpTimeCounter;
+    private bool isJumping;
     Vector2 moveInput;
     TouchingDirections touchingDirections;
 
@@ -90,10 +95,6 @@ public class PlayerControllerCSH : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
     }
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -102,9 +103,15 @@ public class PlayerControllerCSH : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
 
         animator.SetFloat(PlatformerAnimationStrings.yVelocity, rb.linearVelocity.y);
+
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -147,6 +154,17 @@ public class PlayerControllerCSH : MonoBehaviour
         {
             animator.SetTrigger(PlatformerAnimationStrings.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
+            isJumping = true;
+            jumpTimeCounter = jumpHoldTime;
+        }
+
+        if (context.canceled && isJumping)
+        {
+            if (rb.linearVelocity.y > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+            }
+            isJumping = false;
         }
     }
 }
