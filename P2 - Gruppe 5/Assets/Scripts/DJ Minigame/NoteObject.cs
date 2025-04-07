@@ -9,24 +9,25 @@ public class NoteObject : MonoBehaviour
     public float pressWindowTime = 0.5f;
 
     private float timeWhenActivated;
-    private static bool hasStartedMusic = false;
 
     void Start()
     {
-        timeWhenActivated = -1f; 
+        timeWhenActivated = -1f;
     }
 
     void Update()
     {
+        // Check if the note's Y position is less than or equal to -2.6
+        if (transform.position.y <= -2.5f && !DjGameManager.instance.HasStartedMusic) //Tester pt. med 2.5
+        {
+            DjGameManager.instance.StartMusic();  // Start the music
+            DjGameManager.instance.HasStartedMusic = true;  // Mark that music has started
+            Debug.Log("Music Started");  // Debugging output to confirm music starts
+        }
+
+        // Check for input when the note can be pressed
         if (canBePressed && Input.GetKeyDown(keyToPress))
         {
-            // Start the music from the GameManager if it's the first note hit
-            if (!hasStartedMusic)
-            {
-                DjGameManager.instance.StartMusic();
-                hasStartedMusic = true;
-            }
-
             gameObject.SetActive(false);
 
             if (Mathf.Abs(transform.position.y - (-2.6f)) > 0.25f)
@@ -49,6 +50,7 @@ public class NoteObject : MonoBehaviour
             }
         }
 
+        // Missed note check
         if (transform.position.y < missedPositionY)
         {
             if (timeWhenActivated >= 0 && Time.time - timeWhenActivated > pressWindowTime)
@@ -62,7 +64,7 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Activator")
+        if (other.CompareTag("Activator"))
         {
             canBePressed = true;
             timeWhenActivated = Time.time;
@@ -71,7 +73,7 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Activator")
+        if (other.CompareTag("Activator"))
         {
             canBePressed = false;
         }

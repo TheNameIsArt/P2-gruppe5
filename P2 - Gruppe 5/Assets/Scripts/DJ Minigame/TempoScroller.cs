@@ -3,7 +3,7 @@ using UnityEngine;
 public class TempoScroller : MonoBehaviour
 {
     
-    public float musicTempo = 125f;
+    private float musicTempo = 125f;
 
     public bool hasStarted; //Knapperne bevæger sig automatisk når hasStarted = true. Ellers skal man kligge for at de bevæger sig
     void Start()

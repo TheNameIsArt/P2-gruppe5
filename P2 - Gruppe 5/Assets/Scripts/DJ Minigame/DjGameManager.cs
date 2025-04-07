@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DjGameManager : MonoBehaviour
 {
@@ -10,17 +11,38 @@ public class DjGameManager : MonoBehaviour
     public TempoScroller tempoScroller;
 
     public static DjGameManager instance;
+    public bool HasStartedMusic { get; set; } = false; // Track if the music has started
     public int currentScore;
+
+    private int maxMisses = 5; //Amount if misses allowed
+    private int currentMisses = 0;
+
     private int scorePerGoodNote = 100;
     private int scorePerGreatNote = 125;
     private int scorePerPerfectNote = 150;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI multiplierText;
+    public TextMeshProUGUI missCounterText;
 
     public int currentMultiplier;
     public int multiplierTracker;
     public int[] multiplierThresholds;
+
+    public GameObject gameoverUI;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
 
     void Start()
     {
@@ -55,39 +77,65 @@ public class DjGameManager : MonoBehaviour
         
     }
 
-public void GoodHit()
-{
-    currentScore += scorePerGoodNote * currentMultiplier;
-    NoteHit();
-}
+    public void StartMusic()
+    {
+        if (!music.isPlaying)
+        {
+            music.Play();
+        }
+    }
 
-public void GreatHit()
-{
-    currentScore += scorePerGreatNote * currentMultiplier;
-    NoteHit();
-}
+    public void GoodHit()
+    {
+        currentScore += scorePerGoodNote * currentMultiplier;
+        NoteHit();
+    }
 
-public void PerfectHit()
-{
-    currentScore += scorePerPerfectNote * currentMultiplier;
-    NoteHit();
-}
+    public void GreatHit()
+    {
+        currentScore += scorePerGreatNote * currentMultiplier;
+        NoteHit();
+    }
+
+    public void PerfectHit()
+    {
+        currentScore += scorePerPerfectNote * currentMultiplier;
+        NoteHit();
+    }
 
     public void NoteMissed()
     {
         Debug.Log("Missed note");
+        currentMisses++;
 
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiplierText.text = "Multiplier: x" + currentMultiplier;
+        missCounterText.text = "Misses: " + currentMisses;
+
+        if (currentMisses >= maxMisses)
+        {
+            GameOver();
+        }
+
     }
 
-    public void StartMusic()
-{
-    if (!music.isPlaying)
+    void GameOver()
     {
-        music.Play();
+        Debug.Log("Game Over!");
+        Time.timeScale = 0f; //Game gets paused
+        gameoverUI.SetActive(true);
+        music.Stop();
     }
-}
+
+    public void TryAgain()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
 }
+
+
+
