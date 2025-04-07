@@ -1,8 +1,11 @@
+using DialogueEditor;
 using UnityEngine;
 
 public class SoundIsolationManager : MonoBehaviour
 {
     [SerializeField] GameObject[] soundWaves;
+    private bool allOff = false;
+    [SerializeField] private NPCConversation myConversation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -38,6 +41,18 @@ public class SoundIsolationManager : MonoBehaviour
     {
         // Add your logic here for when all sound waves are turned off
         Debug.Log("All sound waves are turned off!");
+        if (!allOff)
+        {
+            allOff = true;
+            if (myConversation != null)
+            {
+                ConversationManager.Instance.StartConversation(myConversation);
+            }
+            else
+            {
+                Debug.LogWarning("No conversation assigned to the ConversationEditer.");
+            }
+        }
 
     }
 }
