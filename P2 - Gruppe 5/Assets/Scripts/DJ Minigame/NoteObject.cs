@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NoteObject : MonoBehaviour
 {
@@ -9,24 +10,20 @@ public class NoteObject : MonoBehaviour
     public float pressWindowTime = 0.5f;
 
     private float timeWhenActivated;
+    private bool buttonPress;
 
     void Start()
     {
         timeWhenActivated = -1f;
+        buttonPress = false;
     }
 
     void Update()
     {
-        // Check if the note's Y position is less than or equal to -2.6
-        if (transform.position.y <= -2.5f && !DjGameManager.instance.HasStartedMusic) //Tester pt. med 2.5
-        {
-             DjGameManager.instance.StartMusic();  // Start the music
-             DjGameManager.instance.HasStartedMusic = true;  // Mark that music has started
-             Debug.Log("Music Started");  // Debugging output to confirm music starts
-        }
-
+        
         // Check for input when the note can be pressed
-        if (canBePressed && Input.GetKeyDown(keyToPress))
+       
+        if (canBePressed && buttonPress) 
         {
             gameObject.SetActive(false);
 
@@ -59,6 +56,7 @@ public class NoteObject : MonoBehaviour
                 Instantiate(missEffect, transform.position, missEffect.transform.rotation);
                 gameObject.SetActive(false);
             }
+            buttonPress = false;
         }
     }
 
@@ -76,6 +74,14 @@ public class NoteObject : MonoBehaviour
         if (other.CompareTag("Activator"))
         {
             canBePressed = false;
+        }
+    }
+
+    public void ButtonPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            buttonPress = true;
         }
     }
 }

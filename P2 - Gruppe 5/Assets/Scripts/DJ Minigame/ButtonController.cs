@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ButtonController : MonoBehaviour
 {
@@ -17,12 +18,20 @@ public class ButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyToPress))
+       
+    }
+
+    public void ButtonPress(InputAction.CallbackContext context)
+    {
+        if (context.performed)
         {
             spriteRenderer.sprite = PressedImage; //Hvis der trykkes skifter billedet
         }
+    }
 
-        if(Input.GetKeyUp(KeyToPress))
+    public void ButtonRelease(InputAction.CallbackContext context)
+    {
+        if (context.performed)
         {
             spriteRenderer.sprite = defaultImage; //Giver man slip skifter billedet tilbage
         }

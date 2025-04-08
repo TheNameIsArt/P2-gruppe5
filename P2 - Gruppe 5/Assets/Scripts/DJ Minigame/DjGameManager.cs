@@ -30,6 +30,7 @@ public class DjGameManager : MonoBehaviour
     public int[] multiplierThresholds;
 
     public GameObject gameoverUI;
+    private float musicDelay = 3.65f;
 
     void Awake()
     {
@@ -49,6 +50,7 @@ public class DjGameManager : MonoBehaviour
         instance = this;
         scoreText.text = "Score: 0";
         currentMultiplier = 1;
+        Invoke ("StartMusic", musicDelay);
     }
 
     void Update()
@@ -56,26 +58,27 @@ public class DjGameManager : MonoBehaviour
         
     }
 
-    public void NoteHit()
-    {
-        Debug.Log("Hit on time");
-        if (currentMultiplier - 1 < multiplierThresholds.Length)
-        {
-            multiplierTracker ++;
+   public void NoteHit()
+{
+    Debug.Log("Hit on time");
 
-        if(multiplierThresholds[currentMultiplier -1] <= multiplierTracker)
+    // Handle multiplier progression only if within range
+    if (currentMultiplier - 1 < multiplierThresholds.Length)
+    {
+        multiplierTracker++;
+
+        if (multiplierThresholds[currentMultiplier - 1] <= multiplierTracker)
         {
             multiplierTracker = 0;
             currentMultiplier++;
         }
-
-        multiplierText.text = "Multiplier: x" + currentMultiplier;
-
-        //currentScore += scorePerGoodNote * currentMultiplier;
-        scoreText.text = "Score: " + currentScore;
-        }
-        
     }
+
+    // Always update the multiplier and score display
+    multiplierText.text = "Multiplier: x" + currentMultiplier;
+    scoreText.text = "Score: " + currentScore;
+}
+
 
     public void StartMusic()
     {
