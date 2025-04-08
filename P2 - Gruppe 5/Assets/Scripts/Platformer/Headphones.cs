@@ -2,26 +2,33 @@ using UnityEngine;
 
 public class Headphones : MonoBehaviour
 {
-    public float volumeReduction = 0.3f; // Adjust this for effect strength
-
-
-    private void Update()
-    {
-       
-    }
+    public GameObject pickupEffect; // Assign the particle effect prefab in the Inspector
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Speaker[] speakers = FindObjectsOfType<Speaker>();
-
-            foreach (Speaker speaker in speakers)
+            // Spawn the particle effect at the headphones' position
+            if (pickupEffect != null)
             {
-                speaker.SetVolumeModifier(volumeReduction);
+                Instantiate(pickupEffect, transform.position, Quaternion.identity);
             }
 
-            Destroy(gameObject);
+            // Inform PlayerControllerCSH directly (if it has a headphone reaction)
+            PlayerControllerCSH playerController = other.GetComponent<PlayerControllerCSH>();
+            if (playerController != null)
+            {
+                playerController.OnPickupHeadphones(); // Trigger a method to handle headphone logic
+            }
+
+            // Reduce speaker volume
+            Speaker[] speakers = FindObjectsOfType<Speaker>();
+            foreach (Speaker speaker in speakers)
+            {
+                speaker.SetVolumeModifier(0.3f);
+            }
+
+            Destroy(gameObject); // Remove headphones after pickup
         }
     }
 }
