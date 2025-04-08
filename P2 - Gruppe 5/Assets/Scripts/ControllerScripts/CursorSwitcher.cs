@@ -13,6 +13,7 @@ public class InputDeviceSwitcher : MonoBehaviour
     [SerializeField] private float switchDelay = 0.01f; // Delay in seconds between input device switches
     private float lastSwitchTime = 0f; // Time of the last input device switch
 
+
     private void Start()
     {
         InputSystem.onActionChange += OnActionChange;

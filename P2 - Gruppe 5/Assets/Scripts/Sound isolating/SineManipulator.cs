@@ -14,6 +14,7 @@ public class SineManipulator : MonoBehaviour
     public GameObject scannerUI;
     public bool Won = false;
     public AudioSource currentAudio;
+    InputDeviceSwitcher inputDeviceSwitcher;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class SineManipulator : MonoBehaviour
         controledSinewave = GetComponent<Sinewave>();
         scannerUI = GameObject.Find("Scanner UI");
         targetSinewave = GameObject.Find("Sinewave").GetComponent<Sinewave>();
+        
 
         float randomValue1 = Random.Range(0.0f, 1.0f);
         float randomValue2 = Random.Range(0.0f, 1.0f);

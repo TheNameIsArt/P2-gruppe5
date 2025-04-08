@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5347810400197188231}
   - component: {fileID: 5136545083666211076}
   - component: {fileID: 1087924279373239960}
+  - component: {fileID: 9095647035725232625}
   m_Layer: 5
   m_Name: Cursor Canvas
   m_TagString: Untagged
@@ -102,6 +103,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &9095647035725232625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814493804598012610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf5fcabf1ab144408883bb0780ad6f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualMouseObject: {fileID: 5726894179479584178}
+  realMouseObject: {fileID: 0}
+  gamepadInputObject: {fileID: 0}
+  switchDelay: 0.1
 --- !u!1001 &5478952924412115755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,9 +245,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 248583421415786137, guid: c4fdcf9a3cbfe154dba28e71dc51ce85, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 947142969525834198}
-    - targetCorrespondingSourceObject: {fileID: 248583421415786137, guid: c4fdcf9a3cbfe154dba28e71dc51ce85, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6187867428196742075}
   m_SourcePrefab: {fileID: 100100000, guid: c4fdcf9a3cbfe154dba28e71dc51ce85, type: 3}
 --- !u!224 &3998322231606411272 stripped
@@ -243,20 +257,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 248583421415786137, guid: c4fdcf9a3cbfe154dba28e71dc51ce85, type: 3}
   m_PrefabInstance: {fileID: 5478952924412115755}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &947142969525834198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5726894179479584178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf5fcabf1ab144408883bb0780ad6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualMouse: {fileID: 0}
-  cursorImage: {fileID: 0}
 --- !u!114 &6187867428196742075
 MonoBehaviour:
   m_ObjectHideFlags: 0
