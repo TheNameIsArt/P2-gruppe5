@@ -13,6 +13,7 @@ public class SineManipulator : MonoBehaviour
     public Slider progressBar;
     public GameObject scannerUI;
     public bool Won = false;
+    public AudioSource currentAudio;
 
     private void Awake()
     {
@@ -31,10 +32,6 @@ public class SineManipulator : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-
-    }
 
     void FixedUpdate()
     {
@@ -87,7 +84,6 @@ public class SineManipulator : MonoBehaviour
             ProgressBarUnfilling();
         }
     }
-
     private void ProgressBarFilling()
     {
         if (!progressBar.enabled)
@@ -97,6 +93,13 @@ public class SineManipulator : MonoBehaviour
 
         progressBar.value += 0.01f;
 
+        // Gradually reduce the volume of the current audio
+        if (currentAudio != null && currentAudio.volume > 0f)
+        {
+            currentAudio.volume -= 0.01f; // Reduce volume by 0.01 per frame
+            currentAudio.volume = Mathf.Clamp(currentAudio.volume, 0f, 1f); // Ensure volume doesn't go below 0
+        }
+
         if (progressBar.value >= 1f)
         {
             Debug.Log("You win!");
@@ -104,17 +107,35 @@ public class SineManipulator : MonoBehaviour
             progressBar.value = 0f;
             targetSinewave.Reroll();
             scannerUI.SetActive(false);
+
+            // Optionally stop the audio when the progress bar is full
+            if (currentAudio != null)
+            {
+                currentAudio.Stop();
+            }
         }
     }
 
     private void ProgressBarUnfilling()
     {
+        // Gradually increases the volume of the current audio
+        if (currentAudio != null && currentAudio.volume > 0f)
+        {
+            currentAudio.volume += 0.01f; // Reduce volume by 0.01 per frame
+            currentAudio.volume = Mathf.Clamp(currentAudio.volume, 0f, 1f); // Ensure volume doesn't go below 0
+        }
         progressBar.value -= 0.01f;
 
         if (progressBar.value <= 0f)
         {
             progressBar.value = 0f;
             progressBar.enabled = false;
+
+            // Optionally reset the audio volume when the progress bar is empty
+            if (currentAudio != null)
+            {
+                currentAudio.volume = 1f; // Reset volume to full
+            }
         }
     }
 }

@@ -44,6 +44,18 @@ public class ButtonScriptSound : MonoBehaviour
                 buttonPressed = true;
                 Cursor.lockState = CursorLockMode.Locked;
 
+                // Assign this GameObject's AudioSource to the SineManipulator's currentAudio
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (audioSource != null)
+                {
+                    SineManipulator.currentAudio = audioSource;
+                    Debug.Log("AudioSource assigned to SineManipulator.");
+                }
+                else
+                {
+                    Debug.LogWarning("No AudioSource found on this GameObject.");
+                }
+
                 // Disable all buttons while the action is in progress
                 DisableAllButtons();
             }

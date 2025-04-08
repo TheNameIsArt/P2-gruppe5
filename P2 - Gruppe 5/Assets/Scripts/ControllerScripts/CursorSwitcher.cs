@@ -86,7 +86,7 @@ public class InputDeviceSwitcher : MonoBehaviour
             gamepadInputObject.SetActive(activeInput == virtualMouseObject); // Gamepad uses virtual mouse
         }
 
-        // Control the system cursor visibility
+        // Control the system cursor visibility and lock state
         if (activeInput == realMouseObject)
         {
             Cursor.visible = true; // Show the system cursor for the real mouse
@@ -95,7 +95,7 @@ public class InputDeviceSwitcher : MonoBehaviour
         else
         {
             Cursor.visible = false; // Hide the system cursor for other devices
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Confined; // Confine the cursor to the game window but allow clicks
         }
     }
 }
