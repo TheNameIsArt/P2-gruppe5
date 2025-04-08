@@ -44,7 +44,9 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
         Animate();
+        
         isConversationActive = ConversationManager.Instance.IsConversationActive;
+
         if (!isConversationActive && !playerInput.enabled)
         {
             playerInput.enabled = true; // Enable the PlayerInput component
