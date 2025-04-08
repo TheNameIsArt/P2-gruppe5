@@ -14,11 +14,11 @@ public class Headphones : MonoBehaviour
                 Instantiate(pickupEffect, transform.position, Quaternion.identity);
             }
 
-            // Enable player headphone animations
-            Animator playerAnimator = other.GetComponent<Animator>();
-            if (playerAnimator != null)
+            // Inform PlayerControllerCSH directly (if it has a headphone reaction)
+            PlayerControllerCSH playerController = other.GetComponent<PlayerControllerCSH>();
+            if (playerController != null)
             {
-                playerAnimator.SetBool("HasHeadphones", true);
+                playerController.OnPickupHeadphones(); // Trigger a method to handle headphone logic
             }
 
             // Reduce speaker volume
