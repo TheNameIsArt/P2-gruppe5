@@ -15,9 +15,18 @@ public class ButtonScriptSound : MonoBehaviour
 
     private void Start()
     {
-        // Find all Button components in the scene and add them to the list
-        Button[] buttons = FindObjectsOfType<Button>();
-        allButtons.AddRange(buttons);
+        // Find all GameObjects with the "SoundWaves" tag
+        GameObject[] soundWaveObjects = GameObject.FindGameObjectsWithTag("SoundWaves");
+
+        // Get the Button component from each GameObject and add it to the list
+        foreach (GameObject obj in soundWaveObjects)
+        {
+            Button button = obj.GetComponent<Button>();
+            if (button != null)
+            {
+                allButtons.Add(button);
+            }
+        }
     }
 
     public void OnButtonClick()

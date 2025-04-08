@@ -972,6 +972,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6312483274585327361, guid: 3e51f85175f9d6249ad12be4d46b44e8, type: 3}
   m_PrefabInstance: {fileID: 1857001130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &785236936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5726894179479584178, guid: 3556b6d9cf1c93b428cf43b3b1efe5d1, type: 3}
+  m_PrefabInstance: {fileID: 1123666171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &847314332 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6312483274585327361, guid: 3e51f85175f9d6249ad12be4d46b44e8, type: 3}
@@ -1621,6 +1626,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cursor Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 947142969525834198, guid: 3556b6d9cf1c93b428cf43b3b1efe5d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 947142969525834198, guid: 3556b6d9cf1c93b428cf43b3b1efe5d1, type: 3}
+      propertyPath: switchDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 947142969525834198, guid: 3556b6d9cf1c93b428cf43b3b1efe5d1, type: 3}
+      propertyPath: virtualMouseObject
+      value: 
+      objectReference: {fileID: 785236936}
     - target: {fileID: 1200591798348739238, guid: 3556b6d9cf1c93b428cf43b3b1efe5d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
