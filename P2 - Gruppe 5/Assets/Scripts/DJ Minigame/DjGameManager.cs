@@ -14,7 +14,7 @@ public class DjGameManager : MonoBehaviour
     public bool HasStartedMusic { get; set; } = false; // Track if the music has started
     public int currentScore;
 
-    private int maxMisses = 5; //Amount if misses allowed
+    private int maxMisses = 10; //Amount if misses allowed
     private int currentMisses = 0;
 
     private int scorePerGoodNote = 100;
@@ -83,7 +83,7 @@ public class DjGameManager : MonoBehaviour
         {
             music.Play();
         }
-    }
+    } 
 
     public void GoodHit()
     {

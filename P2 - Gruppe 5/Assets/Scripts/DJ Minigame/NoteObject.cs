@@ -20,9 +20,9 @@ public class NoteObject : MonoBehaviour
         // Check if the note's Y position is less than or equal to -2.6
         if (transform.position.y <= -2.5f && !DjGameManager.instance.HasStartedMusic) //Tester pt. med 2.5
         {
-            DjGameManager.instance.StartMusic();  // Start the music
-            DjGameManager.instance.HasStartedMusic = true;  // Mark that music has started
-            Debug.Log("Music Started");  // Debugging output to confirm music starts
+             DjGameManager.instance.StartMusic();  // Start the music
+             DjGameManager.instance.HasStartedMusic = true;  // Mark that music has started
+             Debug.Log("Music Started");  // Debugging output to confirm music starts
         }
 
         // Check for input when the note can be pressed
