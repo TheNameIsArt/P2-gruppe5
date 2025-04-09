@@ -4,19 +4,26 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Activator
+  - InteractionZone
+  - UI
+  - WireEnd
+  - WireStart
+  - InteractionButton
+  - ConversationZone
+  - SoundWaves
+  - Speaker
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
   - 
   - 
   - 
-  - 
+  - Mirror
   - 
   - 
   - 
@@ -39,14 +46,32 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 1148377433
+    locked: 0
+  - name: Background
+    uniqueID: 1320260519
+    locked: 0
+  - name: Buildings
+    uniqueID: 1819835323
+    locked: 0
+  - name: Middleground
+    uniqueID: 1301078847
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Targetboxes
-    uniqueID: 2127807663
+  - name: Player
+    uniqueID: 1323848801
     locked: 0
-  - name: Letters
-    uniqueID: 715726853
+  - name: NPC
+    uniqueID: 3665876091
+    locked: 0
+  - name: Foreground
+    uniqueID: 79694891
+    locked: 0
+  - name: UI
+    uniqueID: 1750803837
     locked: 0
   m_RenderingLayers:
   - Default
