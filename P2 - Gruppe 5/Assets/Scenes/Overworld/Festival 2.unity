@@ -1643,7 +1643,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 4.6793737
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3208,6 +3208,24 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: -1126409950, guid: 4f6a0e5f83e1a734485f745bb4aa412e, type: 3}
   Audio: {fileID: 0}
+--- !u!1 &1237834376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3813544785027290341, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
+  m_PrefabInstance: {fileID: 5591568153908818961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1237834381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237834376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e34d1c2f0fac5f47ac501fa7897708f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionsAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1001 &1263988219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4762,10 +4780,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueSystemCanvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5450575174579705899, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3813544785027290341, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1237834381}
   m_SourcePrefab: {fileID: 100100000, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
