@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class CursorScript : MonoBehaviour
 {
-    public float clickRange = 50f; // Max distance to click a button
+    //public float clickRange = 50f; // Max distance to click a button
     public float moveSpeed = 10f; // Speed of object movement
 
     void Start()
@@ -14,14 +14,7 @@ public class CursorScript : MonoBehaviour
 
     void Update()
     {
-        Cursor.visible = false; // Hide the cursor
-
         MoveWithMouse();
-
-        if (Input.GetMouseButtonDown(0)) // Left-click to simulate button press
-        {
-            PushButton();
-        }
     }
 
     void MoveWithMouse()
@@ -37,7 +30,7 @@ public class CursorScript : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
-    Button FindClosestButtonInRange()
+   /* Button FindClosestButtonInRange()
     {
         Button[] buttons = FindObjectsOfType<Button>();
         Button closest = null;
@@ -68,5 +61,5 @@ public class CursorScript : MonoBehaviour
             Debug.Log("No button within range!");
         }
     }
-
+   */
 }
