@@ -29,14 +29,14 @@ public class NoteObject : MonoBehaviour
     spriteRenderer = GetComponent<SpriteRenderer>();
     if (spriteRenderer != null)
     {
-        spriteRenderer.enabled = false; // Start invisible
+        spriteRenderer.enabled = false; // hide at start
     }
 }
 
 
+
     void Update()
 {
-    // Reveal the note once it reaches Y = appearY
     if (!hasAppeared && transform.position.y <= noteAppearY)
     {
         hasAppeared = true;
@@ -45,6 +45,7 @@ public class NoteObject : MonoBehaviour
             spriteRenderer.enabled = true;
         }
     }
+
 
     // Missed note check
     if (transform.position.y < missedPositionY)
