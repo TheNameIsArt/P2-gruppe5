@@ -4,26 +4,85 @@ using UnityEngine.InputSystem;
 public class NoteObject : MonoBehaviour
 {
     public bool canBePressed;
-    public KeyCode keyToPress;
+    public InputAction notePressedAction; 
     public GameObject goodHit, greatHit, perfectHit, missEffect;
     public float missedPositionY = -4f;
     public float pressWindowTime = 0.5f;
+    private float noteAppearY = 5f; //Y position where the note should be visible
+    private bool hasAppeared = false;
+    private SpriteRenderer spriteRenderer;
+
+
 
     private float timeWhenActivated;
-    private bool buttonPress;
 
     void Start()
+{
+    timeWhenActivated = -1f;
+
+    if (notePressedAction != null)
     {
-        timeWhenActivated = -1f;
-        buttonPress = false;
+        notePressedAction.Enable();
+        notePressedAction.performed += ButtonPressed;
     }
 
-    void Update()
+    spriteRenderer = GetComponent<SpriteRenderer>();
+    if (spriteRenderer != null)
     {
-        
-        // Check for input when the note can be pressed
-       
-        if (canBePressed && buttonPress) 
+        spriteRenderer.enabled = false; // Start invisible
+    }
+}
+
+
+    void Update()
+{
+    // Reveal the note once it reaches Y = appearY
+    if (!hasAppeared && transform.position.y <= noteAppearY)
+    {
+        hasAppeared = true;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.enabled = true;
+        }
+    }
+
+    // Missed note check
+    if (transform.position.y < missedPositionY)
+    {
+        if (timeWhenActivated >= 0 && Time.time - timeWhenActivated > pressWindowTime)
+        {
+            DjGameManager.instance.NoteMissed();
+            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+            gameObject.SetActive(false);
+        }
+    }
+}
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Activator"))
+        {
+            Debug.Log("Entered activator!");
+            canBePressed = true;
+            timeWhenActivated = Time.time;
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Activator"))
+        {
+            canBePressed = false;
+        }
+    }
+
+    public void ButtonPressed(InputAction.CallbackContext context)
+    {
+       Debug.Log("Input performed!");
+
+            if (canBePressed) 
         {
             gameObject.SetActive(false);
 
@@ -46,42 +105,11 @@ public class NoteObject : MonoBehaviour
                 Instantiate(perfectHit, transform.position, perfectHit.transform.rotation);
             }
         }
-
-        // Missed note check
-        if (transform.position.y < missedPositionY)
-        {
-            if (timeWhenActivated >= 0 && Time.time - timeWhenActivated > pressWindowTime)
-            {
-                DjGameManager.instance.NoteMissed();
-                Instantiate(missEffect, transform.position, missEffect.transform.rotation);
-                gameObject.SetActive(false);
-            }
-            buttonPress = false;
-        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnDestroy()
     {
-        if (other.CompareTag("Activator"))
-        {
-            canBePressed = true;
-            timeWhenActivated = Time.time;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Activator"))
-        {
-            canBePressed = false;
-        }
-    }
-
-    public void ButtonPressed(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            buttonPress = true;
-        }
+        notePressedAction.performed -= ButtonPressed;
+        notePressedAction.Disable();       
     }
 }

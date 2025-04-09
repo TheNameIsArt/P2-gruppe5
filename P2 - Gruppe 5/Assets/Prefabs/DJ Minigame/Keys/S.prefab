@@ -104,7 +104,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
-  keyToPress: 115
+  notePressedAction:
+    m_Name: Note Pressed
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bb0a63a3-97a1-4e24-9b55-4cedab970084
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 870557bc-e553-4766-aa20-1da83568dc8e
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Note Pressed
+      m_Flags: 0
+    m_Flags: 0
   goodHit: {fileID: 5359402209980570094, guid: 1dcd3328d20bfca48b4f58ff2bcfa988, type: 3}
   greatHit: {fileID: 3250051553618639925, guid: bea92a39db0f264439b0e1bde77b3d28, type: 3}
   perfectHit: {fileID: 8634546747771758998, guid: b5210070c63261d43b980f4b5e772439, type: 3}
@@ -141,7 +157,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
