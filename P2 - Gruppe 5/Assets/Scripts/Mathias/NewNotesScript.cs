@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class NoteObject : MonoBehaviour
 {
-    /*public bool canBePressed;
+    public bool canBePressed;
     public InputAction notePressAction; // Reference to the InputAction
     public GameObject goodHit, greatHit, perfectHit, missEffect;
     public float missedPositionY = -4f;
@@ -97,5 +97,5 @@ public class NoteObject : MonoBehaviour
             notePressAction.performed -= OnNotePressed;
             notePressAction.Disable();
         }
-    }*/
+    }
 }
