@@ -25,11 +25,13 @@ public class Level_Changer : MonoBehaviour
     {
         Level_Connection.activeConnection = connection;
         //LoadNextScene();
-        SceneManager.LoadScene(targetSceneName);
+        //SceneManager.LoadScene(targetSceneName);
+        SceneFader.Instance.FastFadeToScene(targetSceneName);
     }
     public void LoadNextScene() 
     {
-        StartCoroutine(LoadScene(targetSceneName));
+        //StartCoroutine(LoadScene(targetSceneName));
+        
     }
 
     IEnumerator LoadScene(string targetSceneName)

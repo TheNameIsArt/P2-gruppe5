@@ -40,10 +40,10 @@ public class SoundIsolationManager : MonoBehaviour
     void OnAllSoundWavesOff()
     {
         // Add your logic here for when all sound waves are turned off
-        Debug.Log("All sound waves are turned off!");
         if (!allOff)
         {
             allOff = true;
+            Debug.Log("All sound waves are turned off!");
             if (myConversation != null)
             {
                 ConversationManager.Instance.StartConversation(myConversation);
