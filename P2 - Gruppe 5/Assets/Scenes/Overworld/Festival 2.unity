@@ -1428,6 +1428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343698917}
   - component: {fileID: 343698916}
+  - component: {fileID: 343698918}
   m_Layer: 5
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -1466,6 +1467,19 @@ RectTransform:
   m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &343698918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343698915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e34d1c2f0fac5f47ac501fa7897708f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionsAsset: {fileID: 0}
 --- !u!4 &478990986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
@@ -1643,7 +1657,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 4.6793737
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4762,7 +4776,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueSystemCanvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5450575174579705899, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

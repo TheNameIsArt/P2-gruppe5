@@ -19,10 +19,13 @@ public class ExampleInputManager : MonoBehaviour
 
             if (uiActionMap != null)
             {
-                uiActionMap.FindAction("Navigate").performed += ctx => OnNavigate(ctx);
-                uiActionMap.FindAction("Submit").performed += ctx => OnSubmit(ctx);
-                uiActionMap.FindAction("Cancel").performed += ctx => OnCancel(ctx);
-                uiActionMap.FindAction("Click").performed += ctx => OnClick(ctx); // Bind the OnClick method
+                // Ensure subscriptions are not duplicated
+                UnsubscribeInputActions();
+
+                uiActionMap.FindAction("Navigate").performed += OnNavigate;
+                uiActionMap.FindAction("Submit").performed += OnSubmit;
+                uiActionMap.FindAction("Cancel").performed += OnCancel;
+                uiActionMap.FindAction("Click").performed += OnClick; // Bind the OnClick method
             }
             else
             {
@@ -32,6 +35,23 @@ public class ExampleInputManager : MonoBehaviour
         else
         {
             Debug.LogError("Input Actions Asset is not assigned!");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from input actions to prevent memory leaks
+        UnsubscribeInputActions();
+    }
+
+    private void UnsubscribeInputActions()
+    {
+        if (uiActionMap != null)
+        {
+            uiActionMap.FindAction("Navigate").performed -= OnNavigate;
+            uiActionMap.FindAction("Submit").performed -= OnSubmit;
+            uiActionMap.FindAction("Cancel").performed -= OnCancel;
+            uiActionMap.FindAction("Click").performed -= OnClick;
         }
     }
 
