@@ -2,31 +2,63 @@ using UnityEngine;
 
 public class CampPanel : MonoBehaviour
 {
-    public Sprite[] panel;
+    public Sprite[] panel; // [0] = default, [1] = hover
     private SpriteRenderer spriteRenderer;
 
-    bool hovering;
+    public bool hovering;
+    private bool clicked;
+
+    public bool panelActivated;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = panel[0]; // Default sprite at start
+        spriteRenderer.sprite = panel[0];
+        panelActivated = false;
+    }
+
+    void Update()
+    {
+        // Detect left-click anywhere
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Check if we clicked on this sprite
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+            // If nothing was hit, or we hit something else
+            if (hit.collider == null || hit.collider.gameObject != gameObject)
+            {
+                ResetPanel(); // Reset the panel sprite
+            }
+        }
     }
 
     void OnMouseEnter()
     {
         hovering = true;
-        spriteRenderer.sprite = panel[1]; // Change to hover sprite
+        if (!clicked)
+            spriteRenderer.sprite = panel[1];
     }
 
     void OnMouseExit()
     {
         hovering = false;
-        spriteRenderer.sprite = panel[0]; // Revert to default sprite
+        if (!clicked)
+            spriteRenderer.sprite = panel[0];
     }
 
-    public void Select()
+    void OnMouseDown()
     {
-        Debug.Log("Selected");
+        clicked = true;
+        spriteRenderer.sprite = panel[1];
+        panelActivated = true;
+    }
+
+    void ResetPanel()
+    {
+        clicked = false;
+        panelActivated = false;
+        spriteRenderer.sprite = panel[0];
     }
 }
