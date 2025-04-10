@@ -10,12 +10,12 @@ public class Level_Changer : MonoBehaviour
     [SerializeField] private string targetSceneName;
     [SerializeField] private Transform spawnPoint;
 
-    public Animator animator;
-    public float transitionTime;
+    //public Animator animator;
+    //public float transitionTime;
 
     private void Start()
     {
-        if (connection == Level_Connection.activeConnection) 
+        if (connection == Level_Connection.activeConnection)
         {
             player.transform.position = spawnPoint.position;
         }
@@ -23,21 +23,26 @@ public class Level_Changer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D Player_test)
     {
-        Level_Connection.activeConnection = connection;
-        //LoadNextScene();
-        SceneManager.LoadScene(targetSceneName);
-    }
-    public void LoadNextScene() 
-    {
-        StartCoroutine(LoadScene(targetSceneName));
+        SetActiveConnection();
+        SceneFader.Instance.FastFadeToScene(targetSceneName);
     }
 
-    IEnumerator LoadScene(string targetSceneName)
+    public void SetActiveConnection()
+    {
+        Level_Connection.activeConnection = connection;
+    }
+
+    public void LoadNextScene()
+    {
+        //StartCoroutine(LoadScene(targetSceneName));
+    }
+
+    /*IEnumerator LoadScene(string targetSceneName)
     {
         animator.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(targetSceneName);
-    }
+    }*/
 }
