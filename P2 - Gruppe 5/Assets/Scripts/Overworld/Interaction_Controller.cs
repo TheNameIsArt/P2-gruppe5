@@ -1,3 +1,4 @@
+using DialogueEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,7 +8,6 @@ public class Interaction_Controller : MonoBehaviour
 
     void Start()
     {
-        
     }
     
     void Update()

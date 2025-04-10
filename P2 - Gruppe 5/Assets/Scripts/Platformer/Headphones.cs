@@ -21,11 +21,15 @@ public class Headphones : MonoBehaviour
                 playerAnimator.SetBool("HasHeadphones", true);
             }
 
-            // Reduce speaker volume
-            Speaker[] speakers = FindObjectsOfType<Speaker>();
-            foreach (Speaker speaker in speakers)
+            // Reduce speaker volume by tag instead of type
+            GameObject[] speakerObjects = GameObject.FindGameObjectsWithTag("Speaker");
+            foreach (GameObject speakerObject in speakerObjects)
             {
-                speaker.SetVolumeModifier(0.3f);
+                Speaker speaker = speakerObject.GetComponent<Speaker>();
+                if (speaker != null)
+                {
+                    speaker.SetVolumeModifier(0.3f);
+                }
             }
 
             Destroy(gameObject); // Remove headphones after pickup

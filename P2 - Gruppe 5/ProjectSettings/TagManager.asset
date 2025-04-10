@@ -6,6 +6,12 @@ TagManager:
   tags:
   - InteractionZone
   - UI
+  - WireEnd
+  - WireStart
+  - InteractionButton
+  - ConversationZone
+  - SoundWaves
+  - Speaker
   layers:
   - Default
   - TransparentFX
@@ -17,7 +23,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Mirror
   - 
   - 
   - 
@@ -58,8 +64,14 @@ TagManager:
   - name: Player
     uniqueID: 1323848801
     locked: 0
+  - name: NPC
+    uniqueID: 3665876091
+    locked: 0
   - name: Foreground
     uniqueID: 79694891
+    locked: 0
+  - name: UI
+    uniqueID: 1750803837
     locked: 0
   m_RenderingLayers:
   - Default
