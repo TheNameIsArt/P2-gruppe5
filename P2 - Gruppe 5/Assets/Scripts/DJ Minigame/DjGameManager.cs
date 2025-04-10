@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using DialogueEditor;
 
 public class DjGameManager : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class DjGameManager : MonoBehaviour
     public GameObject gameoverUI;
     private float musicDelay = 3.65f;
 
+    private bool isGameStarted = false; // Track if the game has started
+    private bool gameOver = false; // Track if the game is over
+
+    [SerializeField] private NPCConversation myConversation;
+
     void Awake()
     {
         if (instance == null)
@@ -55,7 +61,10 @@ public class DjGameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (isGameStarted && !music.isPlaying && !gameOver)
+        {
+            Win();
+        }
     }
 
    public void NoteHit()
@@ -82,9 +91,10 @@ public class DjGameManager : MonoBehaviour
 
     public void StartMusic()
     {
-        if (!music.isPlaying)
+        if (!music.isPlaying && !isGameStarted)
         {
             music.Play();
+            isGameStarted = true;
         }
     } 
 
@@ -129,6 +139,7 @@ public class DjGameManager : MonoBehaviour
         Time.timeScale = 0f; //Game gets paused
         gameoverUI.SetActive(true);
         music.Stop();
+        gameOver = true;
     }
 
     public void TryAgain()
@@ -137,7 +148,19 @@ public class DjGameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-
+    public void Win()
+    {
+        Debug.Log("You win!");
+        gameOver = true;
+        if (myConversation != null)
+        {
+            ConversationManager.Instance.StartConversation(myConversation);
+        }
+        else
+        {
+            Debug.LogWarning("No conversation assigned to the ConversationEditer.");
+        }
+    }
 }
 
 
