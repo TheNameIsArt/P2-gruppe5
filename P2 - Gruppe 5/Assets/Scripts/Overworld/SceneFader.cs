@@ -30,7 +30,16 @@ public class SceneFader : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(FadeFromBlack());
+        Vector3 savedPosition = SceneFader.Instance.LoadPlayerPosition(SceneManager.GetActiveScene().name);
+        if (savedPosition != Vector3.zero)
+        {
+            Debug.Log($"Restoring player position to: {savedPosition}");
+            transform.position = savedPosition;
+        }
+        else
+        {
+            Debug.Log("No saved position found. Using default position.");
+        }
     }
 
     public void FadeToScene(string sceneName)
@@ -45,6 +54,13 @@ public class SceneFader : MonoBehaviour
 
     IEnumerator FadeAndLoadScene(string sceneName)
     {
+        // Save the player's position
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            SavePlayerPosition(player.transform.position, SceneManager.GetActiveScene().name);
+        }
+
         yield return StartCoroutine(FadeToBlack());
         SceneManager.LoadScene(sceneName);
         yield return new WaitForEndOfFrame();
@@ -119,5 +135,30 @@ public class SceneFader : MonoBehaviour
 
         fadeImage.color = new Color(0, 0, 0, 0);
         fadeImage.enabled = false;
+    }
+
+    public void SavePlayerPosition(Vector3 position, string sceneName)
+    {
+        Debug.Log($"Saving position for scene {sceneName}: {position}");
+        PlayerPrefs.SetFloat($"{sceneName}_PlayerPosX", position.x);
+        PlayerPrefs.SetFloat($"{sceneName}_PlayerPosY", position.y);
+        PlayerPrefs.SetFloat($"{sceneName}_PlayerPosZ", position.z);
+        PlayerPrefs.Save();
+    }
+
+    public Vector3 LoadPlayerPosition(string sceneName)
+    {
+        if (PlayerPrefs.HasKey($"{sceneName}_PlayerPosX"))
+        {
+            float x = PlayerPrefs.GetFloat($"{sceneName}_PlayerPosX");
+            float y = PlayerPrefs.GetFloat($"{sceneName}_PlayerPosY");
+            float z = PlayerPrefs.GetFloat($"{sceneName}_PlayerPosZ");
+            Vector3 loadedPosition = new Vector3(x, y, z);
+            Debug.Log($"Loaded position for scene {sceneName}: {loadedPosition}");
+            return loadedPosition;
+        }
+
+        Debug.Log($"No saved position found for scene {sceneName}. Returning default position.");
+        return Vector3.zero;
     }
 }

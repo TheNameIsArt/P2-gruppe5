@@ -29,11 +29,11 @@ public class SingleAnimationUniversal : MonoBehaviour
 
         if (inputDeviceSwitcher.inputDevice != null && inputDeviceSwitcher.inputDevice.name == "VirtualMouse")
         {
-            Debug.Log("Virtual mouse detected. Skipping animation.");
+            //Debug.Log("Virtual mouse detected. Skipping animation.");
             return;
         }
 
-        Debug.Log("InputDeviceSwitcher found on Cursor object.");
+        //Debug.Log("InputDeviceSwitcher found on Cursor object.");
         if (inputDevice is Gamepad)
         {
             myAnimator.Play(gamepadAnimation.name);
