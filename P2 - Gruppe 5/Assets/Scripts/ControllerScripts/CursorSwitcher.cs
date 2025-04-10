@@ -61,7 +61,7 @@ public class InputDeviceSwitcher : MonoBehaviour
             }
             else
             {
-                Debug.Log($"Other input device detected: {device.displayName}");
+                //Debug.Log($"Other input device detected: {device.displayName}");
                 SetInputState(null); // Disable all inputs if the device is unrecognized
             }
         }
