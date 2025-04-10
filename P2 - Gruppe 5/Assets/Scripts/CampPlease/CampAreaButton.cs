@@ -1,35 +1,42 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
-public class CampAreaButton : MonoBehaviour
+public class CampButton : MonoBehaviour
 {
-    TMP_Text buttonText;
-    string buttonString;
-    private string correctCampLetter;
-    private ExpressionSelector selector;
+    public Sprite[] buttonStates; // [0] = default, [1] = hover, [2] = clicked
+    private SpriteRenderer spriteRenderer;
+    private CampPanel panel;
 
-    private void Start()
+    void Start()
     {
-        selector = GameObject.Find("ExpressionReader").GetComponent<ExpressionSelector>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = buttonStates[0];
+
+        panel = Object.FindFirstObjectByType<CampPanel>(); // Assuming there's only one CampPanel in the scene
     }
-    public void OnButtonClick()
+
+    void OnMouseEnter()
     {
-        
-        correctCampLetter = selector.correctCampLetter;
-        buttonText = GetComponentInChildren<TMP_Text>();
-        buttonString = buttonText.text;
-        //Debug.Log("buttonString er: " + buttonString + "og buttonText er: " + buttonText.text + "og correctCampLetter er: " + correctCampLetter);
-        if (buttonString != null)
+        if (panel != null && panel.panelActivated) // Only change sprite if the panel is activated
         {
-            if (buttonString == correctCampLetter)
-            {
-                Debug.Log("Correct Camp Selected: " + buttonString);
-            }
-            else
-            {
-                Debug.Log("Wrong Camp! Try Again.");
-            }
+            spriteRenderer.sprite = buttonStates[1];
+        }
+    }
+
+    void OnMouseExit()
+    {
+        if (panel != null && panel.panelActivated) // Only reset sprite if the panel is activated
+        {
+            spriteRenderer.sprite = buttonStates[0];
+        }
+    }
+
+    void OnMouseDown()
+    {
+        if (panel != null && panel.panelActivated) // Only interact if the panel is activated
+        {
+            spriteRenderer.sprite = buttonStates[1];
+            Debug.Log("Button clicked!");
+            // Add button-specific logic here
         }
     }
 }
