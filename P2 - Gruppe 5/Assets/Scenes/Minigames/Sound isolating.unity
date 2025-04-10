@@ -1308,7 +1308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22fa8563caae27a428e4e98d534d3bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!114 &937242476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,11 +1321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 5
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":99.2,"yPos":304.6001},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Leave
-    minigame]","parentUIDs":[2],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":343.200043,"yPos":299},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"[Play
-    again]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":197.200012,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ah
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":97.9999847,"yPos":304.6001},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Leave
+    minigame]","parentUIDs":[2],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":342.000031,"yPos":299},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"[Play
+    again]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":196,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ah
     that was so much better!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Homie
-    Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":198.400055,"yPos":188.000076},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":197.200043,"yPos":188.000076},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
     i can finaly eat in peace and get out of here","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Homie
     Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -1345,7 +1344,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 937242475}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: SetSceneNameAndLoad
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1696,7 +1695,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 937242475}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: SetSceneNameAndLoad
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1784,6 +1783,63 @@ RectTransform:
   m_AnchoredPosition: {x: -4.9999695, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1051261319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195155676354823117, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262321228293474130, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
+      propertyPath: m_Name
+      value: Scene Fader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
 --- !u!1001 &1123666171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2860,3 +2916,4 @@ SceneRoots:
   - {fileID: 937242473}
   - {fileID: 338054543}
   - {fileID: 1123666171}
+  - {fileID: 1051261319}
