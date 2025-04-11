@@ -1,10 +1,12 @@
 using UnityEngine;
 
-public class CampButton : MonoBehaviour
+public class CampAreaButton : MonoBehaviour
 {
-    public Sprite[] buttonStates;
+    public Sprite[] buttonStates; // [0] = default, [1] = selected
     private SpriteRenderer spriteRenderer;
     private CampPanel panel;
+
+    private bool clicked = false;
 
     void Start()
     {
@@ -16,7 +18,7 @@ public class CampButton : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (panel != null && panel.panelActivated) // Only change sprite if the panel is activated
+        if (panel != null && panel.panelActivated && !clicked)
         {
             spriteRenderer.sprite = buttonStates[1];
         }
@@ -24,7 +26,7 @@ public class CampButton : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (panel != null && panel.panelActivated) // Only reset sprite if the panel is activated
+        if (panel != null && panel.panelActivated && !clicked)
         {
             spriteRenderer.sprite = buttonStates[0];
         }
@@ -32,9 +34,10 @@ public class CampButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (panel != null && panel.panelActivated) // Only interact if the panel is activated
+        if (panel != null && panel.panelActivated)
         {
-            spriteRenderer.sprite = buttonStates[1];
+            clicked = !clicked; // toggle
+            spriteRenderer.sprite = clicked ? buttonStates[1] : buttonStates[0];
         }
     }
 }

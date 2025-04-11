@@ -19,20 +19,27 @@ public class CampPanel : MonoBehaviour
 
     void Update()
     {
-        // Detect left-click anywhere
         if (Input.GetMouseButtonDown(0))
         {
-            // Check if we clicked on this sprite
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-            // If nothing was hit, or we hit something else
-            if (hit.collider == null || hit.collider.gameObject != gameObject)
+            if (hit.collider == null)
             {
-                ResetPanel(); // Reset the panel sprite
+                ResetPanel();
+            }
+            else
+            {
+                // Prevent reset if clicking on a CampButton
+                if (hit.collider.GetComponent<CampAreaButton>() == null &&
+                    hit.collider.gameObject != gameObject)
+                {
+                    ResetPanel();
+                }
             }
         }
     }
+
 
     void OnMouseEnter()
     {
