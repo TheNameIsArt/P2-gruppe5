@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CampButton : MonoBehaviour
 {
-    public Sprite[] buttonStates; // [0] = default, [1] = hover, [2] = clicked
+    public Sprite[] buttonStates;
     private SpriteRenderer spriteRenderer;
     private CampPanel panel;
 
@@ -11,7 +11,7 @@ public class CampButton : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = buttonStates[0];
 
-        panel = Object.FindFirstObjectByType<CampPanel>(); // Assuming there's only one CampPanel in the scene
+        panel = Object.FindFirstObjectByType<CampPanel>();
     }
 
     void OnMouseEnter()
@@ -35,8 +35,6 @@ public class CampButton : MonoBehaviour
         if (panel != null && panel.panelActivated) // Only interact if the panel is activated
         {
             spriteRenderer.sprite = buttonStates[1];
-            Debug.Log("Button clicked!");
-            // Add button-specific logic here
         }
     }
 }
