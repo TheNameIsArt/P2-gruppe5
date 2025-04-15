@@ -17,7 +17,8 @@ public class Level_Changer : MonoBehaviour
     {
         if (connection == Level_Connection.activeConnection)
         {
-            player.transform.position = spawnPoint.position;
+            if (player != null && spawnPoint != null)
+                player.transform.position = spawnPoint.position;
         }
     }
 
@@ -32,10 +33,13 @@ public class Level_Changer : MonoBehaviour
         Level_Connection.activeConnection = connection;
     }
 
-    public void LoadNextScene()
+    public void sceneChanger()
     {
-        //StartCoroutine(LoadScene(targetSceneName));
+        SetActiveConnection();
+        SceneFader.Instance.FadeToScene(targetSceneName);
     }
+
+
 
     /*IEnumerator LoadScene(string targetSceneName)
     {

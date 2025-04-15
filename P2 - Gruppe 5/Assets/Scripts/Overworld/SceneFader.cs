@@ -45,6 +45,15 @@ public class SceneFader : MonoBehaviour
 
     IEnumerator FadeAndLoadScene(string sceneName)
     {
+        // Call FadeOutAndDestroy on the Singleton instance if it exists
+        if (AudioSingleton.Instance != null)
+        {
+            AudioSingleton.Instance.FadeOutAndDestroy(1f); // Adjust the fade-out speed as needed
+            // Wait for the singleton to finish fading out
+            yield return new WaitUntil(() => Singleton.Instance == null);
+        }
+
+        // Proceed with fading to black and loading the new scene
         yield return StartCoroutine(FadeToBlack());
         SceneManager.LoadScene(sceneName);
         yield return new WaitForEndOfFrame();
