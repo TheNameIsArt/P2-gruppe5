@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -123,23 +123,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lvl_frame_0
+      name: UI_Buttons-Sheet_S_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 360
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42b91b3d6326c3370800000000000000
-      internalID: 8303619800583740196
+      spriteID: 1a8ff8add9956bb4295c91fd65772645
+      internalID: 1258315308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Buttons-Sheet_S_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc2e853ee75f6f48b814a12c0db9c45
+      internalID: -656013496
       vertices: []
       indices: 
       edges: []
@@ -158,7 +180,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lvl_frame_0: 8303619800583740196
+      UI_Buttons-Sheet_S_0: 1258315308
+      UI_Buttons-Sheet_S_1: -656013496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

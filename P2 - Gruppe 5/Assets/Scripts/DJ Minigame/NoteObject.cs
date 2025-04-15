@@ -11,7 +11,7 @@ public class NoteObject : MonoBehaviour
     private float noteAppearY = 5f; //Y position where the note should be visible
     private bool hasAppeared = false;
     private SpriteRenderer spriteRenderer;
-
+    public InputDevice inputDevice;
 
 
     private float timeWhenActivated;
@@ -19,6 +19,8 @@ public class NoteObject : MonoBehaviour
     void Start()
 {
     timeWhenActivated = -1f;
+
+        //InputSystem.onActionChange += OnActionChange;
 
     if (notePressedAction != null)
     {
@@ -87,13 +89,13 @@ public class NoteObject : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            if (Mathf.Abs(transform.position.y - (-3f)) > 0.25f)
+            if (Mathf.Abs(transform.position.y - (-2.17f)) > 1f)
             {
                 Debug.Log("Good Hit!");
                 DjGameManager.instance.GoodHit();
                 Instantiate(goodHit, transform.position, goodHit.transform.rotation);
             }
-            else if (Mathf.Abs(transform.position.y - (-3f)) > 0.10f)
+            else if (Mathf.Abs(transform.position.y - (-2.17f)) > 0.75f)
             {
                 Debug.Log("Great Hit!");
                 DjGameManager.instance.GreatHit();
@@ -114,4 +116,14 @@ public class NoteObject : MonoBehaviour
         notePressedAction.performed -= ButtonPressed;
         notePressedAction.Disable();       
     }
+    /*private void OnActionChange(object obj, InputActionChange change)
+    {
+        if (change == InputActionChange.ActionPerformed)
+        {
+            var inputAction = (InputAction)obj;
+            var lastControl = inputAction.activeControl;
+            inputDevice = lastControl.device;
+        }
+
+    }*/
 }
