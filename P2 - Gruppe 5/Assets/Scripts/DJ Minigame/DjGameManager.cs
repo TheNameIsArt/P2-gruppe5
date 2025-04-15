@@ -32,7 +32,7 @@ public class DjGameManager : MonoBehaviour
     public int[] multiplierThresholds;
 
     public GameObject gameoverUI;
-    private float musicDelay = 3.65f;
+    private float musicDelay = 3.6f;
 
     private bool isGameStarted = false; // Track if the game has started
     private bool gameOver = false; // Track if the game is over
