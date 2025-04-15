@@ -87,13 +87,13 @@ public class NoteObject : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            if (Mathf.Abs(transform.position.y - (-2.6f)) > 0.25f)
+            if (Mathf.Abs(transform.position.y - (-3f)) > 0.25f)
             {
                 Debug.Log("Good Hit!");
                 DjGameManager.instance.GoodHit();
                 Instantiate(goodHit, transform.position, goodHit.transform.rotation);
             }
-            else if (Mathf.Abs(transform.position.y - (-2.6f)) > 0.10f)
+            else if (Mathf.Abs(transform.position.y - (-3f)) > 0.10f)
             {
                 Debug.Log("Great Hit!");
                 DjGameManager.instance.GreatHit();
@@ -106,6 +106,7 @@ public class NoteObject : MonoBehaviour
                 Instantiate(perfectHit, transform.position, perfectHit.transform.rotation);
             }
         }
+
     }
 
     private void OnDestroy()
