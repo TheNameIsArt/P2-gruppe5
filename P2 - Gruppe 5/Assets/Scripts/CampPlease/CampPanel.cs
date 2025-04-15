@@ -10,6 +10,8 @@ public class CampPanel : MonoBehaviour
 
     public bool panelActivated;
 
+    [SerializeField] private GameObject[] mapAreas;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -60,6 +62,10 @@ public class CampPanel : MonoBehaviour
         clicked = true;
         spriteRenderer.sprite = panel[1];
         panelActivated = true;
+        foreach (GameObject area in mapAreas)
+        {
+            area.SetActive(true);
+        }
     }
 
     void ResetPanel()
@@ -67,5 +73,9 @@ public class CampPanel : MonoBehaviour
         clicked = false;
         panelActivated = false;
         spriteRenderer.sprite = panel[0];
+        foreach (GameObject area in mapAreas)
+        {
+            area.SetActive(false);
+        }
     }
 }
