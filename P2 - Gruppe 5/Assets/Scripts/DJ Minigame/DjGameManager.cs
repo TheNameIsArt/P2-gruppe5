@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using DialogueEditor;
+using UnityEngine.InputSystem;
 
 public class DjGameManager : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class DjGameManager : MonoBehaviour
     public int[] multiplierThresholds;
 
     public GameObject gameoverUI;
-    private float musicDelay = 3.65f;
+    private float musicDelay = 3.6f;
 
     private bool isGameStarted = false; // Track if the game has started
     private bool gameOver = false; // Track if the game is over
@@ -70,6 +71,12 @@ public class DjGameManager : MonoBehaviour
    public void NoteHit()
 {
     Debug.Log("Hit on time");
+
+    if (currentMisses > 0)
+    {
+        currentMisses --;
+        missCounterText.text = "Misses:" + currentMisses + "/10";
+    }
 
     // Handle multiplier progression only if within range
     if (currentMultiplier - 1 < multiplierThresholds.Length)
@@ -124,7 +131,7 @@ public class DjGameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiplierText.text = "Multiplier: x" + currentMultiplier;
-        missCounterText.text = "Misses: " + currentMisses;
+        missCounterText.text = "Misses: " + currentMisses + "/10";
 
         if (currentMisses >= maxMisses)
         {
@@ -142,10 +149,19 @@ public class DjGameManager : MonoBehaviour
         gameOver = true;
     }
 
+    public void TryAgainController(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
     public void TryAgain()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Win()
