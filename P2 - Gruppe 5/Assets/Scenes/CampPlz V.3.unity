@@ -2229,7 +2229,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 3.93803
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   targetButton: {fileID: 0}
   spriteTarget: {fileID: 1344482402}
   hoverSprite: {fileID: 21300000, guid: e8064b77298ae8b418699807dd64e270, type: 3}
-  defaultSprite: {fileID: 21300000, guid: 154aa924eef68df498c13c9a70d0d49a, type: 3}
+  defaultSprite: {fileID: 1560999341, guid: 83d2f6adc1ca8fe4ca8290ee68e205ca, type: 3}
   playerInput: {fileID: 1799689915}
 --- !u!1 &1196114292
 GameObject:
@@ -2973,6 +2973,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1344482404}
   - component: {fileID: 1344482403}
+  - component: {fileID: 1344482406}
+  - component: {fileID: 1344482405}
+  - component: {fileID: 1344482407}
   m_Layer: 0
   m_Name: Book
   m_TagString: Untagged
@@ -3024,7 +3027,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 154aa924eef68df498c13c9a70d0d49a, type: 3}
+  m_Sprite: {fileID: 1560999341, guid: 83d2f6adc1ca8fe4ca8290ee68e205ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3044,12 +3047,109 @@ Transform:
   m_GameObject: {fileID: 1344482402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -3.52, z: 0}
+  m_LocalPosition: {x: 0.04, y: -2.32, z: 0}
   m_LocalScale: {x: 1.27, y: 1.27, z: 1.27}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1344482405
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344482402}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3940ce305ac45604a803b701518a22d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1344482406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344482402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38006a36f428c64da4d119137d05fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1344482405}
+--- !u!114 &1344482407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344482402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 116f7396f30dff14bb30614ddc41b906, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1344482406}
+        m_TargetAssemblyTypeName: BookScript, Assembly-CSharp
+        m_MethodName: FlipForward
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b6974196-8141-4611-91f8-e5063a915a46
+    m_ActionName: 'Book/Forward[/XInputControllerWindows/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1344482406}
+        m_TargetAssemblyTypeName: BookScript, Assembly-CSharp
+        m_MethodName: FlipBackwards
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b1390ff7-b8cd-4bb4-813e-d9ed000ba136
+    m_ActionName: 'Book/Backward[/XInputControllerWindows/leftTrigger]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Book
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1376860587
 GameObject:
   m_ObjectHideFlags: 0

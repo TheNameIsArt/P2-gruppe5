@@ -14,6 +14,12 @@ public class PanelManager : MonoBehaviour
     public List<PanelMapping> panelMappings = new List<PanelMapping>(); // List of action-to-panel mappings
 
     public PlayerInput playerInput; // Reference to the PlayerInput component
+    private InputDevice inputDevice;
+
+    private void Awake()
+    {
+        InputSystem.onActionChange += OnActionChange;
+    }
 
     void Update()
     {
@@ -30,6 +36,50 @@ public class PanelManager : MonoBehaviour
                 {
                     mapping.panel.SetActive(true);
                 }
+            }
+        }
+    }
+
+    private void OnActionChange(object obj, InputActionChange change)
+    {
+        if (change == InputActionChange.ActionPerformed)
+        {
+            var inputAction = (InputAction)obj;
+            var lastControl = inputAction.activeControl;
+            inputDevice = lastControl.device;
+
+            // Check if the input device is a mouse
+            if (inputDevice is Mouse)
+            {
+                TurnOffAllPanels();
+            }
+
+            if (inputDevice is Gamepad)
+            {
+                TurnOnAllPanels();
+            }
+        }
+    }
+
+    private void TurnOffAllPanels()
+    {
+        // Deactivate all panels in the panelMappings list
+        foreach (var mapping in panelMappings)
+        {
+            if (mapping.panel != null && mapping.panel.activeSelf)
+            {
+                mapping.panel.SetActive(false);
+            }
+        }
+    }
+    private void TurnOnAllPanels()
+    {
+        // Activate all panels in the panelMappings list
+        foreach (var mapping in panelMappings)
+        {
+            if (mapping.panel != null && !mapping.panel.activeSelf)
+            {
+                mapping.panel.SetActive(true);
             }
         }
     }
