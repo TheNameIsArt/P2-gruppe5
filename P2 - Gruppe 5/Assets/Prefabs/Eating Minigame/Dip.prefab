@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6806665604671598596}
   - component: {fileID: 4681149174480950319}
   - component: {fileID: 5864839500103836280}
-  - component: {fileID: -4978742065808287465}
+  - component: {fileID: -4467629377489894437}
   m_Layer: 0
   m_Name: Dip
   m_TagString: Untagged
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4681149174480950319
@@ -116,11 +116,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -4467629377489894437}
+        m_TargetAssemblyTypeName: FoodObject, Assembly-CSharp
+        m_MethodName: ButtonPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6603b977-91db-48eb-98fd-76a34aa6f19c
     m_ActionName: 'Buttons/Left Pressed[/Keyboard/a]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -4467629377489894437}
+        m_TargetAssemblyTypeName: FoodObject, Assembly-CSharp
+        m_MethodName: ButtonRelease
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3a038d08-ad02-4953-95e2-a93118bb3124
     m_ActionName: 'Buttons/Left Released[/Keyboard/a]'
   - m_PersistentCalls:
@@ -148,19 +172,7 @@ MonoBehaviour:
     m_ActionId: bdc437fb-e57a-4719-ad18-ca64c0814b90
     m_ActionName: 'Buttons/Down Released[/Keyboard/k]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -4978742065808287465}
-        m_TargetAssemblyTypeName: NoteObject, Assembly-CSharp
-        m_MethodName: ButtonPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 7f15251e-2917-4ff9-94c2-da8c03ce5739
     m_ActionName: 'Notes/Left[/Keyboard/a]'
   - m_PersistentCalls:
@@ -216,7 +228,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &-4978742065808287465
+--- !u!114 &-4467629377489894437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,38 +237,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5298679812663656440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88b157b9f7fb0641830c3428c0914ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 908bc765f425a36469152873f3417ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBePressed: 0
-  notePressedAction:
-    m_Name: Note Pressed
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 4e010de7-1ed2-4cbb-b7aa-c5c99fc8cd7f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 5e00f1df-8f34-4bd1-870b-5e859bf463ed
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Note Pressed
-      m_Flags: 0
-    - m_Name: 
-      m_Id: ee81e72e-e0a9-40c5-97cc-6ddeac4e1d8c
-      m_Path: 
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Note Pressed
-      m_Flags: 0
-    m_Flags: 0
-  goodHit: {fileID: 0}
-  greatHit: {fileID: 0}
-  perfectHit: {fileID: 0}
-  missEffect: {fileID: 0}
-  missedPositionY: -4
-  pressWindowTime: 0.5
+  defaultImage: {fileID: 1847209286, guid: 1905450a832034d4bbc826b1dd410a8d, type: 3}
+  pressedImage: {fileID: -798832404, guid: 1905450a832034d4bbc826b1dd410a8d, type: 3}
