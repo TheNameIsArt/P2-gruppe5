@@ -27,12 +27,12 @@ public class DjGameManager : MonoBehaviour
     public TextMeshProUGUI multiplierText;
     public TextMeshProUGUI missCounterText;
 
-    public int currentMultiplier;
-    public int multiplierTracker;
+    private int currentMultiplier;
+    private int multiplierTracker;
     public int[] multiplierThresholds;
 
     public GameObject gameoverUI;
-    private float musicDelay = 3.6f;
+    private float musicDelay = 2.9f;
 
     private bool isGameStarted = false; // Track if the game has started
     private bool gameOver = false; // Track if the game is over

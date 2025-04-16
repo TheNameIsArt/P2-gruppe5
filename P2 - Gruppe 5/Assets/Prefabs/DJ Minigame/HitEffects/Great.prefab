@@ -102,13 +102,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
-  keyToPress: 0
+  notePressedAction:
+    m_Name: Note Pressed
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 02ab1d8d-68d9-4a78-a051-d12695c9aa82
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   goodHit: {fileID: 0}
   greatHit: {fileID: 0}
   perfectHit: {fileID: 0}
   missEffect: {fileID: 0}
   missedPositionY: -4
   pressWindowTime: 0.5
+  goodHitYPosition: 1.2
+  greatHitYPosition: 0.95
 --- !u!114 &-3719515789481597257
 MonoBehaviour:
   m_ObjectHideFlags: 0
