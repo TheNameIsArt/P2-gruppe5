@@ -707,7 +707,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 1115594653}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 359942755}
     m_SelectOnRight: {fileID: 359942755}
   m_Transition: 1
@@ -751,7 +751,8 @@ MonoBehaviour:
   spriteTarget: {fileID: 959677014}
   hoverSprite: {fileID: 21300000, guid: e5a59d4ebbaa5324f8a0127266d72688, type: 3}
   defaultSprite: {fileID: 21300000, guid: 9c1cd152a6f126d44ad7bc8fed59ac38, type: 3}
-  playerInput: {fileID: 1799689915}
+  panelManager: {fileID: 1799689917}
+  playerInput: {fileID: 0}
 --- !u!224 &287289433 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5797783812398095088, guid: d8b817599496fee47ba253b09b917140, type: 3}
@@ -959,7 +960,8 @@ MonoBehaviour:
   spriteTarget: {fileID: 411221922}
   hoverSprite: {fileID: 21300000, guid: 01a58f3b6e52eb5409799a49066e96e0, type: 3}
   defaultSprite: {fileID: 21300000, guid: 0f71dbf50525cf24d87bde928b48829c, type: 3}
-  playerInput: {fileID: 1799689915}
+  panelManager: {fileID: 1799689917}
+  playerInput: {fileID: 0}
 --- !u!114 &359942753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,7 +1016,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 1115594653}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 273441834}
     m_SelectOnRight: {fileID: 273441834}
   m_Transition: 1
@@ -1458,6 +1460,7 @@ RectTransform:
   - {fileID: 359942751}
   - {fileID: 273441831}
   - {fileID: 1115594650}
+  - {fileID: 1170341180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2229,7 +2232,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.93803
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2629,9 +2632,8 @@ GameObject:
   - component: {fileID: 1115594653}
   - component: {fileID: 1115594652}
   - component: {fileID: 1115594651}
-  - component: {fileID: 1115594654}
   m_Layer: 5
-  m_Name: Book Button
+  m_Name: Book Right Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2653,8 +2655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.2, y: -350.8}
-  m_SizeDelta: {x: 821.2, y: 470.9}
+  m_AnchoredPosition: {x: 200.7, y: -350.8}
+  m_SizeDelta: {x: 390.13, y: 470.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115594651
 MonoBehaviour:
@@ -2707,7 +2709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 273441834}
     m_SelectOnDown: {fileID: 0}
@@ -2715,7 +2717,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 273441834}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.8448267, b: 0.016333295, a: 0.28235295}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2737,24 +2739,151 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1115594651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1115594654
+      m_Calls:
+      - m_Target: {fileID: 1344482406}
+        m_TargetAssemblyTypeName: BookScript, Assembly-CSharp
+        m_MethodName: FlipForwardMouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1170341179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170341180}
+  - component: {fileID: 1170341183}
+  - component: {fileID: 1170341182}
+  - component: {fileID: 1170341181}
+  m_Layer: 5
+  m_Name: Book Left Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1170341180
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170341179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 513933402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -202, y: -350.8}
+  m_SizeDelta: {x: 415.4, y: 470.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1170341181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115594649}
+  m_GameObject: {fileID: 1170341179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26b2558cfd004d49a9e6bbb4be12b82, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetButton: {fileID: 0}
-  spriteTarget: {fileID: 1344482402}
-  hoverSprite: {fileID: 21300000, guid: e8064b77298ae8b418699807dd64e270, type: 3}
-  defaultSprite: {fileID: 1560999341, guid: 83d2f6adc1ca8fe4ca8290ee68e205ca, type: 3}
-  playerInput: {fileID: 1799689915}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1170341182
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170341179}
+  m_CullTransparentMesh: 1
+--- !u!114 &1170341183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170341179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 273441834}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 359942755}
+    m_SelectOnRight: {fileID: 273441834}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.8448267, b: 0.016333295, a: 0.28235295}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1170341181}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1344482406}
+        m_TargetAssemblyTypeName: BookScript, Assembly-CSharp
+        m_MethodName: FlipBackwardsMouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1196114292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,6 +3217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1344482405}
+  playerInput: {fileID: 1799689915}
 --- !u!114 &1344482407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3097,59 +3227,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344482402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 116f7396f30dff14bb30614ddc41b906, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1344482406}
-        m_TargetAssemblyTypeName: BookScript, Assembly-CSharp
-        m_MethodName: FlipForward
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b6974196-8141-4611-91f8-e5063a915a46
-    m_ActionName: 'Book/Forward[/XInputControllerWindows/rightTrigger]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1344482406}
-        m_TargetAssemblyTypeName: BookScript, Assembly-CSharp
-        m_MethodName: FlipBackwards
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b1390ff7-b8cd-4bb4-813e-d9ed000ba136
-    m_ActionName: 'Book/Backward[/XInputControllerWindows/leftTrigger]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Book
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &1376860587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,7 +4623,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799689914}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -4562,12 +4674,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelMappings:
-  - actionName: Cancel
-    panel: {fileID: 359942750}
-  - actionName: Cancel
-    panel: {fileID: 273441830}
-  - actionName: Cancel
-    panel: {fileID: 1115594649}
+  - panel: {fileID: 359942750}
+  - panel: {fileID: 273441830}
   playerInput: {fileID: 1799689915}
 --- !u!1 &1926335668
 GameObject:

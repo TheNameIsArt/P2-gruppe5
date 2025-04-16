@@ -13,6 +13,7 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     private Button thisButton;
     private SpriteRenderer spriteTargetRenderer; // Reference to the SpriteRenderer
+    public PanelManager panelManager; // Reference to the PanelManager
 
     public PlayerInput playerInput; // Reference to the PlayerInput component
 
@@ -34,10 +35,9 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void Update()
     {
-        // Reactivate the button and return focus when the "East" button is pressed
+        // Ensure the button remains selected when the "Cancel" action is triggered
         if (playerInput != null && playerInput.actions["Cancel"].triggered)
         {
-            gameObject.SetActive(true);
             EventSystem.current.SetSelectedGameObject(gameObject);
         }
     }
@@ -89,13 +89,16 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     private void OnButtonClick()
     {
-        // Deactivate this button
-        gameObject.SetActive(false);
-
-        // Select the target button
+        panelManager.UpdateLastSelectedPanel(gameObject); // Update the last selected panel in the PanelManager
         if (targetButton != null)
         {
+            // Select the target button
             EventSystem.current.SetSelectedGameObject(targetButton.gameObject);
+        }
+        else
+        {
+            // Log a warning if the target button is not set
+            Debug.LogWarning("Target button is not assigned in the PanelChooser script.", this);
         }
     }
 }

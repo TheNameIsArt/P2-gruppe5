@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 public class PanelManager : MonoBehaviour
 {
     [System.Serializable]
     public class PanelMapping
     {
-        public string actionName; // The name of the input action (e.g., "Cancel", "Submit")
         public GameObject panel; // The corresponding PanelChooser GameObject
     }
 
@@ -16,27 +16,20 @@ public class PanelManager : MonoBehaviour
     public PlayerInput playerInput; // Reference to the PlayerInput component
     private InputDevice inputDevice;
 
+    private bool panelsWereTurnedOff = false; // Flag to track if TurnOffAllPanels was called
+    private GameObject lastSelectedPanel; // Stores the last selected panel
+
     private void Awake()
     {
         InputSystem.onActionChange += OnActionChange;
     }
 
-    void Update()
+    private void Update()
     {
-        if (playerInput == null) return;
-
-        // Iterate through all panel mappings
-        foreach (var mapping in panelMappings)
+        // Check if the "Cancel" action is triggered
+        if (playerInput != null && playerInput.actions["Cancel"].triggered)
         {
-            // Check if the action is triggered
-            if (playerInput.actions[mapping.actionName].triggered)
-            {
-                // Reactivate the corresponding panel if it's inactive
-                if (mapping.panel != null && !mapping.panel.activeSelf)
-                {
-                    mapping.panel.SetActive(true);
-                }
-            }
+            GoToLastSelectedPanel();
         }
     }
 
@@ -71,7 +64,11 @@ public class PanelManager : MonoBehaviour
                 mapping.panel.SetActive(false);
             }
         }
+
+        // Set the flag to true
+        panelsWereTurnedOff = true;
     }
+
     private void TurnOnAllPanels()
     {
         // Activate all panels in the panelMappings list
@@ -82,5 +79,41 @@ public class PanelManager : MonoBehaviour
                 mapping.panel.SetActive(true);
             }
         }
+
+        // Only select the first panel if TurnOffAllPanels was called
+        if (panelsWereTurnedOff)
+        {
+            if (panelMappings.Count > 0 && panelMappings[0].panel != null)
+            {
+                EventSystem.current.SetSelectedGameObject(panelMappings[0].panel);
+                lastSelectedPanel = panelMappings[0].panel; // Update the last selected panel
+            }
+            else
+            {
+                Debug.LogWarning("No panels available to select in the Event System.");
+            }
+
+            // Reset the flag
+            panelsWereTurnedOff = false;
+        }
+    }
+
+    private void GoToLastSelectedPanel()
+    {
+        // Set the last selected panel as the active panel in the Event System
+        if (lastSelectedPanel != null)
+        {
+            EventSystem.current.SetSelectedGameObject(lastSelectedPanel);
+        }
+        else
+        {
+            Debug.LogWarning("No last selected panel to return to.");
+        }
+    }
+
+    public void UpdateLastSelectedPanel(GameObject panel)
+    {
+        // Update the last selected panel
+        lastSelectedPanel = panel;
     }
 }
