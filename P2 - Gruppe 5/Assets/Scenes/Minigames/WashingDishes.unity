@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 18124123}
   - component: {fileID: 18124125}
   - component: {fileID: 18124124}
+  - component: {fileID: 18124126}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -194,6 +195,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18124122}
   m_CullTransparentMesh: 1
+--- !u!225 &18124126
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18124122}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &78060132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7414802138947329387, guid: bb7c00e6dc36ccc4da0bd9063691683e, type: 3}
@@ -622,8 +635,8 @@ Transform:
   m_GameObject: {fileID: 998986583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0382, y: -0.0024, z: 0}
-  m_LocalScale: {x: 0.54565585, y: 0.41278344, z: 1}
+  m_LocalPosition: {x: -0.0204, y: 0.013, z: 0}
+  m_LocalScale: {x: 0.52082855, y: 0.40667424, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 541181267}
@@ -986,7 +999,7 @@ Transform:
   m_GameObject: {fileID: 2000076092}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3902432, y: -0.45193648, z: 0.09329116}
+  m_LocalPosition: {x: -0.397, y: -0.395, z: 0.09329116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1043,7 +1056,8 @@ MonoBehaviour:
   firePoint: {fileID: 541181267}
   aimSmoothSpeed: 10
   crosshair: {fileID: 18124123}
-  crosshairDistance: 2
+  crosshairDistance: 4
+  fadeSpeed: 5
 --- !u!212 &2000076096
 SpriteRenderer:
   m_ObjectHideFlags: 0
