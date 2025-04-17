@@ -103,9 +103,34 @@ public class MapButtonManager : MonoBehaviour
         confirmButton.onClick.AddListener(OnConfirmButtonClicked);
 
         // Ensure only the first bot is active at the start
-        for (int i = 0; i < bots.Length; i++)
+        /*for (int i = 0; i < bots.Length; i++)
         {
             bots[i].SetActive(i == 0);
+        }*/
+    }
+    public void ActivateFirstBot()
+    {
+        // Reset the current bot index to 0
+        currentBotIndex = 0;
+
+        // Deactivate all bots first
+        foreach (GameObject bot in bots)
+        {
+            if (bot != null)
+            {
+                bot.SetActive(false);
+            }
+        }
+
+        // Activate the first bot if it exists
+        if (bots.Length > 0 && bots[0] != null)
+        {
+            bots[0].SetActive(true);
+            Debug.Log("First bot activated.");
+        }
+        else
+        {
+            Debug.LogWarning("No bots available to activate.");
         }
     }
 }
