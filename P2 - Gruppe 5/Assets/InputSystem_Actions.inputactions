@@ -577,6 +577,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "FlipForward",
+                    "type": "Button",
+                    "id": "2fd7065d-740d-420f-a982-ae85338ab5a4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FlipBackwards",
+                    "type": "Button",
+                    "id": "09dc7ac1-a6e3-4c59-9e9e-470012806e44",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1028,6 +1046,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseHoldAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "38ecd888-21dc-446d-8c9f-b804835bb35b",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "FlipForward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b78dbf20-0e8a-4dd1-b476-023e66d4f29d",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "FlipBackwards",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
