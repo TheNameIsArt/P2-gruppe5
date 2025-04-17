@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2523469079980902707}
   - component: {fileID: 456583681567377422}
   - component: {fileID: 8957998548155404959}
+  - component: {fileID: 5214782136373671672}
   m_Layer: 0
   m_Name: WaterProjectile
   m_TagString: Untagged
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -150,5 +151,20 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.375
+  m_Offset: {x: -0.04079926, y: 0}
+  m_Radius: 0.10424149
+--- !u!114 &5214782136373671672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2638596755828001475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ffdf019f4e5144c8279c0f88e0aed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifetime: 2
+  splashEffectPrefab: {fileID: 7414802138947329387, guid: bb7c00e6dc36ccc4da0bd9063691683e, type: 3}

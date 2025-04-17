@@ -32,6 +32,14 @@ public class WDPlayerController : MonoBehaviour
     private enum AimMode { Mouse, Controller }
     private AimMode currentAimMode = AimMode.Mouse;
 
+    public float fireRate = 0.1f; // seconds between shots
+    private float nextFireTime = 0f;
+    private float shootCooldown = 0f;
+    private bool isShootingHeld = false;
+
+    public AudioSource waterGunAudio;
+
+
     // Awake is called when the script instance is being loaded
     void Awake()
     {
@@ -39,6 +47,10 @@ public class WDPlayerController : MonoBehaviour
         inputActions = new WashingDishes();
         rb = GetComponent<Rigidbody2D>();
         crosshairCanvasGroup = crosshair.GetComponent<CanvasGroup>();
+
+        inputActions = new WashingDishes();
+        rb = GetComponent<Rigidbody2D>();
+        waterGunAudio = GetComponent<AudioSource>(); // Auto-assign if on same object
     }
 
     // OnEnable is called when the object becomes enabled and active
@@ -64,14 +76,13 @@ public class WDPlayerController : MonoBehaviour
 
         inputActions.Player.Look.canceled += ctx => aimInput = Vector2.zero;
 
-        inputActions.Player.Shoot.performed += OnShootPerformed;
+        inputActions.Player.Shoot.performed += ctx => isShootingHeld = true;
+        inputActions.Player.Shoot.canceled += ctx => isShootingHeld = false;
     }
 
     // OnDisable is called when the object becomes disabled and inactive
     void OnDisable()
     {
-        // Remove input event handlers and disable input actions
-        inputActions.Player.Shoot.performed -= OnShootPerformed;
         inputActions.Player.Disable();
     }
 
@@ -91,6 +102,41 @@ public class WDPlayerController : MonoBehaviour
         // Smooth fade for crosshair visibility
         float targetAlpha = crosshairVisible ? 1f : 0f;
         crosshairCanvasGroup.alpha = Mathf.Lerp(crosshairCanvasGroup.alpha, targetAlpha, Time.deltaTime * fadeSpeed);
+
+        // Auto-shoot if holding the button
+        if (isShootingHeld)
+        {
+            shootCooldown -= Time.deltaTime;
+            if (shootCooldown <= 0f)
+            {
+                Shoot();
+                shootCooldown = 1f / fireRate;
+            }
+        }
+        else
+        {
+            shootCooldown = 0f; // reset cooldown when released
+        }
+
+        if (currentAimMode == AimMode.Controller && aimInput.magnitude > 0.1f)
+        {
+            // Optional: gun rotation logic
+        }
+
+        // Start firing sound
+        if (inputActions.Player.Shoot.IsPressed() && Time.time >= nextFireTime)
+        {
+            nextFireTime = Time.time + fireRate;
+            Shoot();
+
+            if (!waterGunAudio.isPlaying)
+                waterGunAudio.Play();
+        }
+        else if (!inputActions.Player.Shoot.IsPressed() && waterGunAudio.isPlaying)
+        {
+            // Stop when not firing
+            waterGunAudio.Stop();
+        }
     }
 
     // FixedUpdate is called at a fixed interval and is used for physics calculations
@@ -139,12 +185,6 @@ public class WDPlayerController : MonoBehaviour
 
             crosshair.position = Mouse.current.position.ReadValue();
         }
-    }
-
-    // Event handler for shooting input
-    void OnShootPerformed(InputAction.CallbackContext context)
-    {
-        Shoot();
     }
 
     // Handle shooting logic
