@@ -1,5 +1,6 @@
 using UnityEngine;
 using DialogueEditor;
+using UnityEngine.EventSystems;
 
 public class CampPlzWinBot : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CampPlzWinBot : MonoBehaviour
     private bool hasFinished = false; // Flag to check if the animation has finished
     [SerializeField] private MapButtonManager mapButtonManager;
     private float waitTime = 5f; // Time to wait before despawning the object and starting the game
+    public GameObject panelButton; // Reference to the Panel Button GameObject
     void Start()
     {
         // Get the Animator component attached to this GameObject
@@ -45,15 +47,37 @@ public class CampPlzWinBot : MonoBehaviour
         // Add your logic here (e.g., despawn the bot, enable the next bot, etc.)
         ConversationManager.Instance.StartConversation(winConversation);
     }
+
     public void GoAway()
     {
-
         Debug.Log("Correct Zone! The selected button corresponds to the correct area.");
 
         // Play the win animation
         if (animator != null)
         {
             animator.SetTrigger("CampPlzWin"); // Trigger the "Win" animation
+        }
+
+        // Ensure the EventSystem is active
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.gameObject.SetActive(true); // Activate the EventSystem GameObject
+            Debug.Log("EventSystem activated.");
+        }
+        else
+        {
+            Debug.LogWarning("EventSystem is not found in the scene!");
+        }
+
+        // Deselect the button by setting the EventSystem's selected GameObject to the Panel Button
+        if (panelButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(panelButton);
+            Debug.Log("Panel Button selected in EventSystem.");
+        }
+        else
+        {
+            Debug.LogWarning("Panel Button is not set!");
         }
 
         // Start a coroutine to despawn the object after the animation finishes
