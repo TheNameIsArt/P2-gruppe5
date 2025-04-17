@@ -5,11 +5,13 @@ public class campBotScript : MonoBehaviour
     public MapButtonManager mapButtonManager; // Reference to the MapButtonManager script
     private Animator animator; // Reference to the Animator component
     [SerializeField] private string botCorrectArea; // Correct area for the bot
+    [SerializeField] private GameObject speechBubble; // Reference to the speech bubble GameObject
 
     void Start()
     {
         mapButtonManager.correctArea = botCorrectArea; // Set the correct area for the map button
         animator = GetComponent<Animator>(); // Get the Animator component attached to this GameObject
+        
     }
 
     // Method to handle correct match
@@ -38,5 +40,14 @@ public class campBotScript : MonoBehaviour
 
         // Despawn the object (destroy or deactivate)
         Destroy(gameObject); // Alternatively, you can use gameObject.SetActive(false);
+    }
+
+    public void SpeechBubleApear()
+    {
+        speechBubble.SetActive(true); // Show the speech bubble
+    }
+    public void SpeechBubleDisapear()
+    {
+        speechBubble.SetActive(false); // Hide the speech bubble
     }
 }
