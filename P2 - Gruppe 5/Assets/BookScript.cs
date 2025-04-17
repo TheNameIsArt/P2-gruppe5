@@ -6,12 +6,11 @@ public class BookScript : MonoBehaviour
 {
     public Animator animator; // Reference to the Animator component
     public PlayerInput playerInput; // Reference to the shared PlayerInput component
-    public TMP_Text leftPageText; // Reference to the TMP text for the left page
-    public TMP_Text rightPageText; // Reference to the TMP text for the right page
+    public TMP_Text pageText; // Reference to the TMP text for the page number
+    public SpriteRenderer pageRenderer; // Reference to the SpriteRenderer for the page
+    public Sprite[] pageSprites; // Array of sprites for the pages
 
     private int pageIndex = 0; // Index to track the current page
-    private int leftPageCount = 1; // Count of pages to display
-    private int rightPageCount = 2; // Count of pages to display
     [SerializeField] private float additionalDelay = 0.3f; // Additional delay in seconds
 
     private void OnEnable()
@@ -44,16 +43,18 @@ public class BookScript : MonoBehaviour
 
     public void FlipForwardMouse()
     {
-        if (animator != null && pageIndex < 3)
+        if (animator != null && pageIndex < pageSprites.Length - 1)
         {
             if (!IsAnimationPlaying("BookBack") && !IsAnimationPlaying("Book"))
             {
-                DisablePageTexts();
+                DisablePageSprite();
+                DisablePageText();
                 animator.Play("Book", -1, 0f);
                 pageIndex++;
                 float animationDuration = GetAnimationDuration("Book") + additionalDelay;
-                Invoke(nameof(UpdatePageTextsForward), animationDuration);
-                Invoke(nameof(EnablePageTexts), animationDuration);
+                Invoke(nameof(UpdatePageSpriteForward), animationDuration);
+                Invoke(nameof(EnablePageSprite), animationDuration);
+                Invoke(nameof(EnablePageText), animationDuration);
             }
         }
     }
@@ -64,48 +65,65 @@ public class BookScript : MonoBehaviour
         {
             if (!IsAnimationPlaying("BookBack") && !IsAnimationPlaying("Book"))
             {
-                DisablePageTexts();
+                DisablePageSprite();
+                DisablePageText();
                 animator.Play("BookBack", -1, 0f);
                 pageIndex--;
                 float animationDuration = GetAnimationDuration("BookBack") + additionalDelay;
-                Invoke(nameof(UpdatePageTextsBackward), animationDuration);
-                Invoke(nameof(EnablePageTexts), animationDuration);
+                Invoke(nameof(UpdatePageSpriteBackward), animationDuration);
+                Invoke(nameof(EnablePageSprite), animationDuration);
+                Invoke(nameof(EnablePageText), animationDuration);
             }
         }
     }
 
-    private void DisablePageTexts()
+    private void DisablePageSprite()
     {
-        if (leftPageText != null) leftPageText.gameObject.SetActive(false);
-        if (rightPageText != null) rightPageText.gameObject.SetActive(false);
+        if (pageRenderer != null) pageRenderer.enabled = false;
     }
 
-    private void EnablePageTexts()
+    private void EnablePageSprite()
     {
-        if (leftPageText != null) leftPageText.gameObject.SetActive(true);
-        if (rightPageText != null) rightPageText.gameObject.SetActive(true);
+        if (pageRenderer != null) pageRenderer.enabled = true;
     }
 
-    private void UpdatePageTextsForward()
+    private void DisablePageText()
     {
-        // Increment both page numbers by 2
-        leftPageCount += 2;
-        rightPageCount += 2;
-        UpdatePageTexts(leftPageCount, rightPageCount);
+        if (pageText != null) pageText.gameObject.SetActive(false);
     }
 
-    private void UpdatePageTextsBackward()
+    private void EnablePageText()
     {
-        // Decrement both page numbers by 2
-        leftPageCount -= 2;
-        rightPageCount -= 2;
-        UpdatePageTexts(leftPageCount, rightPageCount);
+        if (pageText != null) pageText.gameObject.SetActive(true);
     }
 
-    private void UpdatePageTexts(int leftPage, int rightPage)
+    private void UpdatePageSpriteForward()
     {
-        if (leftPageText != null) leftPageText.text = leftPage.ToString();
-        if (rightPageText != null) rightPageText.text = rightPage.ToString();
+        // Update the page sprite for flipping forward
+        if (pageRenderer != null)
+        {
+            pageRenderer.sprite = pageSprites[pageIndex];
+        }
+
+        // Update the page number
+        UpdatePageText(pageIndex + 1);
+    }
+
+    private void UpdatePageSpriteBackward()
+    {
+        // Update the page sprite for flipping backward
+        if (pageRenderer != null)
+        {
+            pageRenderer.sprite = pageSprites[pageIndex];
+        }
+
+        // Update the page number
+        UpdatePageText(pageIndex + 1);
+    }
+
+    private void UpdatePageText(int pageNumber)
+    {
+        if (pageText != null) pageText.text = pageNumber.ToString();
     }
 
     private float GetAnimationDuration(string animationName)
