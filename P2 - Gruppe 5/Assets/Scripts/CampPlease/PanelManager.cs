@@ -85,7 +85,7 @@ public class PanelManager : MonoBehaviour
         {
             if (panelMappings.Count > 0 && panelMappings[0].panel != null)
             {
-                EventSystem.current.SetSelectedGameObject(panelMappings[0].panel);
+                //EventSystem.current.SetSelectedGameObject(panelMappings[0].panel);
                 lastSelectedPanel = panelMappings[0].panel; // Update the last selected panel
             }
             else

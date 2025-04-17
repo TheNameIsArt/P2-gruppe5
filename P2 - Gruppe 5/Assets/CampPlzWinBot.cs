@@ -58,30 +58,29 @@ public class CampPlzWinBot : MonoBehaviour
             animator.SetTrigger("CampPlzWin"); // Trigger the "Win" animation
         }
 
-        // Ensure the EventSystem is active
-        if (EventSystem.current != null)
-        {
-            EventSystem.current.gameObject.SetActive(true); // Activate the EventSystem GameObject
-            Debug.Log("EventSystem activated.");
-        }
-        else
-        {
-            Debug.LogWarning("EventSystem is not found in the scene!");
-        }
+        // Start a coroutine to delay setting the selected GameObject in the EventSystem
+        StartCoroutine(DelaySetSelectedGameObject());
+
+        // Start a coroutine to despawn the object after the animation finishes
+        StartCoroutine(DespawnAfterAnimation());
+    }
+
+    // Coroutine to delay setting the selected GameObject in the EventSystem
+    private System.Collections.IEnumerator DelaySetSelectedGameObject()
+    {
+        // Wait for 0.3 seconds
+        yield return new WaitForSeconds(0.3f);
 
         // Deselect the button by setting the EventSystem's selected GameObject to the Panel Button
         if (panelButton != null)
         {
             EventSystem.current.SetSelectedGameObject(panelButton);
-            Debug.Log("Panel Button selected in EventSystem.");
+            Debug.Log("Panel Button selected in EventSystem after delay.");
         }
         else
         {
             Debug.LogWarning("Panel Button is not set!");
         }
-
-        // Start a coroutine to despawn the object after the animation finishes
-        StartCoroutine(DespawnAfterAnimation());
     }
     // Coroutine to despawn the object after the animation finishes
     private System.Collections.IEnumerator DespawnAfterAnimation()

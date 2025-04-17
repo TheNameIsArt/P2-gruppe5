@@ -860,7 +860,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1318198614}
     m_SelectOnLeft: {fileID: 359942755}
     m_SelectOnRight: {fileID: 359942755}
   m_Transition: 1
@@ -1651,6 +1651,7 @@ RectTransform:
   - {fileID: 134734240}
   - {fileID: 359942751}
   - {fileID: 273441831}
+  - {fileID: 584174892}
   - {fileID: 637651179}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1794,6 +1795,126 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576319519}
+  m_CullTransparentMesh: 1
+--- !u!1 &584174891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584174892}
+  - component: {fileID: 584174895}
+  - component: {fileID: 584174894}
+  - component: {fileID: 584174893}
+  m_Layer: 5
+  m_Name: Idle Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &584174892
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584174891}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 513933402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 398.98}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &584174893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584174891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 584174894}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &584174894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584174891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &584174895
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584174891}
   m_CullTransparentMesh: 1
 --- !u!1 &606652839
 GameObject:
@@ -3329,18 +3450,18 @@ PrefabInstance:
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 292a9336b0f3cdb44b41e28ff43279fa, type: 3}
+      objectReference: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.g
-      value: 0.9418583
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.r
@@ -4081,16 +4202,16 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 721392958}
-    m_SelectOnDown: {fileID: 216665855}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnUp: {fileID: 273441834}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 359942755}
+    m_SelectOnRight: {fileID: 359942755}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.64705884, g: 0.59607846, b: 0.67058825, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4310,6 +4431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winConversation: {fileID: 1375710127}
   mapButtonManager: {fileID: 0}
+  panelButton: {fileID: 0}
 --- !u!114 &1375710127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4512,7 +4634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 359942750}
+  m_FirstSelected: {fileID: 584174891}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1404747030
@@ -5521,18 +5643,18 @@ PrefabInstance:
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 292a9336b0f3cdb44b41e28ff43279fa, type: 3}
+      objectReference: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.g
-      value: 0.9418583
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Color.r
@@ -5544,7 +5666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5545726240193586066, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.32
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 5545726240193586066, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5628,16 +5750,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 9
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":30.6666641,"yPos":179.000015},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
-    please!","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":246.666626,"yPos":197.666748},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Nah,
-    I got this","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":237.200012,"yPos":486.733521},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Start
-    Game]","parentUIDs":[7],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":124.666656,"yPos":-72.66667},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":340.533478,"yPos":53.0001526},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
+    please!","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":556.5334,"yPos":71.6669},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Nah,
+    I got this","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":547.066833,"yPos":360.7335},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Start
+    Game]","parentUIDs":[7],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":434.5335,"yPos":-198.666809},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
     you once again for helping me.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":118.333282,"yPos":52.666626},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":428.200073,"yPos":-73.33334},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
     you need a quick breakdown before I go?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":238.13324,"yPos":275.733459},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool,
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":548.000061,"yPos":149.733459},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool,
     cool. If you get confused just consult the note on your left","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":232.666687,"yPos":389.333618},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":542.5335,"yPos":263.3337},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway
     see you around","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
     The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -5656,7 +5778,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1668808025}
+        m_TargetAssemblyTypeName: CampPlzWinBot, Assembly-CSharp
+        m_MethodName: GoAway
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1668808025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5671,6 +5805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winConversation: {fileID: 1668808024}
   mapButtonManager: {fileID: 935188675}
+  panelButton: {fileID: 359942750}
 --- !u!1 &1755533372
 GameObject:
   m_ObjectHideFlags: 0
