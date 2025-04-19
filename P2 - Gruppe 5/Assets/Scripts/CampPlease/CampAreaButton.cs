@@ -26,6 +26,7 @@ public class CampAreaButton : MonoBehaviour
 
     void OnMouseExit()
     {
+        // Reset to default state if not clicked
         if (panel != null && panel.panelActivated && !clicked)
         {
             spriteRenderer.sprite = buttonStates[0];
@@ -36,8 +37,18 @@ public class CampAreaButton : MonoBehaviour
     {
         if (panel != null && panel.panelActivated)
         {
-            clicked = !clicked; // toggle
+            clicked = !clicked; // Toggle clicked state
             spriteRenderer.sprite = clicked ? buttonStates[1] : buttonStates[0];
         }
+    }
+
+    void ResetPanel()
+    {
+        clicked = false;
+        if (panel != null)
+        {
+            panel.panelActivated = false;
+        }
+        spriteRenderer.sprite = buttonStates[0];
     }
 }
