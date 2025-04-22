@@ -11,6 +11,7 @@ public class YellowSpriteChecker : MonoBehaviour
     public AudioClip[] audioClips;   // Array of AudioClips (2 clips)
     private bool winConditionMet = false;
     [SerializeField] private NPCConversation myConversation;
+    [SerializeField] private GameObject virtualMouse; // Reference to the virtual mouse GameObject
     private void Start()
     {
         winButton.interactable = false;
@@ -53,6 +54,7 @@ public class YellowSpriteChecker : MonoBehaviour
                                         // Start the conversation
         if (myConversation != null)
         {
+            virtualMouse.SetActive(false); // Disable the virtual mouse
             ConversationManager.Instance.StartConversation(myConversation);
         }
         else
