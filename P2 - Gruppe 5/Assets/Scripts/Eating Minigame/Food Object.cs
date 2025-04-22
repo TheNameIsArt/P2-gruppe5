@@ -19,7 +19,7 @@ public class FoodObject : MonoBehaviour
 
     public void ButtonPress(InputAction.CallbackContext context)
     {
-        Debug.Log("Input performed!");
+        //Debug.Log("Input performed!");
         if (context.performed)
         {
             spriteRenderer.sprite = pressedImage;
@@ -28,7 +28,7 @@ public class FoodObject : MonoBehaviour
 
     public void ButtonRelease(InputAction.CallbackContext context)
     {
-        Debug.Log("Button released");
+        //Debug.Log("Button released");
         if (context.performed)
         {
             spriteRenderer.sprite = defaultImage;
