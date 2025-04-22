@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5214782136373671672}
   m_Layer: 0
   m_Name: WaterProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a254441036ecd1d4c9218485c42edacb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b183c7758aeb1364689859ffed3098fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -168,3 +168,5 @@ MonoBehaviour:
   speed: 10
   lifetime: 2
   splashEffectPrefab: {fileID: 7414802138947329387, guid: bb7c00e6dc36ccc4da0bd9063691683e, type: 3}
+  bubblePrefab: {fileID: 0}
+  maxDistanceFromCamera: 20

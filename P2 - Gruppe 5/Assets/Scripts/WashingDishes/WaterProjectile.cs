@@ -9,14 +9,13 @@ public class WaterProjectile : MonoBehaviour
     public float maxDistanceFromCamera = 20f; // Tune as needed
     private Camera mainCamera;
 
-
     private Vector2 direction;
-
 
     private void Awake()
     {
         mainCamera = Camera.main;
     }
+
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
@@ -55,8 +54,13 @@ public class WaterProjectile : MonoBehaviour
         {
             plate.Clean(0.3f); // Adjust cleaning power here
             Destroy(gameObject); // One-shot water projectile
+
+            // Change the scale of the sprite to a random value between 0.5 and 1
+            float randomScale = Random.Range(0.5f, 1f);
+            transform.localScale = new Vector3(randomScale, randomScale, randomScale);
         }
     }
-
 }
+
+
 
