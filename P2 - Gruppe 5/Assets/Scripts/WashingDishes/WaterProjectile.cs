@@ -1,63 +1,44 @@
 using UnityEngine;
 
+// Controls movement and behavior of the water projectile
 public class WaterProjectile : MonoBehaviour
 {
     public float speed = 10f;
-    public float lifetime = 2f;
-    public GameObject splashEffectPrefab;
-
-    public float maxDistanceFromCamera = 20f; // Tune as needed
-    private Camera mainCamera;
+    public float maxDistance = 20f;
 
     private Vector2 direction;
+    private Vector3 spawnPosition;
 
-    private void Awake()
+    void OnEnable()
     {
-        mainCamera = Camera.main;
+        spawnPosition = transform.position; // Remember spawn for distance check
     }
 
+    // Called by the player controller to set projectile's direction.
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
-        Destroy(gameObject, lifetime);
-    }
-
-    void OnDestroy()
-    {
-        if (splashEffectPrefab != null)
-        {
-            Instantiate(splashEffectPrefab, transform.position, Quaternion.identity);
-        }
     }
 
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        // Move projectile
+        transform.position += (Vector3)direction * speed * Time.deltaTime;
 
-        if (mainCamera == null) return;
-
-        Vector3 screenPos = mainCamera.WorldToViewportPoint(transform.position);
-
-        bool offScreen = screenPos.x < -0.2f || screenPos.x > 1.2f ||
-                         screenPos.y < -0.2f || screenPos.y > 1.2f;
-
-        if (offScreen)
+        // Deactivate if too far from start
+        if (Vector3.Distance(transform.position, spawnPosition) > maxDistance)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        DirtyPlate plate = other.GetComponent<DirtyPlate>();
-        if (plate != null)
+        // Example: destroy (deactivate) on hitting a plate
+        if (other.CompareTag("Plate"))
         {
-            plate.Clean(0.3f); // Adjust cleaning power here
-            Destroy(gameObject); // One-shot water projectile
-
-            // Change the scale of the sprite to a random value between 0.5 and 1
-            float randomScale = Random.Range(0.5f, 1f);
-            transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+            // TODO: add particle effect, sound, etc.
+            gameObject.SetActive(false);
         }
     }
 }

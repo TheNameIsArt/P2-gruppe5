@@ -147,7 +147,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -166,7 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  lifetime: 2
-  splashEffectPrefab: {fileID: 7414802138947329387, guid: bb7c00e6dc36ccc4da0bd9063691683e, type: 3}
-  bubblePrefab: {fileID: 0}
-  maxDistanceFromCamera: 20
+  maxDistance: 20

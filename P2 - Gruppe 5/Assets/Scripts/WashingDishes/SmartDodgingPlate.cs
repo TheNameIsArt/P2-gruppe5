@@ -138,14 +138,17 @@ public class SmartDodgingPlate : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 
-    // 💥 Detects when a projectile hits the plate and destroys it
+    public PlatePooler pooler; // Assign via spawner when spawned
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Projectile"))
         {
-            Destroy(other.gameObject);
+            // Return to pool instead of destroying
+            pooler.ReturnPlate(gameObject);
         }
     }
+
 }
 
 
