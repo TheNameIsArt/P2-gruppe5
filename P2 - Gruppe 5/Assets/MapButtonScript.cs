@@ -11,6 +11,7 @@ public class MapButtonManager : MonoBehaviour
     [SerializeField] private GameObject[] bots; // Array to hold bot GameObjects
     private int currentBotIndex = 0; // Tracks the current bot to trigger
     private bool botIsExiting = false; // Flag to check if the bot is exiting
+    [SerializeField] private TimeManager timeManager; // Reference to the TimeManager script
 
     // This method is called when a button is clicked
     public void OnMapButtonClicked(Button clickedButton)
@@ -89,6 +90,7 @@ public class MapButtonManager : MonoBehaviour
     private void IncorrectMatch()
     {
         Debug.Log("Incorrect match logic executed.");
+        timeManager.AddTenPercentToElapsedTime(); // Add 10% of the total time to the elapsed time
     }
 
     // Optional: Initialize the buttons with listeners
