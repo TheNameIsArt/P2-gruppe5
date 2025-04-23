@@ -112,7 +112,7 @@ public class ExampleInputManager : MonoBehaviour
     {
         if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive && canInteract)
         {
-            ConversationManager.Instance.EndConversation();
+            ConversationManager.Instance.EndConversationEarly();
         }
     }
 

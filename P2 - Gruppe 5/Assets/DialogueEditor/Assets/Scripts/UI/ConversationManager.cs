@@ -76,6 +76,7 @@ namespace DialogueEditor
         public int m_targetScrollTextCount;
         private eState m_state;
         private float m_stateTime;
+        public bool minigameActive = false; // Added by Marcus to check if a minigame is active
 
         private Conversation m_conversation;
         private SpeechNode m_currentSpeech;
@@ -160,15 +161,22 @@ namespace DialogueEditor
             SetState(eState.TransitioningDialogueBoxOn);
         }
 
-        public void EndConversation()
+        public void EndConversationEarly()
         {
-
-            SetState(eState.TransitioningDialogueOff);
-
-            if (OnConversationEnded != null)
-                OnConversationEnded.Invoke();
+            if (!minigameActive)
+            {
+               EndConversation();
+            }
         }
+        private void EndConversation()
+        {
+            
+                SetState(eState.TransitioningDialogueOff);
 
+                if (OnConversationEnded != null)
+                    OnConversationEnded.Invoke();
+            
+        }
         public void SelectNextOption()
         {
             int next = m_currentSelectedIndex + 1;
@@ -179,6 +187,15 @@ namespace DialogueEditor
             SetSelectedOption(next);
         }
 
+        public void MinigameActive()
+        {
+            minigameActive = true;
+        }
+
+        public void MinigameInactive()
+        {
+            minigameActive = false;
+        }
         public void SelectPreviousOption()
         {
             int previous = m_currentSelectedIndex - 1;
