@@ -3259,9 +3259,9 @@ MonoBehaviour:
   correctArea: Area B
   confirmButton: {fileID: 1318198614}
   bots:
+  - {fileID: 1901841628}
   - {fileID: 46546158}
   - {fileID: 1281804891}
-  - {fileID: 1901841628}
   - {fileID: 1375710121}
   timeManager: {fileID: 132589314}
 --- !u!1 &959677014
@@ -5099,9 +5099,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2147787917519417389, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147787917519417389, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0c7a23beca50368419a30c07d752cf09, type: 3}
+      objectReference: {fileID: 8195110257023704978, guid: ef8ff220e8785c641b2d2ad6274b00aa, type: 3}
+    - target: {fileID: 2147787917519417389, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5160,7 +5168,7 @@ PrefabInstance:
       objectReference: {fileID: 1116333601}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: botCorrectArea
-      value: Area B
+      value: Area E
       objectReference: {fileID: 0}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: mapButtonManager
@@ -5517,11 +5525,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1373308946 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7467512245078295554, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
-  m_PrefabInstance: {fileID: 8685364740925910299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1375710121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1597465533759562412, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
@@ -7188,6 +7191,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: speechBubble
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: botCorrectArea
       value: 
       objectReference: {fileID: 0}
@@ -7750,7 +7757,11 @@ PrefabInstance:
     - target: {fileID: 2147787917519417389, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d9eb837af074cf3409c8fd88372d0eb8, type: 3}
+      objectReference: {fileID: 4220069385915455967, guid: 360791dd3f4a68e489c987e2d3e0a31c, type: 3}
+    - target: {fileID: 2147787917519417389, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4943101077094307904, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7809,7 +7820,7 @@ PrefabInstance:
       objectReference: {fileID: 410753494}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: botCorrectArea
-      value: Area F
+      value: Area E
       objectReference: {fileID: 0}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: mapButtonManager
@@ -8528,10 +8539,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot Rusty
       objectReference: {fileID: 0}
-    - target: {fileID: 1597465533759562412, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5545726240193586066, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8572,22 +8579,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7467512245078295554, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: timeManager
       value: 
       objectReference: {fileID: 132589314}
-    - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
-      propertyPath: speechBubble
-      value: 
-      objectReference: {fileID: 1373308946}
-    - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
-      propertyPath: botCorrectArea
-      value: Area H
-      objectReference: {fileID: 0}
     - target: {fileID: 8954709176925347805, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: mapButtonManager
       value: 

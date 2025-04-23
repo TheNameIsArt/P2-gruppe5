@@ -107,7 +107,7 @@ public class PanelManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No last selected panel to return to.");
+            //Debug.LogWarning("No last selected panel to return to.");
         }
     }
 
