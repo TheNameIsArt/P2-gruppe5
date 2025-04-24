@@ -4,11 +4,16 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Player_Crowd
-  - Route
-  - Tail
-  - Fill
-  - Prefab
+  - InteractionZone
+  - UI
+  - WireEnd
+  - WireStart
+  - InteractionButton
+  - ConversationZone
+  - SoundWaves
+  - Speaker
+  - Activator
+  - TimeManager
   layers:
   - Default
   - TransparentFX
@@ -16,12 +21,12 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Wall
-  - GoalTile
-  - Trigger
   - 
   - 
   - 
+  - 
+  - Mirror
+  - CameraBounds
   - 
   - 
   - 
@@ -61,8 +66,14 @@ TagManager:
   - name: Player
     uniqueID: 1323848801
     locked: 0
+  - name: NPC
+    uniqueID: 3665876091
+    locked: 0
   - name: Foreground
     uniqueID: 79694891
+    locked: 0
+  - name: UI
+    uniqueID: 1750803837
     locked: 0
   m_RenderingLayers:
   - Default
