@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement_crowd : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerMovement_crowd : MonoBehaviour
     public int maxMoves = 20; // Maximum number of moves allowed
     public float shadowMoveDelay = 0.1f; // Delay for shadow movement
     public Vector2 startingPosition; // Store the player's starting position
+    public GameObject followerObject; // Object that will follow the route
+    public float followerSpeed = 2f; // Speed of the follower object
+
 
     // Private variables for internal logic
     private Rigidbody2D rb; // Rigidbody component for movement
@@ -60,6 +64,12 @@ public class PlayerMovement_crowd : MonoBehaviour
         moveCount = maxMoves;
         UpdateMoveCounterUI();
         if (restartButton != null) restartButton.SetActive(false);
+
+        // Set the follower object's initial position
+        if (followerObject != null)
+        {
+            followerObject.transform.position = startingPosition;
+        }
     }
 
 
@@ -161,7 +171,15 @@ public class PlayerMovement_crowd : MonoBehaviour
 
         foreach (GameObject shadowTail in shadowTailObjects)
         {
+            if (shadowTail == null) continue; // Skip if the shadow tail was already destroyed
+
             Vector2 position = shadowTail.transform.position;
+
+            // Move the follower object to the shadow tail's position
+            if (followerObject != null)
+            {
+                yield return StartCoroutine(MoveFollowerToPosition(followerObject, position));
+            }
 
             // Replace shadow tail with actual tail
             GameObject newTail = Instantiate(tailPrefab, position, Quaternion.identity);
@@ -195,6 +213,20 @@ public class PlayerMovement_crowd : MonoBehaviour
         }
 
         if (restartButton != null) restartButton.SetActive(true);
+    }
+
+    // Coroutine to move the follower object to a target position
+    private IEnumerator MoveFollowerToPosition(GameObject follower, Vector2 targetPosition)
+    {
+        while ((Vector2)follower.transform.position != targetPosition)
+        {
+            follower.transform.position = Vector2.MoveTowards(
+                follower.transform.position,
+                targetPosition,
+                followerSpeed * Time.deltaTime
+            );
+            yield return null; // Wait for the next frame
+        }
     }
 
     // Public method to start the coroutine
@@ -267,6 +299,12 @@ public class PlayerMovement_crowd : MonoBehaviour
         // Reset the player's position to the starting position
         rb.position = startingPosition;
 
+        // Reset the follower object's position
+        if (followerObject != null)
+        {
+            followerObject.transform.position = startingPosition;
+        }
+
         // Remove all tails
         GameObject[] allTails = GameObject.FindGameObjectsWithTag("Tail");
         foreach (GameObject tail in allTails)
@@ -289,10 +327,11 @@ public class PlayerMovement_crowd : MonoBehaviour
         isGameOver = false;
         canMove = true;
         restartButton.SetActive(false);
+
         // Reset the coroutine reference
         fillShadowTailCoroutine = null;
 
-        Debug.Log("Game reset: Player position, tails, and shadows cleared.");
+        Debug.Log("Game reset: Player position, follower position, tails, and shadows cleared.");
     }
 
     private Vector2 SnapToHalfCoordinates(Vector2 position)
