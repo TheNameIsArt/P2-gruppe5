@@ -16,7 +16,7 @@ public class PlayerMovement_crowd : MonoBehaviour
     public float shadowFillSpeed = 0.1f; // Speed of filling shadow tails
     public int maxMoves = 20; // Maximum number of moves allowed
     public float shadowMoveDelay = 0.1f; // Delay for shadow movement
-    private Vector2 startingPosition; // Store the player's starting position
+    public Vector2 startingPosition; // Store the player's starting position
 
     // Private variables for internal logic
     private Rigidbody2D rb; // Rigidbody component for movement
@@ -288,7 +288,7 @@ public class PlayerMovement_crowd : MonoBehaviour
         // Reset other game state variables
         isGameOver = false;
         canMove = true;
-
+        restartButton.SetActive(false);
         // Reset the coroutine reference
         fillShadowTailCoroutine = null;
 

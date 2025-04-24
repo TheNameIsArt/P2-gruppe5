@@ -12,6 +12,7 @@ public class TriggerScript : MonoBehaviour
         {
             Debug.Log("Tail collided with TriggerTile");
             playerMovement.StopFillShadowTail();
+            playerMovement.startingPosition = transform.position; // Set the starting position to the trigger's position
             Debug.Log("StopFillShadowTail called");
 
             if (Layer != null)
@@ -23,7 +24,7 @@ public class TriggerScript : MonoBehaviour
             {
                 DespawnLayer.SetActive(false); // Deactivate the DespawnLayer object
             }
-
+            playerMovement.RestartScene();
             Destroy(gameObject); // Remove the trigger object
         }
     }
