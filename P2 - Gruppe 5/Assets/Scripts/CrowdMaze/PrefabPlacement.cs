@@ -43,10 +43,4 @@ public class PrefabPlacement : MonoBehaviour
         GameObject newPrefab = Instantiate(prefab, snappedPosition, Quaternion.identity);
         newPrefab.tag = "Prefab"; // Assign the "Prefab" tag to the instantiated prefab
     }
-
-    // Method triggered when a trigger collision occurs
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-    }
 }

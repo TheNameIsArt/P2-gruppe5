@@ -16,6 +16,7 @@ public class PlayerMovement_crowd : MonoBehaviour
     public float shadowFillSpeed = 0.1f; // Speed of filling shadow tails
     public int maxMoves = 20; // Maximum number of moves allowed
     public float shadowMoveDelay = 0.1f; // Delay for shadow movement
+    private Vector2 startingPosition; // Store the player's starting position
 
     // Private variables for internal logic
     private Rigidbody2D rb; // Rigidbody component for movement
@@ -55,41 +56,13 @@ public class PlayerMovement_crowd : MonoBehaviour
     {
         // Initialize variables and UI
         rb = GetComponent<Rigidbody2D>();
+        startingPosition = rb.position; // Store the starting position
         moveCount = maxMoves;
         UpdateMoveCounterUI();
         if (restartButton != null) restartButton.SetActive(false);
     }
 
-    void Update()
-    {
-        if (isGameOver) return;
 
-        // Handle shadow tail filling
-        if (fillShadowAction.triggered)
-        {
-            canMove = false;
-            StartCoroutine(FillShadowTailIncrementally());
-        }
-
-        // Handle scene restart
-        if (restartAction.triggered) RestartScene();
-
-        // Handle player movement
-        if (canMove)
-        {
-            Vector2 inputDirection = moveAction.ReadValue<Vector2>();
-            if (inputDirection != Vector2.zero)
-            {
-                Move(inputDirection);
-            }
-        }
-
-        // Check if the player is on a GoalTile
-        IsOnGoalTile();
-
-        // Check if the player is on a TriggerTile
-        IsOnTriggerTile();
-    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -104,7 +77,8 @@ public class PlayerMovement_crowd : MonoBehaviour
     {
         if (context.performed)
         {
-            StartCoroutine(FillShadowTailIncrementally());
+            StartFillShadowTail();
+            canMove = false; // Disable movement while filling shadow
         }
     }
 
@@ -177,6 +151,9 @@ public class PlayerMovement_crowd : MonoBehaviour
         canMove = true;
     }
 
+    // Add a private variable to store the coroutine reference
+    private Coroutine fillShadowTailCoroutine;
+
     public System.Collections.IEnumerator FillShadowTailIncrementally()
     {
         // Replace shadow tails with actual tails incrementally
@@ -220,6 +197,31 @@ public class PlayerMovement_crowd : MonoBehaviour
         if (restartButton != null) restartButton.SetActive(true);
     }
 
+    // Public method to start the coroutine
+    public void StartFillShadowTail()
+    {
+        if (fillShadowTailCoroutine == null)
+        {
+            fillShadowTailCoroutine = StartCoroutine(FillShadowTailIncrementally());
+        }
+    }
+
+    // Public method to stop the coroutine
+    public void StopFillShadowTail()
+    {
+        if (fillShadowTailCoroutine != null)
+        {
+            StopCoroutine(fillShadowTailCoroutine);
+            Debug.Log("Coroutine stopped.");
+            fillShadowTailCoroutine = null;
+        }
+        else
+        {
+            Debug.Log("Coroutine was already null. Nothing to stop.");
+        }
+    }
+   
+
     private bool IsOnGoalTile()
     {
         // Check if the player is on the goal tile
@@ -262,8 +264,35 @@ public class PlayerMovement_crowd : MonoBehaviour
 
     public void RestartScene()
     {
-        // Restart the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // Reset the player's position to the starting position
+        rb.position = startingPosition;
+
+        // Remove all tails
+        GameObject[] allTails = GameObject.FindGameObjectsWithTag("Tail");
+        foreach (GameObject tail in allTails)
+        {
+            Destroy(tail);
+        }
+
+        // Remove all shadow tails
+        GameObject[] allShadows = GameObject.FindGameObjectsWithTag("Shadow");
+        foreach (GameObject shadow in allShadows)
+        {
+            Destroy(shadow);
+        }
+
+        // Reset move count and update the UI
+        moveCount = maxMoves;
+        UpdateMoveCounterUI();
+
+        // Reset other game state variables
+        isGameOver = false;
+        canMove = true;
+
+        // Reset the coroutine reference
+        fillShadowTailCoroutine = null;
+
+        Debug.Log("Game reset: Player position, tails, and shadows cleared.");
     }
 
     private Vector2 SnapToHalfCoordinates(Vector2 position)

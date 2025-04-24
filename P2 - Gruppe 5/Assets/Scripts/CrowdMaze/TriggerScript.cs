@@ -4,12 +4,15 @@ public class TriggerScript : MonoBehaviour
 {
     public GameObject Layer; // Object to activate
     public GameObject DespawnLayer; // Object to deactivate
+    [SerializeField] private PlayerMovement_crowd playerMovement; // Reference to the PlayerMovement script
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Prefab")) // Check if the collider belongs to Prefab
+        if (other.CompareTag("Tail")) // Check if the collider belongs to Prefab
         {
             Debug.Log("Tail collided with TriggerTile");
+            playerMovement.StopFillShadowTail();
+            Debug.Log("StopFillShadowTail called");
 
             if (Layer != null)
             {
