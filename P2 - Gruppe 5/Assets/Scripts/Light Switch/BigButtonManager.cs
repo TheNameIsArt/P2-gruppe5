@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;  // For UI elements like Image if needed
+using DialogueEditor; // Assuming you have a DialogueEditor namespace for your dialogue system
 
 public class YellowSpriteChecker : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class YellowSpriteChecker : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip[] audioClips;   // Array of AudioClips (2 clips)
     private bool winConditionMet = false;
+    [SerializeField] private NPCConversation myConversation;
+    [SerializeField] private GameObject virtualMouse; // Reference to the virtual mouse GameObject
     private void Start()
     {
         winButton.interactable = false;
@@ -47,6 +50,17 @@ public class YellowSpriteChecker : MonoBehaviour
     {
         Debug.Log("YOU WIN THE ENTIRE GAME AND HAVE SET UP THE LIGHT SHOW!!!!");
         PlayClip(1); // Play the second clip
+        winButton.interactable = false; // Disable the button after clicking
+                                        // Start the conversation
+        if (myConversation != null)
+        {
+            virtualMouse.SetActive(false); // Disable the virtual mouse
+            ConversationManager.Instance.StartConversation(myConversation);
+        }
+        else
+        {
+            Debug.LogWarning("No conversation assigned to the ConversationEditer.");
+        }
     }
     void PlayClip(int index)
     {
