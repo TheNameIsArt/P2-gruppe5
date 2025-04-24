@@ -33,7 +33,7 @@ public class PrefabPlacement : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(snappedPosition, 0.1f);
         foreach (Collider collider in colliders)
         {
-            if (collider.gameObject.CompareTag("Prefab") || collider.gameObject.CompareTag("Tail"))
+            if (collider.gameObject.CompareTag("Tail"))
             {
                 Debug.Log("Cannot place prefab: another prefab or tail is already at this position.");
                 return;

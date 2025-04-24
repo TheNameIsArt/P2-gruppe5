@@ -150,7 +150,7 @@ public class PlayerMovement_crowd : MonoBehaviour
         Vector2 targetPosition = currentPosition + direction.normalized * stepSize;
 
         // Check for collision with the Wall layer
-        RaycastHit2D hit = Physics2D.Raycast(currentPosition, direction, stepSize, LayerMask.GetMask("Wall"));
+        RaycastHit2D hit = Physics2D.Raycast(currentPosition, direction, stepSize, LayerMask.GetMask("CrowdMaze_Wall"));
         if (hit.collider != null)
         {
             Debug.Log("Blocked by wall: " + hit.collider.name);
@@ -180,7 +180,7 @@ public class PlayerMovement_crowd : MonoBehaviour
     public System.Collections.IEnumerator FillShadowTailIncrementally()
     {
         // Replace shadow tails with actual tails incrementally
-        GameObject[] shadowTailObjects = GameObject.FindGameObjectsWithTag("Tail");
+        GameObject[] shadowTailObjects = GameObject.FindGameObjectsWithTag("Shadow"); // Ensure correct tag is used
 
         foreach (GameObject shadowTail in shadowTailObjects)
         {
@@ -224,7 +224,7 @@ public class PlayerMovement_crowd : MonoBehaviour
     {
         // Check if the player is on the goal tile
         Vector2 playerPosition = rb.position;
-        Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("GoalTile"));
+        Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("CrowdMaze_GoalTile"));
         bool isOnGoalTile = hit != null;
 
         if (isOnGoalTile && !wasOnGoalTile)
@@ -244,20 +244,13 @@ public class PlayerMovement_crowd : MonoBehaviour
     {
         // Check if the player is on the trigger tile
         Vector2 playerPosition = rb.position;
-        Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("Trigger"));
+        Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("CrowdMaze_GoalTile"));
         bool isOnTriggerTile = hit != null;
 
         if (isOnTriggerTile && !wasOnTriggerTile)
         {
             Debug.Log("Player is on a TriggerTile");
             wasOnTriggerTile = true;
-
-            // Remember the first trigger tile
-            if (firstTriggeredTile == null)
-            {
-                firstTriggeredTile = hit.gameObject;
-                Debug.Log("First Trigger Tile: " + firstTriggeredTile.name);
-            }
         }
         else if (!isOnTriggerTile)
         {
