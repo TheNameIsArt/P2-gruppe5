@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2329967953930205997}
   - component: {fileID: 7420692032087166921}
   - component: {fileID: -289007734821403389}
-  - component: {fileID: -4231913352380465815}
+  - component: {fileID: -5293672619629164749}
   m_Layer: 0
   m_Name: Burger
   m_TagString: Untagged
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &7420692032087166921
@@ -176,11 +176,35 @@ MonoBehaviour:
     m_ActionId: 10700ef0-6b5e-40d5-93df-6c99c7d5c032
     m_ActionName: 'Buttons/Up Released[/Keyboard/s]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -5293672619629164749}
+        m_TargetAssemblyTypeName: FoodObject, Assembly-CSharp
+        m_MethodName: ButtonPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 28ff20cc-13d4-4583-8c6f-8d764894c1ea
     m_ActionName: 'Buttons/Down Pressed[/Keyboard/k]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -5293672619629164749}
+        m_TargetAssemblyTypeName: FoodObject, Assembly-CSharp
+        m_MethodName: ButtonRelease
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: bdc437fb-e57a-4719-ad18-ca64c0814b90
     m_ActionName: 'Buttons/Down Released[/Keyboard/k]'
   - m_PersistentCalls:
@@ -196,19 +220,7 @@ MonoBehaviour:
     m_ActionId: 463d3210-143c-49b4-bb88-cb9867c2a4c8
     m_ActionName: 'Notes/Up[/Keyboard/s]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -4231913352380465815}
-        m_TargetAssemblyTypeName: NoteObject, Assembly-CSharp
-        m_MethodName: ButtonPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 99469bc9-a7ca-4ba3-b806-e30a5e066d02
     m_ActionName: 'Notes/Down[/Keyboard/k]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -216,7 +228,7 @@ MonoBehaviour:
   m_DefaultActionMap: Buttons
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &-4231913352380465815
+--- !u!114 &-5293672619629164749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,38 +237,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3345421587032957631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88b157b9f7fb0641830c3428c0914ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 908bc765f425a36469152873f3417ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBePressed: 0
-  notePressedAction:
-    m_Name: Note Pressed
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c4d5890d-0be1-45ef-9442-039154790d71
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 5e00f1df-8f34-4bd1-870b-5e859bf463ed
-      m_Path: <Keyboard>/k
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Note Pressed
-      m_Flags: 0
-    - m_Name: 
-      m_Id: ee81e72e-e0a9-40c5-97cc-6ddeac4e1d8c
-      m_Path: 
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Note Pressed
-      m_Flags: 0
-    m_Flags: 0
-  goodHit: {fileID: 0}
-  greatHit: {fileID: 0}
-  perfectHit: {fileID: 0}
-  missEffect: {fileID: 0}
-  missedPositionY: -4
-  pressWindowTime: 0.5
+  defaultImage: {fileID: -1272580967, guid: 1905450a832034d4bbc826b1dd410a8d, type: 3}
+  pressedImage: {fileID: -1401387198, guid: 1905450a832034d4bbc826b1dd410a8d, type: 3}

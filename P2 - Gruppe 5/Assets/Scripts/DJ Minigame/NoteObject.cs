@@ -6,12 +6,15 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public InputAction notePressedAction; 
     public GameObject goodHit, greatHit, perfectHit, missEffect;
-    public float missedPositionY = -4f;
-    public float pressWindowTime = 0.5f;
+    private float missedPositionY = -2.25f;
+    private float pressWindowTime = 0.5f;
     private float noteAppearY = 5f; //Y position where the note should be visible
     private bool hasAppeared = false;
     private SpriteRenderer spriteRenderer;
     public InputDevice inputDevice;
+    private float hitboxYPosition = -1.36f; 
+    private float goodHitYPosition = 0.25f;
+    private float greatHitYPosition = 0.10f;
 
 
     private float timeWhenActivated;
@@ -89,13 +92,13 @@ public class NoteObject : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            if (Mathf.Abs(transform.position.y - (-2.17f)) > 1f)
+            if (Mathf.Abs(transform.position.y - (hitboxYPosition)) > goodHitYPosition)
             {
                 Debug.Log("Good Hit!");
                 DjGameManager.instance.GoodHit();
                 Instantiate(goodHit, transform.position, goodHit.transform.rotation);
             }
-            else if (Mathf.Abs(transform.position.y - (-2.17f)) > 0.75f)
+            else if (Mathf.Abs(transform.position.y - (hitboxYPosition)) > greatHitYPosition)
             {
                 Debug.Log("Great Hit!");
                 DjGameManager.instance.GreatHit();

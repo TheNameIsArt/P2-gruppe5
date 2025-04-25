@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4107748097522643246}
   - component: {fileID: -9209041769029068820}
   - component: {fileID: 1443168703066037209}
-  - component: {fileID: 4676686040074138864}
+  - component: {fileID: 4266613117309200886}
   m_Layer: 0
   m_Name: Fries
   m_TagString: Untagged
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-9209041769029068820
@@ -132,11 +132,35 @@ MonoBehaviour:
     m_ActionId: fb9cffbb-3b0a-4fec-a79a-4a1d0bce06e7
     m_ActionName: 'Buttons/Right Released[/Keyboard/l]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4266613117309200886}
+        m_TargetAssemblyTypeName: FoodObject, Assembly-CSharp
+        m_MethodName: ButtonPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d963c997-aa12-4143-86f7-c319c383666c
     m_ActionName: 'Buttons/Up Pressed[/Keyboard/s]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4266613117309200886}
+        m_TargetAssemblyTypeName: FoodObject, Assembly-CSharp
+        m_MethodName: ButtonRelease
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 10700ef0-6b5e-40d5-93df-6c99c7d5c032
     m_ActionName: 'Buttons/Up Released[/Keyboard/s]'
   - m_PersistentCalls:
@@ -156,19 +180,7 @@ MonoBehaviour:
     m_ActionId: ce25da6c-0404-41d6-ae06-1aa017c18a24
     m_ActionName: 'Notes/Right[/Keyboard/l]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4676686040074138864}
-        m_TargetAssemblyTypeName: NoteObject, Assembly-CSharp
-        m_MethodName: ButtonPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 463d3210-143c-49b4-bb88-cb9867c2a4c8
     m_ActionName: 'Notes/Up[/Keyboard/s]'
   - m_PersistentCalls:
@@ -216,7 +228,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.49999997
---- !u!114 &4676686040074138864
+--- !u!114 &4266613117309200886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,38 +237,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 976706623727527194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88b157b9f7fb0641830c3428c0914ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 908bc765f425a36469152873f3417ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBePressed: 0
-  notePressedAction:
-    m_Name: Note Pressed
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: b5f5678f-3327-44c7-8e15-76fe03b539e1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 5e00f1df-8f34-4bd1-870b-5e859bf463ed
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Note Pressed
-      m_Flags: 0
-    - m_Name: 
-      m_Id: ee81e72e-e0a9-40c5-97cc-6ddeac4e1d8c
-      m_Path: 
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Note Pressed
-      m_Flags: 0
-    m_Flags: 0
-  goodHit: {fileID: 0}
-  greatHit: {fileID: 0}
-  perfectHit: {fileID: 0}
-  missEffect: {fileID: 0}
-  missedPositionY: -4
-  pressWindowTime: 0.5
+  defaultImage: {fileID: -2078882277, guid: 1905450a832034d4bbc826b1dd410a8d, type: 3}
+  pressedImage: {fileID: 46663155, guid: 1905450a832034d4bbc826b1dd410a8d, type: 3}
