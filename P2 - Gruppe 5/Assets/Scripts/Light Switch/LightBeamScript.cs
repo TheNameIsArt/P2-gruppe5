@@ -8,7 +8,7 @@ public class LightBeam : MonoBehaviour
     public LayerMask mirrorLayer;
     public LayerMask groundLayer;
     public LayerMask winLayer;  // Added win trigger layer
-    public int maxReflections = 17;
+    public int maxReflections = 18;
     public float offsetDistance = 0.01f; // Prevents self-collision
     private bool isWin = false;
 
@@ -59,7 +59,7 @@ public class LightBeam : MonoBehaviour
             else
             {
                 // Extend the beam if no mirrors or win trigger are hit
-                beamPoints.Add(startPosition + direction * 17f);
+                beamPoints.Add(startPosition + direction * 10f);
                 break;
             }
         }
