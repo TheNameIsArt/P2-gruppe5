@@ -301,27 +301,6 @@ public class PlayerMovement_crowd : MonoBehaviour
 
         return isOnGoalTile;
     }
-
-    private bool IsOnTriggerTile()
-    {
-        // Check if the player is on the trigger tile
-        Vector2 playerPosition = rb.position;
-        Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("CrowdMaze_GoalTile"));
-        bool isOnTriggerTile = hit != null;
-
-        if (isOnTriggerTile && !wasOnTriggerTile)
-        {
-            Debug.Log("Player is on a TriggerTile");
-            wasOnTriggerTile = true;
-        }
-        else if (!isOnTriggerTile)
-        {
-            wasOnTriggerTile = false;
-        }
-
-        return isOnTriggerTile;
-    }
-
     public void RestartScene()
     {
         // Reset the player's position to the starting position
