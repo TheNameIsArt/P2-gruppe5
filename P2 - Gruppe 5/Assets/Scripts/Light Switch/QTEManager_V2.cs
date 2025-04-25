@@ -134,7 +134,7 @@ public class QTEManager_V2 : MonoBehaviour
             {
                 sequencesCompleted++;
                 qteActive = false;
-                sequenceLights[sequencesCompleted - 1].color = Color.yellow;
+                sequenceLights[sequencesCompleted - 1].color = Color.white;
                 StartNextSequence();
             }
         }
@@ -198,7 +198,7 @@ public class QTEManager_V2 : MonoBehaviour
         PlayClip(1);
         if (winLight != null)
         {
-            winLight.color = Color.yellow;
+            winLight.color = new Color(1f, 1f, 1f, 1f);
         }
     }
 

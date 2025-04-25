@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
         // Change the color from black to yellow
         if (winLight != null)
         {
-            winLight.color = Color.yellow;
+            winLight.color = new Color (1f, 1f, 1f, 1f);
         }
     }
 }
