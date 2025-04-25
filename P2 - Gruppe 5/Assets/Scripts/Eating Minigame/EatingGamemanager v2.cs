@@ -12,6 +12,8 @@ public class EatingGamemanagerv2 : MonoBehaviour
     private List<int> currentSequence = new List<int>();
     private int currentInputIndex = 0;  // Tracks player's progress through the sequence
     public TextMeshProUGUI feedbackText;
+
+    private bool isSequenceResetting = false; //Makes sure that the sequence only resetts once, instead of multiple times via multiple inputs
     void Start()
     {
         StartNewSequence();
@@ -23,6 +25,8 @@ public class EatingGamemanagerv2 : MonoBehaviour
     /// </summary>
     void StartNewSequence()
     {
+        isSequenceResetting = false; //Sequence can be reset again
+        
         currentSequence.Clear();
         currentInputIndex = 0;
 
@@ -58,9 +62,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Called when the player input matches the expected sprite.
-    /// </summary>
+   
     void OnCorrectInput()
     {
         // Hide the correctly matched slot
@@ -75,13 +77,12 @@ public class EatingGamemanagerv2 : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Called when the player input is incorrect.
-    /// </summary>
     void OnWrongInput()
     {
+        if (isSequenceResetting) return; //If isSequenceResetting = true, nothing happens.
+        isSequenceResetting = true;
+
         Debug.Log("Wrong input! Restarting sequence.");
-        // TODO: add visual or audio feedback here
         Invoke ("StartNewSequence", 1.0f);
         feedbackText.text = "Try again buddy";
     }
