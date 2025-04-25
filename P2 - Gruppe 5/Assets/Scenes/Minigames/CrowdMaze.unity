@@ -306,7 +306,7 @@ MonoBehaviour:
   shadowMoveDelay: 0.8
   startingPosition: {x: 0, y: 0}
   followerObject: {fileID: 495318985}
-  followerSpeed: 2
+  followerSpeed: 10
 --- !u!114 &126017442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4558,7 +4558,7 @@ GameObject:
   - component: {fileID: 495318987}
   - component: {fileID: 495318986}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FollowerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31075,7 +31075,7 @@ MonoBehaviour:
   Layer: {fileID: 1053951101}
   DespawnLayer: {fileID: 990805127}
   playerMovement: {fileID: 126017441}
-  tilemap: {fileID: 1271437577}
+  targetGameObject: {fileID: 495318985}
 --- !u!1 &1329296593
 GameObject:
   m_ObjectHideFlags: 0
