@@ -243,6 +243,17 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
                 },
                 {
                     ""name"": """",
+                    ""id"": ""08dc6919-9ea1-4b5e-8f64-4d2c5f85927e"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""44016cf9-a67e-46c9-9a48-756e97270d17"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement_crowd : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class PlayerMovement_crowd : MonoBehaviour
     public int maxMoves = 20; // Maximum number of moves allowed
     public float shadowMoveDelay = 0.1f; // Delay for shadow movement
     public Vector2 startingPosition; // Store the player's starting position
+    public GameObject followerObject; // Object that will follow the route
+    public float followerSpeed = 2f; // Speed of the follower object
+                                     // Add a private variable to store the coroutine reference
+    private Coroutine moveFollowerCoroutine;
 
     // Private variables for internal logic
     private Rigidbody2D rb; // Rigidbody component for movement
@@ -60,6 +65,12 @@ public class PlayerMovement_crowd : MonoBehaviour
         moveCount = maxMoves;
         UpdateMoveCounterUI();
         if (restartButton != null) restartButton.SetActive(false);
+
+        // Set the follower object's initial position
+        if (followerObject != null)
+        {
+            followerObject.transform.position = startingPosition;
+        }
     }
 
 
@@ -156,14 +167,30 @@ public class PlayerMovement_crowd : MonoBehaviour
 
     public System.Collections.IEnumerator FillShadowTailIncrementally()
     {
-        // Replace shadow tails with actual tails incrementally
-        GameObject[] shadowTailObjects = GameObject.FindGameObjectsWithTag("Shadow"); // Ensure correct tag is used
+        // Find all shadow tail objects in the scene
+        GameObject[] shadowTailObjects = GameObject.FindGameObjectsWithTag("Shadow");
 
         foreach (GameObject shadowTail in shadowTailObjects)
         {
+            if (shadowTail == null) continue; // Skip if the shadow tail was already destroyed
+
             Vector2 position = shadowTail.transform.position;
 
-            // Replace shadow tail with actual tail
+            // Move the follower object to the shadow tail's position
+            if (followerObject != null)
+            {
+                // Stop any ongoing follower movement coroutine
+                if (moveFollowerCoroutine != null)
+                {
+                    StopCoroutine(moveFollowerCoroutine);
+                }
+
+                // Start moving the follower to the current shadow tail position
+                moveFollowerCoroutine = StartCoroutine(MoveFollowerToPosition(followerObject, position));
+                yield return moveFollowerCoroutine; // Wait until the follower reaches the position
+            }
+
+            // Replace the shadow tail with an actual tail
             GameObject newTail = Instantiate(tailPrefab, position, Quaternion.identity);
             Destroy(shadowTail);
 
@@ -181,10 +208,25 @@ public class PlayerMovement_crowd : MonoBehaviour
                 }
 
                 Debug.Log("Player moved to the first triggered tile and tails cleared.");
-                yield break;
+                yield break; // Exit the coroutine
             }
 
+            // Wait for a short delay before processing the next shadow tail
             yield return new WaitForSeconds(shadowFillSpeed);
+        }
+
+        // After processing all shadow tails, move the follower to the player's position
+        if (followerObject != null)
+        {
+            // Stop any ongoing follower movement coroutine
+            if (moveFollowerCoroutine != null)
+            {
+                StopCoroutine(moveFollowerCoroutine);
+            }
+
+            // Start moving the follower to the player's position
+            moveFollowerCoroutine = StartCoroutine(MoveFollowerToPosition(followerObject, transform.position));
+            yield return moveFollowerCoroutine; // Wait until the follower reaches the player's position
         }
 
         // Check if the player is on the goal tile
@@ -194,7 +236,25 @@ public class PlayerMovement_crowd : MonoBehaviour
             // Add win logic here, e.g., load a win scene or display a win message
         }
 
+        // Enable the restart button if it exists
         if (restartButton != null) restartButton.SetActive(true);
+    }
+
+    // Coroutine to move the follower object to a target position
+    private IEnumerator MoveFollowerToPosition(GameObject follower, Vector2 targetPosition)
+    {
+        while ((Vector2)follower.transform.position != targetPosition)
+        {
+            follower.transform.position = Vector2.MoveTowards(
+                follower.transform.position,
+                targetPosition,
+                followerSpeed * Time.deltaTime
+            );
+            yield return null; // Wait for the next frame
+        }
+
+        // Clear the coroutine reference once the movement is complete
+        moveFollowerCoroutine = null;
     }
 
     // Public method to start the coroutine
@@ -241,31 +301,23 @@ public class PlayerMovement_crowd : MonoBehaviour
 
         return isOnGoalTile;
     }
-
-    private bool IsOnTriggerTile()
-    {
-        // Check if the player is on the trigger tile
-        Vector2 playerPosition = rb.position;
-        Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("CrowdMaze_GoalTile"));
-        bool isOnTriggerTile = hit != null;
-
-        if (isOnTriggerTile && !wasOnTriggerTile)
-        {
-            Debug.Log("Player is on a TriggerTile");
-            wasOnTriggerTile = true;
-        }
-        else if (!isOnTriggerTile)
-        {
-            wasOnTriggerTile = false;
-        }
-
-        return isOnTriggerTile;
-    }
-
     public void RestartScene()
     {
         // Reset the player's position to the starting position
         rb.position = startingPosition;
+
+        // Reset the follower object's position
+        if (followerObject != null)
+        {
+            followerObject.transform.position = startingPosition;
+
+            // Stop the follower movement coroutine
+            if (moveFollowerCoroutine != null)
+            {
+                StopCoroutine(moveFollowerCoroutine);
+                moveFollowerCoroutine = null;
+            }
+        }
 
         // Remove all tails
         GameObject[] allTails = GameObject.FindGameObjectsWithTag("Tail");
@@ -289,10 +341,11 @@ public class PlayerMovement_crowd : MonoBehaviour
         isGameOver = false;
         canMove = true;
         restartButton.SetActive(false);
+
         // Reset the coroutine reference
         fillShadowTailCoroutine = null;
 
-        Debug.Log("Game reset: Player position, tails, and shadows cleared.");
+        Debug.Log("Game reset: Player position, follower position, tails, and shadows cleared.");
     }
 
     private Vector2 SnapToHalfCoordinates(Vector2 position)
