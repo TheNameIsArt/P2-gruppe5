@@ -35,6 +35,11 @@ public class SceneFader : MonoBehaviour
 
     public void FadeToScene(string sceneName)
     {
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true); // Activate the GameObject if it's inactive
+        }
+
         StartCoroutine(FadeAndLoadScene(sceneName));
     }
 

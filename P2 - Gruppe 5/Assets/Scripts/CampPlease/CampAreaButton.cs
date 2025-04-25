@@ -1,22 +1,24 @@
 using UnityEngine;
 
-public class CampButton : MonoBehaviour
+public class CampAreaButton : MonoBehaviour
 {
-    public Sprite[] buttonStates; // [0] = default, [1] = hover, [2] = clicked
+    public Sprite[] buttonStates; // [0] = default, [1] = selected
     private SpriteRenderer spriteRenderer;
     private CampPanel panel;
+
+    private bool clicked = false;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = buttonStates[0];
 
-        panel = Object.FindFirstObjectByType<CampPanel>(); // Assuming there's only one CampPanel in the scene
+        panel = Object.FindFirstObjectByType<CampPanel>();
     }
 
     void OnMouseEnter()
     {
-        if (panel != null && panel.panelActivated) // Only change sprite if the panel is activated
+        if (panel != null && panel.panelActivated && !clicked)
         {
             spriteRenderer.sprite = buttonStates[1];
         }
@@ -24,7 +26,8 @@ public class CampButton : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (panel != null && panel.panelActivated) // Only reset sprite if the panel is activated
+        // Reset to default state if not clicked
+        if (panel != null && panel.panelActivated && !clicked)
         {
             spriteRenderer.sprite = buttonStates[0];
         }
@@ -32,11 +35,20 @@ public class CampButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (panel != null && panel.panelActivated) // Only interact if the panel is activated
+        if (panel != null && panel.panelActivated)
         {
-            spriteRenderer.sprite = buttonStates[1];
-            Debug.Log("Button clicked!");
-            // Add button-specific logic here
+            clicked = !clicked; // Toggle clicked state
+            spriteRenderer.sprite = clicked ? buttonStates[1] : buttonStates[0];
         }
+    }
+
+    void ResetPanel()
+    {
+        clicked = false;
+        if (panel != null)
+        {
+            panel.panelActivated = false;
+        }
+        spriteRenderer.sprite = buttonStates[0];
     }
 }

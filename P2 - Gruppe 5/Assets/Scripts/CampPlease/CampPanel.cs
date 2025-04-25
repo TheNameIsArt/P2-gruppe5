@@ -10,6 +10,8 @@ public class CampPanel : MonoBehaviour
 
     public bool panelActivated;
 
+    [SerializeField] private GameObject[] mapAreas;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -19,20 +21,27 @@ public class CampPanel : MonoBehaviour
 
     void Update()
     {
-        // Detect left-click anywhere
         if (Input.GetMouseButtonDown(0))
         {
-            // Check if we clicked on this sprite
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-            // If nothing was hit, or we hit something else
-            if (hit.collider == null || hit.collider.gameObject != gameObject)
+            if (hit.collider == null)
             {
-                ResetPanel(); // Reset the panel sprite
+                ResetPanel();
+            }
+            else
+            {
+                // Prevent reset if clicking on a CampButton
+                if (hit.collider.GetComponent<CampAreaButton>() == null &&
+                    hit.collider.gameObject != gameObject)
+                {
+                    ResetPanel();
+                }
             }
         }
     }
+
 
     void OnMouseEnter()
     {
@@ -53,6 +62,10 @@ public class CampPanel : MonoBehaviour
         clicked = true;
         spriteRenderer.sprite = panel[1];
         panelActivated = true;
+        foreach (GameObject area in mapAreas)
+        {
+            area.SetActive(true);
+        }
     }
 
     void ResetPanel()
@@ -60,5 +73,9 @@ public class CampPanel : MonoBehaviour
         clicked = false;
         panelActivated = false;
         spriteRenderer.sprite = panel[0];
+        foreach (GameObject area in mapAreas)
+        {
+            area.SetActive(false);
+        }
     }
 }
