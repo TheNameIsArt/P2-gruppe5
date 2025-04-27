@@ -17,7 +17,7 @@ public class campBotScript : MonoBehaviour
 
         if (timeManager == null)
         {
-            Debug.LogError("TimeManager is not assigned in the Inspector!");
+            //Debug.LogError("TimeManager is not assigned in the Inspector!");
         }
 
         // Start a coroutine to wait for the current animation to finish
