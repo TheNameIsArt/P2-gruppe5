@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -170,6 +170,11 @@ public class WDPlayerController : MonoBehaviour
         {
             projectile.transform.position = firePoint.position;
             projectile.transform.rotation = firePoint.rotation;
+
+            // 🔀 Randomize scale here!
+            float scale = Random.Range(0.8f, 1.3f); // tweak min/max as needed
+            projectile.transform.localScale = new Vector3(scale, scale, 1f);
+
             projectile.SetActive(true);
 
             var proj = projectile.GetComponent<WaterProjectile>();
@@ -179,4 +184,5 @@ public class WDPlayerController : MonoBehaviour
             }
         }
     }
+
 }
