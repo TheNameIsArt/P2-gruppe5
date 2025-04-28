@@ -15,7 +15,7 @@ public class PlayerMovement_crowd : MonoBehaviour
     public GameObject restartButton; // Button to restart the game
     public float shadowFillSpeed = 0.1f; // Speed of filling shadow tails
     public int maxMoves = 20; // Maximum number of moves allowed
-    public Vector2 startingPosition; // Store the player's starting position
+    public Vector2 startingPosition; // Starting position of the player
 
     // Private variables for internal logic
     private Rigidbody2D rb; // Rigidbody component for movement
