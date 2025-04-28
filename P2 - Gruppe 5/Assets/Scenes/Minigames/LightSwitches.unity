@@ -1237,9 +1237,10 @@ GameObject:
   - component: {fileID: 132826880}
   - component: {fileID: 132826879}
   - component: {fileID: 132826881}
+  - component: {fileID: 132826882}
   m_Layer: 0
   m_Name: Lightswitch Game BG
-  m_TagString: Untagged
+  m_TagString: BG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1336,6 +1337,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &132826882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132826878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0edd8937f41f74499224f8824f4ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winAnimator: {fileID: 0}
 --- !u!224 &152911852 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3231901989739605856, guid: 3a20dcc03698c6a49a5000a77fde2180, type: 3}
@@ -3082,6 +3096,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: e781a70ae4022ab44afdcf11cbb5185f, type: 3}
   - {fileID: 8300000, guid: e6db4cd67d4eea7438f0919b5e848ed4, type: 3}
+  winConditionMet: 0
   myConversation: {fileID: 1692635629}
   virtualMouse: {fileID: 1389550415152286767}
 --- !u!4 &708979177
