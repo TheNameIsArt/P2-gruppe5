@@ -41,6 +41,8 @@ public class LightsOut : MonoBehaviour
 
         buttonSound.Play();
         CheckWinCondition();
+
+
     }
 
 
@@ -52,7 +54,7 @@ public class LightsOut : MonoBehaviour
 
     void UpdateLightAppearance(int index)
     {
-        lightButtons[index].color = lightStates[index] ? Color.yellow : Color.black;
+        lightButtons[index].color = lightStates[index] ? new Color(1f,1f,1f,1f) : new Color(1f, 1f, 1f, 0f);
     }
 
     void CheckWinCondition()
@@ -71,7 +73,7 @@ public class LightsOut : MonoBehaviour
         // Change the color from black to yellow
         if (winLight != null)
         {
-            winLight.color = Color.yellow;
+            winLight.color = new Color(1f, 1f, 1f, 1f);
         }
     }
 }

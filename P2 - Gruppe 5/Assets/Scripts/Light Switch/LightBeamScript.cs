@@ -8,7 +8,7 @@ public class LightBeam : MonoBehaviour
     public LayerMask mirrorLayer;
     public LayerMask groundLayer;
     public LayerMask winLayer;  // Added win trigger layer
-    public int maxReflections = 10;
+    public int maxReflections = 18;
     public float offsetDistance = 0.01f; // Prevents self-collision
     private bool isWin = false;
 
