@@ -6,7 +6,7 @@ public class ButtonController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     public Sprite defaultImage; //Default billede af knappen man skal trykke på
-    public Sprite PressedImage; //Billede af knappen efter der er trykket. Virker om visual feedback.
+    public Sprite pressedImage; //Billede af knappen efter der er trykket. Virker om visual feedback.
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); //Finder SpriteRenderen
@@ -20,7 +20,7 @@ public class ButtonController : MonoBehaviour
     {
         if (context.performed)
         {
-            spriteRenderer.sprite = PressedImage; //Hvis der trykkes skifter billedet
+            spriteRenderer.sprite = pressedImage; //Hvis der trykkes skifter billedet
         }
     }
 
