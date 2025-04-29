@@ -9,7 +9,7 @@ public class YellowSpriteChecker : MonoBehaviour
     public Button winButton;
     private AudioSource audioSource;
     public AudioClip[] audioClips;   // Array of AudioClips (2 clips)
-    private bool winConditionMet = false;
+    public bool winConditionMet = false;
     [SerializeField] private NPCConversation myConversation;
     [SerializeField] private GameObject virtualMouse; // Reference to the virtual mouse GameObject
     private void Start()
