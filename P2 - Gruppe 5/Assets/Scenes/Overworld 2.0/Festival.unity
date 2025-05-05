@@ -1027,7 +1027,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452530909}
+  - component: {fileID: 452530912}
   - component: {fileID: 452530910}
+  - component: {fileID: 452530911}
   m_Layer: 0
   m_Name: Buildings_Saloon
   m_TagString: Untagged
@@ -1106,6 +1108,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &452530911
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452530908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &452530912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452530908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 452530911}
+  Building: {fileID: 7400000, guid: f4dbb2855651e8b46bb34312571cb938, type: 2}
 --- !u!1 &485773617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1153,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485773618}
+  - component: {fileID: 485773621}
   - component: {fileID: 485773619}
+  - component: {fileID: 485773620}
   m_Layer: 0
   m_Name: Buildings_Cocktail
   m_TagString: Untagged
@@ -1194,6 +1234,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &485773620
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485773617}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &485773621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485773617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 485773620}
+  Building: {fileID: 7400000, guid: 9dc423a22ae09614b886699ee2e52b12, type: 2}
 --- !u!1 &518596244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,9 +1876,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718323233}
+  - component: {fileID: 718323236}
   - component: {fileID: 718323232}
   - component: {fileID: 718323235}
-  - component: {fileID: 718323234}
   m_Layer: 0
   m_Name: Buildings_Hospital
   m_TagString: Untagged
@@ -1881,18 +1957,6 @@ Transform:
   - {fileID: 231826056}
   m_Father: {fileID: 1612273171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &718323234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718323231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ebc9e12245d924b95c8a1cc02b6c78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &718323235
 Animator:
   serializedVersion: 7
@@ -1915,6 +1979,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &718323236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718323231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 718323235}
+  Building: {fileID: 7400000, guid: f9a0cedca8e21ee4dab78bf798efe53f, type: 2}
 --- !u!1 &719301270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2503,8 @@ GameObject:
   m_Component:
   - component: {fileID: 872096024}
   - component: {fileID: 872096025}
+  - component: {fileID: 872096027}
+  - component: {fileID: 872096026}
   m_Layer: 0
   m_Name: Buildings_Arcade
   m_TagString: Untagged
@@ -2503,6 +2583,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &872096026
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872096023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &872096027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872096023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 872096026}
+  Building: {fileID: 7400000, guid: ce30d7b453210584d8811b8a3f012fdd, type: 2}
 --- !u!1 &883800683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,7 +2803,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 913780092}
+  - component: {fileID: 913780095}
   - component: {fileID: 913780093}
+  - component: {fileID: 913780094}
   m_Layer: 0
   m_Name: Buildings_Burger
   m_TagString: Untagged
@@ -2766,6 +2884,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &913780094
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913780091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &913780095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913780091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 913780094}
+  Building: {fileID: 7400000, guid: ee17967fdffd1a2478103323e4ba5306, type: 2}
 --- !u!1 &931036768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,7 +3016,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 982362891}
+  - component: {fileID: 982362893}
   - component: {fileID: 982362890}
+  - component: {fileID: 982362892}
   m_Layer: 0
   m_Name: Buildings_LNF
   m_TagString: Untagged
@@ -2941,6 +3097,42 @@ Transform:
   - {fileID: 636385590}
   m_Father: {fileID: 1612273171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &982362892
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982362889}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &982362893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982362889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 982362892}
+  Building: {fileID: 7400000, guid: 3ecddeb98ea4b114dba193d14c75c9ca, type: 2}
 --- !u!1001 &989436292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4016,7 +4208,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1694047075}
+  - component: {fileID: 1694047078}
   - component: {fileID: 1694047076}
+  - component: {fileID: 1694047077}
   m_Layer: 0
   m_Name: Buildings_Ballonos
   m_TagString: Untagged
@@ -4095,6 +4289,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1694047077
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694047074}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1694047078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694047074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1694047077}
+  Building: {fileID: 7400000, guid: fdd5e9ef73ad434478385264ad857daf, type: 2}
 --- !u!1 &1712061072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,7 +4829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693540017561195785, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.46
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 8693540017561195785, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4903,7 +5133,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1885371150}
+  - component: {fileID: 1885371153}
   - component: {fileID: 1885371151}
+  - component: {fileID: 1885371152}
   m_Layer: 0
   m_Name: Buildings_DJ
   m_TagString: Untagged
@@ -4981,6 +5213,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1885371152
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885371149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1885371153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885371149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1885371152}
+  Building: {fileID: 7400000, guid: e931b4552aad2014ea0e2af7a23e7047, type: 2}
 --- !u!1 &1901147300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,7 +5588,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1951270216}
+  - component: {fileID: 1951270218}
   - component: {fileID: 1951270215}
+  - component: {fileID: 1951270217}
   m_Layer: 0
   m_Name: Buildings_Info
   m_TagString: Untagged
@@ -5372,7 +5642,7 @@ SpriteRenderer:
   m_SortingLayerID: 1323848801
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eebdd5b2bdad2234c83e3ed88d52d185, type: 3}
+  m_Sprite: {fileID: 2046466482, guid: fde23b4d49f5d314cad6fed66c6e7a66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5399,6 +5669,42 @@ Transform:
   - {fileID: 839961156}
   m_Father: {fileID: 1612273171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1951270217
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951270214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f8fd5dd82cbf204784a73c4cb186f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1951270218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951270214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1951270217}
+  Building: {fileID: 7400000, guid: 23493fd8bd527004f93e4e54d42c6732, type: 2}
 --- !u!1001 &1959370499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5805,6 +6111,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2021857085
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8794492
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129010340993171176, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: m_Name
+      value: Bot_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560208717775789605, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      propertyPath: idleAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: 6007bad8593503140b7b47b6934fa416, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
 --- !u!1 &2041254152
 GameObject:
   m_ObjectHideFlags: 0
@@ -6476,3 +6843,4 @@ SceneRoots:
   - {fileID: 1786143636}
   - {fileID: 138262572}
   - {fileID: 1719651127}
+  - {fileID: 2021857085}
