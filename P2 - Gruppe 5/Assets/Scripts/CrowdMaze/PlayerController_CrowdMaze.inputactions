@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Follow",
+                    "type": "Button",
+                    "id": "21cdf928-5d59-497b-bc91-4059d26a1dfc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -146,17 +155,6 @@
                 },
                 {
                     "name": "",
-                    "id": "9a59b8fb-a818-4b30-ac39-01bca1302906",
-                    "path": "<iOSGameController>/dpad",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "08dc6919-9ea1-4b5e-8f64-4d2c5f85927e",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
@@ -190,17 +188,6 @@
                 },
                 {
                     "name": "",
-                    "id": "5a73c917-36b7-4d32-9a2f-3a72e6f6846b",
-                    "path": "<iOSGameController>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "FillShadow",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "8621862a-0f4c-4054-8c75-7a01ed71ab04",
                     "path": "<Keyboard>/r",
                     "interactions": "",
@@ -223,12 +210,23 @@
                 },
                 {
                     "name": "",
-                    "id": "2051799a-1f12-4909-8f7c-a6811b630e54",
-                    "path": "<iOSGameController>/buttonEast",
+                    "id": "3fa3d230-5f93-43da-a746-c279fc63e646",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Restart",
+                    "action": "Follow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a107258f-d506-4f77-ab54-9ac2b0e30376",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Follow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

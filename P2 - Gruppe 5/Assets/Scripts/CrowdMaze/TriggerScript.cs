@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class TriggerScript : MonoBehaviour
 {
@@ -17,17 +16,11 @@ public class TriggerScript : MonoBehaviour
             // Stop the shadow tail coroutine
             playerMovement.StopFillShadowTail();
 
-            // Get the position of the target GameObject
-            if (targetGameObject != null)
+            // Update the starting position to the collider's position
+            if (playerMovement != null)
             {
-                Vector3 targetPosition = targetGameObject.transform.position;
-                Debug.Log($"Target GameObject position: {targetPosition}");
-                playerMovement.startingPosition = targetPosition; // Set the starting position
-            }
-            else
-            {
-                Debug.LogWarning("Target GameObject is not assigned. Defaulting to (0,0).");
-                playerMovement.startingPosition = Vector2.zero; // Default to (0,0) if no GameObject is assigned
+                playerMovement.startingPosition = other.transform.position;
+                Debug.Log($"Starting position updated to: {playerMovement.startingPosition}");
             }
 
             // Activate and deactivate layers
