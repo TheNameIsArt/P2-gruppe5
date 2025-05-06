@@ -24,13 +24,15 @@ public class PlayerMovement_crowd : MonoBehaviour
     private int moveCount = 0; // Counter for remaining moves
     private bool isGameOver = false; // Flag to check if the game is over
     private bool wasOnGoalTile = false; // Flag to track if player was on a goal tile
-    private bool wasOnTriggerTile = false; // Flag to track if player was on a trigger tile
     private GameObject firstTriggeredTile = null; // To store the first trigger tile
 
     // Input actions
     private InputAction moveAction; // Action for player movement
     private InputAction fillShadowAction; // Action for filling shadow tails
     private InputAction restartAction; // Action for restarting the game
+
+    // Add a private variable to store the coroutine reference
+    private Coroutine fillShadowTailCoroutine;
 
     void Awake()
     {
@@ -46,9 +48,9 @@ public class PlayerMovement_crowd : MonoBehaviour
         fillShadowAction = playerInput.actions["FillShadow"];
         restartAction = playerInput.actions["Restart"];
 
-        if (moveAction != null) moveAction.Enable();
-        if (fillShadowAction != null) fillShadowAction.Enable();
-        if (restartAction != null) restartAction.Enable();
+        moveAction?.Enable();
+        fillShadowAction?.Enable();
+        restartAction?.Enable();
     }
 
     void Start()
@@ -58,10 +60,8 @@ public class PlayerMovement_crowd : MonoBehaviour
         startingPosition = rb.position; // Store the starting position
         moveCount = maxMoves;
         UpdateMoveCounterUI();
-        if (restartButton != null) restartButton.SetActive(false);
+        restartButton?.SetActive(false);
     }
-
-
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -110,14 +110,7 @@ public class PlayerMovement_crowd : MonoBehaviour
         if (moveCount <= 0 || !canMove) return;
 
         // Restrict movement to one axis at a time
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            direction.y = 0;
-        }
-        else
-        {
-            direction.x = 0;
-        }
+        direction = Mathf.Abs(direction.x) > Mathf.Abs(direction.y) ? new Vector2(direction.x, 0) : new Vector2(0, direction.y);
 
         Vector2 currentPosition = rb.position;
         Vector2 targetPosition = currentPosition + direction.normalized * stepSize;
@@ -150,20 +143,15 @@ public class PlayerMovement_crowd : MonoBehaviour
         canMove = true;
     }
 
-    // Add a private variable to store the coroutine reference
-    private Coroutine fillShadowTailCoroutine;
-
     public System.Collections.IEnumerator FillShadowTailIncrementally()
     {
         // Replace shadow tails with actual tails incrementally
-        GameObject[] shadowTailObjects = GameObject.FindGameObjectsWithTag("Shadow"); // Ensure correct tag is used
-
-        foreach (GameObject shadowTail in shadowTailObjects)
+        foreach (GameObject shadowTail in GameObject.FindGameObjectsWithTag("Shadow")) // Ensure correct tag is used
         {
             Vector2 position = shadowTail.transform.position;
 
             // Replace shadow tail with actual tail
-            GameObject newTail = Instantiate(tailPrefab, position, Quaternion.identity);
+            Instantiate(tailPrefab, position, Quaternion.identity);
             Destroy(shadowTail);
 
             // Check if the new tail triggers the first triggered tile
@@ -173,11 +161,7 @@ public class PlayerMovement_crowd : MonoBehaviour
                 rb.position = position;
 
                 // Destroy all tails
-                GameObject[] allTails = GameObject.FindGameObjectsWithTag("Tail");
-                foreach (GameObject tail in allTails)
-                {
-                    Destroy(tail);
-                }
+                foreach (GameObject tail in GameObject.FindGameObjectsWithTag("Tail")) Destroy(tail);
 
                 Debug.Log("Player moved to the first triggered tile and tails cleared.");
                 yield break;
@@ -187,13 +171,9 @@ public class PlayerMovement_crowd : MonoBehaviour
         }
 
         // Check if the player is on the goal tile
-        if (IsOnGoalTile())
-        {
-            Debug.Log("Player Wins!");
-            // Add win logic here, e.g., load a win scene or display a win message
-        }
+        if (IsOnGoalTile()) Debug.Log("Player Wins!");
 
-        if (restartButton != null) restartButton.SetActive(true);
+        restartButton?.SetActive(true);
     }
 
     // Public method to start the coroutine
@@ -219,26 +199,14 @@ public class PlayerMovement_crowd : MonoBehaviour
             Debug.Log("Coroutine was already null. Nothing to stop.");
         }
     }
-   
 
     private bool IsOnGoalTile()
     {
         // Check if the player is on the goal tile
         Vector2 playerPosition = rb.position;
         Collider2D hit = Physics2D.OverlapPoint(playerPosition, LayerMask.GetMask("CrowdMaze_GoalTile"));
-        bool isOnGoalTile = hit != null;
-
-        if (isOnGoalTile && !wasOnGoalTile)
-        {
-            Debug.Log("Player is on a GoalTile");
-            wasOnGoalTile = true;
-        }
-        else if (!isOnGoalTile)
-        {
-            wasOnGoalTile = false;
-        }
-
-        return isOnGoalTile;
+        wasOnGoalTile = hit != null;
+        return wasOnGoalTile;
     }
 
     public void RestartScene()
@@ -247,18 +215,10 @@ public class PlayerMovement_crowd : MonoBehaviour
         rb.position = startingPosition;
 
         // Remove all tails
-        GameObject[] allTails = GameObject.FindGameObjectsWithTag("Tail");
-        foreach (GameObject tail in allTails)
-        {
-            Destroy(tail);
-        }
+        foreach (GameObject tail in GameObject.FindGameObjectsWithTag("Tail")) Destroy(tail);
 
         // Remove all shadow tails
-        GameObject[] allShadows = GameObject.FindGameObjectsWithTag("Shadow");
-        foreach (GameObject shadow in allShadows)
-        {
-            Destroy(shadow);
-        }
+        foreach (GameObject shadow in GameObject.FindGameObjectsWithTag("Shadow")) Destroy(shadow);
 
         // Reset move count and update the UI
         moveCount = maxMoves;
@@ -267,7 +227,7 @@ public class PlayerMovement_crowd : MonoBehaviour
         // Reset other game state variables
         isGameOver = false;
         canMove = true;
-        restartButton.SetActive(false);
+        restartButton?.SetActive(false);
         // Reset the coroutine reference
         fillShadowTailCoroutine = null;
 
@@ -277,9 +237,7 @@ public class PlayerMovement_crowd : MonoBehaviour
     private Vector2 SnapToHalfCoordinates(Vector2 position)
     {
         // Snap position to half-grid coordinates
-        float x = Mathf.Round(position.x * 2f) / 2f;
-        float y = Mathf.Round(position.y * 2f) / 2f;
-        return new Vector2(x, y);
+        return new Vector2(Mathf.Round(position.x * 2f) / 2f, Mathf.Round(position.y * 2f) / 2f);
     }
 
     private void UpdateMoveCounterUI()
