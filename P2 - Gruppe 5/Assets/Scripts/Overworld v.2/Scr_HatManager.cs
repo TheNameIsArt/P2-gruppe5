@@ -63,7 +63,7 @@ public class Scr_HatSwitch : MonoBehaviour
                 hatKey = "Hat: " + hatChooser;
                 break;
             default:
-                hatRenderer.enabled=false;
+                hatRenderer.enabled = false;
                 break;
 
         }
