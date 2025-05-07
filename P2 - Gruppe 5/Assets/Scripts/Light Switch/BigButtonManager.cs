@@ -12,6 +12,11 @@ public class YellowSpriteChecker : MonoBehaviour
     public bool winConditionMet = false;
     [SerializeField] private NPCConversation myConversation;
     [SerializeField] private GameObject virtualMouse; // Reference to the virtual mouse GameObject
+    public bool light1;
+    public bool light2;
+    public bool light3;
+    [SerializeField] private Animator winAnimator; // Reference to the animation component
+    [SerializeField] private AnimationClip winAnimation; // Reference to the animation clip
     private void Start()
     {
         winButton.interactable = false;
@@ -30,20 +35,15 @@ public class YellowSpriteChecker : MonoBehaviour
 
     bool CheckAllYellow()
     {
-        foreach (SpriteRenderer sprite in targetSprites)
-        {
-            if (sprite.color != targetColor)
-            {
-                return false; // If any sprite is not yellow, return false
-            }
-        }
-        return true; // All sprites are yellow
+        // Check if all three boolean variables are true
+        return light1 && light2 && light3;
     }
 
     void TriggerAction()
     {
         Debug.Log("All sprites are yellow! Unnlocking end button");
         winButton.interactable = true;
+        winAnimator.Play(winAnimation.name); // Play the animation
     }
 
     public void OnWinButtonClick()

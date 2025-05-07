@@ -47,6 +47,7 @@ public class SoundIsolationManager : MonoBehaviour
             if (myConversation != null)
             {
                 ConversationManager.Instance.StartConversation(myConversation);
+                ConversationManager.Instance.minigameActive = true;
             }
             else
             {
@@ -54,5 +55,10 @@ public class SoundIsolationManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void ConversationEnded()
+    {
+        ConversationManager.Instance.minigameActive = false;
     }
 }

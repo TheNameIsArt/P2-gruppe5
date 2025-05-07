@@ -3,7 +3,7 @@ using Cinemachine;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-public class Scr_CameraController : MonoBehaviour
+public class Scr_CameraControllerMaze : MonoBehaviour
 {
  
     static List<CinemachineVirtualCamera> cameras = new List<CinemachineVirtualCamera>();
