@@ -117,6 +117,15 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Follow"",
+                    ""type"": ""Button"",
+                    ""id"": ""21cdf928-5d59-497b-bc91-4059d26a1dfc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -232,17 +241,6 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9a59b8fb-a818-4b30-ac39-01bca1302906"",
-                    ""path"": ""<iOSGameController>/dpad"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""08dc6919-9ea1-4b5e-8f64-4d2c5f85927e"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
@@ -276,17 +274,6 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5a73c917-36b7-4d32-9a2f-3a72e6f6846b"",
-                    ""path"": ""<iOSGameController>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FillShadow"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""8621862a-0f4c-4054-8c75-7a01ed71ab04"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
@@ -309,12 +296,23 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2051799a-1f12-4909-8f7c-a6811b630e54"",
-                    ""path"": ""<iOSGameController>/buttonEast"",
+                    ""id"": ""3fa3d230-5f93-43da-a746-c279fc63e646"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Restart"",
+                    ""action"": ""Follow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a107258f-d506-4f77-ab54-9ac2b0e30376"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Follow"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -328,6 +326,7 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_FillShadow = m_Player.FindAction("FillShadow", throwIfNotFound: true);
         m_Player_Restart = m_Player.FindAction("Restart", throwIfNotFound: true);
+        m_Player_Follow = m_Player.FindAction("Follow", throwIfNotFound: true);
     }
 
     ~@PlayerController_CrowdMaze()
@@ -411,6 +410,7 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_FillShadow;
     private readonly InputAction m_Player_Restart;
+    private readonly InputAction m_Player_Follow;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -434,6 +434,10 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
         /// Provides access to the underlying input action "Player/Restart".
         /// </summary>
         public InputAction @Restart => m_Wrapper.m_Player_Restart;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Follow".
+        /// </summary>
+        public InputAction @Follow => m_Wrapper.m_Player_Follow;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -469,6 +473,9 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
             @Restart.started += instance.OnRestart;
             @Restart.performed += instance.OnRestart;
             @Restart.canceled += instance.OnRestart;
+            @Follow.started += instance.OnFollow;
+            @Follow.performed += instance.OnFollow;
+            @Follow.canceled += instance.OnFollow;
         }
 
         /// <summary>
@@ -489,6 +496,9 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
             @Restart.started -= instance.OnRestart;
             @Restart.performed -= instance.OnRestart;
             @Restart.canceled -= instance.OnRestart;
+            @Follow.started -= instance.OnFollow;
+            @Follow.performed -= instance.OnFollow;
+            @Follow.canceled -= instance.OnFollow;
         }
 
         /// <summary>
@@ -550,5 +560,12 @@ public partial class @PlayerController_CrowdMaze: IInputActionCollection2, IDisp
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRestart(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Follow" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFollow(InputAction.CallbackContext context);
     }
 }
