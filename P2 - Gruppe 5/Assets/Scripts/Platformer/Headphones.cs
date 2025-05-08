@@ -3,11 +3,13 @@ using UnityEngine;
 public class Headphones : MonoBehaviour
 {
     public GameObject pickupEffect; // Assign the particle effect prefab in the Inspector
+    public GameObject winZone; // Assign the win zone prefab in the Inspector
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            winZone.SetActive(true); // Activate the win zone
             // Spawn the particle effect at the headphones' position
             if (pickupEffect != null)
             {

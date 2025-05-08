@@ -19,6 +19,10 @@ public class PanelManager : MonoBehaviour
     private bool panelsWereTurnedOff = false; // Flag to track if TurnOffAllPanels was called
     private GameObject lastSelectedPanel; // Stores the last selected panel
 
+    [Header("GameObjects to Activate")]
+    public GameObject gameObject1; // First GameObject to activate
+    public GameObject gameObject2; // Second GameObject to activate
+
     private void Awake()
     {
         InputSystem.onActionChange += OnActionChange;
@@ -45,11 +49,33 @@ public class PanelManager : MonoBehaviour
             if (inputDevice is Mouse)
             {
                 TurnOffAllPanels();
+                // Activate the two specific GameObjects
+                if (gameObject1 != null)
+                {
+                    gameObject1.SetActive(false);
+                }
+
+                if (gameObject2 != null)
+                {
+                    gameObject2.SetActive(false);
+                }
             }
 
+            // Check if the input device is a gamepad
             if (inputDevice is Gamepad)
             {
                 TurnOnAllPanels();
+
+                // Activate the two specific GameObjects
+                if (gameObject1 != null)
+                {
+                    gameObject1.SetActive(true);
+                }
+
+                if (gameObject2 != null)
+                {
+                    gameObject2.SetActive(true);
+                }
             }
         }
     }
@@ -85,7 +111,6 @@ public class PanelManager : MonoBehaviour
         {
             if (panelMappings.Count > 0 && panelMappings[0].panel != null)
             {
-                //EventSystem.current.SetSelectedGameObject(panelMappings[0].panel);
                 lastSelectedPanel = panelMappings[0].panel; // Update the last selected panel
             }
             else
@@ -104,10 +129,6 @@ public class PanelManager : MonoBehaviour
         if (lastSelectedPanel != null)
         {
             EventSystem.current.SetSelectedGameObject(lastSelectedPanel);
-        }
-        else
-        {
-            //Debug.LogWarning("No last selected panel to return to.");
         }
     }
 

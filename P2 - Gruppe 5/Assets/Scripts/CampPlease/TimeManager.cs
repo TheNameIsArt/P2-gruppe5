@@ -6,6 +6,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private Sprite[] clockSprites; // Array of 17 sprites for the clock
     [SerializeField] private AudioSource audioSource; // Reference to the AudioSource component
     [SerializeField] private AudioClip timeoutSound; // Sound to play when time runs out
+    [SerializeField] private AudioClip errorSound; // Sound to play when you guess wrong
     [SerializeField] private Animator animator; // Reference to the Animator component
     [SerializeField] private string timeoutAnimationTrigger = "CampClock"; // Trigger name for the timeout animation
 
@@ -164,6 +165,10 @@ public class TimeManager : MonoBehaviour
 
         // Add the penalty time to the elapsed time
         elapsedTime += penaltyTime;
+
+        //Play the error sound
+        audioSource.PlayOneShot(errorSound);
+
 
         // Ensure elapsedTime does not exceed countdownTime
         if (elapsedTime > countdownTime)
