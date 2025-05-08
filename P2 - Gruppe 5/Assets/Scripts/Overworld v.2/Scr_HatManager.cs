@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Scr_HatSwitch : MonoBehaviour
 {
@@ -7,29 +9,22 @@ public class Scr_HatSwitch : MonoBehaviour
 
     public string hatKey;
     public int hatChooser;
-    //public bool hatEnabled = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         hatRenderer = gameObject.GetComponent<SpriteRenderer>();
         hatRenderer.enabled = false;
-        //Debug.Log(Hats.Length);
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //HatEnabler();
         HatChooser();
-        HatDetector();
-
     }
 
-    void HatDetector()
+    public void HatIncreaser(InputAction.CallbackContext trigger)
     {
-        if (Input.GetKeyDown(KeyCode.T) /*&& hatRenderer.enabled*/)
+        if (trigger.performed)
         {
             hatRenderer.enabled = true;
             hatChooser = hatChooser + 1;
@@ -41,15 +36,6 @@ public class Scr_HatSwitch : MonoBehaviour
         }
     }
 
-    void HatEnabler()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && !hatRenderer.enabled)
-        {
-            hatRenderer.enabled = true;
-            hatChooser = 0;
-        }
-    }
-
     void HatChooser()
     {
         switch (hatChooser)
@@ -57,23 +43,18 @@ public class Scr_HatSwitch : MonoBehaviour
             case 0:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
-                //hatRenderer.enabled = false;
-                Debug.Log("No hat equipped");
                 break;
             case 1:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
-                Debug.Log(hatKey);
                 break;
             case 2:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
-                Debug.Log(hatKey);
                 break;
             case 3:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
-                Debug.Log(hatKey);
                 break;
             default:
                 hatRenderer.enabled = false;
