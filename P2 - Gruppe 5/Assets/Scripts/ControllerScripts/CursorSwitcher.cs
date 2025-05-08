@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 
 public class InputDeviceSwitcher : MonoBehaviour
@@ -12,6 +13,8 @@ public class InputDeviceSwitcher : MonoBehaviour
 
     [SerializeField] private float switchDelay = 0.01f; // Delay in seconds between input device switches
     private float lastSwitchTime = 0f; // Time of the last input device switch
+    public bool gameIsOver = false; // Flag to indicate if the game is over
+    public VirtualMouseInput virtualMouseInput; // Reference to the virtual mouse input component
 
 
     private void Start()
@@ -37,32 +40,35 @@ public class InputDeviceSwitcher : MonoBehaviour
 
     private void HandleInputDevice(InputDevice device)
     {
-        if (device != null)
+        if (!gameIsOver)
         {
-            // Check if enough time has passed since the last switch
-            if (Time.time - lastSwitchTime < switchDelay)
+            if (device != null)
             {
-                return; // Ignore the input if the delay hasn't passed
-            }
+                // Check if enough time has passed since the last switch
+                if (Time.time - lastSwitchTime < switchDelay)
+                {
+                    return; // Ignore the input if the delay hasn't passed
+                }
 
-            lastSwitchTime = Time.time; // Update the last switch time
+                lastSwitchTime = Time.time; // Update the last switch time
 
-            if (device.name == "VirtualMouse") // Replace "VirtualMouse" with the actual name of your virtual mouse device
-            {
-                SetInputState(virtualMouseObject);
-            }
-            else if (device is Mouse)
-            {
-                SetInputState(realMouseObject);
-            }
-            else if (device is Gamepad)
-            {
-                SetInputState(virtualMouseObject); // Enable virtual mouse for gamepad input
-            }
-            else
-            {
-                //Debug.Log($"Other input device detected: {device.displayName}");
-                SetInputState(null); // Disable all inputs if the device is unrecognized
+                if (device.name == "VirtualMouse") // Replace "VirtualMouse" with the actual name of your virtual mouse device
+                {
+                    SetInputState(virtualMouseObject);
+                }
+                else if (device is Mouse)
+                {
+                    SetInputState(realMouseObject);
+                }
+                else if (device is Gamepad)
+                {
+                    SetInputState(virtualMouseObject); // Enable virtual mouse for gamepad input
+                }
+                else
+                {
+                    //Debug.Log($"Other input device detected: {device.displayName}");
+                    SetInputState(null); // Disable all inputs if the device is unrecognized
+                }
             }
         }
     }
@@ -98,5 +104,17 @@ public class InputDeviceSwitcher : MonoBehaviour
             Cursor.visible = false; // Hide the system cursor for other devices
             Cursor.lockState = CursorLockMode.Confined; // Confine the cursor to the game window but allow clicks
         }
+    }
+
+    public void MouseOff()
+    {
+        gameIsOver = true; // Set the game over flag
+        virtualMouseInput.enabled = false; // Disable the virtual mouse input
+    }
+
+    public void MouseOn()
+    {
+        gameIsOver = false; // Reset the game over flag
+        virtualMouseInput.enabled = true; // Enable the virtual mouse input
     }
 }

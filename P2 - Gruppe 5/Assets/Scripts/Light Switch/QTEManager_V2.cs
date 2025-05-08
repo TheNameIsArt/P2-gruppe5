@@ -18,6 +18,7 @@ public class QTEManager_V2 : MonoBehaviour
     public AudioClip[] audioClips;
     public SpriteRenderer[] sequenceLights;
     public Slider timerSlider;
+    [SerializeField] private YellowSpriteChecker yellowSpriteChecker; // Reference to the YellowSpriteChecker script
 
     private List<string> qteSequence = new List<string>();
     private int currentIndex = 0;
@@ -200,6 +201,7 @@ public class QTEManager_V2 : MonoBehaviour
         {
             winLight.color = new Color(1f, 1f, 1f, 1f);
         }
+        yellowSpriteChecker.light3 = true; // Set light3 to true
     }
 
     void LoseQTE()

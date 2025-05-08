@@ -14,7 +14,7 @@ public class SineManipulator : MonoBehaviour
     public GameObject scannerUI;
     public bool Won = false;
     public AudioSource currentAudio;
-    InputDeviceSwitcher inputDeviceSwitcher;
+    public InputDeviceSwitcher inputDeviceSwitcher;
 
     private void Awake()
     {
@@ -31,7 +31,13 @@ public class SineManipulator : MonoBehaviour
 
         controledSinewave.frequency = randomValue1;
         controledSinewave.amplitude = randomValue2;
-        
+        inputDeviceSwitcher = GameObject.Find("Cursor Canvas").GetComponent<InputDeviceSwitcher>();
+        if (inputDeviceSwitcher == null)
+        {
+            Debug.LogError("InputDeviceSwitcher not found in the scene.");
+        }
+        inputDeviceSwitcher.MouseOff(); // Reset the game over state
+
     }
 
 
@@ -108,6 +114,7 @@ public class SineManipulator : MonoBehaviour
             Won = true;
             progressBar.value = 0f;
             targetSinewave.Reroll();
+            inputDeviceSwitcher.MouseOn(); // Set game over state to false
             scannerUI.SetActive(false);
 
             // Optionally stop the audio when the progress bar is full
