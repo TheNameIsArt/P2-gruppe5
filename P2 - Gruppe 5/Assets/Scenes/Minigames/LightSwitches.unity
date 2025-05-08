@@ -310,6 +310,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 110921298}
     - target: {fileID: 5179296253885244341, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: yellowSpriteChecker
+      value: 
+      objectReference: {fileID: 708979176}
+    - target: {fileID: 5179296253885244341, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
       propertyPath: audioClips.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1070,6 +1074,7 @@ MonoBehaviour:
   - {fileID: 1121873335}
   - {fileID: 1146956017}
   winLight: {fileID: 628983589}
+  yellowSpriteChecker: {fileID: 708979176}
 --- !u!4 &116189888
 Transform:
   m_ObjectHideFlags: 0
@@ -1344,7 +1349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132826878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b0edd8937f41f74499224f8824f4ad2, type: 3}
   m_Name: 
@@ -3099,6 +3104,11 @@ MonoBehaviour:
   winConditionMet: 0
   myConversation: {fileID: 1692635629}
   virtualMouse: {fileID: 1389550415152286767}
+  light1: 0
+  light2: 0
+  light3: 0
+  winAnimator: {fileID: 132826881}
+  winAnimation: {fileID: 7400000, guid: 281a4ee233412ae48865c73f4442b808, type: 2}
 --- !u!4 &708979177
 Transform:
   m_ObjectHideFlags: 0
@@ -4849,7 +4859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6677980671601673456, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7918,6 +7928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winLight: {fileID: 1360139172}
+  yellowSpriteChecker: {fileID: 708979176}
 --- !u!1 &2017651069
 GameObject:
   m_ObjectHideFlags: 0
