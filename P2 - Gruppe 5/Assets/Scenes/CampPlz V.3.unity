@@ -2332,7 +2332,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 610070648}
+      - m_Target: {fileID: 1375710128}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -2487,28 +2487,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5262321228293474130, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 610070648}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
---- !u!1 &610070647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5262321228293474130, guid: 7bc27c6893bb03640b42118c546be641, type: 3}
-  m_PrefabInstance: {fileID: 610070646}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &610070648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610070647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22fa8563caae27a428e4e98d534d3bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &637651178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,7 +3591,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 3.93803
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4255,6 +4235,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1597465533759562412, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1375710127}
+    - targetCorrespondingSourceObject: {fileID: 1597465533759562412, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1375710128}
   m_SourcePrefab: {fileID: 100100000, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
 --- !u!1 &1139237965
 GameObject:
@@ -5759,12 +5742,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":173.800049,"yPos":244.7333},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Back
-    to festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":175.600037,"yPos":-122.800018},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Phew,
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":193.799988,"yPos":158.333328},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Back
+    to festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":195.599976,"yPos":-209.200012},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Phew,
     made it just in time to avoid a major leak","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":169.93335,"yPos":1.86663818},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":189.933289,"yPos":-84.5333252},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
     a bunch! You seemed to have caught on quick.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":169.2667,"yPos":112.533295},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway.
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":189.266632,"yPos":26.1333256},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway.
     See you at the concert!","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
     The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -5781,7 +5764,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 610070648}
+      - m_Target: {fileID: 1375710128}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -5805,6 +5788,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1375710128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375710121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fa8563caae27a428e4e98d534d3bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1376860587
 GameObject:
   m_ObjectHideFlags: 0
