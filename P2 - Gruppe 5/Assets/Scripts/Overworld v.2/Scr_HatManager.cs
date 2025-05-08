@@ -6,7 +6,6 @@ public class Scr_HatSwitch : MonoBehaviour
     [SerializeField] private Sprite[] Hats;
 
     [SerializeField] private string hatKey;
-
     [SerializeField] private int hatChooser;
     //public bool hatEnabled = false;
 
@@ -15,7 +14,7 @@ public class Scr_HatSwitch : MonoBehaviour
     {
         hatRenderer = gameObject.GetComponent<SpriteRenderer>();
         hatRenderer.enabled = false;
-        Debug.Log(Hats.Length);
+        //Debug.Log(Hats.Length);
 
     }
 
@@ -30,10 +29,14 @@ public class Scr_HatSwitch : MonoBehaviour
 
     void HatDetector()
     {
-        if (Input.GetKeyDown(KeyCode.E) && hatRenderer.enabled)
+        if (Input.GetKeyDown(KeyCode.T) && hatRenderer.enabled)
         {
-            hatChooser = (hatChooser + 1) % Hats.Length-1;
+            hatChooser = hatChooser + 1;
             Debug.Log(hatChooser);
+            if (hatChooser >= Hats.Length)
+            {
+                hatChooser = 0;
+            }
         }
     }
 
