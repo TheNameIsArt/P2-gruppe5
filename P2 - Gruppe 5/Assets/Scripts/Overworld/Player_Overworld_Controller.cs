@@ -1,3 +1,4 @@
+using Cinemachine;
 using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,7 +20,10 @@ public class Player_Overworld_Controller : MonoBehaviour
     private bool isConversationZone;
     private bool isInteractionZone;
     private bool isContextZone;
+
     [SerializeField] private bool isConversationActive = false;
+    public CinemachineVirtualCamera localCamera;
+    public CinemachineVirtualCamera localCamera2;
 
     private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
@@ -54,6 +58,18 @@ public class Player_Overworld_Controller : MonoBehaviour
                 playerInput.enabled = true; // Enable the PlayerInput component
             }
         }
+        if (ConversationManager.Instance != null)
+        {
+            if (ConversationManager.Instance.IsConversationActive)
+            {
+                Scr_CameraController.SwitchCamera(localCamera);
+            }
+            else if (!ConversationManager.Instance.IsConversationActive)
+            {
+                Scr_CameraController.SwitchCamera(localCamera2);
+            }
+        }
+      
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -118,6 +134,7 @@ public class Player_Overworld_Controller : MonoBehaviour
                 isConversationZone = false;
             }
         }
+       
     }
 
     public void Interact(InputAction.CallbackContext context)
