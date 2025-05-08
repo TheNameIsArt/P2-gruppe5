@@ -3,10 +3,10 @@ using UnityEngine;
 public class Scr_HatSwitch : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer hatRenderer;
-    [SerializeField] private Sprite[] Hats;
+    public Sprite[] Hats;
 
-    [SerializeField] private string hatKey;
-    [SerializeField] private int hatChooser;
+    public string hatKey;
+    public int hatChooser;
     //public bool hatEnabled = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +21,7 @@ public class Scr_HatSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HatEnabler();
+        //HatEnabler();
         HatChooser();
         HatDetector();
 
@@ -29,8 +29,9 @@ public class Scr_HatSwitch : MonoBehaviour
 
     void HatDetector()
     {
-        if (Input.GetKeyDown(KeyCode.T) && hatRenderer.enabled)
+        if (Input.GetKeyDown(KeyCode.T) /*&& hatRenderer.enabled*/)
         {
+            hatRenderer.enabled = true;
             hatChooser = hatChooser + 1;
             Debug.Log(hatChooser);
             if (hatChooser >= Hats.Length)
@@ -56,14 +57,23 @@ public class Scr_HatSwitch : MonoBehaviour
             case 0:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
+                //hatRenderer.enabled = false;
+                Debug.Log("No hat equipped");
                 break;
             case 1:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
+                Debug.Log(hatKey);
                 break;
             case 2:
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
+                Debug.Log(hatKey);
+                break;
+            case 3:
+                HatSelector(hatChooser);
+                hatKey = "Hat: " + hatChooser;
+                Debug.Log(hatKey);
                 break;
             default:
                 hatRenderer.enabled = false;
