@@ -3,29 +3,28 @@ using UnityEngine;
 public class Scr_SpriteLayering : MonoBehaviour
 {
     public GameObject topLayer;
+
+    private SpriteRenderer spriteRenderer;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        topLayer.SetActive(false);
+        spriteRenderer = topLayer.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            topLayer.SetActive(true);
+            spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            topLayer.SetActive(false);
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
         }
     }
 }
