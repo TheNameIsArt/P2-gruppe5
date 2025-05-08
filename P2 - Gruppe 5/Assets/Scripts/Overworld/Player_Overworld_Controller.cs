@@ -53,6 +53,10 @@ public class Player_Overworld_Controller : MonoBehaviour
                 playerInput.enabled = true; // Enable the PlayerInput component
             }
         }
+        if (isConversationActive) 
+        {
+            
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
