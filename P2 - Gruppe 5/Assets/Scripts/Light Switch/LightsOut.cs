@@ -7,6 +7,7 @@ public class LightsOut : MonoBehaviour
     private bool[] lightStates;   // Store the On/Off state of lights
     public SpriteRenderer winLight;
     private AudioSource buttonSound;
+    [SerializeField] private YellowSpriteChecker yellowSpriteChecker; // Reference to the YellowSpriteChecker script
     void Start()
     {
         buttonSound = GetComponent<AudioSource>();
@@ -41,6 +42,8 @@ public class LightsOut : MonoBehaviour
 
         buttonSound.Play();
         CheckWinCondition();
+
+
     }
 
 
@@ -52,7 +55,7 @@ public class LightsOut : MonoBehaviour
 
     void UpdateLightAppearance(int index)
     {
-        lightButtons[index].color = lightStates[index] ? Color.yellow : Color.black;
+        lightButtons[index].color = lightStates[index] ? new Color(1f,1f,1f,1f) : new Color(1f, 1f, 1f, 0f);
     }
 
     void CheckWinCondition()
@@ -68,10 +71,11 @@ public class LightsOut : MonoBehaviour
     void OnWin()
     {
 
-        // Change the color from black to yellow
-        if (winLight != null)
-        {
-            winLight.color = Color.yellow;
-        }
+            // Change the color from black to white
+            if (winLight != null)
+            {
+                winLight.color = new Color(1f, 1f, 1f, 1f);
+            }
+        yellowSpriteChecker.light1 = true;
     }
 }

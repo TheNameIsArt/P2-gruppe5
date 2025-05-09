@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Animator))]
 public class PlayerControllerCSH : MonoBehaviour
 {
-    private Animator animator;
     public float maxSpeed = 10f;
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
@@ -20,56 +19,16 @@ public class PlayerControllerCSH : MonoBehaviour
     private Vector2 moveInput;
     private TouchingDirections touchingDirections;
     private Rigidbody2D rb;
+    private Animator animator;
+
     public bool HasHeadphones { get; private set; } = false;
-    private string currentAnimation = "";
 
-    [SerializeField]
-    private bool _isMoving = false;
+    private bool _isMoving;
+    private bool _isRunning;
+    private bool _isFacingRight = true;
+    private string currentState = "";
 
-    public bool isMoving
-    {
-        get => _isMoving;
-        private set => _isMoving = value;
-    }
-
-    [SerializeField]
-    private bool _isRunning = false;
-
-    public bool isRunning
-    {
-        get => _isRunning;
-        set => _isRunning = value;
-    }
-
-    public bool _isFacingRight = true;
-
-    public bool IsFacingRight
-    {
-        get => _isFacingRight;
-        private set
-        {
-            if (_isFacingRight != value)
-            {
-                transform.localScale *= new Vector2(-1, 1);
-            }
-            _isFacingRight = value;
-        }
-    }
-
-    private float CurrentMoveSpeed
-    {
-        get
-        {
-            if (isMoving)
-            {
-                return isRunning ? runSpeed : walkSpeed;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-    }
+    private float CurrentMoveSpeed => _isMoving ? (_isRunning ? runSpeed : walkSpeed) : 0;
 
     private void Awake()
     {
@@ -78,10 +37,10 @@ public class PlayerControllerCSH : MonoBehaviour
         touchingDirections = GetComponent<TouchingDirections>();
     }
 
-    void Update()
+    private void Update()
     {
-        isMoving = moveInput != Vector2.zero;
-        UpdateAnimationState();
+        _isMoving = moveInput != Vector2.zero;
+        UpdateAnimation();
     }
 
     private void FixedUpdate()
@@ -97,20 +56,13 @@ public class PlayerControllerCSH : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        isMoving = moveInput != Vector2.zero;
+        _isMoving = moveInput != Vector2.zero;
         SetFacingDirection(moveInput);
     }
 
     public void OnRun(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            isRunning = true;
-        }
-        else if (context.canceled)
-        {
-            isRunning = false;
-        }
+        _isRunning = context.ReadValue<float>() > 0.5f;
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -134,45 +86,59 @@ public class PlayerControllerCSH : MonoBehaviour
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (moveInput.x > 0 && !IsFacingRight)
+        if (moveInput.x > 0 && !_isFacingRight)
         {
-            IsFacingRight = true;
+            Flip();
         }
-        if (moveInput.x < 0 && IsFacingRight)
+        else if (moveInput.x < 0 && _isFacingRight)
         {
-            IsFacingRight = false;
+            Flip();
         }
     }
 
-    private void UpdateAnimationState()
+    private void Flip()
     {
-        string newAnimation = "";
+        _isFacingRight = !_isFacingRight;
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+    }
+
+    private void UpdateAnimation()
+    {
+        string newState = "";
+
+        float yVelocity = rb.linearVelocity.y;
 
         if (!touchingDirections.IsGrounded)
         {
-            newAnimation = "New_Guy_Jump";
+            if (yVelocity > 1f)
+                newState = HasHeadphones ? "JumpUp_Headphones" : "JumpUp";
+            else if (yVelocity > 0f)
+                newState = HasHeadphones ? "JumpPeak_Headphones" : "JumpPeak";
+            else
+                newState = HasHeadphones ? "Fall_Headphones" : "Fall";
         }
-        else if (isMoving)
+        else if (_isMoving)
         {
-            newAnimation = isRunning ? "New_Guy_Run" : "New_Guy_Walk";
+            if (_isRunning)
+                newState = HasHeadphones ? "Run_Headphones" : "Run";
+            else
+                newState = HasHeadphones ? "Walk_Headphones" : "Walk";
         }
         else
         {
-            newAnimation = "New_Guy_Idle";
+            newState = HasHeadphones ? "Idle_Headphones" : "Idle";
         }
 
-        if (newAnimation != currentAnimation)
+        if (newState != currentState)
         {
-            animator.Play(newAnimation);
-            currentAnimation = newAnimation;
+            animator.Play(newState);
+            currentState = newState;
         }
     }
-
-   
 
     public void OnPickupHeadphones()
     {
         HasHeadphones = true;
-        animator.Play("New_Guy_Headphones"); // Make sure this animation state exists in the Animator
     }
 }
+

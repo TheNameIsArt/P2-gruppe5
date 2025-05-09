@@ -1,3 +1,4 @@
+using Cinemachine;
 using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,7 +19,11 @@ public class Player_Overworld_Controller : MonoBehaviour
     private GameObject interactionButton;
     private bool isConversationZone;
     private bool isInteractionZone;
+    private bool isContextZone;
+
     [SerializeField] private bool isConversationActive = false;
+    public CinemachineVirtualCamera localCamera;
+    public CinemachineVirtualCamera localCamera2;
 
     private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
@@ -53,6 +58,18 @@ public class Player_Overworld_Controller : MonoBehaviour
                 playerInput.enabled = true; // Enable the PlayerInput component
             }
         }
+        if (ConversationManager.Instance != null)
+        {
+            if (ConversationManager.Instance.IsConversationActive)
+            {
+                Scr_CameraController.SwitchCamera(localCamera);
+            }
+            else if (!ConversationManager.Instance.IsConversationActive)
+            {
+                Scr_CameraController.SwitchCamera(localCamera2);
+            }
+        }
+      
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -99,19 +116,25 @@ public class Player_Overworld_Controller : MonoBehaviour
             if(!isConversationActive)
                 interactionButton.SetActive(true);
         }
+        else if (collision.gameObject.tag == "ContextZone")
+        {
+            isContextZone = true;
+            interactionButton.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (interactionButton != null)
         {
-            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone")
+            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone")
             {
                 interactionButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
             }
         }
+       
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -132,6 +155,37 @@ public class Player_Overworld_Controller : MonoBehaviour
                 }
                 playerInput.enabled = false; // Disable the PlayerInput component
                 interactionButton.SetActive(false); // Hide the interaction button
+            }
+            else if (context.performed && isContextZone)
+            {
+                Debug.Log("Context interaction!");
+
+                // Check if the interactionZone has a script attached
+                if (interactionZone != null)
+                {
+                    // Try to find a script attached to the interactionZone
+                    var contextScript = interactionZone.GetComponent<MonoBehaviour>();
+
+                    if (contextScript != null)
+                    {
+                        // Check if the script has a method called "PerformAction"
+                        var method = contextScript.GetType().GetMethod("PerformAction");
+                        if (method != null)
+                        {
+                            // Invoke the "PerformAction" method on the script
+                            method.Invoke(contextScript, null);
+                            Debug.Log($"Performed action on {contextScript.GetType().Name}");
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"No 'PerformAction' method found on {contextScript.GetType().Name}");
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("No script found on the ContextZone GameObject.");
+                    }
+                }
             }
         }
     }
