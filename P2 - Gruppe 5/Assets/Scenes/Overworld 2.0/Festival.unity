@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 63284247}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,11 +326,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 63284242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 1885371149}
-  building: {fileID: 7400000, guid: e931b4552aad2014ea0e2af7a23e7047, type: 2}
+  Building: {fileID: 7400000, guid: e931b4552aad2014ea0e2af7a23e7047, type: 2}
 --- !u!1 &79143681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1253,7 @@ GameObject:
   - component: {fileID: 452530913}
   m_Layer: 0
   m_Name: Buildings_Saloon
-  m_TagString: b_Saloon
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1367,7 +1366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: f4dbb2855651e8b46bb34312571cb938, type: 2}
-  startFrame: 10
 --- !u!114 &452530913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,7 +1379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: f4dbb2855651e8b46bb34312571cb938, type: 2}
-  startFrame: 10
 --- !u!1 &459476437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1393,7 @@ GameObject:
   - component: {fileID: 459476442}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1502,11 +1499,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 459476437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 872096023}
-  building: {fileID: 7400000, guid: ce30d7b453210584d8811b8a3f012fdd, type: 2}
+  Building: {fileID: 7400000, guid: ce30d7b453210584d8811b8a3f012fdd, type: 2}
 --- !u!1 &485773617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,7 +1517,7 @@ GameObject:
   - component: {fileID: 485773621}
   m_Layer: 0
   m_Name: Buildings_Cocktail
-  m_TagString: b_Cocktail
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1634,7 +1630,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: 9dc423a22ae09614b886699ee2e52b12, type: 2}
-  startFrame: 10
+--- !u!4 &524908523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1981260761531456172, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
+  m_PrefabInstance: {fileID: 1326573486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &600814596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +1987,7 @@ GameObject:
   - component: {fileID: 718323236}
   m_Layer: 0
   m_Name: Buildings_Hospital
-  m_TagString: b_Hospital
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2100,7 +2100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: f9a0cedca8e21ee4dab78bf798efe53f, type: 2}
-  startFrame: 10
 --- !u!1 &734238752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2114,7 @@ GameObject:
   - component: {fileID: 734238757}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2221,11 +2220,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 734238752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 913780091}
-  building: {fileID: 7400000, guid: ee17967fdffd1a2478103323e4ba5306, type: 2}
+  Building: {fileID: 7400000, guid: ee17967fdffd1a2478103323e4ba5306, type: 2}
 --- !u!1 &757687752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +2472,7 @@ GameObject:
   - component: {fileID: 872096027}
   m_Layer: 0
   m_Name: Buildings_Arcade
-  m_TagString: b_Arcade
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2587,7 +2585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: ce30d7b453210584d8811b8a3f012fdd, type: 2}
-  startFrame: 10
 --- !u!1 &888158260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2691,7 @@ GameObject:
   - component: {fileID: 913780095}
   m_Layer: 0
   m_Name: Buildings_Burger
-  m_TagString: b_Burger
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2807,7 +2804,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: ee17967fdffd1a2478103323e4ba5306, type: 2}
-  startFrame: 10
 --- !u!1 &982362889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,7 +2818,7 @@ GameObject:
   - component: {fileID: 982362892}
   m_Layer: 0
   m_Name: Buildings_LNF
-  m_TagString: b_LNF
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2935,7 +2931,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: 3ecddeb98ea4b114dba193d14c75c9ca, type: 2}
-  startFrame: 10
 --- !u!1001 &989436292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2944,6 +2939,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17744988688137722, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.5164
+      objectReference: {fileID: 0}
     - target: {fileID: 7950325653516576275, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_Radius
       value: 2.5
@@ -3019,7 +3018,7 @@ GameObject:
   - component: {fileID: 1058204372}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3125,11 +3124,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1058204367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 1951270214}
-  building: {fileID: 7400000, guid: 23493fd8bd527004f93e4e54d42c6732, type: 2}
+  Building: {fileID: 7400000, guid: 23493fd8bd527004f93e4e54d42c6732, type: 2}
 --- !u!1001 &1069062541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3340,7 +3338,7 @@ GameObject:
   - component: {fileID: 1201614535}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3446,11 +3444,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1201614530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 485773617}
-  building: {fileID: 7400000, guid: 9dc423a22ae09614b886699ee2e52b12, type: 2}
+  Building: {fileID: 7400000, guid: 9dc423a22ae09614b886699ee2e52b12, type: 2}
 --- !u!1 &1258386102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,7 +3768,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1981260761531456172, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1987452488}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
 --- !u!1 &1351142638
@@ -3788,7 +3788,7 @@ GameObject:
   - component: {fileID: 1351142643}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3894,11 +3894,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351142638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 982362889}
-  building: {fileID: 7400000, guid: 3ecddeb98ea4b114dba193d14c75c9ca, type: 2}
+  Building: {fileID: 7400000, guid: 3ecddeb98ea4b114dba193d14c75c9ca, type: 2}
 --- !u!1 &1386381654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,7 +4004,7 @@ GameObject:
   - component: {fileID: 1428233626}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4111,11 +4110,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1428233621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 1694047074}
-  building: {fileID: 7400000, guid: fdd5e9ef73ad434478385264ad857daf, type: 2}
+  Building: {fileID: 7400000, guid: fdd5e9ef73ad434478385264ad857daf, type: 2}
 --- !u!1001 &1440020198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4183,11 +4181,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.04499
+      value: 35.22
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.46
+      value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4369,6 +4367,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17744988688137722, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 13.997701
+      objectReference: {fileID: 0}
+    - target: {fileID: 17744988688137722, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7786083889859554194, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4608,7 +4614,7 @@ GameObject:
   - component: {fileID: 1694047078}
   m_Layer: 0
   m_Name: Buildings_Ballons
-  m_TagString: b_Balloons
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4721,7 +4727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: fdd5e9ef73ad434478385264ad857daf, type: 2}
-  startFrame: 10
 --- !u!1001 &1719651127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4730,6 +4735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17744988688137722, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 21.05565
+      objectReference: {fileID: 0}
     - target: {fileID: 17744988688137722, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.32
@@ -5293,7 +5302,7 @@ GameObject:
   - component: {fileID: 1885371152}
   m_Layer: 0
   m_Name: Buildings_DJ
-  m_TagString: b_DJ
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5406,7 +5415,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: e931b4552aad2014ea0e2af7a23e7047, type: 2}
-  startFrame: 10
 --- !u!1001 &1914137724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5560,7 +5568,7 @@ GameObject:
   - component: {fileID: 1951270217}
   m_Layer: 0
   m_Name: Buildings_Info
-  m_TagString: b_Info
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5673,7 +5681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: 23493fd8bd527004f93e4e54d42c6732, type: 2}
-  startFrame: 10
 --- !u!1001 &1959370499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5763,7 +5770,7 @@ GameObject:
   - component: {fileID: 1968614446}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5869,11 +5876,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1968614442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 452530908}
-  building: {fileID: 7400000, guid: f4dbb2855651e8b46bb34312571cb938, type: 2}
+  Building: {fileID: 7400000, guid: f4dbb2855651e8b46bb34312571cb938, type: 2}
 --- !u!1 &1975404185
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,6 +5958,93 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1987452487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987452488}
+  - component: {fileID: 1987452489}
+  m_Layer: 0
+  m_Name: TopLayer (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1987452488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987452487}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.020000458, y: -2.9429207, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 524908523}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1987452489
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987452487}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 79694891
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 96c41d72ef2928b4ab1ae5b23017c04b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6, y: 4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2021332814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1659006296416450810, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
@@ -6154,7 +6247,7 @@ GameObject:
   - component: {fileID: 2051951972}
   m_Layer: 0
   m_Name: TopLayer
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6260,11 +6353,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2051951967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908d990a3701a24dbb3e02f62e0a2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8603400a2581c049b200fc63c0172a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  underSprite: {fileID: 718323231}
-  building: {fileID: 7400000, guid: f9a0cedca8e21ee4dab78bf798efe53f, type: 2}
+  Building: {fileID: 7400000, guid: f9a0cedca8e21ee4dab78bf798efe53f, type: 2}
 --- !u!1 &2060940186
 GameObject:
   m_ObjectHideFlags: 0
