@@ -1040,6 +1040,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 21300000, guid: e5a59d4ebbaa5324f8a0127266d72688, type: 3}
   defaultSprite: {fileID: 21300000, guid: 9c1cd152a6f126d44ad7bc8fed59ac38, type: 3}
   panelManager: {fileID: 1799689917}
+  backButton: {fileID: 0}
   playerInput: {fileID: 0}
 --- !u!224 &287289433 stripped
 RectTransform:
@@ -1249,6 +1250,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 21300000, guid: d400434ed53c5f34aa5820873810fcbe, type: 3}
   defaultSprite: {fileID: 21300000, guid: f5277fe1191abd2479d677e3b678b430, type: 3}
   panelManager: {fileID: 1799689917}
+  backButton: {fileID: 0}
   playerInput: {fileID: 0}
 --- !u!114 &359942753
 MonoBehaviour:
@@ -5515,6 +5517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winConversation: {fileID: 1375710127}
   mapButtonManager: {fileID: 0}
+  waitTime: 2.5
   panelButton: {fileID: 0}
 --- !u!114 &1375710127
 MonoBehaviour:
@@ -7206,46 +7209,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 32
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-171.666672,"yPos":221.66745},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
-    please!","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":44.3335571,"yPos":240.334686},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Nah,
-    I got this","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":576.8655,"yPos":299.9348},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Start
-    Game]","parentUIDs":[7],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":243.267029,"yPos":633.400757},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhm,
-    can I get it one more time?","parentUIDs":[27],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":254.732239,"yPos":433.801361},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    think I got it!","parentUIDs":[27],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-77.66669,"yPos":-30},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":231.3334,"yPos":273.6674},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
+    please!","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":447.333618,"yPos":292.334747},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Nah,
+    I got this","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":979.8655,"yPos":351.934723},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Start
+    Game]","parentUIDs":[7],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":646.266846,"yPos":685.400452},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhm,
+    can I get it one more time?","parentUIDs":[27],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":657.732056,"yPos":485.8013},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    think I got it!","parentUIDs":[27],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":325.333374,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"T-T-Thank
     you once again for helping me.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-84.00006,"yPos":95.33353},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":319,"yPos":147.333527},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"D-D-D-Do
     you need a quick breakdown before I go?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":284.465637,"yPos":181.067047},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool,
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":687.465454,"yPos":233.067078},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool,
     cool. If you get confused just consult the note on your left","parentUIDs":[5,30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":517.6654,"yPos":176.001},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway
-    see you around shortly. I''m about to burst!","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-229.666428,"yPos":319.600739},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Your
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":920.6653,"yPos":228.001038},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway
+    see you around shortly. UURGGHH.I''m about to burst!","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":173.333633,"yPos":371.6008},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Your
     need to find the correct camp for everone that comes by","parentUIDs":[29,4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-237.666367,"yPos":463.334},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":165.3337,"yPos":515.334},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"This
     is done through 4 steps","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":-238.199753,"yPos":600.5331},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"First
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":164.800308,"yPos":652.5329},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"First
     stage is to identify the bots facial espression. This can be done by using the
     face reader on the left","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-239.932922,"yPos":867.4667},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":163.067154,"yPos":919.4661},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     second step is to find the correct page in the book in front of you","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-235.799744,"yPos":986.934448},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":167.200333,"yPos":1038.9353},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
     you are on the right page, you need to find the correct letter area for the given
     robot","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-239.133118,"yPos":1122.27307},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":163.866959,"yPos":1174.27441},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     robot in front of you gives you a combination of symbols. Find the correct symbols
     on the page, and thereby the correct letter","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":12.7335205,"yPos":1122.00012},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":415.733582,"yPos":1174.00146},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     now need to pick the correct letter on the map to your right. Click confirm to
     send the robot to their correct camp","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":-0.7331238,"yPos":957.332764},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":402.2669,"yPos":1009.33344},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     you got it wrong the bot will stays put. ","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":2.06655884,"yPos":803.333},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":405.0666,"yPos":855.3326},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
     on a timer to hit your quota. If time runs out then it''s game over.","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":28},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":-5.66607666,"yPos":619.3334},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Did
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":28},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":397.333984,"yPos":671.333069},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Did
     you catch all that or would you like it one more time?","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":20.3334961,"yPos":382.667847},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":423.333557,"yPos":434.667816},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
     course. Let me go through it one more time","parentUIDs":[28],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-238.866669,"yPos":724.0011},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Select
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":164.1334,"yPos":776.0008},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Select
     the correct antenna, eyes and mouth, and you''ll get a page number","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
     The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -7279,21 +7282,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1668808025}
-        m_TargetAssemblyTypeName: CampPlzWinBot, Assembly-CSharp
-        m_MethodName: GoAway
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 2052445692}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7317,6 +7308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winConversation: {fileID: 1668808024}
   mapButtonManager: {fileID: 935188675}
+  waitTime: 2.5
   panelButton: {fileID: 359942750}
 --- !u!1 &1755533372
 GameObject:
