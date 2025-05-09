@@ -14,6 +14,7 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private Button thisButton;
     private SpriteRenderer spriteTargetRenderer; // Reference to the SpriteRenderer
     public PanelManager panelManager; // Reference to the PanelManager
+    public GameObject backButton;
 
     public PlayerInput playerInput; // Reference to the PlayerInput component
 
@@ -76,6 +77,10 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             spriteTargetRenderer.sprite = hoverSprite;
         }
+        if (backButton != null)
+        {
+            backButton.SetActive(false);
+        }
     }
 
     public void OnDeselect(BaseEventData eventData)
@@ -99,6 +104,11 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             // Log a warning if the target button is not set
             Debug.LogWarning("Target button is not assigned in the PanelChooser script.", this);
+        }
+
+        if (backButton != null)
+        {
+            backButton.gameObject.SetActive(true);
         }
     }
 }
