@@ -8,7 +8,7 @@ public class CampPlzWinBot : MonoBehaviour
     public NPCConversation winConversation; // Reference to the NPCConversation component
     private bool hasFinished = false; // Flag to check if the animation has finished
     [SerializeField] private MapButtonManager mapButtonManager;
-    private float waitTime = 5f; // Time to wait before despawning the object and starting the game
+    [SerializeField] private float waitTime = 2.5f; // Time to wait before despawning the object and starting the game
     public GameObject panelButton; // Reference to the Panel Button GameObject
     void Start()
     {
