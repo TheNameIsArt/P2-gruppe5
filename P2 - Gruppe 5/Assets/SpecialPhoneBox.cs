@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class SpecialPhoneBox : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer targetSpriteRenderer; // Reference to the target sprite
+    [SerializeField] private SpriteRenderer[] targetSpriteRenderers; // Array to hold multiple SpriteRenderers
     private bool isPhasing = false;
     [SerializeField] private AudioSource audioSource; // Reference to the AudioSource component
 
@@ -11,17 +11,27 @@ public class SpecialPhoneBox : MonoBehaviour
     {
         Debug.Log("SpecialPhoneBox Start method called."); // Log when Start is called
 
-        // Ensure the target SpriteRenderer is valid
-        if (targetSpriteRenderer != null)
+        // Ensure the target SpriteRenderers are valid
+        if (targetSpriteRenderers != null && targetSpriteRenderers.Length > 0)
         {
-            Debug.Log($"Target SpriteRenderer assigned: {targetSpriteRenderer.gameObject.name}"); // Log the assigned SpriteRenderer
-            Color color = targetSpriteRenderer.color;
-            color.a = 1f; // Fully opaque
-            targetSpriteRenderer.color = color;
+            foreach (var spriteRenderer in targetSpriteRenderers)
+            {
+                if (spriteRenderer != null)
+                {
+                    Debug.Log($"Target SpriteRenderer assigned: {spriteRenderer.gameObject.name}"); // Log the assigned SpriteRenderer
+                    Color color = spriteRenderer.color;
+                    color.a = 1f; // Fully opaque
+                    spriteRenderer.color = color;
+                }
+                else
+                {
+                    Debug.LogError("One of the target SpriteRenderers is not assigned in the SpecialPhoneBox script.");
+                }
+            }
         }
         else
         {
-            Debug.LogError("Target SpriteRenderer is not assigned in the SpecialPhoneBox script.");
+            Debug.LogError("Target SpriteRenderers array is empty or null in the SpecialPhoneBox script.");
         }
     }
 
@@ -122,21 +132,29 @@ public class SpecialPhoneBox : MonoBehaviour
         Debug.Log("PhaseEffect coroutine ended."); // Log when the coroutine ends
     }
 
-    // Helper method to update the sprite's alpha
+    // Helper method to update the sprites' alpha
     private void UpdateSpriteAlpha(float alpha)
     {
-        if (targetSpriteRenderer != null)
+        if (targetSpriteRenderers != null && targetSpriteRenderers.Length > 0)
         {
-            Color color = targetSpriteRenderer.color;
-            color.a = alpha;
-            targetSpriteRenderer.color = color;
-            Debug.Log($"Updated targetSpriteRenderer alpha: {alpha}"); // Log the updated alpha
+            foreach (var spriteRenderer in targetSpriteRenderers)
+            {
+                if (spriteRenderer != null)
+                {
+                    Color color = spriteRenderer.color;
+                    color.a = alpha;
+                    spriteRenderer.color = color;
+                    Debug.Log($"Updated {spriteRenderer.gameObject.name} alpha: {alpha}"); // Log the updated alpha
+                }
+                else
+                {
+                    Debug.LogError("One of the target SpriteRenderers is null during PhaseEffect.");
+                }
+            }
         }
         else
         {
-            Debug.LogError("Target SpriteRenderer is null during PhaseEffect.");
+            Debug.LogError("Target SpriteRenderers array is empty or null during PhaseEffect.");
         }
     }
-
-
 }
