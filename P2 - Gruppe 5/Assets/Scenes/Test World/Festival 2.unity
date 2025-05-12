@@ -3018,7 +3018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Building: {fileID: 7400000, guid: 23493fd8bd527004f93e4e54d42c6732, type: 2}
-  startFrame: 10
 --- !u!4 &654341062
 Transform:
   m_ObjectHideFlags: 0
@@ -12463,6 +12462,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topLayer: {fileID: 1803004804}
+  secondLayer: {fileID: 0}
+  thirdLayer: {fileID: 0}
+  needsSecondLayer: 0
+  needsThirdLayer: 0
 --- !u!61 &2139915363
 BoxCollider2D:
   m_ObjectHideFlags: 0
