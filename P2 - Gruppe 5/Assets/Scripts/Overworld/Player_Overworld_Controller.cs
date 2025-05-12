@@ -10,9 +10,10 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public InputDevice inputDevice;
+    public string playerName;
+
     private GameObject interactionZone;
     private PlayerInput playerInput;
-
     private string targetSceneName;
     //private NPCConversation targetConversation;
     private Vector2 moveInput;
@@ -98,11 +99,11 @@ public class Player_Overworld_Controller : MonoBehaviour
 
         if (moveInput.x != 0 || moveInput.y != 0)
         {
-            animator.Play("New_Guy_Run");
+            animator.Play("Andy_Run");
         }
         else
         {
-            animator.Play("New_Guy_Idle");
+            animator.Play("Andy_Idle");
         }
     }
 
