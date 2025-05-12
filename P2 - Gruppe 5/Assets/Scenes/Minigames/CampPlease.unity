@@ -4240,19 +4240,15 @@ GameObject:
   - component: {fileID: 1160431711}
   - component: {fileID: 1160431709}
   - component: {fileID: 1160431718}
-  - component: {fileID: 1160431717}
   - component: {fileID: 1160431735}
   - component: {fileID: 1160431732}
   - component: {fileID: 1160431731}
   - component: {fileID: 1160431730}
-  - component: {fileID: 1160431726}
-  - component: {fileID: 1160431724}
   - component: {fileID: 1160431723}
   - component: {fileID: 1160431722}
   - component: {fileID: 1160431721}
   - component: {fileID: 1160431720}
   - component: {fileID: 1160431719}
-  - component: {fileID: 1160431736}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -4444,25 +4440,6 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
---- !u!114 &1160431717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160431708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 10
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
-  Audio: {fileID: 0}
 --- !u!114 &1160431718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4577,44 +4554,6 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
   Audio: {fileID: 0}
---- !u!114 &1160431724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160431708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 25
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
-  Audio: {fileID: 0}
---- !u!114 &1160431726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160431708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 22
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
-  Audio: {fileID: 0}
 --- !u!114 &1160431730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,25 +4627,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 12
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
-  Audio: {fileID: 0}
---- !u!114 &1160431736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160431708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 31
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
   Audio: {fileID: 0}
@@ -5532,12 +5452,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":173.800049,"yPos":244.7333},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Back
-    to festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":175.600037,"yPos":-122.800018},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Phew,
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":315.5334,"yPos":464.866638},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Back
+    to festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":317.333374,"yPos":97.33334},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Phew,
     made it just in time to avoid a major leak","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":169.93335,"yPos":1.86663818},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":311.6667,"yPos":222},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
     a bunch! You seemed to have caught on quick.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":169.2667,"yPos":112.533295},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway.
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":311.000031,"yPos":332.666626},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway.
     See you at the concert!","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
     The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -7209,48 +7129,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 32
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":199.333435,"yPos":297.000732},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
-    please!","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":415.333649,"yPos":315.6681},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Nah,
-    I got this","parentUIDs":[1],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":947.86554,"yPos":375.268066},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Start
-    Game]","parentUIDs":[7],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":614.2669,"yPos":708.733765},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhm,
-    can I get it one more time?","parentUIDs":[27],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":625.7321,"yPos":509.1347},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    think I got it!","parentUIDs":[27],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":293.3334,"yPos":45.33333},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"T-T-Thank
-    you once again for helping me.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":287.000031,"yPos":170.666855},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"D-D-D-Do
-    you need a quick breakdown before I go?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":655.4655,"yPos":256.4004},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool,
-    cool. If you get confused just consult the note on your left","parentUIDs":[5,30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":888.665344,"yPos":251.334351},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway
-    see you around shortly. UURGGHH.I''m about to burst!","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":141.333664,"yPos":394.934143},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Your
-    need to find the correct camp for everone that comes by","parentUIDs":[29,4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":133.333725,"yPos":538.667236},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    is done through 4 steps","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":132.800339,"yPos":675.8662},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"First
-    stage is to identify the bots facial espression. This can be done by using the
-    face reader on the left","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":131.067184,"yPos":942.799438},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    second step is to find the correct page in the book in front of you","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":135.200363,"yPos":1062.26868},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
-    you are on the right page, you need to find the correct letter area for the given
-    robot","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":131.866989,"yPos":1197.60779},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    robot in front of you gives you a combination of symbols. Find the correct symbols
-    on the page, and thereby the correct letter","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":383.7336,"yPos":1197.33484},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    now need to pick the correct letter on the map to your right. Click confirm to
-    send the robot to their correct camp","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":370.266937,"yPos":1032.667},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"If
-    you got it wrong the bot will stays put. ","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":373.06662,"yPos":878.6659},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
-    on a timer to hit your quota. If time runs out then it''s game over.","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":28},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":365.334,"yPos":694.6664},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Did
-    you catch all that or would you like it one more time?","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":391.3336,"yPos":458.00116},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
-    course. Let me go through it one more time","parentUIDs":[28],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":132.133438,"yPos":799.3341},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Select
-    the correct antenna, eyes and mouth, and you''ll get a page number","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":224.000153,\"yPos\":-266.999268},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes
+    please!\",\"parentUIDs\":[1],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":468.0003,\"yPos\":-268.998535},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nah,
+    I got this!\",\"parentUIDs\":[1],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":985.8649,\"yPos\":-180.732056},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"[Start
+    Game]\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":652.2668,\"yPos\":152.733246},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhm,
+    can I get it one more time?\",\"parentUIDs\":[27],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":663.7319,\"yPos\":-46.86519},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    think I got it!\",\"parentUIDs\":[27],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":331.333344,\"yPos\":-510.666656},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"T-T-Thank
+    you once again for helping me.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":324.999969,\"yPos\":-385.333374},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"D-D-D-Do
+    you need a quick breakdown before I go?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":687.4654,\"yPos\":-304.2663},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"If
+    you get confused you can consult the note on your left.\",\"parentUIDs\":[5,30],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":926.665,\"yPos\":-304.6656},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A-A-Anyway
+    see you around shortly. UURGGHH. I'm about to BURST!\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":179.333649,\"yPos\":-161.065735},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You
+    need to find the correct camp for everone that comes by.\",\"parentUIDs\":[29,4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":170.800262,\"yPos\":25.8657074},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"First,
+    match the bot's expression with the face reader on the left to get a page number.\\r\\n\\r\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":167.733856,\"yPos\":216.1326},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Flip
+    to that page in the book, located in front of you, to find the bot\u2019s code.\\r\\n\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":185.200409,\"yPos\":392.2685},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Next
+    to the code is a letter showing which camp the bot belongs to.\\r\\r\\n\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":435.867,\"yPos\":535.608032},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Use
+    the map on the right to select the camp, then press confirm to send the bot on
+    its way.\\r\\n\\r\\n\\r\\n\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":411.066681,\"yPos\":322.665619},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You're
+    on a timer to hit your quota. If time runs out then it's game over.\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":403.334076,\"yPos\":138.665955},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Did
+    you catch all that or would you like it one more time?\",\"parentUIDs\":[26],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":429.333374,\"yPos\":-97.9988556},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Of
+    course. Let me go through it one more time.\",\"parentUIDs\":[28],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank
+    The Service-Bot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Frank The Service-Bot
   DefaultSprite: {fileID: 21300000, guid: 8326c24026786d744bc38824c641cd74, type: 3}
@@ -7264,19 +7173,15 @@ MonoBehaviour:
   - {fileID: 1160431711}
   - {fileID: 1160431709}
   - {fileID: 1160431718}
-  - {fileID: 1160431717}
   - {fileID: 1160431735}
   - {fileID: 1160431732}
   - {fileID: 1160431731}
   - {fileID: 1160431730}
-  - {fileID: 1160431726}
-  - {fileID: 1160431724}
   - {fileID: 1160431723}
   - {fileID: 1160431722}
   - {fileID: 1160431721}
   - {fileID: 1160431720}
   - {fileID: 1160431719}
-  - {fileID: 1160431736}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
