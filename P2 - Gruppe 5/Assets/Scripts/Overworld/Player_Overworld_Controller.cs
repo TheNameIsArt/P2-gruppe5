@@ -97,13 +97,38 @@ public class Player_Overworld_Controller : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (moveInput.x != 0 || moveInput.y != 0)
+        if (playerName == ("Andy")) 
         {
-            animator.Play("Andy_Run");
+            if (moveInput.x != 0 || moveInput.y != 0)
+            {
+                animator.Play("Andy_Run");
+            }
+            else
+            {
+                animator.Play("Andy_Idle");
+            }
         }
-        else
+        else if (playerName == "Delilah")
         {
-            animator.Play("Andy_Idle");
+            if (moveInput.x != 0 || moveInput.y != 0)
+            {
+                animator.Play("Delilah_Run");
+            }
+            else
+            {
+                animator.Play("Delilah_Idle");
+            }
+        }
+        else if (playerName == "Sam")
+        {
+            if (moveInput.x != 0 || moveInput.y != 0)
+            {
+                animator.Play("Sam_Run");
+            }
+            else
+            {
+                animator.Play("Sam_Idle");
+            }
         }
     }
 
