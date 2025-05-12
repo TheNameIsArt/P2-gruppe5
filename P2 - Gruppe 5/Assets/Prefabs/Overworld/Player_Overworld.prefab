@@ -217,6 +217,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 6744852904947208869}
   animator: {fileID: 1814522163260273969}
+  playerName: Andy
   isConversationActive: 0
   localCamera: {fileID: 0}
   localCamera2: {fileID: 0}
@@ -341,6 +342,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 44078917-e80a-4f97-b1b5-eeb69920cb69
     m_ActionName: 'Player/Sprint[/Keyboard/shift,/XInputControllerWindows/leftTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 60c185ee-4107-414e-b76f-d3509ada6655
+    m_ActionName: 'Player/HatSwitcher[/Keyboard/c,/Keyboard/v]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
