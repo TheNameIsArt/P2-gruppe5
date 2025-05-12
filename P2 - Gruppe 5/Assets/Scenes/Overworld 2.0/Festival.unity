@@ -3614,6 +3614,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 768731970996681021, guid: 8da55a6fb57b2b94eaf9961f93d1cd2f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4609922294161496221, guid: 8da55a6fb57b2b94eaf9961f93d1cd2f, type: 3}
       propertyPath: m_Name
       value: Deco_Grass01 (30)
@@ -4787,7 +4791,7 @@ SpriteRenderer:
   m_SortingLayerID: 1301078847
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52340cb49569f494a9ecc6d07c1ebe96, type: 3}
+  m_Sprite: {fileID: -1747638846, guid: 52340cb49569f494a9ecc6d07c1ebe96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5684,6 +5688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 866627775}
     m_Modifications:
+    - target: {fileID: 1593830084897054103, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1659006296416450810, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
       propertyPath: m_Name
       value: Deco_WC
@@ -6577,7 +6585,7 @@ SpriteRenderer:
   m_SortingLayerID: 1301078847
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 915494060, guid: ccbc15c50f67cf349b25ff665cd6d51a, type: 3}
+  m_Sprite: {fileID: -581893012, guid: ccbc15c50f67cf349b25ff665cd6d51a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11464,7 +11472,7 @@ SpriteRenderer:
   m_Size: {x: 14, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1201614534
@@ -12282,6 +12290,10 @@ PrefabInstance:
     - target: {fileID: 5326479082777149759, guid: 39f79e9d5df172d48b5c912fd8ada3b5, type: 3}
       propertyPath: m_Name
       value: Deco_Grass02 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776358688163578861, guid: 39f79e9d5df172d48b5c912fd8ada3b5, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18247,12 +18259,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 343252270910459275, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
-      propertyPath: localCamera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687698237464327160, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.15
+      propertyPath: playerName
+      value: Andy
       objectReference: {fileID: 0}
     - target: {fileID: 6433192825331937958, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18293,6 +18301,18 @@ PrefabInstance:
     - target: {fileID: 6433192825331937958, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      value: 60c185ee-4107-414e-b76f-d3509ada6655
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      value: 'Player/HatSwitcher[/Keyboard/c,/Keyboard/v]'
       objectReference: {fileID: 0}
     - target: {fileID: 8070150995736924018, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_Name
@@ -18817,6 +18837,10 @@ PrefabInstance:
     - target: {fileID: 8048950000007680968, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
       propertyPath: needsSecondLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218256428306138722, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19459,7 +19483,7 @@ SpriteRenderer:
   m_Size: {x: 14, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2051951971
