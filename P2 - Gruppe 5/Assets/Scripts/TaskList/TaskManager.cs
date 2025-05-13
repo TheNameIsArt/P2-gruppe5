@@ -12,9 +12,8 @@ public class TaskManager : MonoBehaviour
     public void AddTask(string taskDescription)
     {
         GameObject newTask = Instantiate(taskItemPrefab, taskListPanel);
-        newTask.GetComponent<TMP_Text>().text = taskDescription; // Or .GetComponent<TMP_Text>() for TextMeshPro
+        newTask.GetComponent<TMP_Text>().text = taskDescription; 
         currentTasks.Add(newTask);
     }
 
-    // Optional: Remove task, clear list, etc.
 }
