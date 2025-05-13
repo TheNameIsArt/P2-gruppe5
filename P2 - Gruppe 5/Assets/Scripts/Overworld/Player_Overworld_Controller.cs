@@ -25,6 +25,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     [SerializeField] private bool isConversationActive = false;
     public CinemachineVirtualCamera localCamera;
     public CinemachineVirtualCamera localCamera2;
+    public CinemachineVirtualCamera localCamera3;
 
     private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
@@ -80,7 +81,6 @@ public class Player_Overworld_Controller : MonoBehaviour
                 }
             }
         }
-      
     }
 
     public void Move(InputAction.CallbackContext context)
