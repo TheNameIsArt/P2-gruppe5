@@ -65,7 +65,7 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (ConversationManager.Instance.IsConversationActive)
             {
                 Scr_CameraController.SwitchCamera(localCamera);
-                Debug.Log("Camera switched to localCamera");
+                //Debug.Log("Camera switched to localCamera");
                 if (playerInput != null)
                 {
                     playerInput.enabled = false; // Disable the PlayerInput component
@@ -74,7 +74,7 @@ public class Player_Overworld_Controller : MonoBehaviour
             else if (!ConversationManager.Instance.IsConversationActive)
             {
                 Scr_CameraController.SwitchCamera(localCamera2);
-                Debug.Log("Camera switched to localCamera2");
+                //Debug.Log("Camera switched to localCamera2");
                 if (playerInput != null)
                 {
                     playerInput.enabled = true; // Enable the PlayerInput component
