@@ -138,7 +138,11 @@ namespace DialogueEditor
             option_x = boxRect.x + boxRect.width * 0.1f;
             Rect optionRect = new Rect(option_x, boxRect.y + boxRect.height + OPTION_BUFFER, option_wid, OPTION_HEIGHT);
             Rect optionTextRect = new Rect(optionRect);
-            optionTextRect.x += optionRect.width * 0.4f;
+            float padding = 10f;
+            textStyle.wordWrap = true;
+            textStyle.clipping = TextClipping.Clip; 
+            optionTextRect.x += padding;
+            optionTextRect.width -= 2 * padding;
             optionTextRect.y += OPTION_TEXT_BUF_Y;
             if (t.OptionImage == null)
             {
