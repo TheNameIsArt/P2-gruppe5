@@ -1235,6 +1235,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1069561375619972668, guid: aaa1a8e03052f6046a2354d3f24a2601, type: 3}
   m_PrefabInstance: {fileID: 69750197}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &77719619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 51.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893570820492610801, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_Name
+      value: Mike
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969209044923479681, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198463308566171432, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: myConversation
+      value: 
+      objectReference: {fileID: 905640454}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: characterID
+      value: Mike Burgger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: npcDialogue
+      value: 
+      objectReference: {fileID: 905640457}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: possibleConversations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: 'possibleConversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 905640454}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2893570820492610801, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 905640454}
+    - targetCorrespondingSourceObject: {fileID: 92535205988984568, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1456533348}
+  m_SourcePrefab: {fileID: 100100000, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
 --- !u!1 &79143681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,6 +5048,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 39444702491599429, guid: 411d2710d3aae56429e4d51336710305, type: 3}
   m_PrefabInstance: {fileID: 362158593}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &364433175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3813544785160971390, guid: a38d2686836931147a3d74209ea2817c, type: 3}
+  m_PrefabInstance: {fileID: 1685549034}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fe614b88daf184a841493ff6bdcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &373831977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11797,6 +11895,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7219553033891014029, guid: bc590caf1264226458f69fe767cbe9f3, type: 3}
   m_PrefabInstance: {fileID: 903905830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &905640453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2893570820492610801, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+  m_PrefabInstance: {fileID: 77719619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &905640454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905640453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":183.199982,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+    I don''t need anything right now","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Mike","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 1456533348}
+  ContinueFont: {fileID: 0}
+  EndConversationFont: {fileID: 0}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &905640457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6198463308566171432, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+  m_PrefabInstance: {fileID: 77719619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905640453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae04a510fda45346b4349716c2ac518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &908852035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13558,27 +13698,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 18
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":159.200012,"yPos":82.19504},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Sounds
-    easy","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":19.2000122,"yPos":338.994568},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Litteral?
-    What does that mean?","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-45.59999,"yPos":541.395935},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"A
-    soda","parentUIDs":[5,12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":172,"yPos":560.5961},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"A
-    salad","parentUIDs":[5,12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":339.200043,"yPos":496.59552},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"A
-    cup of coffee","parentUIDs":[5,12],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":347.199982,"yPos":1010.99091},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Okay,
-    I got this! [Start Game]","parentUIDs":[15],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":157.6,"yPos":-154.000092},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
-    again, Delilah, I know you have a lot going on right now.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":158.400024,"yPos":-28.8017578},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"All
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-15.2000275,"yPos":-727.4047},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Sounds
+    easy","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-155.200027,"yPos":-470.605774},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Litteral?
+    What does that mean?","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-220.000031,"yPos":-268.203},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"A
+    soda","parentUIDs":[5,12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-2.40003967,"yPos":-249.0026},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"A
+    salad","parentUIDs":[5,12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":164.8,"yPos":-313.004517},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"A
+    cup of coffee","parentUIDs":[5,12],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":172.799942,"yPos":201.392731},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Okay,
+    I got this! [Start Game]","parentUIDs":[15],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-16.8000336,"yPos":-963.5992},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
+    again, Delilah, I know you have a lot going on right now.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-16.0000153,"yPos":-838.40094},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"All
     the bots are currently sat by the tabels. All I need you to do is go and take
-    their orders and bring them to me","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":168.800018,"yPos":176.795349},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"It
+    their orders and bring them to me","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-5.60002136,"yPos":-632.8044},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"It
     usually is. The problem is that a lot of the customers think quite litteral.
-    ","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":123.2,"yPos":409.594971},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Let''s
+    ","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-51.2000427,"yPos":-400.0053},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Let''s
     try a quick example: If I were to order \"a mug of roasted seed extract suspended
-    in thermally agitated dihydrogen monoxide\" What would i be ordering?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":250.400024,"yPos":278.394348},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    result in the orders needing to be translated","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-130.399918,"yPos":707.9981},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
-    quite, let''s try again:","parentUIDs":[8,9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":135.200089,"yPos":680.7973},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    in thermally agitated dihydrogen monoxide\" What would i be ordering?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":75.9999847,"yPos":-531.205261},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    result in the orders needing to be translated","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-304.799866,"yPos":-101.600487},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
+    quite, let''s try again:","parentUIDs":[8,9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-39.19995,"yPos":-128.801392},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     I were to order \"a mug of roasted seed extract suspended in thermally agitated
-    dihydrogen monoxide\" What would i be ordering?","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":460.80014,"yPos":644.7963},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"That''s
+    dihydrogen monoxide\" What would i be ordering?","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":286.400146,"yPos":-164.802246},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"That''s
     right! As you can guess it''s quite a headache to translate that AND cook at
-    the same time.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":485.600067,"yPos":751.9982},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"That''s
-    why I need your help Delilah.","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":487.999939,"yPos":870.392},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Just
+    the same time.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":311.200073,"yPos":-57.5998077},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"That''s
+    why I need your help Delilah.","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":313.599976,"yPos":60.7944336},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Just
     collect their order and come back and talk to my. But one order a time, please.
     Else I might get them confused.","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -13606,7 +13746,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 364433175}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1097101876
 Transform:
   m_ObjectHideFlags: 0
@@ -15049,6 +15201,135 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1784357091799241263, guid: 00ea4f58d22132a419ae71cb03cac78c, type: 3}
   m_PrefabInstance: {fileID: 1240637404}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1241939951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241939953}
+  - component: {fileID: 1241939952}
+  m_Layer: 0
+  m_Name: Background music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1241939952
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241939951}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ae4cd36abc2c6204d9ae057dbb68fe80, type: 3}
+  m_Resource: {fileID: 8300000, guid: ae4cd36abc2c6204d9ae057dbb68fe80, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.504
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1241939953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241939951}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.925423, y: 9.38065, z: 0.0071230605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1243323866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 369369315810753642, guid: 8da55a6fb57b2b94eaf9961f93d1cd2f, type: 3}
@@ -15576,7 +15857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1283330713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15652,7 +15933,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 364433175}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 16
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -15952,7 +16245,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 364433175}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: e71b3a131f367cc459736ff147720c6c, type: 3}
@@ -18672,6 +18977,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8987212679620021247, guid: bfd230a9ee48dee489a9c74ba913d6d0, type: 3}
   m_PrefabInstance: {fileID: 1440020198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1456533347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 92535205988984568, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+  m_PrefabInstance: {fileID: 77719619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1456533348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456533347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 7392ef93f28496644855dd99df299431, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &1463115016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21967,7 +22296,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 4.6793737
+      value: 5.625
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
@@ -26343,3 +26672,5 @@ SceneRoots:
   - {fileID: 1920087252}
   - {fileID: 151341663}
   - {fileID: 850354472}
+  - {fileID: 77719619}
+  - {fileID: 1241939953}
