@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 1070219690}
   - component: {fileID: 1070219691}
   - component: {fileID: 1070219692}
+  - component: {fileID: 1070219693}
   m_Layer: 0
   m_Name: Hats
   m_TagString: Untagged
@@ -247,7 +248,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7674be7dfc76745a341a08024e393b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHat: 
+  hats:
+  - Burger
+  - Construction
+  - Lightswitch
   animator: {fileID: 1070219691}
+  hatsIdle:
+  - {fileID: 7400000, guid: 06656fbe8b101274ca46caf39fbc249a, type: 2}
+  - {fileID: 7400000, guid: a821f742028d4474498acbe247b6b67c, type: 2}
+  - {fileID: 7400000, guid: 8860d7f49c2927141b2734d60fe7ab9e, type: 2}
+  hatsRun:
+  - {fileID: 7400000, guid: a1a60358f3eaa5541993dc75e91172bb, type: 2}
+  - {fileID: 7400000, guid: 01c5a9caa43fd3548b3814f9efc1e61b, type: 2}
+  - {fileID: 7400000, guid: a6372b3902f23b54b87192335c201fa7, type: 2}
+  idle: {fileID: 0}
+  run: {fileID: 0}
+--- !u!114 &1070219693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070219688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 29dd0f54017955b4a8c40803b754db6f, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1070219692}
+        m_TargetAssemblyTypeName: Scr_HatSwitcher, Assembly-CSharp
+        m_MethodName: nextHat
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 24c18673-f0f5-4910-9844-58208c489989
+    m_ActionName: 'Player/nextHat[/Keyboard/p]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &1243774675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,7 +464,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 4.6793737
+      value: 5.625
       objectReference: {fileID: 0}
     - target: {fileID: 3117653853965320691, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_Follow
@@ -505,8 +567,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 343252270910459275, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: hats
+      value: 
+      objectReference: {fileID: 1070219688}
+    - target: {fileID: 343252270910459275, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: playerName
-      value: Delilah
+      value: Andy
       objectReference: {fileID: 0}
     - target: {fileID: 343252270910459275, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: localCamera
