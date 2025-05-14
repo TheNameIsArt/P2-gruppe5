@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TaskManager : MonoBehaviour
 {
+    public static TaskManager Instance { get; private set; }
+
     public Transform taskListPanel;
     public GameObject taskItemPrefab;
 
@@ -22,6 +24,18 @@ public class TaskManager : MonoBehaviour
             taskText = text;
             isCompleted = false;
         }
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        // Uncomment the next line if you want the TaskManager to persist between scenes
+        // DontDestroyOnLoad(gameObject);
     }
 
     public void AddTask(string taskDescription)
@@ -60,5 +74,21 @@ public class TaskManager : MonoBehaviour
         AddTask("Talk to the NPC");
         AddTask("Find the hidden treasure");
     }
-
+    public void ResetTasks()
+    {
+        // Destroy all task UI objects
+        foreach (var task in currentTasks)
+        {
+            if (task.taskObject != null)
+                Destroy(task.taskObject);
+        }
+        // Clear the list
+        currentTasks.Clear();
+    }
+    public void RemoveTask(int index)
+    {
+        if (index < 0 || index >= currentTasks.Count) return;
+        Destroy(currentTasks[index].taskObject);
+        currentTasks.RemoveAt(index);
+    }
 }
