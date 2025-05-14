@@ -11,6 +11,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Animator animator;
     public InputDevice inputDevice;
     public string playerName;
+    public GameObject hats;
 
     private GameObject interactionZone;
     private PlayerInput playerInput;
@@ -104,10 +105,12 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 animator.Play("Andy_Run");
+                hats.GetComponent<Scr_HatSwitcher>().animateRun();
             }
             else
             {
                 animator.Play("Andy_Idle");
+                hats.GetComponent<Scr_HatSwitcher>().animateIdle();
             }
         }
         else if (playerName == "Delilah")
@@ -115,10 +118,12 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 animator.Play("Delilah_Run");
+                hats.GetComponent<Scr_HatSwitcher>().animateRun();
             }
             else
             {
                 animator.Play("Delilah_Idle");
+                hats.GetComponent<Scr_HatSwitcher>().animateIdle();
             }
         }
         else if (playerName == "Sam")
