@@ -17,4 +17,10 @@ public class Bot_Animation : MonoBehaviour
     {
         
     }
+
+    // turn this off for the pitbull pandemic
+    private void OnEnable()
+    {
+        animator.Play(idleAnimation.name);
+    }
 }

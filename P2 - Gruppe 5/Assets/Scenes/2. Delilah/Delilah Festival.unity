@@ -626,6 +626,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6129010340993171176, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 47459606}
+    - targetCorrespondingSourceObject: {fileID: 6129010340993171176, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 47459607}
   m_SourcePrefab: {fileID: 100100000, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
 --- !u!4 &47459599 stripped
 Transform:
@@ -659,6 +662,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d6e8a46464bd5b49bb226cdc7e5ce9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sabrina: {fileID: 0}
+--- !u!114 &47459607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47459600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849f814aa4dccc846ab7da38fb2aa8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &52556875
@@ -5094,8 +5110,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 134120760}
   - {fileID: 631627121}
+  - {fileID: 134120760}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &398009954
@@ -6619,18 +6635,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 10
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":143.200043,\"yPos\":-157.80069},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sure
-    Cindy\u2026 *Ahem*, Bit, you realise Sabrina is looking for you right?\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":115.200043,\"yPos\":63.0002},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"BIT
-    YOU NEED TO PREPARE YOU ARE GOING LIVE IN 15 MINUTES!!!!!\\r\",\"parentUIDs\":[6],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":110.400024,\"yPos\":294.203064},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Quite
-    the character, you are\u2026\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":153.200012,\"yPos\":-651.597168},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u2026And
-    that\u2019s how I saved Nana Wisda\u2019s cat from drowning\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"16BitPull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":149.600037,\"yPos\":-513.5984},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uh-huh,
-    very impressive\u2026 uhh BitPull was it?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cindy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":148.800018,\"yPos\":-391.199463},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Si++
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":104.533386,\"yPos\":-389.536865},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sure
+    Cindy\u2026 *Ahem*, Bit, you realise Sabrina is looking for you right?\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":76.53339,\"yPos\":-168.7361},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"BIT
+    YOU NEED TO PREPARE YOU ARE GOING LIVE IN 15 MINUTES!!!!!\\r\",\"parentUIDs\":[6],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":71.73337,\"yPos\":62.4667549},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Quite
+    the character, you are\u2026\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":114.533356,\"yPos\":-883.333557},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u2026And
+    that\u2019s how I saved Nana Wisda\u2019s cat from drowning\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"16BitPull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":110.93338,\"yPos\":-745.3348},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uh-huh,
+    very impressive\u2026 uhh BitPull was it?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cindy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":110.133362,\"yPos\":-622.935852},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Si++
     baby, 16BitPull, you got all my 128 bytes of attention. Or if you want to be
     as sweet as you look, call me Mr. Worldwide-Web, I hope you don\u2019t mind getting
-    sticky\\r\\n\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"18Bitpull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":142.400055,\"yPos\":-267.200928},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ew\u2026
-    Delilah mind helping me out here?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cindy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":139.200043,\"yPos\":-68.8005142},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhh,
-    what about it, doesn\u2019t she realise I\u2019m busy?\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"18Bitpull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":114.400024,\"yPos\":174.401688},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
-    my Gen-ai fine, I\u2019ll come. Sabrina is always so needy\u2026\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"18Bitpull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    sticky\\r\\n\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"16Bitpull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":103.7334,\"yPos\":-498.937134},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ew\u2026
+    Delilah mind helping me out here?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cindy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":100.533386,\"yPos\":-300.536743},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhh,
+    what about it, doesn\u2019t she realise I\u2019m busy?\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"16Bitpull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":75.73337,\"yPos\":-57.3346138},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
+    my Gen-ai fine, I\u2019ll come. Sabrina is always so needy\u2026\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"16Bitpull\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 18Bitpull
   DefaultSprite: {fileID: 21300000, guid: 7668103c8661551409a7c13dae79a3d6, type: 3}
@@ -7796,7 +7812,7 @@ PrefabInstance:
     - target: {fileID: 6560208717775789605, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: idleAnimation
       value: 
-      objectReference: {fileID: 7400000, guid: 8e50ad38c4bfd0743b282032d7dd2edc, type: 2}
+      objectReference: {fileID: 7400000, guid: 8f265b31ed40b4d4e8a2d70ca93395cf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11946,20 +11962,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 12
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":336.700043,\"yPos\":-456.999969},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
-    do, what\u2019s the issue?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":316.900024,\"yPos\":-321.400238},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"oh,
-    I see\u2026 and the show is in how long again?\",\"parentUIDs\":[3],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":334.500031,\"yPos\":-213.799728},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uh-oh,
-    do you know where the band members are?\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":313.500031,\"yPos\":247.203171},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay!
-    I\u2019ll go look for them!\",\"parentUIDs\":[10],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":58.00003,\"yPos\":-462.7999},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
-    there Delilah do you have time?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":59.00003,\"yPos\":-354.80014},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"There\u2019s
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":343.900055,\"yPos\":-217.000061},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    do, what\u2019s the issue?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":324.100037,\"yPos\":-81.40033},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"oh,
+    I see\u2026 and the show is in how long again?\",\"parentUIDs\":[3],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":341.700043,\"yPos\":26.2001953},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uh-oh,
+    do you know where the band members are?\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":320.700043,\"yPos\":487.203125},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay!
+    I\u2019ll go look for them!\",\"parentUIDs\":[10],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":65.20004,\"yPos\":-222.799988},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
+    there Delilah do you have time?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":66.20004,\"yPos\":-114.800232},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"There\u2019s
     been a\u2026 tiny little setback with the Band Members, and you usually know
-    what you\u2019re doing.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":57.50003,\"yPos\":-229.799973},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhm,
-    the show is starting in about 10 or 15 minutes.\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":55.50003,\"yPos\":-103.799469},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes!
-    I think I have an idea of where they may be: \",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":56.50003,\"yPos\":9.202267},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bit
+    what you\u2019re doing.\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":64.70004,\"yPos\":10.1999359},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhm,
+    the show is starting in about 10 or 15 minutes.\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":62.7000427,\"yPos\":136.200439},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes!
+    I think I have an idea of where they may be: \",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":63.7000427,\"yPos\":249.202774},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bit
     should be somewhere nearby, probably trying to pick up a girl, he tends to run
-    off.  Try by the tables to the left\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":58.50003,\"yPos\":120.203232},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Frank
+    off.  Try by the tables to the left\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":65.70004,\"yPos\":360.2035},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Frank
     is probably resting somewhere, I think he\u2019s recovering from yesterday, he
-    went pretty hard last night. Try by the camps\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":58.50003,\"yPos\":230.202744},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lastly,
+    went pretty hard last night. Try by the camps\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":65.70004,\"yPos\":470.202759},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lastly,
     Amanda, she grew up close to the ocean, and likes to go look at water when she
     feels overwhelmed or stressed.\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sabrina\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -11983,16 +11999,16 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1534062303}
-        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
-        m_MethodName: MinigameInactive
-        m_Mode: 1
+      - m_Target: {fileID: 47459607}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: '- Talk with Amanda by the lake'
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &903905830
@@ -14673,6 +14689,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1914808316372121015, guid: 00406c044a1926a46a9c63b9aab6d61f, type: 3}
   m_PrefabInstance: {fileID: 1190832214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084383046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084383048}
+  - component: {fileID: 1084383047}
+  m_Layer: 0
+  m_Name: Sabrina activator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1084383047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084383046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6e8a46464bd5b49bb226cdc7e5ce9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sabrina: {fileID: 47459600}
+--- !u!4 &1084383048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084383046}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.807354, y: 14.495879, z: 1.8794492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1085172925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20594,9 +20655,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 317009469}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
-        m_MethodName: AddTask
+      - m_Target: {fileID: 47459607}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20625,9 +20686,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 317009469}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
-        m_MethodName: AddTask
+      - m_Target: {fileID: 47459607}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20656,9 +20717,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 317009469}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
-        m_MethodName: AddTask
+      - m_Target: {fileID: 47459607}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22485,7 +22546,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.6793737
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
@@ -24516,7 +24577,11 @@ MonoBehaviour:
   constructionComplete: 0
   lightSwitchComplete: 0
   sabrinaQuestStarter: 0
+  BitTalkComplete: 0
+  FrankTalkComplete: 0
+  AmandaTalkComplete: 0
   sabrinaQuestConvo: {fileID: 1911839479}
+  FinalTalkConvo: {fileID: 0}
 --- !u!4 &1911839478
 Transform:
   m_ObjectHideFlags: 0
@@ -27676,6 +27741,7 @@ SceneRoots:
   - {fileID: 265174940}
   - {fileID: 93242828}
   - {fileID: 1796205380}
+  - {fileID: 1084383048}
   - {fileID: 387752237}
   - {fileID: 47459598}
   - {fileID: 1911839478}

@@ -12,7 +12,11 @@ public class HatManager : MonoBehaviour
     public  bool constructionComplete = false;
     public  bool lightSwitchComplete = false;
     public  bool sabrinaQuestStarter = false;
+    public bool BitTalkComplete = false;
+    public bool FrankTalkComplete = false;
+    public bool AmandaTalkComplete = false;
     public NPCConversation sabrinaQuestConvo;
+    public NPCConversation FinalTalkConvo;
 
     private void Awake()
     {
@@ -34,6 +38,12 @@ public class HatManager : MonoBehaviour
             {
                 ConversationManager.Instance.StartConversation(sabrinaQuestConvo);
             }
+        }
+
+        if (BitTalkComplete && FrankTalkComplete && AmandaTalkComplete)
+        {
+            Debug.Log("All talk completions are true.");
+            // Perform any additional actions here
         }
     }
     public void TurnBoolOn(string boolName)
