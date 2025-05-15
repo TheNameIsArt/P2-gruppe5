@@ -141,7 +141,7 @@ public class SceneFader : MonoBehaviour
             gameObject.SetActive(true); // Ensure the GameObject is active
         }
 
-        StartCoroutine(FastFadeToBlack());
+        StartCoroutine(FadeToBlack());
     }
 
     public void FadeOut()
@@ -151,6 +151,6 @@ public class SceneFader : MonoBehaviour
             gameObject.SetActive(true); // Ensure the GameObject is active
         }
 
-        StartCoroutine(FastFadeFromBlack());
+        StartCoroutine(FadeFromBlack());
     }
 }

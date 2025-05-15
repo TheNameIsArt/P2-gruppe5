@@ -23,6 +23,16 @@ public class Scr_HatSwitcher : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Try to set currentHatIndex from HatManager
+        if (HatManager.Instance != null && !string.IsNullOrEmpty(HatManager.Instance.SavedHat))
+        {
+            int idx = System.Array.IndexOf(hats, HatManager.Instance.SavedHat);
+            if (idx >= 0)
+            {
+                currentHatIndex = idx;
+            }
+        }
+
         idle = hatsIdle[0];
         run = hatsRun[0];
 
@@ -106,6 +116,9 @@ public class Scr_HatSwitcher : MonoBehaviour
             {
                 currentHatIndex = 0;
             }
+            // Save the new hat
+            if (HatManager.Instance != null)
+                HatManager.Instance.SavedHat = hats[currentHatIndex];
         }
     }
     public void previousHat(InputAction.CallbackContext context)
