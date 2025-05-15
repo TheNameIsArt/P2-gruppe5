@@ -39,7 +39,10 @@ public class Level_Changer : MonoBehaviour
         SceneFader.Instance.FadeToScene(targetSceneName);
     }
 
-
+    public void PerformAction()
+    {
+        sceneChanger();
+    }
 
     /*IEnumerator LoadScene(string targetSceneName)
     {
