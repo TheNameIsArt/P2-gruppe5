@@ -134,4 +134,23 @@ public class SceneFader : MonoBehaviour
         fadeImage.color = new Color(0, 0, 0, 0);
         fadeImage.enabled = false;
     }
+    public void FadeIn()
+    {
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true); // Ensure the GameObject is active
+        }
+
+        StartCoroutine(FastFadeToBlack());
+    }
+
+    public void FadeOut()
+    {
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true); // Ensure the GameObject is active
+        }
+
+        StartCoroutine(FastFadeFromBlack());
+    }
 }
