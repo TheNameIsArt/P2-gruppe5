@@ -23,13 +23,15 @@ public class Player_Overworld_Controller : MonoBehaviour
     private bool isConversationZone;
     private bool isInteractionZone;
     private bool isContextZone;
+    private bool isDelilahConversationZone;
 
     [SerializeField] private bool isConversationActive = false;
     public CinemachineVirtualCamera localCamera;
     public CinemachineVirtualCamera localCamera2;
     public CinemachineVirtualCamera localCamera3;
 
-    private ConversationEditer conversationEditor; // Reference to the ConversationEditor
+    private ConversationEditer conversationEditor;
+    private DelilahConversation delilahConversation;// Reference to the ConversationEditor
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -165,17 +167,26 @@ public class Player_Overworld_Controller : MonoBehaviour
             isContextZone = true;
             interactionButton.SetActive(true);
         }
+        else if (collision.gameObject.tag == "DelilahConversationZone")
+        {
+            //targetConversation = interactionZone.GetComponent<NPCConversation>();
+            delilahConversation = interactionZone.GetComponent<DelilahConversation>();
+            isDelilahConversationZone = true;
+            if (!isConversationActive)
+                interactionButton.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (interactionButton != null)
         {
-            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone")
+            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone" || collision.gameObject.tag == "DelilahConversationZone")
             {
                 interactionButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
+                isDelilahConversationZone = false;
             }
         }
        
@@ -230,6 +241,16 @@ public class Player_Overworld_Controller : MonoBehaviour
                         Debug.LogWarning("No script found on the ContextZone GameObject.");
                     }
                 }
+            }
+            else if (context.performed && isDelilahConversationZone)
+            {
+                if (delilahConversation != null)
+                {
+                    delilahConversation.PlayConversation();
+                    Debug.Log("Delilah Conversation started!");
+                }
+                playerInput.enabled = false; // Disable the PlayerInput component
+                interactionButton.SetActive(false); // Hide the interaction button
             }
         }
     }
