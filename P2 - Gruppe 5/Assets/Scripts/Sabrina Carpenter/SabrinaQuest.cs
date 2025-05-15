@@ -29,7 +29,11 @@ public class SabrinaQuest : MonoBehaviour
     public void Update()
     {
         BandMember = GameObject.FindGameObjectWithTag("BandMember");
-
+        if (BandMember == null)
+        {
+            //Debug.LogWarning("BandMember not found in the scene.");
+            return;
+        }
         if (!sabrinaQuestActive)
         {
             botTurnedOff = true;
