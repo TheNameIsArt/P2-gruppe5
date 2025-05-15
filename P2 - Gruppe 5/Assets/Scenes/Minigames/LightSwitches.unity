@@ -301,6 +301,34 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139804714658335267, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5179296253885244341, guid: 7241e4e53ddfec140a7497d80f4de729, type: 3}
       propertyPath: winLight
       value: 
@@ -1518,16 +1546,16 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1692635628}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 229675730}
+        m_TargetAssemblyTypeName: Level_Changer, Assembly-CSharp
+        m_MethodName: sceneChanger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Festival 2
+          m_StringArgument: Andy Festival
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 5
@@ -1853,6 +1881,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &229675730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6690985233245865983, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+  m_PrefabInstance: {fileID: 1931912247}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b092d7f6f9a67e4588ce334bf40666a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &231428133
 GameObject:
   m_ObjectHideFlags: 0
@@ -6303,12 +6342,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-6.00001526,"yPos":231.800156},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"[Go
-    back]","parentUIDs":[4],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":258.8,"yPos":230.20015},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"[Play
-    again?]","parentUIDs":[4],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":128.4,"yPos":-232.4},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Woah!
-    You did it!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":142,"yPos":11.9999771},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
-    the lights should be working for the upcoming show","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":133.200012,"yPos":-108.000038},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    never would have figured out how to set this up!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":140.4,"yPos":116.800049},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":76.0000458,"yPos":164.599991},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"[Go
+    back]","parentUIDs":[4],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":340.800049,"yPos":163.000015},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"[Play
+    again?]","parentUIDs":[4],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":210.400055,"yPos":-299.6},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Woah!
+    You did it!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":224.000061,"yPos":-55.2000237},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    the lights should be working for the upcoming show","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":215.200073,"yPos":-175.200027},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    never would have figured out how to set this up!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":222.400055,"yPos":49.5999832},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
     man! Let''s get back to the festival","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Simon
@@ -6326,16 +6365,16 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1692635628}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 229675730}
+        m_TargetAssemblyTypeName: Level_Changer, Assembly-CSharp
+        m_MethodName: sceneChanger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Festival 2
+          m_StringArgument: Andy Festival
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1695132249
@@ -7780,6 +7819,71 @@ Transform:
   - {fileID: 683219548}
   m_Father: {fileID: 1853346536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1931912247
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6260035602422027486, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_Name
+      value: WarpPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690985233245865983, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: connection
+      value: 
+      objectReference: {fileID: 11400000, guid: ce1352424dd309f40a3b05b08fdf5ddf, type: 2}
+    - target: {fileID: 6690985233245865983, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: targetSceneName
+      value: Delilah Festival
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2709429
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8779109
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0066860598
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
 --- !u!1 &1958927633
 GameObject:
   m_ObjectHideFlags: 0
@@ -8767,3 +8871,4 @@ SceneRoots:
   - {fileID: 970277098}
   - {fileID: 1893084324}
   - {fileID: 132826880}
+  - {fileID: 1931912247}

@@ -161,7 +161,7 @@ public class PlayerMovement_crowd : MonoBehaviour
                 rb.position = position;
 
                 // Destroy all tails
-                foreach (GameObject tail in GameObject.FindGameObjectsWithTag("Tail")) Destroy(tail);
+                // foreach (GameObject tail in GameObject.FindGameObjectsWithTag("Tail")) Destroy(tail);
 
                 Debug.Log("Player moved to the first triggered tile and tails cleared.");
                 yield break;
@@ -191,12 +191,7 @@ public class PlayerMovement_crowd : MonoBehaviour
         if (fillShadowTailCoroutine != null)
         {
             StopCoroutine(fillShadowTailCoroutine);
-            Debug.Log("Coroutine stopped.");
             fillShadowTailCoroutine = null;
-        }
-        else
-        {
-            Debug.Log("Coroutine was already null. Nothing to stop.");
         }
     }
 

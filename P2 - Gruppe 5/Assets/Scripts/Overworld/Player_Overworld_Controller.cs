@@ -10,9 +10,11 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public InputDevice inputDevice;
+    public string playerName;
+    //public GameObject hats;
+
     private GameObject interactionZone;
     private PlayerInput playerInput;
-
     private string targetSceneName;
     //private NPCConversation targetConversation;
     private Vector2 moveInput;
@@ -24,6 +26,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     [SerializeField] private bool isConversationActive = false;
     public CinemachineVirtualCamera localCamera;
     public CinemachineVirtualCamera localCamera2;
+    public CinemachineVirtualCamera localCamera3;
 
     private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
@@ -63,13 +66,22 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (ConversationManager.Instance.IsConversationActive)
             {
                 Scr_CameraController.SwitchCamera(localCamera);
+                //Debug.Log("Camera switched to localCamera");
+                if (playerInput != null)
+                {
+                    playerInput.enabled = false; // Disable the PlayerInput component
+                }
             }
             else if (!ConversationManager.Instance.IsConversationActive)
             {
                 Scr_CameraController.SwitchCamera(localCamera2);
+                //Debug.Log("Camera switched to localCamera2");
+                if (playerInput != null)
+                {
+                    playerInput.enabled = true; // Enable the PlayerInput component
+                }
             }
         }
-      
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -88,13 +100,42 @@ public class Player_Overworld_Controller : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (moveInput.x != 0 || moveInput.y != 0)
+        if (playerName == ("Andy")) 
         {
-            animator.Play("New_Guy_Run");
+            if (moveInput.x != 0 || moveInput.y != 0)
+            {
+                animator.Play("Andy_Run");
+                //hats.GetComponent<Scr_HatSwitcher>().animateRun();
+            }
+            else
+            {
+                animator.Play("Andy_Idle");
+                //hats.GetComponent<Scr_HatSwitcher>().animateIdle();
+            }
         }
-        else
+        else if (playerName == "Delilah")
         {
-            animator.Play("New_Guy_Idle");
+            if (moveInput.x != 0 || moveInput.y != 0)
+            {
+                animator.Play("Delilah_Run");
+                //hats.GetComponent<Scr_HatSwitcher>().animateRun();
+            }
+            else
+            {
+                animator.Play("Delilah_Idle");
+                //hats.GetComponent<Scr_HatSwitcher>().animateIdle();
+            }
+        }
+        else if (playerName == "Sam")
+        {
+            if (moveInput.x != 0 || moveInput.y != 0)
+            {
+                animator.Play("Sam_Run");
+            }
+            else
+            {
+                animator.Play("Sam_Idle");
+            }
         }
     }
 
