@@ -26,7 +26,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
     private float beatPulseDuration = 0.3f;
 
     private List<float> expectedInputTiming = new List<float>();
-    private float timingWindow = 0.3f;
+    private float timingWindow = 0.4f;
     
     public AudioClip beatSound;
     private AudioSource audioSource;
@@ -151,7 +151,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
         if (currentInputIndex >= currentSequence.Count)
         {
             Debug.Log("Sequence complete! Generating new sequence...");
-            Invoke ("StartNewSequence", 1.0f);
+            Invoke ("StartNewSequence", 2.0f);
             feedbackText.text = "YAY";
             sequencesCompleted ++;
             statusText.text = sequencesCompleted + " sequences completed!";
