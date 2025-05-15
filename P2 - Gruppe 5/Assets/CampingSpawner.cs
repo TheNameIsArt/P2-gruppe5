@@ -8,12 +8,16 @@ public class CampingSpawner : MonoBehaviour
     public static CampingSpawner Instance { get; private set; }
     public bool SpawnCampBots = false;
     private bool botTurnedOff = false;
+
+    public bool talkedWithCampBots = false;
     public GameObject campBots;
+    public GameObject campBots2;
 
 
     private void Awake()
     {
         campBots = GameObject.FindGameObjectWithTag("campBots");
+        campBots2 = GameObject.FindGameObjectWithTag("campBots2");
 
         // If Sabrina Carpenter is Single, so am I
         if (Instance != null && Instance != this)
@@ -40,6 +44,22 @@ public class CampingSpawner : MonoBehaviour
             botTurnedOff = false;
             campBots.gameObject.SetActive(true);
         }
+        if (talkedWithCampBots)
+        {
+            campBots2.gameObject.SetActive(false);
+        }
+        else
+        {
+            campBots2.gameObject.SetActive(true);
+        }
+    }
+
+    public void SwitchCampBots()
+    {
+        if (campBots != null)
+            campBots.SetActive(false);
+        if (campBots2 != null)
+            campBots2.SetActive(true);
     }
 
 }
