@@ -2,7 +2,7 @@ using UnityEngine;
 using DialogueEditor;
 using UnityEngine.SceneManagement;
 
-public abstract class DialogSceneLoader : MonoBehaviour
+public class DialogSceneLoader : MonoBehaviour
 {
     public NPCConversation DialogConvo;
     protected static bool InfomationStart = false;
@@ -24,7 +24,7 @@ public abstract class DialogSceneLoader : MonoBehaviour
         else if (!InfomationStart)
         {
             InfomationStart = true; // Set to true only the first time Start runs
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false); // Removed to prevent object from disappearing
         }
     }
 
