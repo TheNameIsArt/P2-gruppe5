@@ -186,6 +186,7 @@ public class Player_Overworld_Controller : MonoBehaviour
                 interactionButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
+                isContextZone = false;
                 isDelilahConversationZone = false;
             }
         }
@@ -196,12 +197,12 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         if (interactionButton != null)
         {
-            if (context.performed && isInteractionZone)
+            /*if (context.performed && isInteractionZone)
             {
                 SceneManager.LoadScene(targetSceneName);
                 Debug.Log("INTERACT!");
-            }
-            else if (context.performed && isConversationZone)
+            }*/
+            if (context.performed && isConversationZone)
             {
                 if (conversationEditor != null)
                 {
