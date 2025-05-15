@@ -11,7 +11,8 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Animator animator;
     public InputDevice inputDevice;
     public string playerName;
-    //public GameObject hats;
+    public GameObject hats;
+    private GameObject hideHats;
 
     private GameObject interactionZone;
     private PlayerInput playerInput;
@@ -45,15 +46,15 @@ public class Player_Overworld_Controller : MonoBehaviour
             interactionButton.SetActive(false);
         }
         playerInput = GetComponent<PlayerInput>();
+        hideHats = GameObject.FindGameObjectWithTag ("HideHat");
     }
 
     // Update is called once per frame
     void Update()
     {
         rb.linearVelocity = moveInput * moveSpeed;
+
         Animate();
-
-
         if (ConversationManager.Instance != null)
         {
             if (!ConversationManager.Instance.IsConversationActive && !playerInput.enabled)
@@ -105,12 +106,14 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 animator.Play("Andy_Run");
-                //hats.GetComponent<Scr_HatSwitcher>().animateRun();
+                
+                
             }
             else
             {
                 animator.Play("Andy_Idle");
-                //hats.GetComponent<Scr_HatSwitcher>().animateIdle();
+                
+                
             }
         }
         else if (playerName == "Delilah")
@@ -118,12 +121,12 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 animator.Play("Delilah_Run");
-                //hats.GetComponent<Scr_HatSwitcher>().animateRun();
+                hats.GetComponent<Scr_HatSwitcher>().HatRun();
             }
             else
             {
                 animator.Play("Delilah_Idle");
-                //hats.GetComponent<Scr_HatSwitcher>().animateIdle();
+                hats.GetComponent<Scr_HatSwitcher>().HatIdle();
             }
         }
         else if (playerName == "Sam")
