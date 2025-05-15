@@ -26,4 +26,9 @@ public class TaskCompletion : MonoBehaviour
         if (TaskManager.Instance != null)
             TaskManager.Instance.RemoveTask(index);
     }
+    public void ToggleTaskList()
+    {
+        if (TaskManager.Instance != null)
+            TaskManager.Instance.ToggleTaskListVisibility();
+    }
 }

@@ -1,3 +1,5 @@
+using Cinemachine;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,62 +8,104 @@ public class Scr_HatSwitcher : MonoBehaviour
     public string currentHat;
     public string [] hats;
     public Animator animator;
-    public AnimationClip [] hatsIdle;
-    public AnimationClip[] hatsRun;
 
-    public AnimationClip idle;
-    public AnimationClip run;
+    public GameObject hatObjectIdle;
+    public GameObject hatObjectRun;
 
-   
+    public SpriteRenderer[] hatsIdle;
+    public SpriteRenderer[] hatsRun;
+
+    private SpriteRenderer idle;
+    private SpriteRenderer run;
+
+    public int currentHatIndex = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHat = hats[0];
+        idle = hatsIdle[0];
+        run = hatsRun[0];
+
+        hatObjectIdle.SetActive(true);
+        hatObjectRun.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentHat == "Burger")
+        currentHat = hats[currentHatIndex];
+        if (currentHat == "NoHat")
         {
             idle = hatsIdle[0];
             run = hatsRun[0];
+
         }
-        else if (currentHat == "Construction")
+        currentHat = hats[currentHatIndex];
+        if (currentHat == "Burger")
         {
             idle = hatsIdle[1];
             run = hatsRun[1];
+
         }
-        else if (currentHat == "Lightswitch")
+        else if (currentHat == "Construction")
         {
             idle = hatsIdle[2];
             run = hatsRun[2];
+
+        }
+        else if (currentHat == "Lightswitch")
+        {
+            idle = hatsIdle[3];
+            run = hatsRun[3];
+
+        }
+
+        idle.color = new Color(1f, 1f, 1f, 1f);
+        run.color = new Color(1f, 1f, 1f, 1f);
+
+        foreach (SpriteRenderer hats in hatsIdle)
+        {
+            if ( hats != idle)
+            {
+                hats.color = new Color(1f, 1f, 1f, 0f); ;
+            }
+        }
+        foreach (SpriteRenderer hats in hatsRun)
+        {
+            if (hats != run)
+            {
+                hats.color = new Color(1f, 1f, 1f, 0f); ;
+            }
         }
     }
 
-    public void animateIdle()
+    public void HatIdle()
     {
-        animator.Play(idle.name);
+        //animator.Play(idle.name);
+        hatObjectIdle.SetActive(true);
+        hatObjectRun.SetActive(false);
+
     }
-    public void animateRun() 
+    public void HatRun() 
     {
-        animator.Play(run.name);
+        //animator.Play(run.name);
+        hatObjectRun.SetActive(true);
+        hatObjectIdle.SetActive(false);
+
     }
     public void nextHat(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            
-            Debug.Log("Next Hat!");
+            if (++currentHatIndex == hats.Length)
+            {
+                currentHatIndex = 0;
+            }
         }
     }
     public void previousHat(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            //currentHat -= 1;
-        }
+     
     }
 }
 
