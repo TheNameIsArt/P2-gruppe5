@@ -34,28 +34,30 @@ public class Scr_HatSwitcher : MonoBehaviour
     void Update()
     {
         currentHat = hats[currentHatIndex];
-        if (currentHat == "Burger")
+        if (currentHat == "NoHat")
         {
             idle = hatsIdle[0];
             run = hatsRun[0];
 
         }
-        else if (currentHat == "Construction")
+        currentHat = hats[currentHatIndex];
+        if (currentHat == "Burger")
         {
             idle = hatsIdle[1];
             run = hatsRun[1];
 
         }
-        else if (currentHat == "Lightswitch")
+        else if (currentHat == "Construction")
         {
             idle = hatsIdle[2];
             run = hatsRun[2];
 
         }
-        else if (currentHat == "NoHat") 
+        else if (currentHat == "Lightswitch")
         {
             idle = hatsIdle[3];
             run = hatsRun[3];
+
         }
 
         idle.color = new Color(1f, 1f, 1f, 1f);
