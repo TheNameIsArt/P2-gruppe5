@@ -5,11 +5,13 @@ public class AndyQuestTracker : MonoBehaviour
     public static AndyQuestTracker Instance { get; private set; }
     public bool AndyTalkedAtCamp = false;
     private bool burgerTurnedOn = false;
-    public GameObject BandMember;
+    public GameObject burgerConvoZone;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        burgerConvoZone = GameObject.FindGameObjectWithTag("burgerConvo");
+
         // singleton pattern
         if (Instance != null && Instance != this)
         {
@@ -25,8 +27,18 @@ public class AndyQuestTracker : MonoBehaviour
     {
         if (AndyTalkedAtCamp)
         {
-            burgerTurnedOn = true;
-            BandMember.gameObject.SetActive(false);
+            if (burgerConvoZone != null)
+            {
+                burgerConvoZone.gameObject.SetActive(true);
+            }
+            
+        }
+        else
+        {
+            if (burgerConvoZone != null)
+            {
+                burgerConvoZone.gameObject.SetActive(false);
+            }
         }
     }
 }
