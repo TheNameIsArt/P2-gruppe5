@@ -111,22 +111,22 @@ public class PlayerControllerCSH : MonoBehaviour
         if (!touchingDirections.IsGrounded)
         {
             if (yVelocity > 1f)
-                newState = HasHeadphones ? "JumpUp_Headphones" : "JumpUp";
+                newState = HasHeadphones ? "Delilah_P_H_Jump" : "Delilah_P_Jump";
             else if (yVelocity > 0f)
-                newState = HasHeadphones ? "JumpPeak_Headphones" : "JumpPeak";
+                newState = HasHeadphones ? "Delilah_P_H_Jump" : "Delilah_P_Jump";
             else
-                newState = HasHeadphones ? "Fall_Headphones" : "Fall";
+                newState = HasHeadphones ? "Delilah_P_H_Fall" : "Delilah_P_Jump";
         }
         else if (_isMoving)
         {
             if (_isRunning)
-                newState = HasHeadphones ? "Run_Headphones" : "Run";
+                newState = HasHeadphones ? "Delilah_P_H_Run" : "Delilah_P_Run";
             else
-                newState = HasHeadphones ? "Walk_Headphones" : "Walk";
+                newState = HasHeadphones ? "Delilah_P_H_Run" : "Delilah_P_Run";
         }
         else
         {
-            newState = HasHeadphones ? "Idle_Headphones" : "Idle";
+            newState = HasHeadphones ? "Delilah_P_H_Idle" : "Delilah_P_Idle";
         }
 
         if (newState != currentState)
