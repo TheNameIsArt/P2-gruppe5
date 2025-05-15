@@ -59,6 +59,11 @@ public class Scr_HatSwitcher : MonoBehaviour
             run = hatsRun[3];
 
         }
+        else if (currentHat == "Sabrina")
+        {
+            idle = hatsIdle[4];
+            run = hatsRun[4];
+        }
 
         idle.color = new Color(1f, 1f, 1f, 1f);
         run.color = new Color(1f, 1f, 1f, 1f);
