@@ -28,6 +28,8 @@ public class SabrinaQuest : MonoBehaviour
 
     public void Update()
     {
+        BandMember = GameObject.FindGameObjectWithTag("BandMember");
+
         if (!sabrinaQuestActive)
         {
             botTurnedOff = true;
