@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
-
+using DialogueEditor;
 public class EatingGamemanagerv2 : MonoBehaviour
 {
     public Sprite[] foodSprites;      // Array of available food sprites
@@ -22,13 +22,19 @@ public class EatingGamemanagerv2 : MonoBehaviour
     private bool isInputProcessing = true; //Makes sure that the player cannot do a new input after a wrong input and a new sequence is being made
     
     private bool isShowingRythm = false; // When this is turned true, it makes it so that the player cannot do an input
-    public float beatInterval = 0.3f; // Time between beats. Should be updated to BPM later on ?
+    private float beatInterval = 0.8f; // Time between beats. Should be updated to BPM later on ?
+    private float beatPulseDuration = 0.3f;
 
     private List<float> expectedInputTiming = new List<float>();
-    private float timingWindow = 0.7f;
+    private float timingWindow = 0.3f;
     
     public AudioClip beatSound;
     private AudioSource audioSource;
+
+    private bool gameStarted = false;
+    public bool dialogueStartGame = false;
+
+    [SerializeField] private PlayerInput playerInput;
 
    void Start()
     {
@@ -38,13 +44,26 @@ public class EatingGamemanagerv2 : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        StartNewSequence();
+        //StartNewSequence();
         feedbackText.text = "Press the right sequence";
+    }
+
+    public void GameStart()
+    {
+        dialogueStartGame = true;
     }
 
 
     void Update()
     {
+        if (ConversationManager.Instance.IsConversationActive && dialogueStartGame && !gameStarted)
+            return;
+        else if (!ConversationManager.Instance.IsConversationActive && !gameStarted)
+        {
+            gameStarted = true;
+            playerInput.enabled = true;
+            StartNewSequence();
+        }
         if (sequencesCompleted >= sequencesToComplete)
         {
             WinCon();
@@ -146,7 +165,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
         isInputProcessing = false; //Blocks the input 
 
         Debug.Log("Wrong input! Restarting sequence.");
-        Invoke ("StartNewSequence", 1.0f);
+        Invoke ("StartNewSequence", 3.0f);
         feedbackText.text = "Try again buddy";
     }
 
@@ -160,22 +179,17 @@ public class EatingGamemanagerv2 : MonoBehaviour
         for (int i = 0; i < currentSequence.Count; i++)
         {
             expectedInputTiming.Add(startTime + i * (beatInterval + 0.1f));
-           /* // Highlight the current food
-            Image img = foodDisplays[i];
-            Color originalColor = img.color;
-            img.color = Color.green; // Highlight it */
+         
 
             if (beatSound !=null && audioSource != null)
             {
                 audioSource.PlayOneShot(beatSound);
             }
-
             StartCoroutine(BeatPulse(i, 0f));
 
             yield return new WaitForSeconds(beatInterval);
 
-            // Return to original color
-          /*  img.color = originalColor; */
+          
 
             yield return new WaitForSeconds(0.1f); // Tiny pause before next highlight
         }
@@ -200,39 +214,44 @@ public class EatingGamemanagerv2 : MonoBehaviour
         }
     }
 
-    private IEnumerator BeatPulse(int index, float delay)
+   private IEnumerator BeatPulse(int index, float delay, Color? overrideColor = null)
+{
+    yield return new WaitForSeconds(delay); // Wait before pulsing
+
+    Image pulse = beatIndicators[index];
+    float duration = beatPulseDuration;
+    float time = 0f;
+
+    Color originalColor = pulse.color;
+    Color pulseColor = overrideColor ?? originalColor;
+
+    // Reset visual
+    pulse.transform.localScale = Vector3.zero;
+    pulse.color = new Color(pulseColor.r, pulseColor.g, pulseColor.b, 1f); // Fully visible
+
+    // Scale up
+    while (time < duration)
     {
-        yield return new WaitForSeconds(delay); // Wait before pulsing
-
-        Image pulse = beatIndicators[index];
-        float duration = 0.2f;
-        float time = 0f;
-
-        // Reset visual
-        pulse.transform.localScale = Vector3.zero;
-        pulse.color = new Color(pulse.color.r, pulse.color.g, pulse.color.b, 1f); // Fully visible
-
-        // Scale up
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            float scale = Mathf.Lerp(0f, 1f, time / duration);
-            pulse.transform.localScale = new Vector3(scale, scale, scale);
-            yield return null;
-        }
-
-        // Fade out
-        time = 0f;
-        while (time < duration)
-        {
-            time += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, time / duration);
-            pulse.color = new Color(pulse.color.r, pulse.color.g, pulse.color.b, alpha);
-            yield return null;
-        }
-
-        pulse.transform.localScale = Vector3.zero;
+        time += Time.deltaTime;
+        float scale = Mathf.Lerp(0f, 1f, time / duration);
+        pulse.transform.localScale = new Vector3(scale, scale, scale);
+        yield return null;
     }
+
+    // Fade out
+    time = 0f;
+    while (time < duration)
+    {
+        time += Time.deltaTime;
+        float alpha = Mathf.Lerp(1f, 0f, time / duration);
+        pulse.color = new Color(pulseColor.r, pulseColor.g, pulseColor.b, alpha);
+        yield return null;
+    }
+
+    pulse.transform.localScale = Vector3.zero;
+    pulse.color = originalColor; // Restore to red (or whatever was set in Unity)
+}
+
 
     private IEnumerator BeatPulseInput()
 {
@@ -244,7 +263,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
         if (waitTime > 0)
             yield return new WaitForSeconds(waitTime);
 
-        StartCoroutine(BeatPulse(i, 0f));
+        StartCoroutine(BeatPulse(i, 0f, Color.green));
     }
 }
 
