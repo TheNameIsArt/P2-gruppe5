@@ -35,7 +35,7 @@ public class TaskManager : MonoBehaviour
         }
         Instance = this;
         // Uncomment the next line if you want the TaskManager to persist between scenes
-        // DontDestroyOnLoad(gameObject);
+         DontDestroyOnLoad(gameObject);
     }
 
     public void AddTask(string taskDescription)
@@ -67,13 +67,6 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // Example tasks
-        AddTask("Collect 10 coins");
-        AddTask("Talk to the NPC");
-        AddTask("Find the hidden treasure");
-    }
     public void ResetTasks()
     {
         // Destroy all task UI objects
