@@ -15,7 +15,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
     private int currentInputIndex = 0;  // Tracks player's progress through the sequence
     public TextMeshProUGUI feedbackText;
     public int sequencesCompleted = 0;
-    public int sequencesToComplete = 10;
+    private int sequencesToComplete = 10;
     public TextMeshProUGUI statusText;
 
     private bool isSequenceResetting = false; //Makes sure that the sequence only resetts once, instead of multiple times via multiple inputs
@@ -33,6 +33,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
 
     private bool gameStarted = false;
     public bool dialogueStartGame = false;
+    private bool gameWon = false;
 
     [SerializeField] private PlayerInput playerInput;
 
@@ -73,6 +74,12 @@ public class EatingGamemanagerv2 : MonoBehaviour
     
     void StartNewSequence()
     {
+        if (gameWon) return;
+
+        isSequenceResetting = false;
+        isInputProcessing = false;
+        isShowingRythm = true;
+
         isSequenceResetting = false; //Sequence can be reset again
         isInputProcessing = true;
         isShowingRythm = true;
@@ -132,10 +139,6 @@ public class EatingGamemanagerv2 : MonoBehaviour
             OnWrongInput();
         }
     }
-
-
-
-
    
     void OnCorrectInput()
     {
@@ -190,7 +193,6 @@ public class EatingGamemanagerv2 : MonoBehaviour
             yield return new WaitForSeconds(beatInterval);
 
           
-
             yield return new WaitForSeconds(0.1f); // Tiny pause before next highlight
         }
 
@@ -270,6 +272,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
     void WinCon()
     {
         Debug.Log("GG, you win");
+        gameWon = true;
     }
 
     // Inputs 
