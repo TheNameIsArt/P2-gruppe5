@@ -14,4 +14,5 @@ public class InfoSceneDialogLoader : MonoBehaviour
             ConversationManager.Instance.StartConversation(DialogConvo);
         }
     }
+
 }
