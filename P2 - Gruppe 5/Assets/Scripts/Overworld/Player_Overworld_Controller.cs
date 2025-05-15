@@ -181,11 +181,12 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         if (interactionButton != null)
         {
-            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone")
+            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone" || collision.gameObject.tag == "DelilahConversationZone")
             {
                 interactionButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
+                isDelilahConversationZone = false;
             }
         }
        
