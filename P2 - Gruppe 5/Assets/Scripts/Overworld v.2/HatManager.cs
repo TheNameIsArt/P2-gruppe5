@@ -15,6 +15,7 @@ public class HatManager : MonoBehaviour
     public bool BitTalkComplete = false;
     public bool FrankTalkComplete = false;
     public bool AmandaTalkComplete = false;
+    public bool sabrinaQuestComplete = false;
     public NPCConversation sabrinaQuestConvo;
     public NPCConversation FinalTalkConvo;
 
@@ -40,10 +41,15 @@ public class HatManager : MonoBehaviour
             }
         }
 
-        if (BitTalkComplete && FrankTalkComplete && AmandaTalkComplete)
+        if (BitTalkComplete && FrankTalkComplete && AmandaTalkComplete && !sabrinaQuestComplete)
         {
+            burgerComplete = false;
+            constructionComplete = false;
+            lightSwitchComplete = false;
+            sabrinaQuestStarter = false;
+            sabrinaQuestComplete = true;
             Debug.Log("All talk completions are true.");
-            // Perform any additional actions here
+            ConversationManager.Instance.StartConversation(FinalTalkConvo);
         }
     }
     public void TurnBoolOn(string boolName)
