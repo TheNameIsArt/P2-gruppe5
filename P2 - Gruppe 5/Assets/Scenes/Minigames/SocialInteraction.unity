@@ -558,11 +558,11 @@ PrefabInstance:
       objectReference: {fileID: -809401811, guid: da21e5e2c2bd48f4f9f33bbd3c167f16, type: 3}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.04
+      value: 8.38
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.82
+      value: 4.68
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -993,8 +993,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 28
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 4034f2ef95ede07419f74406854601a9, type: 3}
+  TMPFont: {fileID: 11400000, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
+  Icon: {fileID: 21300000, guid: 701298f471451554c80de15349b9b467, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &765231576
 MonoBehaviour:
@@ -1012,8 +1012,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 27
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 4034f2ef95ede07419f74406854601a9, type: 3}
+  TMPFont: {fileID: 11400000, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
+  Icon: {fileID: 21300000, guid: 701298f471451554c80de15349b9b467, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &765231577
 MonoBehaviour:
@@ -1083,24 +1083,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 31
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":35.6000671,\"yPos\":95.800354},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Short
-    and direct\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":250.000031,\"yPos\":98.20041},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Detailed
-    and explanatory\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":469.999969,\"yPos\":98.20041},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Indirect
-    and careful\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":496.000031,\"yPos\":-17.7999954},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"End
-    conversation\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":253.200012,\"yPos\":-36.3999939},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hello,
-    how can I help you?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":36.4000244,\"yPos\":176.800415},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Have
-    you seen someone wearing a red jacket?\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":251.600067,\"yPos\":176.000427},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":49.2000732,\"yPos\":154.200348},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Short
+    and direct\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":263.600037,\"yPos\":156.6004},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Detailed
+    and explanatory\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":483.599976,\"yPos\":156.6004},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Indirect
+    and careful\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":509.600037,\"yPos\":40.6},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"End
+    conversation\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":266.800018,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hello,
+    how can I help you?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":50.00003,\"yPos\":235.200409},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Have
+    you seen someone wearing a red jacket?\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":265.200073,\"yPos\":234.400421},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
     am looking for my friend. He is a yellow robot wearing a red jacket. Have you
-    seen him?\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":476.399872,\"yPos\":175.200409},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry
-    to bother you, but I am looking for my friend. Where do lost robots go?\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":36.40001,\"yPos\":286.4004},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry,
-    I haven\u2019t seen anyone in a blue jacket. Maybe try over by the scene?\\r\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":250.800049,\"yPos\":287.2},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm
+    seen him?\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":489.999878,\"yPos\":233.6004},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry
+    to bother you, but I am looking for my friend. Where do lost robots go?\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":50.0000153,\"yPos\":344.800385},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry,
+    I haven\u2019t seen anyone in a red jacket. Maybe try over by the scene?\\r\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":264.400055,\"yPos\":345.6},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm
     let me think. I think I saw someone like that near here. I heard someone say
-    something about dancing, but I am not sure.\\r\",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Information
-    robot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":475.600037,\"yPos\":290.400024},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"
-    Yes, most robots come here when lost, but there have been no lost robots here
-    today. But a group walked by talking about some kind of floor? I am not sure
-    where they were going.\\r\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Information
-    robot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    something about dancing, but I am not sure.\\r\",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":489.200043,\"yPos\":348.800018},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes,
+    most robots come here when lost, but there have been no lost robots here today.
+    But a group walked by talking about shoot or food or something\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -1158,7 +1155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1801201816727784194, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1801201816727784194, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_Sprite
@@ -1166,11 +1163,11 @@ PrefabInstance:
       objectReference: {fileID: 1015910612, guid: 55750fa642491244d93517e369ee5ad1, type: 3}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.52
+      value: 7.06
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1904,7 +1901,7 @@ Transform:
   m_GameObject: {fileID: 1193204152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5092053, y: 8.202175, z: 0}
+  m_LocalPosition: {x: -5.74, y: 8.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
