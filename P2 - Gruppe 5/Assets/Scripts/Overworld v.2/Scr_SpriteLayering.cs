@@ -11,6 +11,8 @@ public class Scr_SpriteLayering : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer secondSpriteRenderer;
 
+    public Level_Changer levelChanger;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,5 +61,9 @@ public class Scr_SpriteLayering : MonoBehaviour
                 thirdLayer.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
             }
         }
+    }
+    public void PerformAction()
+    {
+        levelChanger.sceneChanger();
     }
 }
