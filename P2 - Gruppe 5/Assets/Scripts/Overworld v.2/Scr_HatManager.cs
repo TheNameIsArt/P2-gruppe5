@@ -56,6 +56,14 @@ public class Scr_HatSwitch : MonoBehaviour
                 HatSelector(hatChooser);
                 hatKey = "Hat: " + hatChooser;
                 break;
+            case 4:
+                HatSelector(hatChooser);
+                hatKey = "Hat: " + hatChooser;
+                break;
+            case 5:
+                HatSelector(hatChooser);
+                hatKey = "Hat: " + hatChooser;
+                break;
             default:
                 hatRenderer.enabled = false;
                 break;

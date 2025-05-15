@@ -11,6 +11,9 @@ public class TaskManager : MonoBehaviour
 
     private List<TaskItem> currentTasks = new List<TaskItem>();
 
+    // Tracks whether the task list is visible
+    public bool IsTaskListVisible { get; private set; } = true;
+
     // Represents a task and its UI
     private class TaskItem
     {
@@ -35,7 +38,7 @@ public class TaskManager : MonoBehaviour
         }
         Instance = this;
         // Uncomment the next line if you want the TaskManager to persist between scenes
-         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void AddTask(string taskDescription)
@@ -78,10 +81,33 @@ public class TaskManager : MonoBehaviour
         // Clear the list
         currentTasks.Clear();
     }
+
     public void RemoveTask(int index)
     {
         if (index < 0 || index >= currentTasks.Count) return;
         Destroy(currentTasks[index].taskObject);
         currentTasks.RemoveAt(index);
+    }
+
+    // --- New: Toggle task list UI visibility ---
+
+    /// <summary>
+    /// Toggles the visibility of the task list panel.
+    /// </summary>
+    public void ToggleTaskListVisibility()
+    {
+        IsTaskListVisible = !IsTaskListVisible;
+        if (taskListPanel != null)
+            taskListPanel.gameObject.SetActive(IsTaskListVisible);
+    }
+
+    /// <summary>
+    /// Sets the visibility of the task list panel.
+    /// </summary>
+    public void SetTaskListVisibility(bool visible)
+    {
+        IsTaskListVisible = visible;
+        if (taskListPanel != null)
+            taskListPanel.gameObject.SetActive(visible);
     }
 }

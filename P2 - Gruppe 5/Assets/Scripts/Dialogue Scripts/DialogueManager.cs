@@ -40,4 +40,15 @@ public class DialogueManager : MonoBehaviour
             savedConversationNames[characterID] = conversation.name;
         }
     }
+    public void SetConversationByIndex(string characterID, NPCConversation[] possibleConversations, int index)
+    {
+        if (possibleConversations == null || index < 0 || index >= possibleConversations.Length)
+            return;
+
+        var conversation = possibleConversations[index];
+        if (conversation != null)
+        {
+            savedConversationNames[characterID] = conversation.name;
+        }
+    }
 }

@@ -11,7 +11,8 @@ public class Player_Overworld_Controller : MonoBehaviour
     public Animator animator;
     public InputDevice inputDevice;
     public string playerName;
-    //public GameObject hats;
+    public GameObject hats;
+    private GameObject hideHats;
 
     private GameObject interactionZone;
     private PlayerInput playerInput;
@@ -22,13 +23,15 @@ public class Player_Overworld_Controller : MonoBehaviour
     private bool isConversationZone;
     private bool isInteractionZone;
     private bool isContextZone;
+    private bool isDelilahConversationZone;
 
     [SerializeField] private bool isConversationActive = false;
     public CinemachineVirtualCamera localCamera;
     public CinemachineVirtualCamera localCamera2;
     public CinemachineVirtualCamera localCamera3;
 
-    private ConversationEditer conversationEditor; // Reference to the ConversationEditor
+    private ConversationEditer conversationEditor;
+    private DelilahConversation delilahConversation;// Reference to the ConversationEditor
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -45,15 +48,15 @@ public class Player_Overworld_Controller : MonoBehaviour
             interactionButton.SetActive(false);
         }
         playerInput = GetComponent<PlayerInput>();
+        hideHats = GameObject.FindGameObjectWithTag ("HideHat");
     }
 
     // Update is called once per frame
     void Update()
     {
         rb.linearVelocity = moveInput * moveSpeed;
+
         Animate();
-
-
         if (ConversationManager.Instance != null)
         {
             if (!ConversationManager.Instance.IsConversationActive && !playerInput.enabled)
@@ -105,12 +108,14 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 animator.Play("Andy_Run");
-                //hats.GetComponent<Scr_HatSwitcher>().animateRun();
+                
+                
             }
             else
             {
                 animator.Play("Andy_Idle");
-                //hats.GetComponent<Scr_HatSwitcher>().animateIdle();
+                
+                
             }
         }
         else if (playerName == "Delilah")
@@ -118,12 +123,12 @@ public class Player_Overworld_Controller : MonoBehaviour
             if (moveInput.x != 0 || moveInput.y != 0)
             {
                 animator.Play("Delilah_Run");
-                //hats.GetComponent<Scr_HatSwitcher>().animateRun();
+                hats.GetComponent<Scr_HatSwitcher>().HatRun();
             }
             else
             {
                 animator.Play("Delilah_Idle");
-                //hats.GetComponent<Scr_HatSwitcher>().animateIdle();
+                hats.GetComponent<Scr_HatSwitcher>().HatIdle();
             }
         }
         else if (playerName == "Sam")
@@ -162,17 +167,27 @@ public class Player_Overworld_Controller : MonoBehaviour
             isContextZone = true;
             interactionButton.SetActive(true);
         }
+        else if (collision.gameObject.tag == "DelilahConversationZone")
+        {
+            //targetConversation = interactionZone.GetComponent<NPCConversation>();
+            delilahConversation = interactionZone.GetComponent<DelilahConversation>();
+            isDelilahConversationZone = true;
+            if (!isConversationActive)
+                interactionButton.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (interactionButton != null)
         {
-            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone")
+            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone" || collision.gameObject.tag == "ContextZone" || collision.gameObject.tag == "DelilahConversationZone")
             {
                 interactionButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
+                isContextZone = false;
+                isDelilahConversationZone = false;
             }
         }
        
@@ -182,12 +197,12 @@ public class Player_Overworld_Controller : MonoBehaviour
     {
         if (interactionButton != null)
         {
-            if (context.performed && isInteractionZone)
+            /*if (context.performed && isInteractionZone)
             {
                 SceneManager.LoadScene(targetSceneName);
                 Debug.Log("INTERACT!");
-            }
-            else if (context.performed && isConversationZone)
+            }*/
+            if (context.performed && isConversationZone)
             {
                 if (conversationEditor != null)
                 {
@@ -227,6 +242,16 @@ public class Player_Overworld_Controller : MonoBehaviour
                         Debug.LogWarning("No script found on the ContextZone GameObject.");
                     }
                 }
+            }
+            else if (context.performed && isDelilahConversationZone)
+            {
+                if (delilahConversation != null)
+                {
+                    delilahConversation.PlayConversation();
+                    Debug.Log("Delilah Conversation started!");
+                }
+                playerInput.enabled = false; // Disable the PlayerInput component
+                interactionButton.SetActive(false); // Hide the interaction button
             }
         }
     }
