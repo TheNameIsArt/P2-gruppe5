@@ -14,4 +14,9 @@ public class WalkiTalkie : MonoBehaviour
             ConversationManager.Instance.StartConversation(WalkiTalkiConvo);
         }
     }
+
+    public void turnOnBool(string boolName)
+    {
+        HatManager.Instance.TurnBoolOn(boolName);
+    }
 }
