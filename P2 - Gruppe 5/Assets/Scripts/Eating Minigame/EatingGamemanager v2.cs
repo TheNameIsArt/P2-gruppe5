@@ -20,8 +20,10 @@ public class EatingGamemanagerv2 : MonoBehaviour
     public TextMeshProUGUI statusText;
 
     private bool isSequenceResetting = false;
+    private bool isInTransition = false;
     private bool isInputProcessing = true;
     private bool isShowingRythm = false;
+    
     private float beatPulseDuration = 0.3f;
     private float timingWindow = 0.4f;
 
@@ -81,10 +83,16 @@ public class EatingGamemanagerv2 : MonoBehaviour
     {
         if (gameWon) return;
 
-        isSequenceResetting = false;
+        isInTransition = false;
         isInputProcessing = false;
         isShowingRythm = true;
 
+        GenerateNewSequence();
+        StartSequencePlayback();
+    }
+
+    void GenerateNewSequence()
+    {
         currentRhythmPattern = rhythmPresets[Random.Range(0, rhythmPresets.Count)];
 
         currentSequence.Clear();
@@ -99,13 +107,27 @@ public class EatingGamemanagerv2 : MonoBehaviour
             img.sprite = foodSprites[rnd];
             img.enabled = true;
         }
+    }
+
+    void StartSequencePlayback()
+    {
+        isSequenceResetting = false;
+        isInputProcessing = false;
+        isShowingRythm = true;
+
+        currentInputIndex = 0;
+
+        foreach (var img in foodDisplays)
+        {
+            img.enabled = true;
+        }
 
         StartCoroutine(ShowRhythm());
     }
 
     void HandleInput(int inputIndex)
     {
-        if (!isInputProcessing || isShowingRythm) return;
+        if (!isInputProcessing || isShowingRythm || isInTransition) return;
 
         float inputTime = Time.time;
 
@@ -150,12 +172,18 @@ public class EatingGamemanagerv2 : MonoBehaviour
 
         if (currentInputIndex >= currentSequence.Count)
         {
-            Invoke("StartNewSequence", 2.0f);
+            isInputProcessing = false;
+            isShowingRythm = false;
+            isInTransition = true;
+
             feedbackText.text = "YAY";
             sequencesCompleted++;
             statusText.text = sequencesCompleted + " sequences completed!";
+
+            Invoke("StartNewSequence", 1.0f);
         }
     }
+
 
     void OnWrongInput()
     {
@@ -163,8 +191,9 @@ public class EatingGamemanagerv2 : MonoBehaviour
         isSequenceResetting = true;
         isInputProcessing = false;
 
-        Invoke("StartNewSequence", 3.0f);
         feedbackText.text = "Try again buddy";
+
+        Invoke(nameof(StartSequencePlayback), 2.0f); // Retry the same sequence
     }
 
     private IEnumerator ShowRhythm()
