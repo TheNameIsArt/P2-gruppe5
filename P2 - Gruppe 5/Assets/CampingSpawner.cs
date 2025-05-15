@@ -2,18 +2,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SabrinaQuest : MonoBehaviour
+public class CampingSpawner : MonoBehaviour
 {
 
-    public static SabrinaQuest Instance { get; private set; }
-    public bool sabrinaQuestActive = false;
+    public static CampingSpawner Instance { get; private set; }
+    public bool SpawnCampBots = false;
     private bool botTurnedOff = false;
-    public GameObject BandMember;
+    public GameObject campBots;
 
 
     private void Awake()
     {
-        BandMember = GameObject.FindGameObjectWithTag("BandMember");
+        campBots = GameObject.FindGameObjectWithTag("campBots");
 
         // If Sabrina Carpenter is Single, so am I
         if (Instance != null && Instance != this)
@@ -28,21 +28,17 @@ public class SabrinaQuest : MonoBehaviour
 
     public void Update()
     {
-        BandMember = GameObject.FindGameObjectWithTag("BandMember");
-        if (BandMember == null)
-        {
-            //Debug.LogWarning("BandMember not found in the scene.");
-            return;
-        }
-        if (!sabrinaQuestActive)
+        campBots = GameObject.FindGameObjectWithTag("campBots");
+
+        if (!SpawnCampBots)
         {
             botTurnedOff = true;
-            BandMember.gameObject.SetActive(false);
+            campBots.gameObject.SetActive(false);
         }
         else
         {
             botTurnedOff = false;
-            BandMember.gameObject.SetActive(true);
+            campBots.gameObject.SetActive(true);
         }
     }
 
