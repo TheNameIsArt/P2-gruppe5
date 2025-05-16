@@ -25,7 +25,7 @@ public class Scr_CameraController : MonoBehaviour
         {
             if (camera != newCamera)
             {
-                camera.Priority = 0;
+                camera.Priority = 1;
             }
         }
     }
