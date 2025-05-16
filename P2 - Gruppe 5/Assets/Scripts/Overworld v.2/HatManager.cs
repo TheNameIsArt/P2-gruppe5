@@ -43,13 +43,15 @@ public class HatManager : MonoBehaviour
 
         if (BitTalkComplete && FrankTalkComplete && AmandaTalkComplete && !sabrinaQuestComplete)
         {
-            burgerComplete = false;
-            constructionComplete = false;
-            lightSwitchComplete = false;
-            sabrinaQuestStarter = false;
             sabrinaQuestComplete = true;
             Debug.Log("All talk completions are true.");
             ConversationManager.Instance.StartConversation(FinalTalkConvo);
+        }
+        if (sabrinaQuestComplete)
+        {
+            Debug.Log("Sabrina quest is complete.");
+
+            // Perform any additional actions when the quest is complete
         }
     }
     public void TurnBoolOn(string boolName)

@@ -1,24 +1,26 @@
 using UnityEngine;
 
-public class Pitdestoyer : MonoBehaviour
+public class Zafrondestroyer : MonoBehaviour
 {
-    public static bool pitDestroyer = false;
+    public static bool zafronDestroyer = false;
+    public GameObject zafron;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (pitDestroyer)
+        if (zafronDestroyer)
         {
-            Destroy(gameObject);
+            Destroy(zafron);
+            
         }
     }
     public void DestroyPit()
     {
-        pitDestroyer = true;
+        zafronDestroyer = true;  
     }
 }
