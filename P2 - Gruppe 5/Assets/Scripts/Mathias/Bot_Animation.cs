@@ -15,12 +15,12 @@ public class Bot_Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        animator.Play(idleAnimation.name);
     }
 
     // turn this off for the pitbull pandemic
-    private void OnEnable()
+    /*private void OnEnable()
     {
         animator.Play(idleAnimation.name);
-    }
+    }*/
 }
