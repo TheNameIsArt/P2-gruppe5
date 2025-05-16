@@ -1559,11 +1559,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 9
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":169.699982,"yPos":199.6},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"We''ll
-    take one burger menu each","parentUIDs":[3],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":168.699982,"yPos":369.599976},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Sits
-    down]","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":289.199982,"yPos":-0.3999939},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
-    my heaven! You really brought your whole camp","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":289.699982,"yPos":97.60002},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"That
-    is amazing. Now what can i get you guys to eat?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":292.699982,"yPos":269.5999},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"That
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":128.9,"yPos":222},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"We''ll
+    take one burger menu each","parentUIDs":[3],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":127.899994,"yPos":391.999969},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"[Sits
+    down]","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":248.4,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
+    my heaven! You really brought your whole camp","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":248.9,"yPos":120.000015},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"That
+    is amazing. Now what can i get you guys to eat?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":251.9,"yPos":291.9999},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"That
     sounds wonderful! Just take a seat and i''ll bring it down","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Benny
@@ -1580,7 +1580,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1964831401}
+        m_TargetAssemblyTypeName: Level_Changer, Assembly-CSharp
+        m_MethodName: sceneChanger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &124964724
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -511,101 +511,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397233486}
   m_CullTransparentMesh: 1
---- !u!1 &416388599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 416388601}
-  - component: {fileID: 416388604}
-  - component: {fileID: 416388600}
-  m_Layer: 0
-  m_Name: ConversationEventInfo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &416388600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416388599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 810430571}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Delilah Festival
-          m_BoolArgument: 0
-        m_CallState: 2
-  NodeID: 3
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
-  Audio: {fileID: 0}
---- !u!4 &416388601
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416388599}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6896935, y: -0.8154454, z: 2.5928996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 810430573}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &416388604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416388599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
-        m_MethodName: MinigameActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  NodeID: 0
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 646c7af932bdf6f4093d6e2ed5a35f66, type: 3}
-  Audio: {fileID: 0}
 --- !u!1 &591297009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,94 +2213,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808413319}
   m_CullTransparentMesh: 1
---- !u!1 &810430570
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810430573}
-  - component: {fileID: 810430572}
-  - component: {fileID: 810430571}
-  m_Layer: 0
-  m_Name: WinConversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &810430571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810430570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22fa8563caae27a428e4e98d534d3bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &810430572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810430570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":253.666718,"yPos":375.9992},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure!
-    [Back to the festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":249.999969,"yPos":18},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"What
-    a show! You''re a natural!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":252.066681,"yPos":136.000092},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
-    you sure that you''re not a professional?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Rusty","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":257.6667,"yPos":247.199249},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Would
-    you mind helping me set up and get ready for the next big gig?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Rusty","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
-  saveVersion: 110
-  DefaultName: Simon
-  DefaultSprite: {fileID: 21300000, guid: 5c14a8ed462000449bbf0bcbcd89c18d, type: 3}
-  DefaultFont: {fileID: 0}
-  NodeSerializedDataList:
-  - {fileID: 416388604}
-  - {fileID: 416388600}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
-  Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
-        m_MethodName: MinigameActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &810430573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810430570}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6896935, y: 0.8154454, z: -2.5928996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 416388601}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842895997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,26 +2663,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 17
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":253.866669,"yPos":171.000137},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
-    course.. but.. how do you eat?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":242.533356,"yPos":423.000366},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    was made today","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":529.8666,"yPos":273.666718},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"A
-    red and a green bubble?","parentUIDs":[6],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1031.20044,"yPos":331.666748},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
-    I think I got it! \n[Start Game]","parentUIDs":[12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":811.2001,"yPos":488.333557},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Can
-    I please get it again?","parentUIDs":[12],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":249.199982,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"We''re
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":-290.933319,"yPos":32.60013},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Of
+    course.. but.. how do you eat?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-302.266632,"yPos":284.600372},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    was made today","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-14.9332581,"yPos":135.266708},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"A
+    red and a green bubble?","parentUIDs":[6],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":486.400024,"yPos":193.266739},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
+    I think I got it! \n[Start Game]","parentUIDs":[12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":266.4,"yPos":349.933563},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Can
+    I please get it again?","parentUIDs":[12],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":-295.6,"yPos":-116.400009},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"We''re
     glad that you wanted to grab some lunch with us!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin
-    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":254.533356,"yPos":283.333527},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"How
-    do you... eat?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":244.5333,"yPos":535.999939},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Ahh,
-    I see. ","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":550.5333,"yPos":539.3332},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Well,
+    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-290.266632,"yPos":144.933517},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"How
+    do you... eat?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-300.2667,"yPos":397.599884},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Ahh,
+    I see. ","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Simon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":5.733368,"yPos":400.933136},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Well,
     as it is with all robots, we have a random sequence shown in our speech bubble
     on the left.","parentUIDs":[4,15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin
-    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":546.5333,"yPos":393.3336},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"A
+    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":1.73336792,"yPos":254.933563},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"A
     red and a green bubble will appear over the food items.","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin
-    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":530.5332,"yPos":140.0001},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-14.2666321,"yPos":1.60009766},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     red one shows the rythm in which you should eat. The green one is a guideline
     for you to follow.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin
-    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":13},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":839.2001,"yPos":183.333481},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Does
+    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":13},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":294.400024,"yPos":44.93347},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Does
     it makes sense to you, or should I repeat? ","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin
-    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":728.533447,"yPos":686.666443},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure!
+    ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":183.733368,"yPos":548.266235},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure!
     ","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin
     ??","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -3070,7 +2887,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5115,4 +4932,3 @@ SceneRoots:
   - {fileID: 842895999}
   - {fileID: 236195401}
   - {fileID: 2034081025}
-  - {fileID: 810430573}
