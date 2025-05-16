@@ -221,10 +221,10 @@ PrefabInstance:
     - target: {fileID: 6690985233245865983, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
       propertyPath: connection
       value: 
-      objectReference: {fileID: 11400000, guid: 83f72c46cc6ed6146ba87120d1bc8c7b, type: 2}
+      objectReference: {fileID: 11400000, guid: e798e99903d0f9b419044311be1d714e, type: 2}
     - target: {fileID: 6690985233245865983, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
       propertyPath: targetSceneName
-      value: Andy Festival
+      value: RosAndyFestival
       objectReference: {fileID: 0}
     - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2512,6 +2512,7 @@ GameObject:
   - component: {fileID: 606652843}
   - component: {fileID: 606652842}
   - component: {fileID: 606652840}
+  - component: {fileID: 606652845}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -2546,7 +2547,7 @@ MonoBehaviour:
           m_StringArgument: Andy Festival
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      - m_Target: {fileID: 2052445692}
         m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
         m_MethodName: MinigameInactive
         m_Mode: 1
@@ -2631,6 +2632,25 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &606652845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606652839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 19
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -6388,12 +6408,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":163,"yPos":245.533234},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Back
-    to festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":165.6,"yPos":-122.000008},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Phew,
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":238.9,"yPos":390.533234},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Back
+    to festival]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":241.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Phew,
     made it just in time to avoid a major leak","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":159.933319,"yPos":2.66671},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":235.833313,"yPos":146.666718},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Thanks
     a bunch! You seemed to have caught on quick.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
-    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":159.266663,"yPos":113.3334},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway.
+    The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":235.166656,"yPos":257.3334},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Anyway.
     See you at the concert!","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Frank
     The Service-Bot","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -6405,6 +6425,7 @@ MonoBehaviour:
   - {fileID: 606652843}
   - {fileID: 606652842}
   - {fileID: 606652840}
+  - {fileID: 606652845}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
@@ -6422,7 +6443,7 @@ MonoBehaviour:
           m_StringArgument: Andy Festival
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      - m_Target: {fileID: 2052445692}
         m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
         m_MethodName: MinigameInactive
         m_Mode: 1
