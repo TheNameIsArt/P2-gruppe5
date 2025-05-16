@@ -1,9 +1,11 @@
+using DialogueEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class amandaManager : MonoBehaviour
 {
     public static bool amandaHappy = false;
+    private static bool amandaConvo = false; // Flag to check if amandaHappy has been set
     public GameObject amanda;
     public GameObject amandaHappyObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,7 +31,15 @@ public class amandaManager : MonoBehaviour
         amandaHappy = true;
         Destroy(amanda);
         amandaHappyObject.SetActive(true);
+        amandaConvo = true; // Set the flag to true when amandaHappy is set
     }
 
-
+    private void Update()
+    {
+        if (amandaConvo && !ConversationManager.Instance.IsConversationActive)
+        {
+            amandaConvo = false; // Reset the flag after the conversation is done
+            HatManager.Instance.AmandaTalkComplete = true;
+        }
+    }
 }

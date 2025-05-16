@@ -253,7 +253,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.6793737
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
@@ -2076,6 +2076,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4920577113379566336, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 334460720}
+    - target: {fileID: 4920577113379566336, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sceneChanger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4147853713667032593, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
@@ -2084,6 +2092,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+--- !u!114 &334460720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8629598789988538345, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+  m_PrefabInstance: {fileID: 334460719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b092d7f6f9a67e4588ce334bf40666a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &335048512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,6 +2726,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
+--- !u!1001 &358003902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5232956870969566166, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_Name
+      value: Last bot zones
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.561357
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.260763
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9048795
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 888197704611c084c95ce733c3372854, type: 3}
 --- !u!1001 &360594760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12135,6 +12211,7 @@ GameObject:
   - component: {fileID: 1720141500}
   - component: {fileID: 1720141499}
   - component: {fileID: 1720141516}
+  - component: {fileID: 1720141517}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -12381,18 +12458,6 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1802987985}
-        m_TargetAssemblyTypeName: WalkiTalkie, Assembly-CSharp
-        m_MethodName: turnOnBool
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AmandaTalkComplete
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1802987986}
         m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
         m_MethodName: ToggleTaskComplete
@@ -12503,18 +12568,6 @@ MonoBehaviour:
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1802987985}
-        m_TargetAssemblyTypeName: WalkiTalkie, Assembly-CSharp
-        m_MethodName: turnOnBool
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AmandaTalkComplete
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 53
@@ -12766,6 +12819,37 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 58
   TMPFont: {fileID: 11400000, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &1720141517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720141457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1802987985}
+        m_TargetAssemblyTypeName: WalkiTalkie, Assembly-CSharp
+        m_MethodName: turnOnBool
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AmandaTalkComplete
+          m_BoolArgument: 0
+        m_CallState: 2
+  NodeID: 59
+  TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!1001 &1720988741
@@ -13510,38 +13594,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 59
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":44}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":428.799438,\"yPos\":-568.0005},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah
-    okay, I get that feeling. \",\"parentUIDs\":[23],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":41}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":415.4995,\"yPos\":-241.402573},\"ID\":42,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm,
-    that does seem very overwhelming\",\"parentUIDs\":[26],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":46}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":408.4995,\"yPos\":-127.4026},\"ID\":47,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
-    could say the same thing about you\",\"parentUIDs\":[43],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":49}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":417.4995,\"yPos\":6.597267},\"ID\":50,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"This
-    is what my hats are for\",\"parentUIDs\":[48],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":54}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":403.4995,\"yPos\":230.598129},\"ID\":55,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
-    really enjoyed this conversation too\",\"parentUIDs\":[53],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":52}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":408.4995,\"yPos\":116.597664},\"ID\":58,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"And
-    so do you! \",\"parentUIDs\":[51],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":45}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":178.000031,\"yPos\":-720.400146},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm\u2026
-    *sigh*\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":171.199982,\"yPos\":-587.0005},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
+  CurrentIDCounter: 60
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":44}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":431.465973,\"yPos\":147.733},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah
+    okay, I get that feeling. \",\"parentUIDs\":[23],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":41}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":418.166046,\"yPos\":474.330841},\"ID\":42,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm,
+    that does seem very overwhelming\",\"parentUIDs\":[26],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":46}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":411.166046,\"yPos\":588.330933},\"ID\":47,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    could say the same thing about you\",\"parentUIDs\":[43],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":49}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":420.166046,\"yPos\":722.330566},\"ID\":50,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"This
+    is what my hats are for\",\"parentUIDs\":[48],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":54}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":406.1661,\"yPos\":946.3314},\"ID\":55,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    really enjoyed this conversation too\",\"parentUIDs\":[53],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":52}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":411.166046,\"yPos\":832.3308},\"ID\":58,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"And
+    so do you! \",\"parentUIDs\":[51],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":45}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":180.666641,\"yPos\":-4.66665649},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm\u2026
+    *sigh*\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":173.8666,\"yPos\":128.733},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
     hi Delilah, didn\u2019t see you there\u2026 I guess I\u2019m just feeling a bit
-    overwhelmed\",\"parentUIDs\":[45],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":166.799957,\"yPos\":-477.601135},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"The
-    spotlight, the attention, the noise. It\u2019s all just a bit much\",\"parentUIDs\":[44],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":42}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":170.799957,\"yPos\":-256.002136},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Not
+    overwhelmed\",\"parentUIDs\":[45],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":169.466568,\"yPos\":238.132446},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"The
+    spotlight, the attention, the noise. It\u2019s all just a bit much\",\"parentUIDs\":[44],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":42}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":173.466568,\"yPos\":459.731354},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Not
     to mention I\u2019m the newest in Sabrina\u2019s group, so it can feel like I\u2019m
-    out of my league\",\"parentUIDs\":[33],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":169.499969,\"yPos\":-364.402344},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    out of my league\",\"parentUIDs\":[33],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":172.16658,\"yPos\":351.331146},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
     know it\u2019s what I signed up for when I decided to become a musician but sometimes
-    I wonder if that was the right decision\",\"parentUIDs\":[25],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":43}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":652.4996,\"yPos\":-262.402466},\"ID\":41,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You
-    always bring the most energy to your shows! I never knew you felt like this off-stage\",\"parentUIDs\":[42],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":47}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":169.499969,\"yPos\":-141.402481},\"ID\":43,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"How
+    I wonder if that was the right decision\",\"parentUIDs\":[25],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":43}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":655.1671,\"yPos\":453.330963},\"ID\":41,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You
+    always bring the most energy to your shows! I never knew you felt like this off-stage\",\"parentUIDs\":[42],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":47}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":172.16658,\"yPos\":574.331055},\"ID\":43,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"How
     do you do it Delilah? You\u2019re so good at managing and organizing such massive
-    events, I could never imagine being in your shoes\",\"parentUIDs\":[41],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":674.499451,\"yPos\":-579.400757},\"ID\":44,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"What
-    is it that\u2019s overwhelming you?\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":428.4995,\"yPos\":-714.4},\"ID\":45,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
-    Amanda, are you okay?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":48}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":653.499451,\"yPos\":-146.402725},\"ID\":46,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
-    get super overwhelmed in social situations myself\",\"parentUIDs\":[47],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":50}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":165.500031,\"yPos\":-18.4028549},\"ID\":48,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Really?
+    events, I could never imagine being in your shoes\",\"parentUIDs\":[41],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":677.166748,\"yPos\":136.332733},\"ID\":44,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"What
+    is it that\u2019s overwhelming you?\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":431.166046,\"yPos\":1.33346558},\"ID\":45,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
+    Amanda, are you okay?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":48}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":656.1669,\"yPos\":569.3308},\"ID\":46,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    get super overwhelmed in social situations myself\",\"parentUIDs\":[47],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":50}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":168.166641,\"yPos\":697.330566},\"ID\":48,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Really?
     How do you manage to keep your head cool, with all the people you need to interact
-    with, as an organizer?\\r\\n\",\"parentUIDs\":[46],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":51}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":661.4993,\"yPos\":-5.402851},\"ID\":49,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"They
+    with, as an organizer?\\r\\n\",\"parentUIDs\":[46],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":51}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":664.1666,\"yPos\":710.3307},\"ID\":49,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"They
     help me out but it\u2019s super draining, so sometimes I need to take a break
-    to decompress and recharge\",\"parentUIDs\":[50],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":58}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":161.500031,\"yPos\":98.59736},\"ID\":51,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"That
-    sounds like you\u2019re going through quite a lot on the regular!\",\"parentUIDs\":[49],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":53}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":658.4996,\"yPos\":108.597481},\"ID\":52,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You\u2019re
-    an amazing musician Amanda\",\"parentUIDs\":[58],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":55}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":149.700043,\"yPos\":202.79805},\"ID\":53,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Thank
+    to decompress and recharge\",\"parentUIDs\":[50],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":58}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":164.166641,\"yPos\":814.330566},\"ID\":51,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"That
+    sounds like you\u2019re going through quite a lot on the regular!\",\"parentUIDs\":[49],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":53}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":661.167,\"yPos\":824.3307},\"ID\":52,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You\u2019re
+    an amazing musician Amanda\",\"parentUIDs\":[58],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":55}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":152.366669,\"yPos\":918.53125},\"ID\":53,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Thank
     you so much Delilah, I really appreciate talking with you, it\u2019s like you
-    get me in a way other people don\u2019t\",\"parentUIDs\":[52],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":56}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":655.4993,\"yPos\":216.598129},\"ID\":54,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"It
-    was a nice escape from the bustle of work\",\"parentUIDs\":[55],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":57}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":125.70005,\"yPos\":338.601563},\"ID\":56,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
-    feel better now too. Will I see you at the concert later?\",\"parentUIDs\":[54],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":400.699524,\"yPos\":318.801636},\"ID\":57,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Definitely!\",\"parentUIDs\":[56],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    get me in a way other people don\u2019t\",\"parentUIDs\":[52],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":56}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":658.166748,\"yPos\":932.3314},\"ID\":54,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"It
+    was a nice escape from the bustle of work\",\"parentUIDs\":[55],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":57}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":128.366669,\"yPos\":1054.33569},\"ID\":56,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+    feel better now too. Will I see you at the concert later?\",\"parentUIDs\":[54],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Amanda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":403.366119,\"yPos\":1034.53564},\"ID\":57,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Definitely!\",\"parentUIDs\":[56],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Delilah\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Amanda
   DefaultSprite: {fileID: 21300000, guid: 6dfe428a59c06274c8494d6919dccf81, type: 3}
@@ -13576,47 +13660,12 @@ MonoBehaviour:
   - {fileID: 1720141500}
   - {fileID: 1720141499}
   - {fileID: 1720141516}
+  - {fileID: 1720141517}
   ContinueFont: {fileID: 11400000, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
   EndConversationFont: {fileID: 11400000, guid: b2fa5bce3c863e74994b56a5366d7750, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1802987983}
-        m_TargetAssemblyTypeName: amandaManager, Assembly-CSharp
-        m_MethodName: MakeAmandaHappy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1802987986}
-        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
-        m_MethodName: ToggleTaskComplete
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1802987985}
-        m_TargetAssemblyTypeName: WalkiTalkie, Assembly-CSharp
-        m_MethodName: turnOnBool
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AmandaTalkComplete
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &1837058678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16287,3 +16336,4 @@ SceneRoots:
   - {fileID: 426445885}
   - {fileID: 1802987984}
   - {fileID: 334460719}
+  - {fileID: 358003902}

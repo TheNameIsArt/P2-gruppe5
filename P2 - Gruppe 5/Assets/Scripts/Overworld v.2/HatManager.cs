@@ -18,6 +18,7 @@ public class HatManager : MonoBehaviour
     public bool sabrinaQuestComplete = false;
     public NPCConversation sabrinaQuestConvo;
     public NPCConversation FinalTalkConvo;
+    public Level_Changer levelChanger;
 
     private void Awake()
     {
@@ -43,14 +44,17 @@ public class HatManager : MonoBehaviour
 
         if (BitTalkComplete && FrankTalkComplete && AmandaTalkComplete && !sabrinaQuestComplete)
         {
-            sabrinaQuestComplete = true;
+            
             Debug.Log("All talk completions are true.");
+            levelChanger = GameObject.FindGameObjectWithTag("DelilahCutscene").GetComponent<Level_Changer>();
             ConversationManager.Instance.StartConversation(FinalTalkConvo);
+            sabrinaQuestComplete = true;
         }
-        if (sabrinaQuestComplete)
+        if (sabrinaQuestComplete && !ConversationManager.Instance.IsConversationActive)
         {
+            sabrinaQuestComplete = false; // Reset the quest completion status
             Debug.Log("Sabrina quest is complete.");
-
+            levelChanger.sceneChanger();
             // Perform any additional actions when the quest is complete
         }
     }
