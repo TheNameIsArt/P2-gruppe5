@@ -72,4 +72,9 @@ public class HatManager : MonoBehaviour
             Debug.LogWarning($"[HatManager] Bool field '{boolName}' not found.");
         }
     }
+
+    public void DestroyThis()
+    {
+        Destroy(gameObject);
+    }
 }
