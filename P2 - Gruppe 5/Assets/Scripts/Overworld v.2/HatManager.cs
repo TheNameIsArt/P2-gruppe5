@@ -52,6 +52,7 @@ public class HatManager : MonoBehaviour
         }
         if (sabrinaQuestComplete && !ConversationManager.Instance.IsConversationActive)
         {
+            BitTalkComplete = false; // Reset the talk completion status
             sabrinaQuestComplete = false; // Reset the quest completion status
             Debug.Log("Sabrina quest is complete.");
             levelChanger.sceneChanger();
