@@ -16,7 +16,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
     private int currentInputIndex = 0;
     public TextMeshProUGUI feedbackText;
     public int sequencesCompleted = 0;
-    private int sequencesToComplete = 10;
+    private int sequencesToComplete = 5;
     public TextMeshProUGUI statusText;
 
     private bool isSequenceResetting = false;
