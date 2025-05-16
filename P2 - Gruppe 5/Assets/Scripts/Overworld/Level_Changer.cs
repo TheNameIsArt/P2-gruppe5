@@ -15,6 +15,8 @@ public class Level_Changer : MonoBehaviour
 
     private void Start()
     {
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
         if (connection == Level_Connection.activeConnection)
         {
             if (player != null && spawnPoint != null)

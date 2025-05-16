@@ -7273,10 +7273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 6
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":92.80002,"yPos":77.3999252},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yup,
-    that''s right!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":326.4001,"yPos":78.99993},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
-    right now, I''ll be back!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":84.2667,"yPos":286.600067},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[4],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":201.6,"yPos":-62.80002},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"One
-    at a time please!... Oh, Delilah! Are you here to help out?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":66.40004,"yPos":161.599945},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-5.466675,"yPos":162.199951},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yup,
+    that''s right!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":228.133392,"yPos":163.799957},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
+    right now, I''ll be back!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-13.9999924,"yPos":371.4001},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[4],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":103.333313,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"One
+    at a time please!... Oh, Delilah! Are you here to help out?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-31.8666534,"yPos":246.399963},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     give me just a moment!","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Benny","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Benny
@@ -7292,43 +7292,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 34260120}
-        m_TargetAssemblyTypeName: CrowdByeBye, Assembly-CSharp
-        m_MethodName: StartBurgerGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 835004763}
-        m_TargetAssemblyTypeName: Level_Changer, Assembly-CSharp
-        m_MethodName: sceneChanger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 567553549}
-        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
-        m_MethodName: ToggleTaskList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &567553549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12475,8 +12439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 2
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":99.80002,"yPos":196.6},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Nothing
-    to it!","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":103,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":100.133331,"yPos":196.6},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Nothing
+    to it!","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":103.333313,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     heard you helped Benny. Great work!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Debrah
@@ -17306,54 +17270,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae04a510fda45346b4349716c2ac518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1354096793
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1354096794}
-  - component: {fileID: 1354096795}
-  m_Layer: 0
-  m_Name: Last bot zones
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1354096794
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354096793}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.561357, y: 13.260763, z: 1.9048795}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1354096795
+--- !u!114 &1354096795 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8942914364534393725, guid: 888197704611c084c95ce733c3372854, type: 3}
+  m_PrefabInstance: {fileID: 2906408852377064992}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354096793}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b092d7f6f9a67e4588ce334bf40666a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1959370501}
-  connection: {fileID: 11400000, guid: 4eb87c8555e2c6a4ea1ba0912105bbad, type: 2}
-  targetSceneName: Delilah Final
-  spawnPoint: {fileID: 0}
 --- !u!1001 &1357049188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22457,7 +22384,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.6793737
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
@@ -27526,6 +27453,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aafd7eb375d8ef44b776dfface981ef, type: 3}
+--- !u!1001 &2906408852377064992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5232956870969566166, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_Name
+      value: Last bot zones
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942914364534393725, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1959370501}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.561357
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.260763
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9048795
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106236649215479105, guid: 888197704611c084c95ce733c3372854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 888197704611c084c95ce733c3372854, type: 3}
 --- !u!1001 &3521447343526943494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27590,6 +27578,14 @@ PrefabInstance:
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 47459600}
+    - target: {fileID: 4920577113379566336, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3521447343526943495}
+    - target: {fileID: 4920577113379566336, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sceneChanger
+      objectReference: {fileID: 0}
     - target: {fileID: 5633900307085954924, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -27607,6 +27603,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+--- !u!114 &3521447343526943495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8629598789988538345, guid: 653a2939607dcee4a92cd61f7230f9ac, type: 3}
+  m_PrefabInstance: {fileID: 3521447343526943494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b092d7f6f9a67e4588ce334bf40666a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -27639,4 +27646,4 @@ SceneRoots:
   - {fileID: 387752237}
   - {fileID: 47459598}
   - {fileID: 3521447343526943494}
-  - {fileID: 1354096794}
+  - {fileID: 2906408852377064992}
