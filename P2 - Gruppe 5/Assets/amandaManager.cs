@@ -39,7 +39,11 @@ public class amandaManager : MonoBehaviour
         if (amandaConvo && !ConversationManager.Instance.IsConversationActive)
         {
             amandaConvo = false; // Reset the flag after the conversation is done
-            HatManager.Instance.AmandaTalkComplete = true;
+            //HatManager.Instance.AmandaTalkComplete = true;
         }
+    }
+    public void hatDestroyer()
+    {
+     HatManager.Instance.DestroyThis();
     }
 }
