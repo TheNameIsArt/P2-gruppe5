@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using DialogueEditor;
+using UnityEngine.SceneManagement;
+
 
 public class EatingGamemanagerv2 : MonoBehaviour
 {
@@ -293,6 +295,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
     {
         Debug.Log("GG, you win");
         gameWon = true;
+        SceneManager.LoadScene("Andy Festival");
     }
 
     public void OnPressA(InputAction.CallbackContext context)
