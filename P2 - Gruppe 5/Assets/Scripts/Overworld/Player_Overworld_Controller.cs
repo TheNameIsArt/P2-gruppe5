@@ -28,7 +28,6 @@ public class Player_Overworld_Controller : MonoBehaviour
     [SerializeField] private bool isConversationActive = false;
     public CinemachineVirtualCamera localCamera;
     public CinemachineVirtualCamera localCamera2;
-    public CinemachineVirtualCamera localCamera3;
 
     private ConversationEditer conversationEditor;
     private DelilahConversation delilahConversation;// Reference to the ConversationEditor
@@ -37,18 +36,17 @@ public class Player_Overworld_Controller : MonoBehaviour
     private void Awake()
     {
         interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
-        
+        playerInput = GetComponent<PlayerInput>();
+        hideHats = GameObject.FindGameObjectWithTag("HideHat");
     }
 
     void Start()
     {
-        InputSystem.onActionChange += OnActionChange;
+        //InputSystem.onActionChange += OnActionChange;
         if (interactionButton != null)
         {
             interactionButton.SetActive(false);
         }
-        playerInput = GetComponent<PlayerInput>();
-        hideHats = GameObject.FindGameObjectWithTag ("HideHat");
     }
 
     // Update is called once per frame
@@ -256,7 +254,7 @@ public class Player_Overworld_Controller : MonoBehaviour
         }
     }
 
-    public void Sprint(InputAction.CallbackContext context)
+    /*public void Sprint(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -264,7 +262,7 @@ public class Player_Overworld_Controller : MonoBehaviour
         }
     }
 
-    private void OnActionChange(object obj, InputActionChange change)
+   private void OnActionChange(object obj, InputActionChange change)
     {
         if (change == InputActionChange.ActionPerformed)
         {
@@ -272,5 +270,5 @@ public class Player_Overworld_Controller : MonoBehaviour
             var lastControl = inputAction.activeControl;
             inputDevice = lastControl.device;
         }
-    }
+    }*/
 }
