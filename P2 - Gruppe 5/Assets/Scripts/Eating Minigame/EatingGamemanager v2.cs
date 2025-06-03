@@ -111,7 +111,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
         }
     }
 
-    void StartSequencePlayback()
+    void StartSequencePlayback() //Når man laver en fejl er denne metode ansvarlig for at gentage den daværende sekvens.
     {
         isSequenceResetting = false;
         isInputProcessing = false;
@@ -221,7 +221,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
 
             currentTime += beatInterval + 0.1f;
         }
-
+    
         feedbackText.text = "Now it's your turn!";
         isShowingRythm = false;
         isInputProcessing = true;
@@ -298,6 +298,7 @@ public class EatingGamemanagerv2 : MonoBehaviour
         SceneManager.LoadScene("Andy Festival");
     }
 
+// Inputs
     public void OnPressA(InputAction.CallbackContext context)
     {
         if (context.performed) HandleInput(0);

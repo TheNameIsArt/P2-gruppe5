@@ -17,7 +17,7 @@ public class NoteObject : MonoBehaviour
     private float greatHitYPosition = 0.10f;
 
 
-    private float timeWhenActivated;
+    private float timeWhenActivated; 
 
     void Start()
 {
@@ -39,7 +39,6 @@ public class NoteObject : MonoBehaviour
 }
 
 
-
     void Update()
 {
     if (!hasAppeared && transform.position.y <= noteAppearY)
@@ -50,7 +49,6 @@ public class NoteObject : MonoBehaviour
             spriteRenderer.enabled = true;
         }
     }
-
 
     // Missed note check
     if (transform.position.y < missedPositionY)
@@ -86,9 +84,9 @@ public class NoteObject : MonoBehaviour
 
     public void ButtonPressed(InputAction.CallbackContext context)
     {
-       Debug.Log("Input performed!");
+        Debug.Log("Input performed!");
 
-            if (canBePressed) 
+        if (canBePressed)
         {
             gameObject.SetActive(false);
 
@@ -111,7 +109,6 @@ public class NoteObject : MonoBehaviour
                 Instantiate(perfectHit, transform.position, perfectHit.transform.rotation);
             }
         }
-
     }
 
     private void OnDestroy()
