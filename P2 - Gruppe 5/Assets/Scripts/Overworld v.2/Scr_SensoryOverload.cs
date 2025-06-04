@@ -5,14 +5,14 @@ public class Scr_SensoryOverload : MonoBehaviour
 {
     public CinemachineVirtualCamera localCamera;
     public CinemachineVirtualCamera localCamera2;
-    public AudioSource localAudioSource;
+    private AudioSource localAudioSource;
 
     private float shakeIntensity = 7f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        localAudioSource = GameObject.Find("Background music").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

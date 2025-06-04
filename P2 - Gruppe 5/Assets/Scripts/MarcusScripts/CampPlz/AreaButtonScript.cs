@@ -33,7 +33,7 @@ public class ButtonSpriteSelector : MonoBehaviour, ISelectHandler, IDeselectHand
         // Iterate through all child GameObjects to find the desired one
         foreach (Transform child in transform.GetComponentsInChildren<Transform>())
         {
-            // Example: Find a child with a specific tag or component
+            // Find a child with spriterenderer component
             SpriteRenderer spriteRenderer = child.GetComponent<SpriteRenderer>();
             if (spriteRenderer != null)
             {
