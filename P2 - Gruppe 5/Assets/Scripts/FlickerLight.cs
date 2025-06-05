@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class FlickerLight : MonoBehaviour
 {
-    public Light2D lightSource; // Assign your Light2D or Light component here
+    public Light2D lightSource;
 
     public float minIntensity = 0.5f;
     public float maxIntensity = 1.5f;
@@ -13,19 +13,27 @@ public class FlickerLight : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Flicker());
+        StartCoroutine(FlickerRoutine());
     }
 
-    IEnumerator Flicker()
+    IEnumerator FlickerRoutine()
     {
-        float elapsed = 0f;
-        while (elapsed < flickertime)
+        while (true)
         {
-            lightSource.intensity = Random.Range(minIntensity, maxIntensity);
-            yield return new WaitForSeconds(flickerSpeed);
-            elapsed += flickerSpeed;
+            // Flicker for flickertime seconds
+            float elapsed = 0f;
+            while (elapsed < flickertime)
+            {
+                lightSource.intensity = Random.Range(minIntensity, maxIntensity);
+                yield return new WaitForSeconds(flickerSpeed);
+                elapsed += flickerSpeed;
+            }
+            // Optionally, set intensity to default after flicker
+            lightSource.intensity = maxIntensity;
+
+            // Wait for a random interval between 5 and 10 seconds before next flicker
+            float waitTime = Random.Range(5f, 10f);
+            yield return new WaitForSeconds(waitTime);
         }
-        // Optionally, set the intensity to a default value after flickering
-        lightSource.intensity = maxIntensity;
     }
 }
