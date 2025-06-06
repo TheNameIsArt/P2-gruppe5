@@ -4084,10 +4084,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 6
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":331,"yPos":162},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Hi
-    im looking for my friend, do you know where he is?","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":327,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Buck","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":332,"yPos":276},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"He
-    went to Lost and found ","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Buck","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 7
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":142,"yPos":-54.0000153},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    went to get drinks for me and buck. Have you seen him?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":140.800018,"yPos":169.400116},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"i''ll
+    try looking for him there. thanks Sarah!","parentUIDs":[5],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":136.4,"yPos":-182.000015},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hi
+    Sam! Where''ve you been? ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":143.799988,"yPos":59.20015},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"buck?
+    He went to Lost and found a couple of minutes ago. I think he lost his red jacket
+    or something.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Buck
   DefaultSprite: {fileID: 21300000, guid: 4102ed4d055bad44ca14b929c75a06af, type: 3}
@@ -4097,6 +4100,7 @@ MonoBehaviour:
   - {fileID: 1884549210}
   - {fileID: 1884549214}
   - {fileID: 1884549213}
+  - {fileID: 1884549215}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
@@ -4123,7 +4127,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Look for friend in Lost and Found
+          m_StringArgument: '- Look for Buck in the Lost and Found building'
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &873120776
@@ -4928,6 +4932,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5728894581024124375, guid: 951779565e10d10479169a30c08b80e3, type: 3}
   m_PrefabInstance: {fileID: 1846408663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1000128113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000128114}
+  - component: {fileID: 1000128115}
+  m_Layer: 0
+  m_Name: ConversationEventInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000128114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000128113}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.42, y: -14.39, z: -1.8794492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2036604339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000128115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000128113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: bd41eeb082a2ad34eb09d838a1ed65c0, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &1102390973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6890,7 +6945,7 @@ PrefabInstance:
     - target: {fileID: 1801201816727784194, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1288766170, guid: 2668de66def5a4a4fa8997a68d384305, type: 3}
+      objectReference: {fileID: 1015910612, guid: 55750fa642491244d93517e369ee5ad1, type: 3}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6942,7 +6997,7 @@ PrefabInstance:
     - target: {fileID: 6560208717775789605, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: idleAnimation
       value: 
-      objectReference: {fileID: 7400000, guid: 3265c79e2ab6c6a4bb2c369329fb7841, type: 2}
+      objectReference: {fileID: 7400000, guid: 8f265b31ed40b4d4e8a2d70ca93395cf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6952,6 +7007,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 873120776}
+    - targetCorrespondingSourceObject: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036604339}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
 --- !u!4 &1583398098 stripped
@@ -8039,12 +8097,16 @@ PrefabInstance:
       objectReference: {fileID: 1738949768}
     - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
       propertyPath: possibleConversations.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
       propertyPath: 'possibleConversations.Array.data[0]'
       value: 
       objectReference: {fileID: 873120775}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: 'possibleConversations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2036604340}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -8069,6 +8131,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
   m_PrefabInstance: {fileID: 1738949767}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1738949770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+  m_PrefabInstance: {fileID: 1738949767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295f1811b610fb40a7874fe7aebc846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1761857218 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6198463308566171432, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
@@ -8223,6 +8296,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ba008328fd29046aabf5d27b93f422, type: 3}
+--- !u!114 &1771322993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5444516189068550381, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+  m_PrefabInstance: {fileID: 997753900911751383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8d2095f9fde8c4a848fe499bd1054f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1777383993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8814,6 +8898,7 @@ GameObject:
   - component: {fileID: 1884549210}
   - component: {fileID: 1884549214}
   - component: {fileID: 1884549213}
+  - component: {fileID: 1884549215}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -8872,7 +8957,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 0
   TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 4102ed4d055bad44ca14b929c75a06af, type: 3}
+  Icon: {fileID: 21300000, guid: bd41eeb082a2ad34eb09d838a1ed65c0, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1884549213
 MonoBehaviour:
@@ -8910,12 +8995,12 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Look for friend in Lost and Found
+          m_StringArgument: '- Look for Buck in the Lost and Found building'
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 5
   TMPFont: {fileID: 0}
-  Icon: {fileID: 21300000, guid: 4102ed4d055bad44ca14b929c75a06af, type: 3}
+  Icon: {fileID: 21300000, guid: bd41eeb082a2ad34eb09d838a1ed65c0, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1884549214
 MonoBehaviour:
@@ -8933,6 +9018,49 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 4
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &1884549215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884549209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1771322993}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lostAndFound
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1738949770}
+        m_TargetAssemblyTypeName: DialogueEventTrigger, Assembly-CSharp
+        m_MethodName: ChangeConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NodeID: 6
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -9407,6 +9535,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1278284523367096926, guid: 39f79e9d5df172d48b5c912fd8ada3b5, type: 3}
   m_PrefabInstance: {fileID: 1982384769}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2036604338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036604339}
+  - component: {fileID: 2036604340}
+  m_Layer: 0
+  m_Name: Convo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2036604339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036604338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1000128114}
+  m_Father: {fileID: 1583398098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036604340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036604338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":164.4,"yPos":21.1999969},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"He
+    should be at the lost and found","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 1000128115}
+  ContinueFont: {fileID: 0}
+  EndConversationFont: {fileID: 0}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2045226097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9963,6 +10150,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3779cf06b9ad73428063c16e16ccfc7, type: 3}
+--- !u!1001 &997753900911751383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6420908
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.035573
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.057551593
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066552844499572410, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_Name
+      value: Sam quest checker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
 --- !u!1001 &3804628597429285258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10353,6 +10597,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 951779565e10d10479169a30c08b80e3, type: 3}
+--- !u!1001 &9137880470079118319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5101911939319459292, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_Name
+      value: Sam quest manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6420908
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.035573
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.057551593
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -10385,3 +10686,5 @@ SceneRoots:
   - {fileID: 715184757}
   - {fileID: 782792448}
   - {fileID: 872609521}
+  - {fileID: 9137880470079118319}
+  - {fileID: 997753900911751383}

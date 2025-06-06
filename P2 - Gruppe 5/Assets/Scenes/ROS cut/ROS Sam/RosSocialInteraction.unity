@@ -592,7 +592,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 86341617}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: ToggleTaskComplete
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 48122328}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 6cf6fdcc3f59b5943a3f0f87dd18b6d8, type: 3}
@@ -634,6 +658,54 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1354449339}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lostAndFound
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1354449339}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: burgerBar
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 48122328}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 86341617}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '- go to the burgerbar'
           m_BoolArgument: 1
         m_CallState: 2
   NodeID: 30
@@ -964,6 +1036,131 @@ PolygonCollider2D:
       - {x: 4.1893187, y: -1.3905267}
       - {x: 9.171365, y: -1.4233638}
   m_UseDelaunayMesh: 0
+--- !u!1001 &86341616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2195210196261523077, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_Name
+      value: Task completer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.830193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9224304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.66258013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+--- !u!114 &86341617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6185595018212099644, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+  m_PrefabInstance: {fileID: 86341616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849f814aa4dccc846ab7da38fb2aa8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &91077191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5101911939319459292, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_Name
+      value: Sam quest manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6420908
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.035573
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.057551593
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690219999046964770, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bf38b837f93fa14494ef29aa9c870c1, type: 3}
 --- !u!1 &316003050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.6793737
       objectReference: {fileID: 0}
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -2568,6 +2765,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1625514902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1059328270
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2881618930813929351, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_Name
+      value: TaskList
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
 --- !u!1 &1191207935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,6 +3199,74 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &1354449338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6420908
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.035573
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.057551593
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034686765860206453, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066552844499572410, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+      propertyPath: m_Name
+      value: Sam quest checker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+--- !u!114 &1354449339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5444516189068550381, guid: 2ed2db67a4344054eaa0f389aea78794, type: 3}
+  m_PrefabInstance: {fileID: 1354449338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8d2095f9fde8c4a848fe499bd1054f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378623776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,6 +3356,7 @@ GameObject:
   - component: {fileID: 1445352909}
   - component: {fileID: 1445352908}
   - component: {fileID: 1445352907}
+  - component: {fileID: 1445352910}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3062,6 +3425,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445352910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445352906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30afef62b22d3443aab6d043fa169a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1446251318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,23 +3564,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 31
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":86.4000244,"yPos":-970.600159},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    sam","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-12.7999573,"yPos":-759.4008},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    can''t find my friend buck.","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":228.000031,"yPos":-753.8011},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    missing my friend","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":-67.20002,"yPos":-469.001556},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"He
-    wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":113.600006,"yPos":-549.001038},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"he
-    wears a red jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":267.2,"yPos":-471.401642},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"He''s
-    the only bot who wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":89.60004,"yPos":-229.001221},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"a
-    burger!","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":146.400024,"yPos":-25.7992554},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"great
-    idea. thanks for the help","parentUIDs":[28],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":84.3999939,"yPos":-1119.59961},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
-    you so much for helping me with the lights! I''m not sure i got your name?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":83.20001,"yPos":-872.800842},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Nice
-    to meet you sam. how can i help you today? did you loose something?","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":23},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":100.800018,"yPos":-660.00116},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"you
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":194.400024,"yPos":225.399567},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    sam","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":95.20003,"yPos":436.5986},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    can''t find my friend buck.","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":336.000366,"yPos":442.1981},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    missing my friend","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":40.7999649,"yPos":726.9964},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"He
+    wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":221.600037,"yPos":646.997253},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"he
+    wears a red jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":363.200317,"yPos":703.7962},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"He''s
+    the only bot who wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":197.600037,"yPos":966.997253},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"a
+    burger!","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":254.40033,"yPos":1170.2002},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"great
+    idea. thanks for the help","parentUIDs":[28],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":192.4,"yPos":76.3999939},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+    you so much for helping me with the lights! I''m not sure i got your name?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":191.200012,"yPos":323.198822},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Nice
+    to meet you sam. how can i help you today? did you loose something?","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":23},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":208.800018,"yPos":535.997864},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"you
     are missing your friend, you say. hmm... has he got anything to help me identify
-    him?","parentUIDs":[18,20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":76.8,"yPos":-364.801971},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"oh
+    him?","parentUIDs":[18,20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":184.800018,"yPos":831.1965},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"oh
     he''s wearing a jacket. he was in here not long ago. i think he went to get a
-    burger","parentUIDs":[22,23,24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":124.800018,"yPos":-142.4},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"My
+    burger","parentUIDs":[22,23,24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":232.800232,"yPos":1053.59888},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"My
     best guess would be that he''s still at the burger bar. maybe go take a look
-    there","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":145.600037,"yPos":71.20163},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"see
+    there","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":253.600342,"yPos":1267.20166},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"see
     ya around!","parentUIDs":[29],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Edward
@@ -3264,6 +3639,54 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1354449339}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lostAndFound
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1354449339}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: burgerBar
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 48122328}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 86341617}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '- go to the burgerbar'
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!4 &1482513622
@@ -3487,7 +3910,7 @@ PrefabInstance:
     - target: {fileID: 1273182403098594349, guid: 2bba923b4a9645749893c622db38649b, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1650905328}
     - target: {fileID: 1273182403098594349, guid: 2bba923b4a9645749893c622db38649b, type: 3}
       propertyPath: connection
       value: 
@@ -3634,6 +4057,11 @@ Transform:
 --- !u!4 &1650905327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6433192825331937958, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+  m_PrefabInstance: {fileID: 1650905325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1650905328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8070150995736924018, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
   m_PrefabInstance: {fileID: 1650905325}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1713296532
@@ -4285,3 +4713,7 @@ SceneRoots:
   - {fileID: 1801890762}
   - {fileID: 827711339}
   - {fileID: 786471520}
+  - {fileID: 1354449338}
+  - {fileID: 91077191}
+  - {fileID: 86341616}
+  - {fileID: 1059328270}

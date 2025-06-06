@@ -773,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 4.6793737
+      value: 5.625
       objectReference: {fileID: 0}
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -1824,6 +1824,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1405509475}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: ToggleTaskComplete
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1405509475}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '- Use the lightbox to fix the lights'
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 24203a97df8ace8438027a6b298fd39b, type: 3}
@@ -1960,7 +1984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571508212707924484, guid: 2bba923b4a9645749893c622db38649b, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2571508212707924484, guid: 2bba923b4a9645749893c622db38649b, type: 3}
       propertyPath: m_SortingOrder
@@ -2359,6 +2383,74 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &1405509474
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2195210196261523077, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_Name
+      value: Task completer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.830193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9224304
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.66258013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337821781682870478, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+--- !u!114 &1405509475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6185595018212099644, guid: 04e589b6b177d7a4b8c336a69b0b223b, type: 3}
+  m_PrefabInstance: {fileID: 1405509474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849f814aa4dccc846ab7da38fb2aa8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445352906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2705,103 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &1576431372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2881618930813929351, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_Name
+      value: TaskList
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469075208642387750, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
 --- !u!1 &1625514901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,11 +3291,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 5
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":95.19998,"yPos":-125.800034},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Hi,
-    I''m here. how can i help?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":91.20001,"yPos":59.7999725},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    give it a go","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":92.39996,"yPos":-263.600281},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Is
-    someboduy there??? The lights turned off and i need help.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"???","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":89.5999756,"yPos":-45.59977},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
-    goodness! can you turn on the fusebox to your right? That should fix the lights","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"???","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":85.5999756,"yPos":140.000015},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":130.400024,"yPos":9.400253},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Hi,
+    I''m here. how can i help?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":126.400055,"yPos":195.000519},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
+    give it a go","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":127.600006,"yPos":-128.4},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Is
+    somebody there??? The lights turned off and i need help.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"???","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":124.800018,"yPos":89.60048},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+    goodness! can you turn on the fusebox to your right? That should fix the lights","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"???","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":120.800018,"yPos":275.20047},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
     you so much... I''ll just stand here... i''ve never liked the dark...","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"???","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: ???
@@ -3635,3 +3824,5 @@ SceneRoots:
   - {fileID: 2114106178}
   - {fileID: 1801890762}
   - {fileID: 2039701109}
+  - {fileID: 1576431372}
+  - {fileID: 1405509474}
