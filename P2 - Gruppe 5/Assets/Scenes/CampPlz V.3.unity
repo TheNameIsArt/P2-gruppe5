@@ -1349,6 +1349,7 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 9c1cd152a6f126d44ad7bc8fed59ac38, type: 3}
   panelManager: {fileID: 1799689917}
   backButton: {fileID: 69468140}
+  specialButton: {fileID: 1318198614}
   playerInput: {fileID: 0}
 --- !u!224 &287289433 stripped
 RectTransform:
@@ -1559,6 +1560,7 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: f5277fe1191abd2479d677e3b678b430, type: 3}
   panelManager: {fileID: 1799689917}
   backButton: {fileID: 2124565836}
+  specialButton: {fileID: 0}
   playerInput: {fileID: 0}
 --- !u!114 &359942753
 MonoBehaviour:
@@ -4268,7 +4270,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.93803
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5972,6 +5974,7 @@ GameObject:
   - component: {fileID: 1318198616}
   - component: {fileID: 1318198615}
   - component: {fileID: 1318198614}
+  - component: {fileID: 1318198617}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -6081,6 +6084,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318198612}
   m_CullTransparentMesh: 1
+--- !u!114 &1318198617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318198612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c0975030062b943960131ec3b7c31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 69468140}
 --- !u!1 &1344482402
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,6 +9196,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6049487804033489551, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049487804033489551, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049487804033489551, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049487804033489551, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049487804033489551, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361041095032086450, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7467512245078295554, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9503,6 +9543,10 @@ PrefabInstance:
     - target: {fileID: 6677980671601673456, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
       propertyPath: m_Name
       value: DialogueSystemCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677980671601673456, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10112,6 +10156,10 @@ PrefabInstance:
     - target: {fileID: 1597465533759562412, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_Name
       value: Bot Rusty
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597465533759562412, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5545726240193586066, guid: b2dc7ece173038d4db63a211a3eb8fc6, type: 3}
       propertyPath: m_LocalPosition.x
