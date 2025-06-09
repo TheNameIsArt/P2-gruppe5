@@ -1632,7 +1632,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 4.6793737
+      value: 5.625
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
@@ -4085,10 +4085,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":142,"yPos":-54.0000153},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    went to get drinks for me and buck. Have you seen him?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":140.800018,"yPos":169.400116},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"i''ll
-    try looking for him there. thanks Sarah!","parentUIDs":[5],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":136.4,"yPos":-182.000015},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hi
-    Sam! Where''ve you been? ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":143.799988,"yPos":59.20015},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"buck?
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":122.799988,"yPos":-26.8000183},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    went to get drinks for me and buck. Have you seen him?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":121.600006,"yPos":196.600128},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"i''ll
+    try looking for him there. thanks Sarah!","parentUIDs":[5],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":117.199982,"yPos":-154.800018},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hi
+    Sam! Where''ve you been? ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":124.599976,"yPos":86.40015},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"buck?
     He went to Lost and found a couple of minutes ago. I think he lost his red jacket
     or something.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -4106,28 +4106,40 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 872609522}
-        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
-        m_MethodName: ToggleTaskComplete
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 872609522}
-        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
-        m_MethodName: AddTaskToManager
+      - m_Target: {fileID: 1771322993}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: '- Look for Buck in the Lost and Found building'
+          m_StringArgument: lostAndFound
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1738949770}
+        m_TargetAssemblyTypeName: DialogueEventTrigger, Assembly-CSharp
+        m_MethodName: ChangeConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 107290554}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &873120776
@@ -9016,7 +9028,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107290554}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 4
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -9056,6 +9080,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 107290554}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9449,7 +9485,8 @@ PrefabInstance:
       value: Player_Overworld
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7144342617523893928, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
@@ -9581,7 +9618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":164.4,"yPos":21.1999969},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"He
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":164.4,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"He
     should be at the lost and found","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
