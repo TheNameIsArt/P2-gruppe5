@@ -5469,6 +5469,7 @@ GameObject:
   - component: {fileID: 435586318}
   - component: {fileID: 435586317}
   - component: {fileID: 435586315}
+  - component: {fileID: 435586320}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -5600,6 +5601,25 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 0c3ba95ca3636334aa19dc78b0fb657e, type: 3}
+  Audio: {fileID: 0}
+--- !u!114 &435586320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435586314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 4
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 0c3ba95ca3636334aa19dc78b0fb657e, type: 3}
   Audio: {fileID: 0}
@@ -8210,29 +8230,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 23
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-257.599548,"yPos":-900.2037},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello,
-    yes, I''m here","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":95.20267,"yPos":-877.805237},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who''s
-    talking to me right now?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-204.800049,"yPos":-412.206848},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Yeah,
-    of course","parentUIDs":[4,6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":124.803452,"yPos":-557.8072},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhm..?
-    Why me?","parentUIDs":[4,6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":140.003555,"yPos":-375.406372},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
-    yeah. That''s right","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-9.600052,"yPos":-137.003082},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    go help them right away","parentUIDs":[12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":236.800644,"yPos":56.6008835},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"Okay,
-    I''ll remember to change my hat if i get overwhelmed","parentUIDs":[19],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":240.800415,"yPos":150.999908},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"bye!","parentUIDs":[21],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":-62.0000458,"yPos":-1069.20068},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"*Skrzzz*
-    Hello? Delilah? You there?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-232.000031,"yPos":-767.2065},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Great!
-    We are have a problem that needs solving. Do you have time?","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":101.602646,"yPos":-803.2061},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
-    me, Debrah, I''m talking to you over the walki. You feeling okay chief?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":104.802704,"yPos":-714.4062},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Anywho!
-    We are have a problem that needs solving. Do you have time?","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":143.203262,"yPos":-468.8075},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    are the manager of this event after all.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-27.2000275,"yPos":-264.005066},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    burgerbar queue is massive. They might be shortstaffed. Benny asked if you could
-    come by","parentUIDs":[7,11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":240.0022,"yPos":-240.805},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Kevin
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-124.8495,"yPos":-614.003},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello,
+    yes, I''m here","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":227.9527,"yPos":-591.604553},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who''s
+    talking to me right now?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-72.05,"yPos":-126.006165},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Yeah,
+    of course","parentUIDs":[4,6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":257.553528,"yPos":-271.6065},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhm..?
+    Why me?","parentUIDs":[4,6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":272.7536,"yPos":-89.20569},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+    yeah. That''s right","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":123.150024,"yPos":149.197632},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
+    go help them right away","parentUIDs":[12],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":369.55072,"yPos":342.8015},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"Okay,
+    I''ll remember to change my hat if i get overwhelmed","parentUIDs":[19],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":373.550476,"yPos":437.200562},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"bye!","parentUIDs":[21],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":70.75,"yPos":-783},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"*Skrzzz*
+    Hello? Delilah? You there?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-99.2499847,"yPos":-481.0058},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Great!
+    We are have a problem that needs solving. Do you have time?","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":234.352722,"yPos":-517.005432},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
+    me, Debrah, I''m talking to you over the walki. You feeling okay chief?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":237.552734,"yPos":-428.2055},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Anywho!
+    We are have a problem that needs solving. Do you have time?","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":275.9533,"yPos":-182.606812},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    are the manager of this event after all.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":105.550049,"yPos":22.1956177},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    burgerbar queue is massive. They are shortstaffed. Benny asked if you could come
+    by","parentUIDs":[7,11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":372.752258,"yPos":45.39569},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Kevin
     also asked for your help. Something about his headphones gone missing. He''s
-    by the main stage to the left setting it up.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":236.801437,"yPos":-139.20285},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Great!
-    I''ll tell them you are on your way","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-11.1999969,"yPos":-71.2036057},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"If
-    you get confused just look to your tasklist in the top right corner!","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":236.801376,"yPos":-33.6019363},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
+    by the main stage to the left setting it up.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":369.5515,"yPos":146.9978},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Great!
+    I''ll tell them you are on your way","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":121.550049,"yPos":214.99707},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    you get confused just look to your tasklist in the top right corner!","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":370.551453,"yPos":252.598755},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
     and remember, if you get overwhelmed, take a deep breath and use the rb button
-    to put on the correct hat for your current situation","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-10.40004,"yPos":21.6008224},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    (or the p button on keyboard) to put on the correct hat for your current situation","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":122.350037,"yPos":307.8015},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     you can''t seem to talk to someone it might be because you are wearing the wrong
-    hat","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":-2.40003967,"yPos":120.000244},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Great!
+    hat","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":130.350037,"yPos":406.200928},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Great!
     Talk to you later then!","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Debrah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Debrah
@@ -12816,11 +12836,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 4
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":163.6,"yPos":124.600006},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Allright!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":166.800018,"yPos":322.200073},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Go
-    to minigame]","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":164.4,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Help
-    me get those headphones!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":165.200012,"yPos":209.599869},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
-    You","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 5
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":222.950012,"yPos":124.600006},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Whats
+    the matter?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":122.150024,"yPos":393.200073},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"[Go
+    to minigame]","parentUIDs":[],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":223.75,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Arh!
+    not again.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":224.550018,"yPos":209.599869},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"while
+    setting op the main stage, I''ve lost my headphones somewhere on the construction
+    site.","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":224,"yPos":303},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Kevin","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Kevin
   DefaultSprite: {fileID: 21300000, guid: 0c3ba95ca3636334aa19dc78b0fb657e, type: 3}
@@ -12830,47 +12852,12 @@ MonoBehaviour:
   - {fileID: 435586318}
   - {fileID: 435586317}
   - {fileID: 435586315}
+  - {fileID: 435586320}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1870779809}
-        m_TargetAssemblyTypeName: Level_Changer, Assembly-CSharp
-        m_MethodName: sceneChanger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 100917256}
-        m_TargetAssemblyTypeName: KevinScript, Assembly-CSharp
-        m_MethodName: StartBurgerGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 759869465}
-        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
-        m_MethodName: ToggleTaskList
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &999729687
 Transform:
   m_ObjectHideFlags: 0
@@ -21079,7 +21066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.6793737
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
