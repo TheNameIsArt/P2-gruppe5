@@ -3064,16 +3064,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 15
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":-270.800079,"yPos":-599.3996},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Yeah,
-    I just got made!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-250.000183,"yPos":-378.602966},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhh...","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-18.0001526,"yPos":-241.804276},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Uhhhhmm...","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":-289.1998,"yPos":-723.597839},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Miaow
-    there, Stranger! Are you new here?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":-266.800049,"yPos":-508.00116},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    just got made? That''s awesome! Do you know where to go then?","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-254.000183,"yPos":-279.2041},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
-    you know HOW to go???","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":96.40021,"yPos":-144.003372},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    take that as a no","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":114.00045,"yPos":-21.6025314},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"To
-    move, use the Left stick on the controller (or WASD if you''re a pc-gamer)","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":125.200653,"yPos":89.6008759},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"To
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-109.600281,\"yPos\":-86.80176},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yeah,
+    I just arrived!\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-88.8003845,\"yPos\":133.994873},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhh\u2026
+    to my friends?\",\"parentUIDs\":[4],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":143.1997,\"yPos\":270.793579},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uhhhhmm...\",\"parentUIDs\":[6],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-128,\"yPos\":-211},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Miaow
+    there, Stranger! Are you new here?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-105.60025,\"yPos\":6.59667969},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You
+    just arrived? That's awesome! Do you know where you\u2019re going?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-92.8003845,\"yPos\":233.393738},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Okay,
+    do you know how to get to them?\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":257.599976,\"yPos\":368.594482},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I'll
+    take that as a no\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":275.2002,\"yPos\":490.995361},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Let\u2019s
+    go through the basics: To move around the festival, use the Left stick on the
+    controller (or WASD if you're using keyboard)\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":286.4005,\"yPos\":602.1987},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"To
     interact with the world around you, use the interact button that pops up above
-    your head","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":126.0007,"yPos":238.40274},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Let''s
-    try it right away. Go to me and talk to me","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Cat","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    your head\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":287.200562,\"yPos\":751.0006},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Let's
+    try it right away. Go to me and talk to me\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Cat\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Cat
   DefaultSprite: {fileID: 0}
@@ -3093,7 +3095,31 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1681979879}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1616029371}
+        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+        m_MethodName: AddTask
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '- go and talk to the cat'
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &296944326
 Transform:
   m_ObjectHideFlags: 0
@@ -18197,7 +18223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967902223189686039, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: orthographic size
-      value: 5.625
+      value: 4.6793737
       objectReference: {fileID: 0}
     - target: {fileID: 1104034427473606435, guid: 2d5795f7db498a240a50882bd0e67b4c, type: 3}
       propertyPath: m_BoundingShape2D
