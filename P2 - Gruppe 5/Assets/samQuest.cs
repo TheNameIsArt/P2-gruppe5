@@ -1,3 +1,4 @@
+using DialogueEditor;
 using UnityEngine;
 
 public class samQuest : MonoBehaviour
@@ -7,6 +8,8 @@ public class samQuest : MonoBehaviour
     public bool burgerBar = false;
     public bool lostAndFound = false;
     public bool buckActive = false;
+    static bool SamStarted = false;
+    public NPCConversation startConvo;
 
     void Awake()
     {
@@ -17,6 +20,16 @@ public class samQuest : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject); // Optional: persists across scenes
+    }
+
+    void Start()
+    {
+        if (!SamStarted)
+        {
+            SamStarted = true;
+            Debug.Log("samQuest started");
+            ConversationManager.Instance.StartConversation(startConvo);
+        }
     }
     public void SetQuest(string questName, bool value)
     {

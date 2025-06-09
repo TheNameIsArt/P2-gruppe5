@@ -19,7 +19,7 @@ public class Player_Overworld_Controller : MonoBehaviour
     private string targetSceneName;
     //private NPCConversation targetConversation;
     private Vector2 moveInput;
-    private GameObject interactionButton;
+    public GameObject interactionButton;
     private bool isConversationZone;
     private bool isInteractionZone;
     private bool isContextZone;
@@ -35,7 +35,10 @@ public class Player_Overworld_Controller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
+        if (interactionButton == null)
+        {
+            interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
+        }
         playerInput = GetComponent<PlayerInput>();
         hideHats = GameObject.FindGameObjectWithTag("HideHat");
     }
