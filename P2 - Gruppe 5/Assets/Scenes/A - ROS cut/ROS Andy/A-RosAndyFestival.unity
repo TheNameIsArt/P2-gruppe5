@@ -1970,6 +1970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156975626}
   - component: {fileID: 156975627}
+  - component: {fileID: 156975628}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2038,6 +2039,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 28.849583}
   m_EdgeRadius: 0
+--- !u!114 &156975628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156975624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c61dc84b2442354baed44e48f44d092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene1Image: {fileID: 1616029372}
+  sceneToShowIn: A-RosAndyFestival
 --- !u!1001 &162027225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3526,7 +3541,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: c656d28859c4046939f512c974e43ed2, type: 2}
     - target: {fileID: 7486702841045326336, guid: 401e2f04fccaaed4aaddc02dce1e1815, type: 3}
       propertyPath: targetSceneName
-      value: CampPlz V.3
+      value: A-CampPlz
       objectReference: {fileID: 0}
     - target: {fileID: 7793155523090983553, guid: 401e2f04fccaaed4aaddc02dce1e1815, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10597,17 +10612,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 13
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":147.6,\"yPos\":-535.7995},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hello,
-    I was told you could help me find my camp?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":148.200012,\"yPos\":-366.4015},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Are
-    you okay?\",\"parentUIDs\":[2],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":148.800018,\"yPos\":-96.19812},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Can't
-    someone swap with you while you take a leak?\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":149.000061,\"yPos\":74.40277},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Me?\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":248.800049,\"yPos\":520.4026},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"[Enter
-    the booth]\",\"parentUIDs\":[12],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":178,\"yPos\":275},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"But
-    I don\u2019t know what to do.\",\"parentUIDs\":[9],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":269,\"yPos\":-636},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"NNNggghh...
-    Hello.... There... nnnghh.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":269.199982,\"yPos\":-469.200378},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"NNghhh...
-    yeah... you came to the... nghh... right place for that.\\r\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":267.400055,\"yPos\":-296.4007},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nggh...
-    I... Ju-just... Re-really need... to take... a LEAK!\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":268.6,\"yPos\":-196.199829},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uuuuuurrrrrrghhh!\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":268.400055,\"yPos\":-30.597229},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Gr-Great
-    idea!... nghhh... co-could you do it???\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":306.8001,\"yPos\":150.202881},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yeah,
-    you.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":357,\"yPos\":369},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bah,
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":897.6,\"yPos\":-756.7995},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hello,
+    I was told you could help me find my camp?\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":898.2,\"yPos\":-587.4015},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Are
+    you okay?\",\"parentUIDs\":[2],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":898.800049,\"yPos\":-317.19812},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Can't
+    someone swap with you while you take a leak?\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":899.000061,\"yPos\":-146.597229},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Me?\",\"parentUIDs\":[7],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":998.800049,\"yPos\":299.4026},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"[Enter
+    the booth]\",\"parentUIDs\":[12],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":928,\"yPos\":54},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"But
+    I don\u2019t know what to do.\",\"parentUIDs\":[9],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":1019,\"yPos\":-857},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"NNNggghh...
+    Hello.... There... nnnghh.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1019.19995,\"yPos\":-690.2004},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"NNghhh...
+    yeah... you came to the... nghh... right place for that.\\r\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1017.4,\"yPos\":-517.4007},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nggh...
+    I... Ju-just... Re-really need... to take... a LEAK!\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1018.6,\"yPos\":-417.199829},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Uuuuuurrrrrrghhh!\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1018.4,\"yPos\":-251.597229},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Gr-Great
+    idea!... nghhh... co-could you do it???\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1056.8,\"yPos\":-70.79712},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yeah,
+    you.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1107,\"yPos\":148},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bah,
     it\u2019s simple! Let me go through it quickly. Co-come behind the booth\u2026\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Frank\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Frank
@@ -11444,7 +11459,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b26fa551bee0e574081c60590647b32a, type: 2}
     - target: {fileID: 8181683357205733697, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: targetSceneName
-      value: RosAndyCampingArea
+      value: A-RosAndyCampingArea
       objectReference: {fileID: 0}
     - target: {fileID: 8630887844401963990, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_Name
@@ -12403,6 +12418,14 @@ PrefabInstance:
       propertyPath: npcDialogue
       value: 
       objectReference: {fileID: 1450989935}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: possibleConversations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      propertyPath: 'possibleConversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17028,6 +17051,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce1d2f31d436cd4b922a89c23c75d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1616029372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2391976826288067052, guid: 271cbd38b7616a54db79fc46261a8a74, type: 3}
+  m_PrefabInstance: {fileID: 1616029370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1623456135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17388,7 +17416,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 99685c7714fbe21499ca32ca02e7b052, type: 2}
     - target: {fileID: 8181683357205733697, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: targetSceneName
-      value: RosAndyCampingArea
+      value: A-RosAndyCampingArea
       objectReference: {fileID: 0}
     - target: {fileID: 8630887844401963990, guid: a384cc130f2dfc24e87434fa4645ec4e, type: 3}
       propertyPath: m_Name
