@@ -1523,7 +1523,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RosSocialInteraction
+          m_StringArgument: A-RosSocialInteraction
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 849887130}
@@ -1548,6 +1548,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: '- go talk to Edward at the front desk'
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 433338582}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 5
@@ -1607,13 +1619,13 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 433338582}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2379,6 +2391,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 424b6720ff5999446843ba414e58a907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &433338582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3813544785160971390, guid: 6740372e471b0294caf1aebb34758e73, type: 3}
+  m_PrefabInstance: {fileID: 1310831442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fe614b88daf184a841493ff6bdcd86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &448197295
@@ -6518,10 +6541,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":157.200012,"yPos":174.200256},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"[Go
-    back]","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":133.200012,"yPos":-245.199982},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Woah!
-    You did it!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":146.800018,"yPos":-4.57763672E-05},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
-    the lights should be working again!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":138.000031,"yPos":-120.000061},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":351,"yPos":441.400452},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"[Go
+    back]","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":327,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Woah!
+    You did it!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":340.6,"yPos":267.199951},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    the lights should be working again!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":false,"xPos":331.800018,"yPos":147.199921},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     never would have figured out how to set this up!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Simon
@@ -6547,7 +6570,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RosSocialInteraction
+          m_StringArgument: A-RosSocialInteraction
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 849887130}
@@ -6572,6 +6595,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: '- go talk to Edward at the front desk'
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 433338582}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1695132249
@@ -8034,7 +8069,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ce1352424dd309f40a3b05b08fdf5ddf, type: 2}
     - target: {fileID: 6690985233245865983, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
       propertyPath: targetSceneName
-      value: Delilah Festival
+      value: A-RosDelilahFestival
       objectReference: {fileID: 0}
     - target: {fileID: 7142952102179148357, guid: b92bdf4ade9775743ae0b98cd242de87, type: 3}
       propertyPath: m_LocalPosition.x

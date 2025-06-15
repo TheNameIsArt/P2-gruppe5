@@ -15,6 +15,8 @@ public class PanelChooser : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private SpriteRenderer spriteTargetRenderer; // Reference to the SpriteRenderer
     public PanelManager panelManager; // Reference to the PanelManager
     public GameObject backButton;
+    public Button specialButton; // Assign this in the Inspector to your specific button
+
 
     public PlayerInput playerInput; // Reference to the PlayerInput component
 
