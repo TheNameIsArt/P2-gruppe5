@@ -698,6 +698,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &79143684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2083,6 +2084,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &206422082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3053,6 +3055,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &323980889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3230,6 +3233,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &340975433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4244,6 +4248,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &437212582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6440,6 +6445,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &676144476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9196,6 +9202,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &888158263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11025,6 +11032,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &1138247359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12058,6 +12066,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &1258386105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12304,6 +12313,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &1295595582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13199,6 +13209,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &1386381657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14641,11 +14652,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.22
+      value: 32.4
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.64
+      value: -7.92
       objectReference: {fileID: 0}
     - target: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16912,6 +16923,7 @@ MonoBehaviour:
   thirdLayer: {fileID: 0}
   needsSecondLayer: 0
   needsThirdLayer: 0
+  levelChanger: {fileID: 0}
 --- !u!61 &1764044353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20826,6 +20838,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aafd7eb375d8ef44b776dfface981ef, type: 3}
+--- !u!1001 &4781847742200780738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 685061062337240371, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_Name
+      value: Deco_Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.11608
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.508562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468892319835170158, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800220062286389505, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1959370501}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0d4e4f76dba5b641ad80c4f29d8f63a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -20848,3 +20921,4 @@ SceneRoots:
   - {fileID: 1727301092}
   - {fileID: 1508146761}
   - {fileID: 866627775}
+  - {fileID: 4781847742200780738}

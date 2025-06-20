@@ -13,12 +13,12 @@ public class Player_Overworld_Controller : MonoBehaviour
     public string playerName;
     public GameObject hats;
     private GameObject hideHats;
+    public PlayerInput playerInput;
 
     private GameObject interactionZone;
-    private PlayerInput playerInput;
     private string targetSceneName;
     //private NPCConversation targetConversation;
-    private Vector2 moveInput;
+    public Vector2 moveInput;
     public GameObject interactionButton;
     private bool isConversationZone;
     private bool isInteractionZone;
