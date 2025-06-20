@@ -8,20 +8,20 @@ public class amandaManager : MonoBehaviour
     private static bool amandaConvo = false; // Flag to check if amandaHappy has been set
     public GameObject amanda;
     public GameObject amandaHappyObject;
+    public bool amandaActive = false; // Flag to check if Amanda is active in the scene
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (amandaHappy)
+
+        if (HatManager.Instance.sabrinaQuestStarter)
         {
-            Debug.Log("Amanda is happy!");
-            Destroy(amanda);
-            amandaHappyObject.SetActive(true);
+            amanda.SetActive(true); // Ensure Amanda is active in the scene
+            amandaHappyObject.SetActive(false); // Hide the happy object initially
         }
         else
         {
-            Debug.Log("Amanda is not happy.");
-            amanda.SetActive(true);
-            amandaHappyObject.SetActive(false);
+            amanda.SetActive(false); // Hide Amanda if not active
+            amandaHappyObject.SetActive(false); // Ensure happy object is also hidden
         }
     }
 
@@ -29,7 +29,7 @@ public class amandaManager : MonoBehaviour
     public void MakeAmandaHappy()
     {
         amandaHappy = true;
-        Destroy(amanda);
+        amanda.SetActive(false); // Hide the amanda GameObject
         amandaHappyObject.SetActive(true);
         amandaConvo = true; // Set the flag to true when amandaHappy is set
     }
