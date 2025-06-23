@@ -122,7 +122,16 @@ public class Scr_HatSwitcher : MonoBehaviour
     }
     public void previousHat(InputAction.CallbackContext context)
     {
-     
+        if (context.performed)
+        {
+            if (--currentHatIndex < 0)
+            {
+                currentHatIndex = hats.Length -1;
+            }
+            // Save the new hat
+            if (HatManager.Instance != null)
+                HatManager.Instance.SavedHat = hats[currentHatIndex];
+        }
     }
 }
 

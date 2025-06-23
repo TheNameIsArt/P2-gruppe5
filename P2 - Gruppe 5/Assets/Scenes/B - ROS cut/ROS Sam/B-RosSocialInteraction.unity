@@ -119,6 +119,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13808148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13808149}
+  - component: {fileID: 13808150}
+  m_Layer: 0
+  m_Name: Convo2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13808149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13808148}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.009201353, y: 0.26551303, z: 0.20357893}
+  m_LocalScale: {x: 0.20357893, y: 0.20357893, z: 0.20357893}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 981392505}
+  m_Father: {fileID: 827711341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &13808150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13808148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentIDCounter: 1
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":189.999969,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"your
+    friend went to get a burger. maybe look there","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Toby","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  saveVersion: 110
+  DefaultName: 
+  DefaultSprite: {fileID: 0}
+  DefaultFont: {fileID: 0}
+  NodeSerializedDataList:
+  - {fileID: 981392506}
+  ContinueFont: {fileID: 0}
+  EndConversationFont: {fileID: 0}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &29785192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,6 +765,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: '- go to the burgerbar'
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 827711342}
+        m_TargetAssemblyTypeName: DialogueEventTrigger, Assembly-CSharp
+        m_MethodName: ChangeConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
   NodeID: 30
@@ -2633,13 +2704,16 @@ PrefabInstance:
     - target: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
       propertyPath: 'possibleConversations.Array.data[1]'
       value: 
-      objectReference: {fileID: 1482513621}
+      objectReference: {fileID: 13808150}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1482513622}
+    - targetCorrespondingSourceObject: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 13808149}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
 --- !u!114 &827711340 stripped
@@ -2658,6 +2732,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2581773807659066136, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
   m_PrefabInstance: {fileID: 827711339}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &827711342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7820216339648502925, guid: 37d3031ecffa95042bc4e1d8e08fce40, type: 3}
+  m_PrefabInstance: {fileID: 827711339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f295f1811b610fb40a7874fe7aebc846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885369974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,19 +2860,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 31
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-79.5999451,\"yPos\":154.200348},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Short
-    and direct\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":134.800018,\"yPos\":156.6004},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Detailed
-    and explanatory\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":354.799957,\"yPos\":156.6004},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Indirect
-    and careful\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":380.800018,\"yPos\":40.6},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"End
-    conversation\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":138,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hello,
-    how can I help you?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-78.79999,\"yPos\":235.200409},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Have
-    you seen someone wearing a red jacket?\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":136.400055,\"yPos\":234.400421},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-32.3999634,\"yPos\":118.200417},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Short
+    and direct\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":182,\"yPos\":120.600487},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Detailed
+    and explanatory\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":401.999817,\"yPos\":120.600487},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Indirect
+    and careful\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":427.999878,\"yPos\":4.600113},\"ID\":30,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"End
+    conversation\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":30}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":185.199982,\"yPos\":-13.9998665},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hello,
+    how can I help you?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-31.6000061,\"yPos\":199.200562},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Have
+    you seen someone wearing a red jacket?\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":183.600037,\"yPos\":198.400574},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"I
     am looking for my friend. He is a yellow robot wearing a red jacket. Have you
-    seen him?\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":361.19986,\"yPos\":233.6004},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry
-    to bother you, but I am looking for my friend. Where do lost robots go?\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-78.8,\"yPos\":344.800385},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry,
-    I haven\u2019t seen anyone in a red jacket. Maybe try over by the scene?\\r\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":135.600037,\"yPos\":345.6},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm
+    seen him?\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":408.399719,\"yPos\":197.600555},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry
+    to bother you, but I am looking for my friend. Where do lost robots go?\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-31.6000214,\"yPos\":308.799683},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sorry,
+    I haven\u2019t seen anyone in a red jacket. Maybe try over by the scene?\\r\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":182.800018,\"yPos\":309.5993},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hmm
     let me think. I think I saw someone like that near here. I heard someone say
-    something about dancing, but I am not sure.\\r\",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":360.400024,\"yPos\":348.800018},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes,
+    something about dancing, but I am not sure.\\r\",\"parentUIDs\":[19],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":407.599854,\"yPos\":312.799255},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Yes,
     most robots come here when lost, but there have been no lost robots here today.
     But a group walked by talking about shoot or food or something\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Toby\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -2837,6 +2922,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3849970128117991384, guid: 2f7169891da03f04ba3711718f6e05f1, type: 3}
   m_PrefabInstance: {fileID: 1641427362}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &981392504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981392505}
+  - component: {fileID: 981392506}
+  m_Layer: 0
+  m_Name: ConversationEventInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981392505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981392504}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.36, y: -3.04, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 13808149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981392506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981392504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 6cf6fdcc3f59b5943a3f0f87dd18b6d8, type: 3}
+  Audio: {fileID: 0}
 --- !u!1 &1031417054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,23 +3874,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 31
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":323.500031,"yPos":100.999573},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    sam","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":224.300049,"yPos":312.1986},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    can''t find my friend buck.","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":465.100342,"yPos":317.7981},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    missing my friend","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":169.899963,"yPos":602.596436},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"He
-    wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":350.700043,"yPos":522.5973},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"he
-    wears a red jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":492.3003,"yPos":579.39624},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"He''s
-    the only bot who wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":326.700043,"yPos":842.5973},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"a
-    burger!","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":383.500336,"yPos":1045.80017},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"great
-    idea. thanks for the help","parentUIDs":[28],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":321.5,"yPos":-48},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
-    you so much for helping me with the lights! I''m not sure i got your name?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":320.300018,"yPos":198.798828},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Nice
-    to meet you sam. how can i help you today? did you loose something?","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":23},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":337.900024,"yPos":411.5979},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"you
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":192,"yPos":170.999573},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    sam","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":92.80002,"yPos":382.1986},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    can''t find my friend buck.","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":333.6003,"yPos":387.7981},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    missing my friend","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":38.3999329,"yPos":672.596436},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"He
+    wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":219.200012,"yPos":592.5973},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"he
+    wears a red jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":360.800262,"yPos":649.39624},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"He''s
+    the only bot who wears a jacket","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":195.200012,"yPos":912.5973},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"a
+    burger!","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":false,"xPos":252.0003,"yPos":1115.80017},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"great
+    idea. thanks for the help","parentUIDs":[28],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":189.999969,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+    you so much for helping me with the lights! I''m not sure i got your name?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":188.799988,"yPos":268.798828},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Nice
+    to meet you sam. how can i help you today? did you loose something?","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":23},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":206.4,"yPos":481.5979},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"you
     are missing your friend, you say. hmm... has he got anything to help me identify
-    him?","parentUIDs":[18,20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":313.900024,"yPos":706.7965},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"oh
+    him?","parentUIDs":[18,20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":182.4,"yPos":776.7965},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"oh
     he''s wearing a jacket. he was in here not long ago. i think he went to get a
-    burger","parentUIDs":[22,23,24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":361.900238,"yPos":929.198853},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"My
+    burger","parentUIDs":[22,23,24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":230.4002,"yPos":999.198853},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"My
     best guess would be that he''s still at the burger bar. maybe go take a look
-    there","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":382.700348,"yPos":1142.80164},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"see
+    there","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":251.200317,"yPos":1212.80164},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"see
     ya around!","parentUIDs":[29],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Edward","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Edward
@@ -3790,7 +3926,91 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 48122328}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 799251484}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1354449339}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lostAndFound
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1354449339}
+        m_TargetAssemblyTypeName: samQuestChecker, Assembly-CSharp
+        m_MethodName: TriggerQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: burgerBar
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 48122328}
+        m_TargetAssemblyTypeName: DialogueEditor.ConversationManager, Assembly-CSharp
+        m_MethodName: MinigameInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 86341617}
+        m_TargetAssemblyTypeName: TaskCompletion, Assembly-CSharp
+        m_MethodName: AddTaskToManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: '- go to the burgerbar'
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 827711342}
+        m_TargetAssemblyTypeName: DialogueEventTrigger, Assembly-CSharp
+        m_MethodName: ChangeConversation
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1482513622
 Transform:
   m_ObjectHideFlags: 0
