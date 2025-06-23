@@ -115,7 +115,7 @@ public class PlayerControllerCSH : MonoBehaviour
             else if (yVelocity > 0f)
                 newState = HasHeadphones ? "Delilah_P_H_Jump" : "Delilah_P_Jump";
             else
-                newState = HasHeadphones ? "Delilah_P_H_Fall" : "Delilah_P_Jump";
+                newState = HasHeadphones ? "Delilah_P_H_Fall" : "Delilah_P_Fall";
         }
         else if (_isMoving)
         {
