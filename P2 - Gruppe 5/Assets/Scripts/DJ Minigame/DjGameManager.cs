@@ -72,11 +72,11 @@ public class DjGameManager : MonoBehaviour
 {
     Debug.Log("Hit on time");
 
-    if (currentMisses > 0)
+    /* if (currentMisses > 0)
     {
         currentMisses --;
         missCounterText.text = "Misses:" + currentMisses + "/10";
-    }
+    } */
 
     // Handle multiplier progression only if within range
     if (currentMultiplier - 1 < multiplierThresholds.Length)
@@ -123,7 +123,7 @@ public class DjGameManager : MonoBehaviour
         NoteHit();
     }
 
-    public void NoteMissed()
+     public void NoteMissed()
     {
         Debug.Log("Missed note");
         currentMisses++;
@@ -131,38 +131,38 @@ public class DjGameManager : MonoBehaviour
         currentMultiplier = 1;
         multiplierTracker = 0;
         multiplierText.text = "Multiplier: x" + currentMultiplier;
-        missCounterText.text = "Misses: " + currentMisses + "/10";
+       // missCounterText.text = "Misses: " + currentMisses + "/10";
 
-        if (currentMisses >= maxMisses)
-        {
-            GameOver();
-        }
+        /* if (currentMisses >= maxMisses)
+         {
+             GameOver();
+         } */
 
     }
 
-    void GameOver()
-    {
-        Debug.Log("Game Over!");
-        Time.timeScale = 0f; //Game gets paused
-        gameoverUI.SetActive(true);
-        music.Stop();
-        gameOver = true;
-    }
+    /* void GameOver()
+     {
+         Debug.Log("Game Over!");
+         Time.timeScale = 0f; //Game gets paused
+         gameoverUI.SetActive(true);
+         music.Stop();
+         gameOver = true;
+     }
 
-    public void TryAgainController(InputAction.CallbackContext context)
+     public void TryAgainController(InputAction.CallbackContext context)
+     {
+         if (context.performed)
+         {
+             Time.timeScale = 1f;
+             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+         }
+     } */
+
+    /* public void TryAgain()
     {
-        if (context.performed)
-        {
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
-
-    public void TryAgain()
-    {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    } */
 
     public void Win()
     {
