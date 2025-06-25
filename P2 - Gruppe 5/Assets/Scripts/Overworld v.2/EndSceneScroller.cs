@@ -1,6 +1,4 @@
 using UnityEngine;
-
-using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -9,9 +7,6 @@ public class EndSceneScroller : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float scrollSpeed = 1f;
-    public Image fadeOverlay;
-    public float fadeDuration = 2f;
-    public string sceneToLoad = "NextScene"; // Replace with your target scene name
 
     private bool hasTriggered = false;
 
@@ -35,24 +30,15 @@ public class EndSceneScroller : MonoBehaviour
         {
             hasTriggered = true;
             rb.linearVelocity = Vector2.zero;
-            StartCoroutine(FadeAndLoadScene());
+            StartCoroutine(QuitAfterDelay(3f));
         }
     }
 
-    private IEnumerator FadeAndLoadScene()
+    private IEnumerator QuitAfterDelay(float delay)
     {
-        float timer = 0f;
-        Color color = fadeOverlay.color;
-
-        while (timer < fadeDuration)
-        {
-            timer += Time.deltaTime;
-            float alpha = Mathf.Clamp01(timer / fadeDuration);
-            fadeOverlay.color = new Color(color.r, color.g, color.b, alpha);
-            yield return null;
-        }
-
-        SceneManager.LoadScene(sceneToLoad);
+        yield return new WaitForSeconds(delay);
+        Application.Quit(); // This will quit the application in a build, but not in the editor
+        Debug.Log("Application quit after delay.");
     }
 }
 
