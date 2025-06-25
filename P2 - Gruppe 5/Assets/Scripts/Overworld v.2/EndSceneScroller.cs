@@ -1,26 +1,44 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EndSceneScroller : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private float scrollSpeed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float scrollSpeed = 1f;
+
+    private bool hasTriggered = false;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        scrollSpeed = 1;
+        if (rb == null)
+            rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        rb.linearVelocityY = scrollSpeed;
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "scrollStop") 
+        if (!hasTriggered)
         {
-            scrollSpeed = 0;
+            rb.linearVelocity = new Vector2(0, scrollSpeed);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!hasTriggered && other.CompareTag("scrollStop"))
+        {
+            hasTriggered = true;
+            rb.linearVelocity = Vector2.zero;
+            StartCoroutine(QuitAfterDelay(3f));
+        }
+    }
+
+    private IEnumerator QuitAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Application.Quit(); // This will quit the application in a build, but not in the editor
+        Debug.Log("Application quit after delay.");
+    }
 }
+

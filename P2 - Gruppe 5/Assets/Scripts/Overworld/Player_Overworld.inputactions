@@ -51,9 +51,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "HatSwitcher",
+                    "name": "NextHat",
                     "type": "Button",
                     "id": "60c185ee-4107-414e-b76f-d3509ada6655",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousHat",
+                    "type": "Button",
+                    "id": "4cbb5662-cbc7-4345-a635-6e34c23b0a3e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -332,18 +341,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "HatSwitcher",
+                    "action": "NextHat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "892c7fdc-bdf4-4f27-9468-7754bf9e400e",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HatSwitcher",
+                    "action": "NextHat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a2157f9-1fb0-475d-82b2-76481f2ee545",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "PreviousHat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
