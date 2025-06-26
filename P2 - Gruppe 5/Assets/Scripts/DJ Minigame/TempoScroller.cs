@@ -16,7 +16,7 @@ public class TempoScroller : MonoBehaviour
     {
         if (hasStarted)
         {
-            transform.position -= new Vector3(0f, musicTempo * Time.deltaTime, 0f);
+            transform.position -= new Vector3(0f, musicTempo * Time.deltaTime, 0f); // Bestemmer retningen og farten notes skal bevæge sig i
         }
     }
 }
