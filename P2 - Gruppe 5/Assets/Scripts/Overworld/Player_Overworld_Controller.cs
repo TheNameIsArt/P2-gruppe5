@@ -39,6 +39,7 @@ public class Player_Overworld_Controller : MonoBehaviour
         {
             interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
         }
+
         playerInput = GetComponent<PlayerInput>();
         hideHats = GameObject.FindGameObjectWithTag("HideHat");
     }

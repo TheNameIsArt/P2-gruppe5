@@ -24238,15 +24238,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_ActionId
       value: 60c185ee-4107-414e-b76f-d3509ada6655
       objectReference: {fileID: 0}
     - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      value: 4cbb5662-cbc7-4345-a635-6e34c23b0a3e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_ActionName
       value: 'Player/HatSwitcher[/Keyboard/c,/Keyboard/v]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      value: Player/PreviousHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 477397426}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: previousHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Scr_HatSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693356947438156220, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8070150995736924018, guid: 3689bb3e062016541b8030e8756fa446, type: 3}
       propertyPath: m_Name
